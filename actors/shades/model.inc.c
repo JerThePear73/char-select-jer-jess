@@ -1,0 +1,295 @@
+Lights1 shades_Sunglasses__EMBLEM__lights = gdSPDefLights1(
+	0x70, 0x0, 0x70,
+	0xE2, 0x0, 0xE2, 0x28, 0x28, 0x28);
+
+Lights1 shades_Metal__METAL__lights = gdSPDefLights1(
+	0xFF, 0xFF, 0xFF,
+	0x0, 0x0, 0x0, 0x28, 0x28, 0x28);
+
+Gfx shades_jer_metal_base_rgba16_aligner[] = {gsSPEndDisplayList()};
+u8 shades_jer_metal_base_rgba16[] = {
+	#include "actors/shades/jer_metal_base.rgba16.inc.c"
+};
+
+Gfx shades_Metal_Shade_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
+u8 shades_Metal_Shade_rgba16_rgba16[] = {
+	#include "actors/shades/Metal_Shade.rgba16.inc.c"
+};
+
+Gfx shades_Metal_Light_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
+u8 shades_Metal_Light_rgba16_rgba16[] = {
+	#include "actors/shades/Metal_Light.rgba16.inc.c"
+};
+
+Vtx shades_Normal_Cap_DL_mesh_layer_1_vtx_0[62] = {
+	{{ {116, 60, 54}, 0, {-529, 1788}, {76, 211, 164, 255} }},
+	{{ {117, 61, 57}, 0, {-529, 1788}, {100, 7, 78, 255} }},
+	{{ {107, 7, 74}, 0, {-529, 1788}, {75, 198, 85, 255} }},
+	{{ {106, 6, 72}, 0, {-529, 1788}, {54, 156, 200, 255} }},
+	{{ {63, 9, 79}, 0, {-529, 1788}, {247, 142, 201, 255} }},
+	{{ {63, 10, 81}, 0, {-529, 1788}, {5, 200, 114, 255} }},
+	{{ {24, 11, 81}, 0, {-529, 1788}, {194, 205, 98, 255} }},
+	{{ {24, 10, 79}, 0, {-529, 1788}, {186, 159, 212, 255} }},
+	{{ {16, 51, 68}, 0, {-529, 1788}, {203, 248, 115, 255} }},
+	{{ {16, 50, 66}, 0, {-529, 1788}, {195, 182, 173, 255} }},
+	{{ {78, 94, 51}, 0, {-529, 1788}, {248, 62, 146, 255} }},
+	{{ {16, 84, 55}, 0, {-529, 1788}, {211, 14, 138, 255} }},
+	{{ {19, 94, 51}, 0, {-529, 1788}, {190, 55, 162, 255} }},
+	{{ {16, 84, 57}, 0, {-529, 1788}, {221, 82, 91, 255} }},
+	{{ {19, 94, 54}, 0, {-529, 1788}, {198, 102, 49, 255} }},
+	{{ {79, 94, 54}, 0, {-529, 1788}, {9, 111, 61, 255} }},
+	{{ {118, 92, 47}, 0, {-529, 1788}, {73, 98, 34, 255} }},
+	{{ {118, 91, 44}, 0, {-529, 1788}, {51, 49, 150, 255} }},
+	{{ {121, 82, 47}, 0, {-529, 1788}, {84, 231, 164, 255} }},
+	{{ {121, 83, 49}, 0, {-529, 1788}, {105, 25, 67, 255} }},
+	{{ {79, 94, 54}, 0, {-529, 558}, {9, 111, 61, 255} }},
+	{{ {16, 84, 57}, 0, {-273, 1788}, {221, 82, 91, 255} }},
+	{{ {16, 51, 68}, 0, {-17, 1788}, {203, 248, 115, 255} }},
+	{{ {63, 10, 81}, 0, {495, 820}, {5, 200, 114, 255} }},
+	{{ {24, 11, 81}, 0, {495, 1788}, {194, 205, 98, 255} }},
+	{{ {117, 61, 57}, 0, {-156, -260}, {100, 7, 78, 255} }},
+	{{ {107, 7, 74}, 0, {495, -260}, {75, 198, 85, 255} }},
+	{{ {121, 83, 49}, 0, {-422, -260}, {105, 25, 67, 255} }},
+	{{ {121, 82, 47}, 0, {-422, -260}, {84, 231, 164, 255} }},
+	{{ {116, 60, 54}, 0, {-156, -260}, {76, 211, 164, 255} }},
+	{{ {118, 92, 47}, 0, {-529, -260}, {73, 98, 34, 255} }},
+	{{ {-116, 60, 54}, 0, {-529, 1788}, {180, 211, 164, 255} }},
+	{{ {-107, 7, 74}, 0, {-529, 1788}, {181, 198, 85, 255} }},
+	{{ {-117, 61, 57}, 0, {-529, 1788}, {156, 7, 78, 255} }},
+	{{ {-106, 6, 72}, 0, {-529, 1788}, {202, 156, 200, 255} }},
+	{{ {-63, 9, 79}, 0, {-529, 1788}, {9, 142, 201, 255} }},
+	{{ {-78, 94, 51}, 0, {-529, 1788}, {8, 62, 146, 255} }},
+	{{ {-121, 82, 47}, 0, {-529, 1788}, {172, 231, 164, 255} }},
+	{{ {-118, 91, 44}, 0, {-529, 1788}, {205, 49, 150, 255} }},
+	{{ {-118, 92, 47}, 0, {-529, 1788}, {183, 98, 34, 255} }},
+	{{ {-121, 83, 49}, 0, {-529, 1788}, {151, 25, 67, 255} }},
+	{{ {-79, 94, 54}, 0, {-529, 1788}, {247, 111, 61, 255} }},
+	{{ {-19, 94, 54}, 0, {-529, 1788}, {58, 102, 49, 255} }},
+	{{ {-19, 94, 51}, 0, {-529, 1788}, {66, 55, 162, 255} }},
+	{{ {-16, 84, 57}, 0, {-529, 1788}, {35, 82, 91, 255} }},
+	{{ {-16, 84, 55}, 0, {-529, 1788}, {45, 14, 138, 255} }},
+	{{ {-16, 50, 66}, 0, {-529, 1788}, {61, 182, 173, 255} }},
+	{{ {-24, 10, 79}, 0, {-529, 1788}, {70, 159, 212, 255} }},
+	{{ {-16, 51, 68}, 0, {-529, 1788}, {53, 248, 115, 255} }},
+	{{ {-24, 11, 81}, 0, {-529, 1788}, {62, 205, 98, 255} }},
+	{{ {-63, 10, 81}, 0, {-529, 1788}, {251, 200, 114, 255} }},
+	{{ {-79, 94, 54}, 0, {-529, 558}, {247, 111, 61, 255} }},
+	{{ {-16, 84, 57}, 0, {-273, 1788}, {35, 82, 91, 255} }},
+	{{ {-16, 51, 68}, 0, {-17, 1788}, {53, 248, 115, 255} }},
+	{{ {-63, 10, 81}, 0, {495, 820}, {251, 200, 114, 255} }},
+	{{ {-117, 61, 57}, 0, {-156, -260}, {156, 7, 78, 255} }},
+	{{ {-121, 83, 49}, 0, {-422, -260}, {151, 25, 67, 255} }},
+	{{ {-118, 92, 47}, 0, {-529, -260}, {183, 98, 34, 255} }},
+	{{ {-121, 82, 47}, 0, {-422, -260}, {172, 231, 164, 255} }},
+	{{ {-116, 60, 54}, 0, {-156, -260}, {180, 211, 164, 255} }},
+	{{ {-24, 11, 81}, 0, {495, 1788}, {62, 205, 98, 255} }},
+	{{ {-107, 7, 74}, 0, {495, -260}, {181, 198, 85, 255} }},
+};
+
+Gfx shades_Normal_Cap_DL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(shades_Normal_Cap_DL_mesh_layer_1_vtx_0 + 0, 31, 0),
+	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
+	gsSP2Triangles(4, 3, 2, 0, 4, 2, 5, 0),
+	gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
+	gsSP2Triangles(7, 6, 8, 0, 7, 8, 9, 0),
+	gsSP2Triangles(4, 7, 9, 0, 4, 9, 10, 0),
+	gsSP2Triangles(11, 10, 9, 0, 12, 10, 11, 0),
+	gsSP2Triangles(12, 11, 13, 0, 12, 13, 14, 0),
+	gsSP2Triangles(10, 12, 14, 0, 10, 14, 15, 0),
+	gsSP2Triangles(10, 15, 16, 0, 10, 16, 17, 0),
+	gsSP2Triangles(18, 17, 16, 0, 18, 16, 19, 0),
+	gsSP2Triangles(10, 17, 18, 0, 18, 0, 10, 0),
+	gsSP2Triangles(0, 4, 10, 0, 0, 3, 4, 0),
+	gsSP2Triangles(20, 14, 21, 0, 21, 22, 20, 0),
+	gsSP2Triangles(20, 22, 23, 0, 22, 24, 23, 0),
+	gsSP2Triangles(20, 23, 25, 0, 23, 26, 25, 0),
+	gsSP2Triangles(25, 27, 20, 0, 28, 27, 25, 0),
+	gsSP2Triangles(28, 25, 29, 0, 30, 20, 27, 0),
+	gsSPVertex(shades_Normal_Cap_DL_mesh_layer_1_vtx_0 + 31, 31, 0),
+	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
+	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
+	gsSP2Triangles(6, 5, 0, 0, 5, 6, 7, 0),
+	gsSP2Triangles(6, 8, 7, 0, 6, 9, 8, 0),
+	gsSP2Triangles(5, 7, 8, 0, 5, 8, 10, 0),
+	gsSP2Triangles(5, 10, 11, 0, 5, 11, 12, 0),
+	gsSP2Triangles(12, 11, 13, 0, 12, 13, 14, 0),
+	gsSP2Triangles(12, 14, 5, 0, 14, 15, 5, 0),
+	gsSP2Triangles(4, 5, 15, 0, 4, 15, 16, 0),
+	gsSP2Triangles(16, 15, 17, 0, 16, 17, 18, 0),
+	gsSP2Triangles(4, 16, 18, 0, 4, 18, 19, 0),
+	gsSP2Triangles(4, 19, 1, 0, 4, 1, 3, 0),
+	gsSP2Triangles(20, 21, 11, 0, 21, 20, 22, 0),
+	gsSP2Triangles(20, 23, 22, 0, 20, 24, 23, 0),
+	gsSP2Triangles(24, 20, 25, 0, 26, 25, 20, 0),
+	gsSP2Triangles(27, 24, 25, 0, 27, 28, 24, 0),
+	gsSP2Triangles(22, 23, 29, 0, 23, 24, 30, 0),
+	gsSPEndDisplayList(),
+};
+
+Vtx shades_Normal_Cap_DL_mesh_layer_1_vtx_1[42] = {
+	{{ {121, 82, 47}, 0, {90, -16}, {84, 231, 164, 255} }},
+	{{ {116, 60, 54}, 0, {357, -16}, {76, 211, 164, 255} }},
+	{{ {142, 37, -46}, 0, {357, -16}, {100, 190, 42, 255} }},
+	{{ {144, 48, -59}, 0, {90, -16}, {77, 22, 158, 255} }},
+	{{ {146, 9, -52}, 0, {357, -16}, {255, 148, 66, 255} }},
+	{{ {149, 5, -67}, 0, {90, -16}, {25, 149, 192, 255} }},
+	{{ {141, 48, -59}, 0, {-16, 1008}, {192, 12, 147, 255} }},
+	{{ {146, 9, -52}, 0, {-16, 1008}, {255, 148, 66, 255} }},
+	{{ {139, 37, -46}, 0, {-16, 1008}, {160, 173, 251, 255} }},
+	{{ {142, 37, -46}, 0, {-16, 1008}, {100, 190, 42, 255} }},
+	{{ {121, 82, 47}, 0, {-16, 1008}, {84, 231, 164, 255} }},
+	{{ {144, 48, -59}, 0, {-16, 1008}, {77, 22, 158, 255} }},
+	{{ {16, 84, 57}, 0, {240, 1008}, {221, 82, 91, 255} }},
+	{{ {0, 59, 68}, 0, {496, 1008}, {216, 224, 116, 255} }},
+	{{ {16, 51, 68}, 0, {496, 1008}, {203, 248, 115, 255} }},
+	{{ {0, 84, 59}, 0, {240, 1008}, {213, 103, 60, 255} }},
+	{{ {-16, 84, 57}, 0, {240, 1008}, {35, 82, 91, 255} }},
+	{{ {-16, 51, 68}, 0, {496, 1008}, {53, 248, 115, 255} }},
+	{{ {-121, 82, 47}, 0, {90, -16}, {172, 231, 164, 255} }},
+	{{ {-142, 37, -46}, 0, {357, -16}, {156, 190, 42, 255} }},
+	{{ {-116, 60, 54}, 0, {357, -16}, {180, 211, 164, 255} }},
+	{{ {-144, 48, -59}, 0, {90, -16}, {179, 22, 158, 255} }},
+	{{ {-146, 9, -52}, 0, {357, -16}, {1, 148, 66, 255} }},
+	{{ {-149, 5, -67}, 0, {90, -16}, {231, 149, 192, 255} }},
+	{{ {-141, 48, -59}, 0, {-16, 1008}, {64, 12, 147, 255} }},
+	{{ {-146, 9, -52}, 0, {-16, 1008}, {1, 148, 66, 255} }},
+	{{ {-139, 37, -46}, 0, {-16, 1008}, {96, 173, 251, 255} }},
+	{{ {-142, 37, -46}, 0, {-16, 1008}, {156, 190, 42, 255} }},
+	{{ {-121, 82, 47}, 0, {-16, 1008}, {172, 231, 164, 255} }},
+	{{ {-144, 48, -59}, 0, {-16, 1008}, {179, 22, 158, 255} }},
+	{{ {16, 50, 66}, 0, {-16, 1008}, {195, 182, 173, 255} }},
+	{{ {0, 58, 65}, 0, {-16, 1008}, {218, 157, 187, 255} }},
+	{{ {16, 84, 55}, 0, {-16, 1008}, {211, 14, 138, 255} }},
+	{{ {16, 51, 68}, 0, {-16, 1008}, {203, 248, 115, 255} }},
+	{{ {0, 59, 68}, 0, {-16, 1008}, {216, 224, 116, 255} }},
+	{{ {0, 84, 59}, 0, {-16, 1008}, {213, 103, 60, 255} }},
+	{{ {0, 84, 57}, 0, {-16, 1008}, {216, 58, 150, 255} }},
+	{{ {16, 84, 57}, 0, {-16, 1008}, {221, 82, 91, 255} }},
+	{{ {-16, 84, 55}, 0, {-16, 1008}, {45, 14, 138, 255} }},
+	{{ {-16, 50, 66}, 0, {-16, 1008}, {61, 182, 173, 255} }},
+	{{ {-16, 51, 68}, 0, {-16, 1008}, {53, 248, 115, 255} }},
+	{{ {-16, 84, 57}, 0, {-16, 1008}, {35, 82, 91, 255} }},
+};
+
+Gfx shades_Normal_Cap_DL_mesh_layer_1_tri_1[] = {
+	gsSPVertex(shades_Normal_Cap_DL_mesh_layer_1_vtx_1 + 0, 30, 0),
+	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
+	gsSP2Triangles(3, 2, 4, 0, 3, 4, 5, 0),
+	gsSP2Triangles(3, 5, 6, 0, 5, 7, 6, 0),
+	gsSP2Triangles(8, 6, 7, 0, 9, 8, 7, 0),
+	gsSP2Triangles(6, 9, 8, 0, 10, 6, 8, 0),
+	gsSP2Triangles(1, 10, 8, 0, 9, 1, 8, 0),
+	gsSP2Triangles(6, 10, 11, 0, 6, 11, 9, 0),
+	gsSP2Triangles(12, 13, 14, 0, 12, 15, 13, 0),
+	gsSP2Triangles(16, 13, 15, 0, 16, 17, 13, 0),
+	gsSP2Triangles(18, 19, 20, 0, 18, 21, 19, 0),
+	gsSP2Triangles(21, 22, 19, 0, 21, 23, 22, 0),
+	gsSP2Triangles(21, 24, 23, 0, 23, 24, 25, 0),
+	gsSP2Triangles(26, 25, 24, 0, 24, 26, 27, 0),
+	gsSP2Triangles(27, 26, 20, 0, 20, 26, 28, 0),
+	gsSP2Triangles(28, 26, 24, 0, 24, 29, 28, 0),
+	gsSP2Triangles(24, 27, 29, 0, 27, 25, 26, 0),
+	gsSPVertex(shades_Normal_Cap_DL_mesh_layer_1_vtx_1 + 30, 12, 0),
+	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
+	gsSP2Triangles(1, 3, 4, 0, 1, 4, 5, 0),
+	gsSP2Triangles(1, 5, 6, 0, 6, 5, 7, 0),
+	gsSP2Triangles(6, 7, 2, 0, 1, 6, 2, 0),
+	gsSP2Triangles(1, 8, 6, 0, 9, 8, 1, 0),
+	gsSP2Triangles(1, 10, 9, 0, 1, 4, 10, 0),
+	gsSP2Triangles(6, 8, 11, 0, 6, 11, 5, 0),
+	gsSPEndDisplayList(),
+};
+
+
+Gfx mat_shades_Sunglasses_reflection[] = {
+	gsSPGeometryMode(0, G_TEXTURE_GEN),
+	gsDPPipeSync(),
+	gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, ENVIRONMENT),
+	gsSPTexture(1984, 4032, 0, 0, 1),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, shades_jer_metal_base_rgba16),
+	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
+	gsDPLoadBlock(7, 0, 0, 2047, 256),
+	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
+	gsDPSetTileSize(0, 0, 0, 124, 252),
+	gsSPEndDisplayList(),
+};
+
+Gfx mat_revert_shades_Sunglasses_reflection[] = {
+	gsSPGeometryMode(G_TEXTURE_GEN, 0),
+	gsDPPipeSync(),
+	gsSPEndDisplayList(),
+};
+
+Gfx mat_shades_Sunglasses__EMBLEM_[] = {
+	gsSPCopyLightsPlayerPart(EMBLEM),
+	gsDPPipeSync(),
+	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
+	gsSPTexture(65535, 65535, 0, 0, 1),
+	gsSPEndDisplayList(),
+};
+
+Gfx mat_shades_Metal__METAL_[] = {
+	gsSPGeometryMode(G_CULL_BACK, G_TEXTURE_GEN),
+	gsSPLight(&shades_Metal__METAL__lights.l, 1),
+    gsSPLight(&shades_Metal__METAL__lights.a, 2),
+    gsSPCopyLightEXT(2, 15),
+	gsDPPipeSync(),
+	gsDPSetCombineLERP(TEXEL0, 0, SHADE, TEXEL1, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, TEXEL1, 0, 0, 0, ENVIRONMENT),
+	gsSPTexture(4032, 1984, 0, 0, 1),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, shades_Metal_Shade_rgba16_rgba16),
+	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
+	gsDPLoadBlock(7, 0, 0, 2047, 128),
+	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0),
+	gsDPSetTileSize(0, 0, 0, 252, 124),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, shades_Metal_Light_rgba16_rgba16),
+	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 512, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
+	gsDPLoadBlock(6, 0, 0, 2047, 128),
+	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 512, 1, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0),
+	gsDPSetTileSize(1, 0, 0, 252, 124),
+	gsSPEndDisplayList(),
+};
+
+Gfx mat_revert_shades_Metal__METAL_[] = {
+	gsSPGeometryMode(G_TEXTURE_GEN, G_CULL_BACK),
+	gsDPPipeSync(),
+	gsSPEndDisplayList(),
+};
+
+Gfx shades_Normal_Cap_DL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_shades_Sunglasses_reflection),
+	gsSPDisplayList(shades_Normal_Cap_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_shades_Sunglasses_reflection),
+	gsSPDisplayList(mat_shades_Sunglasses__EMBLEM_),
+	gsSPDisplayList(shades_Normal_Cap_DL_mesh_layer_1_tri_1),
+	gsSPEndDisplayList(),
+};
+
+Gfx shades_Normal_Cap_DL_mesh_layer_1_mat_override_Metal__METAL__0[] = {
+	gsSPDisplayList(mat_shades_Metal__METAL_),
+	gsSPDisplayList(shades_Normal_Cap_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(shades_Normal_Cap_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_shades_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx shades_material_revert_render_settings[] = {
+	gsDPPipeSync(),
+	gsSPSetGeometryMode(G_LIGHTING),
+	gsSPClearGeometryMode(G_TEXTURE_GEN),
+	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
+	gsSPTexture(65535, 65535, 0, 0, 0),
+	gsDPSetEnvColor(255, 255, 255, 255),
+	gsDPSetAlphaCompare(G_AC_NONE),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, 0),
+	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP  | G_TX_NOMIRROR, 0, 0),
+	gsDPLoadBlock(7, 0, 0, 1023, 256),
+	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
+	gsDPSetTileSize(0, 0, 0, 124, 124),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, 0),
+	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 256, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
+	gsDPLoadBlock(6, 0, 0, 1023, 256),
+	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 256, 1, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
+	gsDPSetTileSize(1, 0, 0, 124, 124),
+	gsSPEndDisplayList(),
+};
+

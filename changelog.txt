@@ -1,0 +1,284 @@
+0.1.0 - pre Feb/10/2025
+- Started keeping a changelog
+- Base features include:
+	- Jer and Jess character models
+	- Life icons
+	- Jer voice lines from beta mario pitched down + goofy yell
+	- Jess voice lines from Veronica Voltage from Lego Racers (1999)
+	- Movesets for each character
+	- Flowers instead of caps (ice & metal)
+	- Custom health meters
+	- Alt outfit for Jess (do Jer's soon)
+
+0.2.0 - Feb/10/2025
+- Updated Jess' ice cap moveset
+	- Custom skating animation
+	- Elegant jump from character movesets
+	- Not holding the analog stick no longer stops you, min forwardVel = 10
+	- Custom music (by Moikey)
+
+0.2.1 - Feb/11/2025
+- Updated Jer's model to not mirror the same texture
+- Updated Jer's eye textures
+- Added metal cap behaviours to Jer's moveset
+	- Slower to accelerate from stationary
+	- Builds momentum as you run
+	- Sparkle particles when reaching high speed
+- Fixed bug where picking up wing cap/vanish cap as Jess would instantly end cap music
+
+0.3.0 - Feb/15/2025
+- Updated Jer's eye textures (again)
+- Gave Jer new voicetable while keeping old one for legacy Jer
+
+0.3.1 - Feb/19/2025
+- Updated Jess's running animation to prevent tilt through the moveset code instead of editing her geo file
+
+0.4.0 - Feb/25/2025
+- Added a twirl move to Jer's moveset inspired from "Return to Yoshi's Island" by Kaze
+
+0.4.1 - Feb/26/2025
+- Renamed Jer's twirl move to Jernado
+- Added new Jernado animation
+- Added custom voiceline for Jernado
+
+0.5.0 - Mar/6/2025
+- Added eye states for Jer
+	- up
+	- down
+	- left
+	- right
+- Added buttons to both characters
+- Added CS menu poses (Concept by Wall_E20)
+- Made Jer's GP Slide Kick follow intended yaw
+- Gave Jer the ability to skip on water if the following conditions are met:
+	- slide kicking
+	- going fast enough (particles)
+	- does not have the metal cap
+
+0.5.1 - Mar/6/2025
+- Fixed bone issues between metal cap model and normal model for both characters
+	- still need to be fixed to match mario's bones
+
+0.5.2 - Mar/7/2025
+- Updated Jer's slide kick + super rollout
+	- Cannot super rollout after slide kick initial bounce
+	- A needs to be held instead to timed
+	- Slide kick can turn in air slightly
+0.5.3 - Mar/8/2025
+- Jer now passively swims slower (0.99x)
+- Moved most functions out of _G.charSelectExists and into on_character_select_load()
+- Updated description table layout to be easier to look at
+
+0.5.4 - Mar/9/2025
+- Jess now has a different slide kick, closer resembling the B3313 squat kick
+- Jess now twirls when jumping off the top of a pole
+- Jess now passively swims faster (1.5x)
+- Jer now passively slides faster (1.3x)
+
+0.6.0 - Mar/16/2025
+- Rewrote Jess' ice cap theme code to not break music as bad
+- New metal texture for Jer
+- New ice texture for Jess
+
+0.6.1 - Mar/23/2025
+- Properly aligned Jess' ice texture
+- Fixed Jess' slide kick to be cancelled by other actions starting
+- Changed Jer's particles from sparkles to dust when running fast with the metal cap
+- Updated moveset guide txt
+
+0.6.2 - Mar/24/2025
+- Updated CS menu descriptions
+
+0.7.0 - Mar/27/2025
+- Fixed both characters' rest poses
+- Updated custom animations to fit new rest poses
+- Completely redid Jess' skating animation
+
+0.8.0 - Mar/30/2025
+- Added new animations for Jess
+	- Idle
+	- Slideflip
+	- Wake up
+	- Stop skid
+- More planned for future for both chars
+
+0.9.0 - Apr/1/2025
+- Fixed variables not being player-specific for the Jernado move conditions
+- Removed Jess' B3313 squatkick
+- Added Sunshine styled continuous dives for Jess
+- Added more anims for Jess that transition into her idle anim
+- Updated CS menu descriptions
+
+0.9.1 - Apr/2/2025
+- Added new palette for Jer
+- Reverted Jer's helmet to be recolourable again
+- Added more char details to the CS menu descriptions
+
+0.9.2 - Apr/4/2025
+- Added Jer driving shell anims
+- Fixed descriptions for 4:3
+
+0.10.0 - Apr/6/2025
+- Added Alt outfit for Jer
+- Added single jump anims for both chars
+- Renamed Jess' sideflip
+- Tweaked Jer's running tilt
+
+0.10.1 - Apr/7/2025
+- New ice skating jump anims for Jess
+- Jess' ice jump now picks one random from 3 anims instead of 2
+
+0.10.2 - Apr/8/2025
+- Made Jer's new palette default
+
+0.11.0 - Apr/16/2025
+- Tweaked the Jernado move
+	- Now you can gain more momentum from it
+	- Faster forward velocity results in less vertical velocity
+	- No horizontal movement grants more height
+	- Doing a GP cancel after a Jernado without touching the ground now grants far less height
+- Jer vanish cap tweaks
+	- Whenever you are holding A with the vanish cap your jumps are more floaty
+	- No fall damage while having the vanish cap
+	- Custom music
+	- Holding A while slide kicking fast enough (particles) let's you levitate at a constant Y temporarily
+- Custom coloured text boxes for each character
+	- Jer = Green
+	- Jess = Blue
+
+0.11.1 - Apr/18/2025
+- s.canSpin is now s.canJernado
+- Added additional voiceline to Jernado
+- Jernado now has handstates
+- Updated Jer's vanish cap music
+- Custom dialog when entering metal/vanish cap stages
+
+0.12.0 - Apr/20/2025
+- Jernado has hands open for almost all of the animation
+- Jer's wing cap adds a boost canister
+- Jer now has a boost ability when using the wing cap
+	- boost by pressing A
+		- if jumping, give an upward thrust
+		- if flying, gives forward momentum
+			- thrust if forwardVel is not too high and tank is full
+	- if performing a slide kick and full tank, boosts automatically
+- New dialog for Jer entering wing cap stage for first time
+- Updated Movesets Guide.txt
+
+0.13.0 - Apr/26/2025
+- Added FLUDD instead of the wing cap for Jess
+	- Press A to hover while jumping
+	- GP land + A for a rocket jump
+	- Dive + Z for sliding boost
+- New dialog for Jess' FLUDD powerup but doesn't play because she isnt flying.
+	- Maybe make her spawn on the stage in future updates
+- Rewrote all extra states variables
+	- now anything for Jer+Jess uses j. instead of s.
+- Added alt animation for Jernado if you have the vanish cap
+- Updated Movesets Guide.txt
+- Jess can now do a Springflip move when diving instead of the weird altered backflip
+- Known issues:
+	- Fludd and Boost canister disappear if more than 1 of the same model is on screen and don't both have wing cap
+- Future plans:
+	- Implement version number in CS menu (like CS Squishy)
+	- Make coins to refill fludd a toggleable host command
+
+0.14.0 - May/2/2025
+- Vanish Jernado now sets eyes to closed
+- Added version number to character descriptions
+- New Jess Ice cap theme, old one is togglable in mod menu
+- Added the funny pipe sound if Jer takes big fall damage w/ metal cap
+- Fixed menu poses
+	- No longer display at wrong times
+	- Now local player only
+- Fixed Fludd/Nos tank model glitch
+- Changed Jess' springflip to be Z + A/B instead of just Z
+	- Now interrupts rollout
+
+0.14.1 - May/6/2025
+- Added subtle dust particles when running
+- Jer will now boost forward when zapped with the metal cap
+- Jer now has custom anim when running fast
+- Tweaked Jer's GP cancel
+  - Has less height than Jess'
+  - More horizontal momentum than Jess'
+
+0.14.2 - May/7/2025
+- Added fast running anim for Jess
+- Updated menu poses for new CS version
+- Added character categories
+
+May/19/2025|> Ver 0.15.0
+__Fixes__
+- Jess Springflip tweaks
+  - Now is bound to just Z pressed again
+  - Cannot be done uphill or on slippery surfaces
+  - Can be done downhill with forwardVel > 60
+  - Slightly increased the speed boost it gives
+- Jess Beytah Triple Jump tweaks
+  - Further nerf (m.vel.y - 3)
+  - Nerf won't apply on natural Twirl Bounces
+  - B to dive out of it (same as GP cancel but more horizontal & less vertical)
+- Jess' GP jump is now a regular triple jump
+- Jer's Slide Kick from stationary now interrupts Breakdance instead of GP Land + B
+- Reformatted anims.lua
+- Table variable CT_JERIO changed to CT_JER
+- Eye/hand states for certain anims now under a mario_update instead of moveset hook
+- Fixed character descriptions to be more accurate
+- Updated Movesets Guide.txt
+
+__Additions__
+- Galaxy Spin (Jess)
+  - Replaces Kick or Dive if forwardVel is negative
+  - Can be done out of a Longjump or Backflip
+  - Can grab ledges
+  - Can GP out of it
+- Eclipse style fludd boost (Jess)
+  - Can be done after a Galaxy Spin since that replaces the kick
+  - Drains all pressure but only uses 2 water
+- Cartwheel (Jer)
+  - Can be done from either GP land + B or Slide Kick (on ground) + Z
+  - Tap/hold Z to balance speed
+  - Blow a tire if you go too fast
+  - Good for moving fast or attacking, risky to maintain
+  - B or A takes you into a Rollout
+- Sprinting for both
+  - Hold A to run faster
+  - Will play a sound and different animation
+  - Must be on semi-flat surface
+- Outfits
+  - Jessilyn (Jess)
+  - Lucky (Jer)
+
+May/24/2025|> Ver 0.15.1
+__Fixes__
+- Jess model fixes (no more hair gaps)
+- Galaxy Spin can now be done out of a Springflip
+- Sprinting mechanic changed
+  - No longer need to hold A, just needs non zero analog
+  - Is no longer continuous
+  - If forwardVel > 40 then your speed will decrease slower
+- Deleted Movesets Guide.txt
+- Edited character descriptions
+
+__Additions__
+- Chat commands
+  - `jj-moves` = moveset guides for each character
+  - `jj-passives` = passive effects/tweaks for each character
+    - if not specified `jer` or `jess` it will use whatever character you are playing as
+  - `jj-fludd-coins` = toggles whether picking up coins should refill water (host only)
+
+May/25/2025|> Ver 0.15.2
+__Fixes__
+- Fixed recolour parts on beach Jer
+- Fixed Jer's cartwheel being global
+
+__Additions__
+- 2 new preset palettes for Beachy (Jess)
+- 1 new preset palette for Shades (Jer)
+
+May/26/2025|> Ver 0.15.3
+__Fixes__
+- Changed Jer's Vanish Cap quicksand immunity, a little buggy visually but it works
+- Fixed script error when hitting a wall during a cartwheel
+- Improved(?) Jess' Galaxy Spin condition
