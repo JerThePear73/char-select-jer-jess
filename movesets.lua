@@ -52,7 +52,6 @@ local SOUND_FLUDD_HOVER_END = audio_sample_load("fludd_hover_end.mp3")
 local SOUND_FLUDD_LOOP = audio_stream_load("fludd_loop.mp3")
 local SOUND_COMEDIC_METAL_PIPE = audio_sample_load("pipe.ogg")
 local SOUND_ZAP = audio_sample_load("zap.mp3")
-local SOUND_KIRBY_SPRINT = audio_sample_load("run.mp3")
 local SOUND_WHEEL_STEP = audio_sample_load("wheel_step.mp3")
 local SOUND_GALAXY_SPIN = audio_sample_load("smg_spin.mp3") -- this is an edited sound effect from extra characters
 
