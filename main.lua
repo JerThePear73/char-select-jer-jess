@@ -260,35 +260,35 @@ local capJER = {
     normal = smlua_model_util_get_id("j_cap_geo"),
     wing = smlua_model_util_get_id("nos_tank_geo"),
     metal = smlua_model_util_get_id("metal_flower_geo"),
-    metalWing = smlua_model_util_get_id("j_metal_wing_cap_geo")
+    metalWing = nil
 }
 
 local capJER_BEACH = {
     normal = smlua_model_util_get_id("shades_geo"),
     wing = smlua_model_util_get_id("nos_tank_geo"),
     metal = smlua_model_util_get_id("metal_flower_geo"),
-    metalWing = smlua_model_util_get_id("j_metal_wing_cap_geo")
+    metalWing = nil
 }
 
 local capJESS = {
     normal = smlua_model_util_get_id("j_cap_geo"),
     wing = smlua_model_util_get_id("fludd_nozzle_geo"),
     metal = smlua_model_util_get_id("ice_flower_geo"),
-    metalWing = smlua_model_util_get_id("j_ice_wing_cap_geo")
+    metalWing = nil
 }
 
 local capJESS_BEACH = {
     normal = smlua_model_util_get_id("beach_flower_geo"),
     wing = smlua_model_util_get_id("fludd_nozzle_geo"),
     metal = smlua_model_util_get_id("ice_flower_geo"),
-    metalWing = smlua_model_util_get_id("j_ice_wing_cap_geo")
+    metalWing = nil
 }
 
 local capJESSILYNN = {
     normal = smlua_model_util_get_id("miner_cap_geo"),
     wing = smlua_model_util_get_id("fludd_nozzle_geo"),
     metal = smlua_model_util_get_id("ice_flower_geo"),
-    metalWing = smlua_model_util_get_id("j_ice_wing_cap_geo")
+    metalWing = nil
 }
 
 local ANIMTABLE_JER = {

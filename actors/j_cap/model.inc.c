@@ -14,33 +14,19 @@ Lights1 j_cap_Logo__CAP__lights = gdSPDefLights1(
 	0x0, 0x3D, 0x0,
 	0x0, 0x80, 0x0, 0x28, 0x28, 0x28);
 
-Lights1 j_cap_Metal__METAL__lights = gdSPDefLights1(
-	0xFF, 0xFF, 0xFF,
-	0x0, 0x0, 0x0, 0x28, 0x28, 0x28);
-
-Gfx j_cap_letter_rgba16_alpha_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 j_cap_letter_rgba16_alpha_rgba16[] = {
-	#include "actors/j_cap/letter.rgba16_alpha.rgba16.inc.c"
+Gfx j_cap_j_emblem_ia8_aligner[] = {gsSPEndDisplayList()};
+u8 j_cap_j_emblem_ia8[] = {
+	#include "actors/j_cap/j_emblem.ia8.inc.c"
 };
 
-Gfx j_cap_jer_shade_alpha_ia8_aligner[] = {gsSPEndDisplayList()};
-u8 j_cap_jer_shade_alpha_ia8[] = {
-	#include "actors/j_cap/jer_shade_alpha.ia8.inc.c"
+Gfx j_cap_jer_shade_ia8_aligner[] = {gsSPEndDisplayList()};
+u8 j_cap_jer_shade_ia8[] = {
+	#include "actors/j_cap/jer_shade.ia8.inc.c"
 };
 
-Gfx j_cap_logo2_rgba16_alpha_ia8_aligner[] = {gsSPEndDisplayList()};
-u8 j_cap_logo2_rgba16_alpha_ia8[] = {
-	#include "actors/j_cap/logo2.rgba16_alpha.ia8.inc.c"
-};
-
-Gfx j_cap_Metal_Shade_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 j_cap_Metal_Shade_rgba16_rgba16[] = {
-	#include "actors/j_cap/Metal_Shade.rgba16.inc.c"
-};
-
-Gfx j_cap_Metal_Light_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 j_cap_Metal_Light_rgba16_rgba16[] = {
-	#include "actors/j_cap/Metal_Light.rgba16.inc.c"
+Gfx j_cap_emblem_fill_i8_aligner[] = {gsSPEndDisplayList()};
+u8 j_cap_emblem_fill_i8[] = {
+	#include "actors/j_cap/emblem_fill.i8.inc.c"
 };
 
 Vtx j_cap_Normal_Cap_DL_mesh_layer_1_vtx_0[6] = {
@@ -165,10 +151,10 @@ Gfx mat_j_cap_J__EMBLEM_[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, j_cap_letter_rgba16_alpha_rgba16),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 1023, 256),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
+	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, j_cap_j_emblem_ia8),
+	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
+	gsDPLoadBlock(7, 0, 0, 511, 512),
+	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(0, 0, 0, 124, 124),
 	gsSPEndDisplayList(),
 };
@@ -178,7 +164,7 @@ Gfx mat_j_cap_Cap_Bottom__CAP_[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, j_cap_jer_shade_alpha_ia8),
+	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, j_cap_jer_shade_ia8),
 	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 511, 512),
 	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
@@ -199,38 +185,11 @@ Gfx mat_j_cap_Logo__CAP_[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, j_cap_logo2_rgba16_alpha_ia8),
-	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
+	gsDPSetTextureImage(G_IM_FMT_I, G_IM_SIZ_8b_LOAD_BLOCK, 1, j_cap_emblem_fill_i8),
+	gsDPSetTile(G_IM_FMT_I, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 511, 512),
-	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
+	gsDPSetTile(G_IM_FMT_I, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(0, 0, 0, 124, 124),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_j_cap_Metal__METAL_[] = {
-	gsSPGeometryMode(G_CULL_BACK, G_TEXTURE_GEN),
-	gsSPLight(&j_cap_Metal__METAL__lights.l, 1),
-    gsSPLight(&j_cap_Metal__METAL__lights.a, 2),
-    gsSPCopyLightEXT(2, 15),
-	gsDPPipeSync(),
-	gsDPSetCombineLERP(TEXEL0, 0, SHADE, TEXEL1, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, TEXEL1, 0, 0, 0, ENVIRONMENT),
-	gsSPTexture(4032, 1984, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, j_cap_Metal_Shade_rgba16_rgba16),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 2047, 128),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0),
-	gsDPSetTileSize(0, 0, 0, 252, 124),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, j_cap_Metal_Light_rgba16_rgba16),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 512, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(6, 0, 0, 2047, 128),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 512, 1, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0),
-	gsDPSetTileSize(1, 0, 0, 252, 124),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_revert_j_cap_Metal__METAL_[] = {
-	gsSPGeometryMode(G_TEXTURE_GEN, G_CULL_BACK),
-	gsDPPipeSync(),
 	gsSPEndDisplayList(),
 };
 
@@ -244,25 +203,9 @@ Gfx j_cap_Normal_Cap_DL_mesh_layer_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx j_cap_Normal_Cap_DL_mesh_layer_1_mat_override_Metal__METAL__0[] = {
-	gsSPDisplayList(mat_j_cap_Metal__METAL_),
-	gsSPDisplayList(j_cap_Normal_Cap_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(j_cap_Normal_Cap_DL_mesh_layer_1_tri_1),
-	gsSPDisplayList(j_cap_Normal_Cap_DL_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_j_cap_Metal__METAL_),
-	gsSPEndDisplayList(),
-};
-
 Gfx j_cap_Normal_Cap_DL_mesh_layer_4[] = {
 	gsSPDisplayList(mat_j_cap_Logo__CAP_),
 	gsSPDisplayList(j_cap_Normal_Cap_DL_mesh_layer_4_tri_0),
-	gsSPEndDisplayList(),
-};
-
-Gfx j_cap_Normal_Cap_DL_mesh_layer_4_mat_override_Metal__METAL__0[] = {
-	gsSPDisplayList(mat_j_cap_Metal__METAL_),
-	gsSPDisplayList(j_cap_Normal_Cap_DL_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_j_cap_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 

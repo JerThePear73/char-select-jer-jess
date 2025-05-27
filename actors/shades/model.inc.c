@@ -2,23 +2,9 @@ Lights1 shades_Sunglasses__EMBLEM__lights = gdSPDefLights1(
 	0x70, 0x0, 0x70,
 	0xE2, 0x0, 0xE2, 0x28, 0x28, 0x28);
 
-Lights1 shades_Metal__METAL__lights = gdSPDefLights1(
-	0xFF, 0xFF, 0xFF,
-	0x0, 0x0, 0x0, 0x28, 0x28, 0x28);
-
 Gfx shades_jer_metal_base_rgba16_aligner[] = {gsSPEndDisplayList()};
 u8 shades_jer_metal_base_rgba16[] = {
 	#include "actors/shades/jer_metal_base.rgba16.inc.c"
-};
-
-Gfx shades_Metal_Shade_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 shades_Metal_Shade_rgba16_rgba16[] = {
-	#include "actors/shades/Metal_Shade.rgba16.inc.c"
-};
-
-Gfx shades_Metal_Light_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 shades_Metal_Light_rgba16_rgba16[] = {
-	#include "actors/shades/Metal_Light.rgba16.inc.c"
 };
 
 Vtx shades_Normal_Cap_DL_mesh_layer_1_vtx_0[62] = {
@@ -228,47 +214,12 @@ Gfx mat_shades_Sunglasses__EMBLEM_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_shades_Metal__METAL_[] = {
-	gsSPGeometryMode(G_CULL_BACK, G_TEXTURE_GEN),
-	gsSPLight(&shades_Metal__METAL__lights.l, 1),
-    gsSPLight(&shades_Metal__METAL__lights.a, 2),
-    gsSPCopyLightEXT(2, 15),
-	gsDPPipeSync(),
-	gsDPSetCombineLERP(TEXEL0, 0, SHADE, TEXEL1, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, TEXEL1, 0, 0, 0, ENVIRONMENT),
-	gsSPTexture(4032, 1984, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, shades_Metal_Shade_rgba16_rgba16),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 2047, 128),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0),
-	gsDPSetTileSize(0, 0, 0, 252, 124),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, shades_Metal_Light_rgba16_rgba16),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 512, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(6, 0, 0, 2047, 128),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 512, 1, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0),
-	gsDPSetTileSize(1, 0, 0, 252, 124),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_revert_shades_Metal__METAL_[] = {
-	gsSPGeometryMode(G_TEXTURE_GEN, G_CULL_BACK),
-	gsDPPipeSync(),
-	gsSPEndDisplayList(),
-};
-
 Gfx shades_Normal_Cap_DL_mesh_layer_1[] = {
 	gsSPDisplayList(mat_shades_Sunglasses_reflection),
 	gsSPDisplayList(shades_Normal_Cap_DL_mesh_layer_1_tri_0),
 	gsSPDisplayList(mat_revert_shades_Sunglasses_reflection),
 	gsSPDisplayList(mat_shades_Sunglasses__EMBLEM_),
 	gsSPDisplayList(shades_Normal_Cap_DL_mesh_layer_1_tri_1),
-	gsSPEndDisplayList(),
-};
-
-Gfx shades_Normal_Cap_DL_mesh_layer_1_mat_override_Metal__METAL__0[] = {
-	gsSPDisplayList(mat_shades_Metal__METAL_),
-	gsSPDisplayList(shades_Normal_Cap_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(shades_Normal_Cap_DL_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_shades_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 

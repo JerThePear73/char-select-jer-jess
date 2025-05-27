@@ -14,10 +14,6 @@ Lights1 miner_cap_Jessilynn_Headlamp__HAIR__lights = gdSPDefLights1(
 	0x27, 0x15, 0xB,
 	0x56, 0x34, 0x21, 0x28, 0x28, 0x28);
 
-Lights1 miner_cap_Metal__METAL__lights = gdSPDefLights1(
-	0xFF, 0xFF, 0xFF,
-	0x0, 0x0, 0x0, 0x28, 0x28, 0x28);
-
 Gfx miner_cap_jess_shade_ia8_aligner[] = {gsSPEndDisplayList()};
 u8 miner_cap_jess_shade_ia8[] = {
 	#include "actors/miner_cap/jess_shade.ia8.inc.c"
@@ -26,16 +22,6 @@ u8 miner_cap_jess_shade_ia8[] = {
 Gfx miner_cap_jess_headlamp_rgba16_aligner[] = {gsSPEndDisplayList()};
 u8 miner_cap_jess_headlamp_rgba16[] = {
 	#include "actors/miner_cap/jess_headlamp.rgba16.inc.c"
-};
-
-Gfx miner_cap_Metal_Shade_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 miner_cap_Metal_Shade_rgba16_rgba16[] = {
-	#include "actors/miner_cap/Metal_Shade.rgba16.inc.c"
-};
-
-Gfx miner_cap_Metal_Light_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 miner_cap_Metal_Light_rgba16_rgba16[] = {
-	#include "actors/miner_cap/Metal_Light.rgba16.inc.c"
 };
 
 Vtx miner_cap_Normal_Cap_DL_mesh_layer_1_vtx_0[9] = {
@@ -242,33 +228,6 @@ Gfx mat_miner_cap_Jessilynn_Headlamp__HAIR_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_miner_cap_Metal__METAL_[] = {
-	gsSPGeometryMode(G_CULL_BACK, G_TEXTURE_GEN),
-	gsSPLight(&miner_cap_Metal__METAL__lights.l, 1),
-    gsSPLight(&miner_cap_Metal__METAL__lights.a, 2),
-    gsSPCopyLightEXT(2, 15),
-	gsDPPipeSync(),
-	gsDPSetCombineLERP(TEXEL0, 0, SHADE, TEXEL1, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, TEXEL1, 0, 0, 0, ENVIRONMENT),
-	gsSPTexture(4032, 1984, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, miner_cap_Metal_Shade_rgba16_rgba16),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 2047, 128),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0),
-	gsDPSetTileSize(0, 0, 0, 252, 124),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, miner_cap_Metal_Light_rgba16_rgba16),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 512, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(6, 0, 0, 2047, 128),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 512, 1, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0),
-	gsDPSetTileSize(1, 0, 0, 252, 124),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_revert_miner_cap_Metal__METAL_[] = {
-	gsSPGeometryMode(G_TEXTURE_GEN, G_CULL_BACK),
-	gsDPPipeSync(),
-	gsSPEndDisplayList(),
-};
-
 Gfx miner_cap_Normal_Cap_DL_mesh_layer_1[] = {
 	gsSPDisplayList(mat_miner_cap_Jessilynn_Cap_Bottom__CAP_),
 	gsSPDisplayList(miner_cap_Normal_Cap_DL_mesh_layer_1_tri_0),
@@ -278,16 +237,6 @@ Gfx miner_cap_Normal_Cap_DL_mesh_layer_1[] = {
 	gsSPDisplayList(miner_cap_Normal_Cap_DL_mesh_layer_1_tri_2),
 	gsSPDisplayList(mat_miner_cap_Jessilynn_Headlamp__HAIR_),
 	gsSPDisplayList(miner_cap_Normal_Cap_DL_mesh_layer_1_tri_3),
-	gsSPEndDisplayList(),
-};
-
-Gfx miner_cap_Normal_Cap_DL_mesh_layer_1_mat_override_Metal__METAL__0[] = {
-	gsSPDisplayList(mat_miner_cap_Metal__METAL_),
-	gsSPDisplayList(miner_cap_Normal_Cap_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(miner_cap_Normal_Cap_DL_mesh_layer_1_tri_1),
-	gsSPDisplayList(miner_cap_Normal_Cap_DL_mesh_layer_1_tri_2),
-	gsSPDisplayList(miner_cap_Normal_Cap_DL_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_miner_cap_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 

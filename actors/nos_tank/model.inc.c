@@ -2,28 +2,14 @@ Lights1 nos_tank_NOS_Tank_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
 
-Lights1 nos_tank_Metal__METAL__lights = gdSPDefLights1(
-	0xFF, 0xFF, 0xFF,
-	0x0, 0x0, 0x0, 0x28, 0x28, 0x28);
-
 Gfx nos_tank_jer_tank_rgba16_aligner[] = {gsSPEndDisplayList()};
 u8 nos_tank_jer_tank_rgba16[] = {
 	#include "actors/nos_tank/jer-tank.rgba16.inc.c"
 };
 
-Gfx nos_tank_stainless_steel_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 nos_tank_stainless_steel_rgba16[] = {
-	#include "actors/nos_tank/stainless_steel.rgba16.inc.c"
-};
-
-Gfx nos_tank_Metal_Shade_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 nos_tank_Metal_Shade_rgba16_rgba16[] = {
-	#include "actors/nos_tank/Metal_Shade.rgba16.inc.c"
-};
-
-Gfx nos_tank_Metal_Light_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 nos_tank_Metal_Light_rgba16_rgba16[] = {
-	#include "actors/nos_tank/Metal_Light.rgba16.inc.c"
+Gfx nos_tank_stainless_steel_i8_aligner[] = {gsSPEndDisplayList()};
+u8 nos_tank_stainless_steel_i8[] = {
+	#include "actors/nos_tank/stainless_steel.i8.inc.c"
 };
 
 Vtx nos_tank_Wing_Cap_mesh_layer_1_vtx_0[79] = {
@@ -210,10 +196,10 @@ Gfx mat_nos_tank_Steel[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(4032, 1984, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, nos_tank_stainless_steel_rgba16),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 2047, 128),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0),
+	gsDPSetTextureImage(G_IM_FMT_I, G_IM_SIZ_8b_LOAD_BLOCK, 1, nos_tank_stainless_steel_i8),
+	gsDPSetTile(G_IM_FMT_I, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
+	gsDPLoadBlock(7, 0, 0, 1023, 256),
+	gsDPSetTile(G_IM_FMT_I, G_IM_SIZ_8b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0),
 	gsDPSetTileSize(0, 0, 0, 252, 124),
 	gsSPEndDisplayList(),
 };
@@ -224,47 +210,12 @@ Gfx mat_revert_nos_tank_Steel[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_nos_tank_Metal__METAL_[] = {
-	gsSPGeometryMode(G_CULL_BACK, G_TEXTURE_GEN),
-	gsSPLight(&nos_tank_Metal__METAL__lights.l, 1),
-    gsSPLight(&nos_tank_Metal__METAL__lights.a, 2),
-    gsSPCopyLightEXT(2, 15),
-	gsDPPipeSync(),
-	gsDPSetCombineLERP(TEXEL0, 0, SHADE, TEXEL1, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, TEXEL1, 0, 0, 0, ENVIRONMENT),
-	gsSPTexture(4032, 1984, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, nos_tank_Metal_Shade_rgba16_rgba16),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 2047, 128),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0),
-	gsDPSetTileSize(0, 0, 0, 252, 124),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, nos_tank_Metal_Light_rgba16_rgba16),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 512, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(6, 0, 0, 2047, 128),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 512, 1, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0),
-	gsDPSetTileSize(1, 0, 0, 252, 124),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_revert_nos_tank_Metal__METAL_[] = {
-	gsSPGeometryMode(G_TEXTURE_GEN, G_CULL_BACK),
-	gsDPPipeSync(),
-	gsSPEndDisplayList(),
-};
-
 Gfx nos_tank_Wing_Cap_mesh_layer_1[] = {
 	gsSPDisplayList(mat_nos_tank_NOS_Tank),
 	gsSPDisplayList(nos_tank_Wing_Cap_mesh_layer_1_tri_0),
 	gsSPDisplayList(mat_nos_tank_Steel),
 	gsSPDisplayList(nos_tank_Wing_Cap_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_nos_tank_Steel),
-	gsSPEndDisplayList(),
-};
-
-Gfx nos_tank_Wing_Cap_mesh_layer_1_mat_override_Metal__METAL__0[] = {
-	gsSPDisplayList(mat_nos_tank_Metal__METAL_),
-	gsSPDisplayList(nos_tank_Wing_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(nos_tank_Wing_Cap_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_nos_tank_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 

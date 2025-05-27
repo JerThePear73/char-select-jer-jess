@@ -8,22 +8,6 @@ const GeoLayout j_cap_Normal_Cap_State_Switch_opt1[] = {
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout j_cap_Normal_Cap_State_Switch_opt2[] = {
-	GEO_NODE_START(),
-	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, j_cap_Normal_Cap_DL_mesh_layer_1_mat_override_Metal__METAL__0),
-		GEO_DISPLAY_LIST(LAYER_ALPHA, j_cap_Normal_Cap_DL_mesh_layer_4_mat_override_Metal__METAL__0),
-	GEO_CLOSE_NODE(),
-	GEO_RETURN(),
-};
-const GeoLayout j_cap_Normal_Cap_State_Switch_opt3[] = {
-	GEO_NODE_START(),
-	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, j_cap_Normal_Cap_DL_mesh_layer_1_mat_override_Metal__METAL__0),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, j_cap_Normal_Cap_DL_mesh_layer_4_mat_override_Metal__METAL__0),
-	GEO_CLOSE_NODE(),
-	GEO_RETURN(),
-};
 const GeoLayout j_cap_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
@@ -43,8 +27,6 @@ const GeoLayout j_cap_geo[] = {
 						GEO_DISPLAY_LIST(LAYER_ALPHA, j_cap_Normal_Cap_DL_mesh_layer_4),
 					GEO_CLOSE_NODE(),
 					GEO_BRANCH(1, j_cap_Normal_Cap_State_Switch_opt1),
-					GEO_BRANCH(1, j_cap_Normal_Cap_State_Switch_opt2),
-					GEO_BRANCH(1, j_cap_Normal_Cap_State_Switch_opt3),
 				GEO_CLOSE_NODE(),
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),

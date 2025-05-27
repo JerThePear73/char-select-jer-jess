@@ -10,20 +10,6 @@ Lights1 beach_flower_Flower_Center__EMBLEM__lights = gdSPDefLights1(
 	0x7F, 0x69, 0x14,
 	0xFF, 0xD5, 0x32, 0x28, 0x28, 0x28);
 
-Lights1 beach_flower_Metal__METAL__lights = gdSPDefLights1(
-	0xFF, 0xFF, 0xFF,
-	0x0, 0x0, 0x0, 0x28, 0x28, 0x28);
-
-Gfx beach_flower_Metal_Shade_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 beach_flower_Metal_Shade_rgba16_rgba16[] = {
-	#include "actors/beach_flower/Metal_Shade.rgba16.inc.c"
-};
-
-Gfx beach_flower_Metal_Light_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 beach_flower_Metal_Light_rgba16_rgba16[] = {
-	#include "actors/beach_flower/Metal_Light.rgba16.inc.c"
-};
-
 Vtx beach_flower_Normal_Cap_DL_mesh_layer_1_vtx_0[12] = {
 	{{ {102, 16, -7}, 0, {-16, -16}, {122, 33, 239, 255} }},
 	{{ {102, 35, 29}, 0, {1008, -16}, {125, 22, 244, 255} }},
@@ -215,33 +201,6 @@ Gfx mat_beach_flower_Flower_Center__EMBLEM_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_beach_flower_Metal__METAL_[] = {
-	gsSPGeometryMode(G_CULL_BACK, G_TEXTURE_GEN),
-	gsSPLight(&beach_flower_Metal__METAL__lights.l, 1),
-    gsSPLight(&beach_flower_Metal__METAL__lights.a, 2),
-    gsSPCopyLightEXT(2, 15),
-	gsDPPipeSync(),
-	gsDPSetCombineLERP(TEXEL0, 0, SHADE, TEXEL1, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, TEXEL1, 0, 0, 0, ENVIRONMENT),
-	gsSPTexture(4032, 1984, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_flower_Metal_Shade_rgba16_rgba16),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 2047, 128),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0),
-	gsDPSetTileSize(0, 0, 0, 252, 124),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_flower_Metal_Light_rgba16_rgba16),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 512, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(6, 0, 0, 2047, 128),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 512, 1, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0),
-	gsDPSetTileSize(1, 0, 0, 252, 124),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_revert_beach_flower_Metal__METAL_[] = {
-	gsSPGeometryMode(G_TEXTURE_GEN, G_CULL_BACK),
-	gsDPPipeSync(),
-	gsSPEndDisplayList(),
-};
-
 Gfx beach_flower_Normal_Cap_DL_mesh_layer_1[] = {
 	gsSPDisplayList(mat_beach_flower_Headband),
 	gsSPDisplayList(beach_flower_Normal_Cap_DL_mesh_layer_1_tri_0),
@@ -250,15 +209,6 @@ Gfx beach_flower_Normal_Cap_DL_mesh_layer_1[] = {
 	gsSPDisplayList(beach_flower_Normal_Cap_DL_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_beach_flower_Flower_Center__EMBLEM_),
 	gsSPDisplayList(beach_flower_Normal_Cap_DL_mesh_layer_1_tri_2),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_flower_Normal_Cap_DL_mesh_layer_1_mat_override_Metal__METAL__0[] = {
-	gsSPDisplayList(mat_beach_flower_Metal__METAL_),
-	gsSPDisplayList(beach_flower_Normal_Cap_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(beach_flower_Normal_Cap_DL_mesh_layer_1_tri_1),
-	gsSPDisplayList(beach_flower_Normal_Cap_DL_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_revert_beach_flower_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
 
