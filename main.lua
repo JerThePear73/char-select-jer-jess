@@ -292,7 +292,7 @@ local capJESSILYNN = {
 }
 
 local ANIMTABLE_JER = {
-    [charSelect.CS_ANIM_MENU] = "jer_menu_pose",
+    [_G.charSelect.CS_ANIM_MENU] = "jer_menu_pose",
     [CHAR_ANIM_RUNNING] = "jer_run", -- Credit: Custom Run Animations Lua; By: STREAMING LION
     [CHAR_ANIM_TWIRL] = "jer_twirl",
     [CHAR_ANIM_START_TWIRL] = "jer_twirl_start",

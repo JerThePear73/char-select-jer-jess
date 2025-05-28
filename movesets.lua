@@ -921,19 +921,7 @@ local jessWaterMid = get_texture_info("water_bar")
 local jessWaterBot = get_texture_info("water_bottom")
 local jessHoverBar = get_texture_info("water_hover_bar")
 
-local speedometerTable = {
-    [0] = get_texture_info("speed_00"),
-    [1] = get_texture_info("speed_10"),
-    [2] = get_texture_info("speed_20"),
-    [3] = get_texture_info("speed_30"),
-    [4] = get_texture_info("speed_40"),
-    [5] = get_texture_info("speed_50"),
-    [6] = get_texture_info("speed_60"),
-    [7] = get_texture_info("speed_70"),
-    [8] = get_texture_info("speed_80"),
-    [9] = get_texture_info("speed_90"),
-    [10] = get_texture_info("speed_100")
-}
+local speedometerSheet = get_texture_info("speedsheet")
 
 function jer_jess_hud()
   for i = 0, MAX_PLAYERS - 1 do
@@ -985,7 +973,7 @@ function jer_jess_hud()
 
             local widthCenter = djui_hud_get_screen_width() / 2
 
-            djui_hud_render_texture(speedometerTable[speedometer], (widthCenter - 16), 50, 1, 1)
+            djui_hud_render_texture_tile(speedometerSheet, (widthCenter - 16), 50, 0.5, 1, speedometer * 32, 0, 32, 16)
         end
     end
 
