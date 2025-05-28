@@ -55,75 +55,7 @@ local SOUND_ZAP = audio_sample_load("zap.mp3")
 local SOUND_WHEEL_STEP = audio_sample_load("wheel_step.mp3")
 local SOUND_GALAXY_SPIN = audio_sample_load("smg_spin.mp3") -- this is an edited sound effect from extra characters
 
-local function mutual_set_action(m)
-    -- wall slide
-    if m.action == ACT_SOFT_BONK then
-        m.faceAngle.y = m.faceAngle.y + 0x8000
-        set_mario_action(m, ACT_WALL_SLIDE, 0)
-        m.vel.x = 0
-        m.vel.y = 0
-        m.vel.z = 0
-    end
-end
-local function mutual_before_set_action(m, act)
-    -- derpy crouch
-    if act == ACT_START_CROUCHING then
-        return ACT_CROUCHING
-    elseif act == ACT_STOP_CROUCHING then
-        return ACT_IDLE
-    end
-    -- twirl landing momentum
-    if act == ACT_TWIRL_LAND and m.input & INPUT_NONZERO_ANALOG ~= 0 then
-        return ACT_WALKING
-    end
-end
-local function mutual_update(m)
-    local j = gJerJessExtraStates[m.playerIndex]
 
-    -- GP cancel
-    if m.action == ACT_GROUND_POUND and (m.input & INPUT_B_PRESSED) ~= 0 then
-        m.faceAngle.y = m.intendedYaw
-        set_mario_action(m, ACT_DIVE, 0)
-        if is_jer() and j.canJernado then
-            m.forwardVel = m.forwardVel + 25
-            m.vel.y = 20
-            m.particleFlags = m.particleFlags | PARTICLE_HORIZONTAL_STAR
-        elseif is_jer() then
-            m.vel.y = 0
-            m.forwardVel = 20
-        else
-            m.particleFlags = m.particleFlags | PARTICLE_MIST_CIRCLE
-            m.vel.y = 30
-            m.forwardVel = 20
-        end
-    end
-    -- sprinting
-    if m.input & INPUT_NONZERO_ANALOG ~= 0 and m.action == ACT_WALKING and m.floor.normal.y > 0.94 and m.forwardVel >= 47 then
-        m.forwardVel = m.forwardVel + 0.98
-    end    
-    -- fast running
-    if m.action == ACT_WALKING then
-        if m.forwardVel > 45 then
-            if is_jer() then
-                smlua_anim_util_set_animation(m.marioObj, "jer_run_fast")
-            elseif is_jess() then
-                smlua_anim_util_set_animation(m.marioObj, "jess_run_fast")
-            end
-            j.stepMax = 3
-        else
-            j.stepMax = 5
-        end
-    end
-    -- dust
-    if m.action == ACT_WALKING and m.forwardVel > 20 and m.pos.y > m.waterLevel then
-        j.stepTimer = j.stepTimer + 1
-
-        if j.stepTimer > j.stepMax then
-            j.stepTimer = 0
-            m.particleFlags = m.particleFlags | PARTICLE_DUST
-        end
-    end
-end
 
 ------------------
 -- CUSTOM MOVES --
@@ -458,6 +390,16 @@ hook_mario_action(ACT_GALAXY_SPIN, act_galaxy_spin)
 local function jess_set_action(m)
     local j = gJerJessExtraStates[m.playerIndex]
 
+    -- wall slide
+    if m.action == ACT_SOFT_BONK then
+        m.faceAngle.y = m.faceAngle.y + 0x8000
+        set_mario_action(m, ACT_WALL_SLIDE, 0)
+        m.vel.x = 0
+        m.vel.y = 0
+        m.vel.z = 0
+    end
+
+
     -- triple jump to twirl
     if (m.action == ACT_TRIPLE_JUMP and m.forwardVel > 0) or m.action == ACT_FLYING_TRIPLE_JUMP then
         j.twirlNerf = true
@@ -499,8 +441,20 @@ local function jess_set_action(m)
         m.vel.y = m.vel.y + 10
     end
     
-    mutual_set_action(m)
     j.prevAction = m.action
+end
+
+local function jess_before_set_action(m, act)
+    -- derpy crouch
+    if act == ACT_START_CROUCHING then
+        return ACT_CROUCHING
+    elseif act == ACT_STOP_CROUCHING then
+        return ACT_IDLE
+    end
+    -- twirl landing momentum
+    if act == ACT_TWIRL_LAND and m.input & INPUT_NONZERO_ANALOG ~= 0 then
+        return ACT_WALKING
+    end
 end
 
 local function jess_before_phys_step(m)
@@ -522,6 +476,34 @@ end
 
 local function jess_update(m)
     local j = gJerJessExtraStates[m.playerIndex]
+
+    -- sprinting
+    if m.input & INPUT_NONZERO_ANALOG ~= 0 and m.action == ACT_WALKING and m.floor.normal.y > 0.94 and m.forwardVel >= 47 then
+        m.forwardVel = m.forwardVel + 0.98
+    end    
+    -- dust
+    if m.action == ACT_WALKING and m.forwardVel > 20 and m.pos.y > m.waterLevel then
+        j.stepTimer = j.stepTimer + 1
+
+        if j.stepTimer > j.stepMax then
+            j.stepTimer = 0
+            m.particleFlags = m.particleFlags | PARTICLE_DUST
+        end
+    end
+    -- GP cancel
+    if m.action == ACT_GROUND_POUND and (m.input & INPUT_B_PRESSED) ~= 0 then
+        m.faceAngle.y = m.intendedYaw
+        set_mario_action(m, ACT_DIVE, 0)
+        if j.canJernado then
+            m.forwardVel = m.forwardVel + 25
+            m.vel.y = 20
+            m.particleFlags = m.particleFlags | PARTICLE_HORIZONTAL_STAR
+        else
+            m.vel.y = 0
+            m.forwardVel = 20
+        end
+    end
+
 
     -- twirl cancel
     if m.action == ACT_TWIRLING and (m.input & INPUT_Z_PRESSED) ~= 0 then
@@ -661,22 +643,31 @@ local function jess_update(m)
     end
 
     -- ANIMS --
-        -- tada 
-        if m.marioObj.header.gfx.animInfo.animID == CHAR_ANIM_TRIPLE_JUMP_LAND then
-            if m.marioObj.header.gfx.animInfo.animFrame > 5 and m.marioObj.header.gfx.animInfo.animFrame < 24 then
-                m.marioBodyState.handState = MARIO_HAND_OPEN
-            end
+    -- tada 
+    if m.marioObj.header.gfx.animInfo.animID == CHAR_ANIM_TRIPLE_JUMP_LAND then
+        if m.marioObj.header.gfx.animInfo.animFrame > 5 and m.marioObj.header.gfx.animInfo.animFrame < 24 then
+            m.marioBodyState.handState = MARIO_HAND_OPEN
         end
-        -- menu pose (Concept by Wall_E20)
-        if m.marioObj.header.gfx.animInfo.animID == charSelect.CS_ANIM_MENU then
-            m.marioBodyState.eyeState = MARIO_EYES_LOOK_RIGHT
-        end
+    end
+    -- menu pose (Concept by Wall_E20)
+    if m.marioObj.header.gfx.animInfo.animID == charSelect.CS_ANIM_MENU then
+        m.marioBodyState.eyeState = MARIO_EYES_LOOK_RIGHT
+    end
     -- disable tilt
     if m.action == ACT_WALKING then
         m.marioBodyState.torsoAngle.x = 0
         m.marioBodyState.torsoAngle.z = 0
     end
-    mutual_update(m)
+    -- fast running
+    if m.action == ACT_WALKING then
+        if m.forwardVel > 45 then
+            smlua_anim_util_set_animation(m.marioObj, "jess_run_fast")
+            m.marioBodyState.handState = MARIO_HAND_OPEN
+            j.stepMax = 3
+        else
+            j.stepMax = 5
+        end
+    end
 end
 
 local function jess_interact(m, obj, type)
@@ -707,6 +698,16 @@ end
 local function jer_set_action(m)
     local j = gJerJessExtraStates[m.playerIndex]
 
+    -- wall slide
+    if m.action == ACT_SOFT_BONK then
+        m.faceAngle.y = m.faceAngle.y + 0x8000
+        set_mario_action(m, ACT_WALL_SLIDE, 0)
+        m.vel.x = 0
+        m.vel.y = 0
+        m.vel.z = 0
+    end
+
+
     -- faster slide kick
     if m.action == ACT_SLIDE_KICK then
         m.forwardVel = m.forwardVel + 18
@@ -731,9 +732,26 @@ local function jer_set_action(m)
         spawn_mist_particles_variable(10, 0, 10)
         audio_sample_play(SOUND_ZAP, m.pos, 1)
     end
+    -- slide kick persists if holding Z
+    if j.prevAction == ACT_SLIDE_KICK and m.action == ACT_FREEFALL and (m.input & INPUT_Z_DOWN) ~= 0 and (m.flags & MARIO_VANISH_CAP) == 0 then
+        m.actionTimer = 2
+        m.action = ACT_SLIDE_KICK
+    end
 
-    mutual_set_action(m)
     j.prevAction = m.action
+end
+
+local function jer_before_set_action(m, act)
+    -- derpy crouch
+    if act == ACT_START_CROUCHING then
+        return ACT_CROUCHING
+    elseif act == ACT_STOP_CROUCHING then
+        return ACT_IDLE
+    end
+    -- twirl landing momentum
+    if act == ACT_TWIRL_LAND and m.input & INPUT_NONZERO_ANALOG ~= 0 then
+        return ACT_WALKING
+    end
 end
 
 local function jer_before_phys_step(m)
@@ -750,6 +768,29 @@ end
 
 local function jer_update(m)
     local j = gJerJessExtraStates[m.playerIndex]
+
+    -- sprinting
+    if m.input & INPUT_NONZERO_ANALOG ~= 0 and m.action == ACT_WALKING and m.floor.normal.y > 0.94 and m.forwardVel >= 47 then
+        m.forwardVel = m.forwardVel + 0.98
+    end    
+    -- dust
+    if m.action == ACT_WALKING and m.forwardVel > 20 and m.pos.y > m.waterLevel then
+        j.stepTimer = j.stepTimer + 1
+
+        if j.stepTimer > j.stepMax then
+            j.stepTimer = 0
+            m.particleFlags = m.particleFlags | PARTICLE_DUST
+        end
+    end
+    -- GP cancel
+    if m.action == ACT_GROUND_POUND and (m.input & INPUT_B_PRESSED) ~= 0 then
+        m.faceAngle.y = m.intendedYaw
+        set_mario_action(m, ACT_DIVE, 0)
+        m.particleFlags = m.particleFlags | PARTICLE_MIST_CIRCLE
+        m.vel.y = 30
+        m.forwardVel = 20
+    end
+
 
     -- speed particle
     if (m.action == ACT_SLIDE_KICK or m.action == ACT_SLIDE_KICK_SLIDE) and m.forwardVel > 58 then
@@ -800,7 +841,6 @@ local function jer_update(m)
             end
         end
     end
-       
     -- jernado
     if m.action == ACT_GROUND_POUND and (m.input & INPUT_A_PRESSED) ~= 0 and j.canJernado == true then
         set_mario_action(m, ACT_JERNADO, 0)
@@ -814,7 +854,7 @@ local function jer_update(m)
         m.particleFlags = m.particleFlags | PARTICLE_WATER_SPLASH
         set_mario_action(m, ACT_SLIDE_KICK, 0)
         m.vel.y = 20
-        m.forwardVel = m.forwardVel - 30
+        m.forwardVel = m.forwardVel - 25
     end
     -- angle
     if m.action == ACT_SLIDE_KICK and m.input & INPUT_NONZERO_ANALOG ~= 0 then
@@ -904,7 +944,15 @@ local function jer_update(m)
         m.marioBodyState.torsoAngle.x = m.marioBodyState.torsoAngle.x * 0.8
         m.marioBodyState.torsoAngle.z = 0
     end
-    mutual_update(m)
+    -- fast running
+    if m.action == ACT_WALKING then
+        if m.forwardVel > 45 then
+            smlua_anim_util_set_animation(m.marioObj, "jer_run_fast")
+            j.stepMax = 3
+        else
+            j.stepMax = 5
+        end
+    end
 end
 
 
@@ -1021,7 +1069,7 @@ function jer_jess_hud()
 end
 
 local function jer_vanish_surface(m)
-    if is_jer() and (m.flags & MARIO_VANISH_CAP) ~= 0 then -- a little glitchy, will do some weird spam dying thing on other peoples screen
+    if is_jer() and (m.flags & MARIO_VANISH_CAP) ~= 0 and m.floor.type ~= SURFACE_BURNING then -- a little glitchy, will do some weird spam dying thing on other peoples screen
         return false
     else
         return true
@@ -1036,9 +1084,9 @@ _G.charSelect.character_hook_moveset(CT_JESS, HOOK_MARIO_UPDATE, jess_update)
 _G.charSelect.character_hook_moveset(CT_JESS, HOOK_ON_SET_MARIO_ACTION, jess_set_action)
 _G.charSelect.character_hook_moveset(CT_JESS, HOOK_BEFORE_PHYS_STEP, jess_before_phys_step)
 _G.charSelect.character_hook_moveset(CT_JESS, HOOK_ON_INTERACT, jess_interact)
-_G.charSelect.character_hook_moveset(CT_JESS, HOOK_BEFORE_SET_MARIO_ACTION, mutual_before_set_action)
+_G.charSelect.character_hook_moveset(CT_JESS, HOOK_BEFORE_SET_MARIO_ACTION, jess_before_set_action)
 
 _G.charSelect.character_hook_moveset(CT_JER, HOOK_MARIO_UPDATE, jer_update)
 _G.charSelect.character_hook_moveset(CT_JER, HOOK_ON_SET_MARIO_ACTION, jer_set_action)
 _G.charSelect.character_hook_moveset(CT_JER, HOOK_BEFORE_PHYS_STEP, jer_before_phys_step)
-_G.charSelect.character_hook_moveset(CT_JER, HOOK_BEFORE_SET_MARIO_ACTION, mutual_before_set_action)
+_G.charSelect.character_hook_moveset(CT_JER, HOOK_BEFORE_SET_MARIO_ACTION, jer_before_set_action)
