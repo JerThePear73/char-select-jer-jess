@@ -301,8 +301,10 @@ local function act_cartwheel(m)
     set_mario_anim_with_accel(m, MARIO_ANIM_RUNNING_UNUSED, m.forwardVel / 5 * 11000)
     smlua_anim_util_set_animation(m.marioObj, "jer_wheel")
     if (m.marioObj.header.gfx.animInfo.animFrame > 8 and m.marioObj.header.gfx.animInfo.animFrame < 12) or m.marioObj.header.gfx.animInfo.animFrame == 0 then
-        audio_sample_stop(SOUND_WHEEL_STEP)
-        audio_sample_play(SOUND_WHEEL_STEP, m.pos, 1)
+        if not is_game_paused() then
+            audio_sample_stop(SOUND_WHEEL_STEP)
+            audio_sample_play(SOUND_WHEEL_STEP, m.pos, 1)
+        end
     end
 
     if m.actionTimer == 0 then
@@ -348,6 +350,10 @@ local function act_cartwheel(m)
 
     if (m.input & INPUT_B_PRESSED) ~= 0 or (m.input & INPUT_A_PRESSED) ~= 0 then
         set_mario_action(m, ACT_FORWARD_ROLLOUT, 0)
+    end
+
+    if _G.charSelect.is_menu_open() == true then
+        m.action = ACT_IDLE
     end
     
     m.actionTimer = m.actionTimer + 1
@@ -455,6 +461,11 @@ local function jess_before_set_action(m, act)
     if act == ACT_TWIRL_LAND and m.input & INPUT_NONZERO_ANALOG ~= 0 then
         return ACT_WALKING
     end
+
+    if act == ACT_LAVA_BOOST and m.flags & MARIO_METAL_CAP ~= 0 then
+        play_character_sound(m, CHAR_SOUND_COUGHING1)
+        return ACT_WALL_SLIDE
+    end
 end
 
 local function jess_before_phys_step(m)
@@ -494,14 +505,9 @@ local function jess_update(m)
     if m.action == ACT_GROUND_POUND and (m.input & INPUT_B_PRESSED) ~= 0 then
         m.faceAngle.y = m.intendedYaw
         set_mario_action(m, ACT_DIVE, 0)
-        if j.canJernado then
-            m.forwardVel = m.forwardVel + 25
-            m.vel.y = 20
-            m.particleFlags = m.particleFlags | PARTICLE_HORIZONTAL_STAR
-        else
-            m.vel.y = 0
-            m.forwardVel = 20
-        end
+        m.particleFlags = m.particleFlags | PARTICLE_MIST_CIRCLE
+        m.vel.y = 30
+        m.forwardVel = 20
     end
 
 
@@ -786,9 +792,14 @@ local function jer_update(m)
     if m.action == ACT_GROUND_POUND and (m.input & INPUT_B_PRESSED) ~= 0 then
         m.faceAngle.y = m.intendedYaw
         set_mario_action(m, ACT_DIVE, 0)
-        m.particleFlags = m.particleFlags | PARTICLE_MIST_CIRCLE
-        m.vel.y = 30
-        m.forwardVel = 20
+        if j.canJernado then
+            m.forwardVel = m.forwardVel + 25
+            m.vel.y = 20
+            m.particleFlags = m.particleFlags | PARTICLE_HORIZONTAL_STAR
+        else
+            m.vel.y = 0
+            m.forwardVel = 20
+        end
     end
 
 
@@ -809,7 +820,7 @@ local function jer_update(m)
         end
         m.vel.y = m.vel.y - 4
     end
-    -- GP slide kick
+    -- cartwheel
     if m.action == ACT_GROUND_POUND_LAND and (m.input & INPUT_B_PRESSED) ~= 0 then
         m.forwardVel = 60
         play_character_sound(m, CHAR_SOUND_HELLO)
@@ -1021,7 +1032,7 @@ function jer_jess_hud()
 
             local widthCenter = djui_hud_get_screen_width() / 2
 
-            djui_hud_render_texture_tile(speedometerSheet, (widthCenter - 16), 50, 0.5, 1, speedometer * 32, 0, 32, 16)
+            djui_hud_render_texture_tile(speedometerSheet, (widthCenter - 16), 60, 0.5, 1, speedometer * 32, 0, 32, 16)
         end
     end
 
