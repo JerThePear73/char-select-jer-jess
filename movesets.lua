@@ -182,6 +182,9 @@ local function act_ice_dive_slide(m)
     if m.input & INPUT_A_PRESSED ~= 0 or m.input & INPUT_B_PRESSED ~= 0 then
         m.pos.y = m.pos.y + 1
         set_mario_action(m, ACT_FORWARD_ROLLOUT, 0)
+    elseif m.input & INPUT_Z_PRESSED ~= 0 then
+        m.pos.y = m.pos.y + 1
+        set_mario_action(m, ACT_SPRINGFLIP, 0)
     end
     -- fall when ice cap ends
     if (m.flags & MARIO_METAL_CAP) == 0 or not is_jess() then
@@ -888,7 +891,7 @@ local function jer_update(m)
         set_mario_action(m, ACT_CARTWHEEL, 0)
     end
     -- slide kick to wheel
-    if m.action == ACT_SLIDE_KICK_SLIDE and (m.input & INPUT_Z_PRESSED) ~= 0 then
+    if (m.action == ACT_SLIDE_KICK_SLIDE or m.action == ACT_DIVE_SLIDE) and (m.input & INPUT_Z_PRESSED) ~= 0 then
         set_mario_action(m, ACT_CARTWHEEL, 0)
     end
     -- rev sound
