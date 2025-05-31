@@ -2,6 +2,7 @@ local ACT_ELEGANT_JUMP = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR
 local ACT_WALL_SLIDE = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_MOVING | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION) -- Credit: Character Movesets; By: steven3004
 
 local ACT_ICE_SKATING = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING | ACT_FLAG_ATTACKING | ACT_FLAG_RIDING_SHELL)
+local ACT_ICE_DIVE_SLIDE = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING | ACT_FLAG_ATTACKING | ACT_FLAG_RIDING_SHELL)
 local ACT_JERNADO = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR)
 local ACT_FLUDD_HOVER = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_CONTROL_JUMP_HEIGHT)
 local ACT_SPRINGFLIP = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION)
@@ -102,12 +103,26 @@ end
 hook_mario_action(ACT_WALL_SLIDE, act_wall_slide)
 
 local function act_ice_skating(m)
+    local j = gJerJessExtraStates[m.playerIndex]
+
     m.faceAngle.y = m.intendedYaw - approach_s32(limit_angle(m.intendedYaw - m.faceAngle.y), 0, 10, 10)
-    perform_ground_step(m)
+    m.faceAngle.x = 0
     update_walking_speed(m)
     set_mario_anim_with_accel(m, MARIO_ANIM_RUNNING_UNUSED, m.forwardVel / 5 * 11000)
     smlua_anim_util_set_animation(m.marioObj, "jess_skating")
     play_sound(SOUND_MOVING_SLIDE_DOWN_POLE, m.marioObj.header.gfx.cameraToObject)
+
+    local stepResult = perform_ground_step(m)
+    if stepResult == GROUND_STEP_HIT_WALL then
+        m.pos.y = m.pos.y + 1
+        m.vel.y = 30
+        m.particleFlags = m.particleFlags | PARTICLE_VERTICAL_STAR
+        set_mario_action(m, ACT_BACKWARD_AIR_KB, 0)
+    elseif stepResult == GROUND_STEP_LEFT_GROUND then
+        m.action = ACT_FREEFALL
+        m.vel.y = 5
+    end
+
     if m.input & INPUT_NONZERO_ANALOG ~= 0 then
         if m.forwardVel < 55 then
             m.forwardVel = m.forwardVel + 2
@@ -118,22 +133,65 @@ local function act_ice_skating(m)
     if m.forwardVel > 5 then
         m.particleFlags = m.particleFlags | PARTICLE_DUST
     end
-    if m.pos.y > (m.waterLevel + 4) then
+    if m.pos.y > (m.waterLevel + 1) then
         set_mario_action(m, ACT_WALKING, 0)
     end
     -- skating jump
     if (m.input & INPUT_A_PRESSED) ~= 0 then
         m.forwardVel = m.forwardVel - 15
         m.vel.y = 55
-        m.pos.y = m.pos.y + 4
+        m.pos.y = m.pos.y + 1
         set_mario_action(m, ACT_ELEGANT_JUMP, 0)
+    end
+    if m.input & INPUT_B_PRESSED ~= 0 and m.forwardVel > 30 then
+        m.pos.y = m.pos.y + 1
+        m.vel.y = 20
+        set_mario_action(m, ACT_DIVE, 0)
     end
     -- fall when ice cap ends
     if (m.flags & MARIO_METAL_CAP) == 0 or not is_jess() then
         set_mario_action(m, ACT_FREEFALL, 0)
     end
+
+    --m.actionTimer = m.actionTimer + 1 -- idk why this breaks j.animArg
+    --return 0
 end
 hook_mario_action(ACT_ICE_SKATING, act_ice_skating)
+
+local function act_ice_dive_slide(m)
+    
+    m.faceAngle.x = 0
+    m.forwardVel = 55
+    m.vel.y = 0
+    m.particleFlags = m.particleFlags | PARTICLE_DUST
+    set_mario_animation(m, CHAR_ANIM_DIVE)
+    play_sound(SOUND_MOVING_SLIDE_DOWN_POLE, m.marioObj.header.gfx.cameraToObject)
+
+    local stepResult = perform_ground_step(m)
+    if stepResult == GROUND_STEP_HIT_WALL then
+        m.pos.y = m.pos.y + 1
+        m.vel.y = 30
+        m.particleFlags = m.particleFlags | PARTICLE_VERTICAL_STAR
+        set_mario_action(m, ACT_BACKWARD_AIR_KB, 0)
+    end
+
+    if m.pos.y > (m.waterLevel + 1) then
+        set_mario_action(m, ACT_DIVE_SLIDE, 0)
+    end
+
+    if m.input & INPUT_A_PRESSED ~= 0 or m.input & INPUT_B_PRESSED ~= 0 then
+        m.pos.y = m.pos.y + 1
+        set_mario_action(m, ACT_FORWARD_ROLLOUT, 0)
+    end
+    -- fall when ice cap ends
+    if (m.flags & MARIO_METAL_CAP) == 0 or not is_jess() then
+        set_mario_action(m, ACT_FREEFALL, 0)
+    end
+
+    m.actionTimer = m.actionTimer + 1
+    return 0
+end
+hook_mario_action(ACT_ICE_DIVE_SLIDE, act_ice_dive_slide)
 
 local function act_elegant_jump(m)
     local j = gJerJessExtraStates[m.playerIndex]
@@ -436,7 +494,7 @@ local function jess_set_action(m)
         set_mario_action(m, ACT_FREEFALL, 0)
     end
     -- galaxy spin
-    if (m.action == ACT_JUMP_KICK or (m.action == ACT_DIVE and (((m.forwardVel < 30) or (m.input & INPUT_NONZERO_ANALOG) == 0) and (j.prevAction ~= ACT_GROUND_POUND)))) then
+    if (m.action == ACT_JUMP_KICK or (m.action == ACT_DIVE and (((m.forwardVel < 30) or (m.input & INPUT_NONZERO_ANALOG) == 0) and (j.prevAction ~= ACT_GROUND_POUND and j.prevAction ~= ACT_WALKING)))) then
         if m.action == ACT_DIVE then
             m.forwardVel = m.forwardVel - 15
         end
@@ -516,8 +574,12 @@ local function jess_update(m)
         set_mario_action(m, ACT_GROUND_POUND, 0)
     end
     -- ice cap
-    if (m.flags & MARIO_METAL_CAP) ~= 0 and m.action ~= ACT_PUTTING_ON_CAP and (m.pos.y < (m.waterLevel + 4) or m.floor.type == SURFACE_BURNING and m.pos.y < m.floorHeight + 4) and m.action ~= ACT_FALL_AFTER_STAR_GRAB and m.action ~= ACT_STAR_DANCE_EXIT and m.action ~= ACT_STAR_DANCE_NO_EXIT then
-        set_mario_action(m, ACT_ICE_SKATING, 0)
+    if m.flags & MARIO_METAL_CAP ~= 0 and (m.pos.y < (m.waterLevel + 1) or (m.floor.type == SURFACE_BURNING and m.pos.y < (m.floorHeight + 1))) and m.action ~= ACT_FALL_AFTER_STAR_GRAB and m.action ~= ACT_STAR_DANCE_EXIT and m.action ~= ACT_STAR_DANCE_NO_EXIT then
+        if m.action == ACT_DIVE or m.action == ACT_ICE_DIVE_SLIDE or m.action == ACT_DIVE_SLIDE then
+            set_mario_action(m, ACT_ICE_DIVE_SLIDE, 0)
+        else
+            set_mario_action(m, ACT_ICE_SKATING, 0)
+        end
     end
     -- GP jump
     if m.action == ACT_GROUND_POUND_LAND and (m.input & INPUT_A_PRESSED) ~= 0 then
@@ -644,7 +706,7 @@ local function jess_update(m)
         m.vel.y = 20
     end
     -- galaxy spin extra conditions
-    if (m.input & INPUT_B_PRESSED) ~= 0 and (m.action == ACT_BACKFLIP or m.action == ACT_LONG_JUMP or (m.action == ACT_SPRINGFLIP and m.actionTimer > 20)) then
+    if (m.input & INPUT_B_PRESSED) ~= 0 and (m.action == ACT_BACKFLIP or m.action == ACT_LONG_JUMP or m.action == ACT_ELEGANT_JUMP or (m.action == ACT_SPRINGFLIP and m.actionTimer > 20)) then
         set_mario_action(m, ACT_GALAXY_SPIN, 0)
     end
 
@@ -718,7 +780,7 @@ local function jer_set_action(m)
     if m.action == ACT_SLIDE_KICK then
         m.forwardVel = m.forwardVel + 18
     end
-    -- slide kick from stationary
+    -- burst slide kick
     if (m.action == ACT_PUNCHING or m.action == ACT_MOVE_PUNCHING) and m.input & INPUT_Z_DOWN ~= 0 and m.forwardVel < 10 then
         m.particleFlags = m.particleFlags | PARTICLE_MIST_CIRCLE
         set_mario_action(m, ACT_SLIDE_KICK, 0)
@@ -748,14 +810,13 @@ local function jer_set_action(m)
 end
 
 local function jer_before_set_action(m, act)
-    -- derpy crouch
-    if act == ACT_START_CROUCHING then
+    if act == ACT_START_CROUCHING or act == ACT_STOP_CRAWLING or act == ACT_LONG_JUMP_LAND_STOP then -- derpy crouch
         return ACT_CROUCHING
     elseif act == ACT_STOP_CROUCHING then
         return ACT_IDLE
-    end
-    -- twirl landing momentum
-    if act == ACT_TWIRL_LAND and m.input & INPUT_NONZERO_ANALOG ~= 0 then
+    elseif act == ACT_START_CRAWLING then
+        return ACT_CRAWLING
+    elseif act == ACT_TWIRL_LAND and m.input & INPUT_NONZERO_ANALOG ~= 0 then -- twirl land skip
         return ACT_WALKING
     end
 end
@@ -963,6 +1024,21 @@ local function jer_update(m)
         else
             j.stepMax = 5
         end
+    end
+    -- kirby crouch
+    local actCrouchSquish = {
+        [ACT_CROUCHING] = true,
+        [ACT_CROUCH_SLIDE] = true,
+        [ACT_LONG_JUMP_LAND] = true
+    }
+
+    if actCrouchSquish[m.action] then
+        set_mario_animation(m, CHAR_ANIM_FIRST_PERSON)
+        m.marioObj.header.gfx.scale.y = 0.4
+        m.marioObj.header.gfx.scale.x = 1.4
+        m.marioObj.header.gfx.scale.z = 1.4
+    elseif m.action == ACT_CRAWLING then
+        m.marioObj.header.gfx.scale.y = 0.6
     end
 end
 

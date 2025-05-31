@@ -2,7 +2,7 @@
 -- description: Mod that adds My characters to SM64 along with their own custom movesets.\n\n\\#ff7777\\This Pack requires Character Select\nto use as a Library!
 
 local TEXT_MOD_NAME = "Jer + Jess"
-local VER_NUM = "0.15.3"
+local VER_NUM = "0.15.5"
 
 -- Stops mod from loading if Character Select isn't on
 if not _G.charSelectExists then
