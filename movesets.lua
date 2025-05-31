@@ -153,8 +153,10 @@ local function act_ice_skating(m)
         set_mario_action(m, ACT_FREEFALL, 0)
     end
 
-    --m.actionTimer = m.actionTimer + 1 -- idk why this breaks j.animArg
-    --return 0
+    if m.actionTimer < 5 then
+        m.actionTimer = m.actionTimer + 1
+    end
+    return 0
 end
 hook_mario_action(ACT_ICE_SKATING, act_ice_skating)
 
@@ -199,12 +201,12 @@ hook_mario_action(ACT_ICE_DIVE_SLIDE, act_ice_dive_slide)
 local function act_elegant_jump(m)
     local j = gJerJessExtraStates[m.playerIndex]
 
-    if m.actionTimer == 0 then
+    if m.actionTimer == 1 then
         m.particleFlags = m.particleFlags | PARTICLE_MIST_CIRCLE
         play_character_sound(m, CHAR_SOUND_HAHA)
         j.animArg = math.floor(math.random(1,3))
     end
-    local stepResult = common_air_action_step(m, ACT_DOUBLE_JUMP_LAND, MARIO_ANIM_RUNNING_UNUSED, 
+    local stepResult = common_air_action_step(m, ACT_DOUBLE_JUMP_LAND, MARIO_ANIM_GROUND_POUND, 
                                                                 AIR_STEP_NONE)
     smlua_anim_util_set_animation(m.marioObj, "jess_ice_jump_" .. tostring(j.animArg))
     m.particleFlags = m.particleFlags | PARTICLE_SPARKLES
@@ -577,7 +579,7 @@ local function jess_update(m)
         set_mario_action(m, ACT_GROUND_POUND, 0)
     end
     -- ice cap
-    if m.flags & MARIO_METAL_CAP ~= 0 and (m.pos.y < (m.waterLevel + 1) or (m.floor.type == SURFACE_BURNING and m.pos.y < (m.floorHeight + 1))) and m.action ~= ACT_FALL_AFTER_STAR_GRAB and m.action ~= ACT_STAR_DANCE_EXIT and m.action ~= ACT_STAR_DANCE_NO_EXIT then
+    if m.flags & MARIO_METAL_CAP ~= 0 and (m.pos.y < (m.waterLevel + 1) or (m.floor.type == SURFACE_BURNING and m.pos.y < (m.floorHeight + 1))) and m.action ~= ACT_FALL_AFTER_STAR_GRAB and m.action ~= ACT_STAR_DANCE_EXIT and m.action ~= ACT_STAR_DANCE_NO_EXIT and m.action ~= ACT_ICE_SKATING then
         if m.action == ACT_DIVE or m.action == ACT_ICE_DIVE_SLIDE or m.action == ACT_DIVE_SLIDE then
             set_mario_action(m, ACT_ICE_DIVE_SLIDE, 0)
         else
@@ -1156,6 +1158,7 @@ function jer_jess_hud()
 --        djui_hud_print_text(string.format("j.jessWater:  "..j.jessWater.." ") , 25, 375, 1)
 --        djui_hud_print_text(string.format("m.floor.normal.y:  "..floorNormalY.." ") , 25, 350, 1)
 --        djui_hud_print_text(string.format("accel:  "..accel.." ") , 25, 500, 1)
+--        djui_hud_print_text("m.actionTimer:  "..m.actionTimer.." " , 25, 500, 1)
 end
 
 local function jer_vanish_surface(m)
