@@ -35,6 +35,7 @@ local function jer_jess_reset_extra_states(index)
         prevAction = 0,
         animArg = 0,
         rotAngle = 0,
+        metalRotation = 0,
     }
     if gNetworkPlayers[0].currLevelNum == 29 then 
         gJerJessExtraStates[index].jessWater = jessMaxWater
@@ -388,11 +389,15 @@ local function act_cartwheel(m)
         m.particleFlags = m.particleFlags | PARTICLE_DUST
     end
     if j.wheelSpeed > 90 then
+      if m.flags & MARIO_METAL_CAP == 0 then
         m.vel.y = 40
         m.action = ACT_FORWARD_AIR_KB
         m.particleFlags = m.particleFlags | PARTICLE_VERTICAL_STAR
         spawn_mist_particles_variable(20, 0, 50)
         play_sound(SOUND_GENERAL_BREAK_BOX, m.marioObj.header.gfx.cameraToObject)
+      elseif j.wheelSpeed > 110 then
+        j.wheelSpeed = 110
+      end
     end
 
     mario_set_forward_vel(m, j.wheelSpeed)
@@ -722,10 +727,6 @@ local function jess_update(m)
             m.marioBodyState.handState = MARIO_HAND_OPEN
         end
     end
-    -- menu pose (Concept by Wall_E20)
-    if m.marioObj.header.gfx.animInfo.animID == charSelect.CS_ANIM_MENU then
-        m.marioBodyState.eyeState = MARIO_EYES_LOOK_RIGHT
-    end
     -- disable tilt
     if m.action == ACT_WALKING then
         m.marioBodyState.torsoAngle.x = 0
@@ -1011,11 +1012,8 @@ local function jer_update(m)
 
 
 
-    -- anims
-        -- menu pose (Concept by Wall_E20)
-        if m.marioObj.header.gfx.animInfo.animID == charSelect.CS_ANIM_MENU then
-            m.marioBodyState.eyeState = MARIO_EYES_LOOK_LEFT
-        end
+    -- ANIMS --
+
     -- modify tilt
     if m.action == ACT_WALKING and (m.flags & MARIO_METAL_CAP) == 0 then
         m.marioBodyState.torsoAngle.x = m.marioBodyState.torsoAngle.x * 0.8
@@ -1061,14 +1059,15 @@ local jessWaterMid = get_texture_info("water_bar")
 local jessWaterBot = get_texture_info("water_bottom")
 local jessHoverBar = get_texture_info("water_hover_bar")
 
-local speedometerSheet = get_texture_info("speedsheet")
+local speedometerBack = get_texture_info("speedometer")
+local speedometerFront = get_texture_info("needle")
 
-function jer_jess_hud()
+function jer_hud()
   for i = 0, MAX_PLAYERS - 1 do
     local m = gMarioStates[i]
     local j = gJerJessExtraStates[i]
 
-    if is_jer() and m.playerIndex == 0 then 
+    if m.playerIndex == 0 then 
         if (m.flags & MARIO_WING_CAP ~= 0) and m.capTimer > 0 then
             djui_hud_set_color(255, 255, 255, 255)
             djui_hud_set_resolution(RESOLUTION_N64)
@@ -1099,25 +1098,30 @@ function jer_jess_hud()
             djui_hud_set_color(255, 255, 255, 255)
             djui_hud_set_resolution(RESOLUTION_N64)
 
-            if m.forwardVel < 26 then speedometer = 0 
-            elseif m.forwardVel < 33 then speedometer = 1
-            elseif m.forwardVel < 40 then speedometer = 2
-            elseif m.forwardVel < 47 then speedometer = 3
-            elseif m.forwardVel < 54 then speedometer = 4
-            elseif m.forwardVel < 61 then speedometer = 5
-            elseif m.forwardVel < 68 then speedometer = 6
-            elseif m.forwardVel < 75 then speedometer = 7
-            elseif m.forwardVel < 82 then speedometer = 8
-            elseif m.forwardVel < 89 then speedometer = 9
-            else speedometer = 10 end
+            local widthCenter = djui_hud_get_screen_width()/2
+            local rotation = degrees_to_sm64(140 - (m.forwardVel*2.5))
+            
 
-            local widthCenter = djui_hud_get_screen_width() / 2
+            djui_hud_render_texture(speedometerBack, (widthCenter - 16), 60, 1, 1)
 
-            djui_hud_render_texture_tile(speedometerSheet, (widthCenter - 16), 60, 0.5, 1, speedometer * 32, 0, 32, 16)
+            if m.flags & MARIO_METAL_CAP and m.forwardVel > 90 then
+                j.metalRotation = j.metalRotation - degrees_to_sm64(m.forwardVel/3)
+                djui_hud_set_rotation((rotation + j.metalRotation), 0.5, 0.9)
+            else
+                djui_hud_set_rotation(rotation, 0.5, 0.9)
+            end
+            djui_hud_render_texture(speedometerFront, (widthCenter - 16), 60, 1, 1)
         end
     end
+  end
+end
 
-    if is_jess() and m.playerIndex == 0 and j.jessWater > 0 then
+local function jess_hud()
+  for i = 0, MAX_PLAYERS - 1 do
+    local m = gMarioStates[i]
+    local j = gJerJessExtraStates[i]
+
+    if j.jessWater > 0 then
         djui_hud_set_color(255, 255, 255, 255)
         djui_hud_set_resolution(RESOLUTION_N64)
         djui_hud_set_font(FONT_HUD)
@@ -1143,9 +1147,10 @@ function jer_jess_hud()
         djui_hud_print_text(string.format("%.0f", j.jessWater/30), jessWaterDisplayOffset, 175, 1)
     end
   end
-
+end
 
 -- DEBUG --
+--local function debug_hud()
 --        local m = gMarioStates[0]
 --        local floorNormalY = m.floor.normal.y
         
@@ -1159,7 +1164,8 @@ function jer_jess_hud()
 --        djui_hud_print_text(string.format("m.floor.normal.y:  "..floorNormalY.." ") , 25, 350, 1)
 --        djui_hud_print_text(string.format("accel:  "..accel.." ") , 25, 500, 1)
 --        djui_hud_print_text("m.actionTimer:  "..m.actionTimer.." " , 25, 500, 1)
-end
+--end
+--hook_event(HOOK_ON_HUD_RENDER_BEHIND, debug_hud)
 
 local function jer_vanish_surface(m)
     if is_jer() and (m.flags & MARIO_VANISH_CAP) ~= 0 and m.floor.type ~= SURFACE_BURNING then -- a little glitchy, will do some weird spam dying thing on other peoples screen
@@ -1169,7 +1175,6 @@ local function jer_vanish_surface(m)
     end
 end
 
-hook_event(HOOK_ON_HUD_RENDER_BEHIND, jer_jess_hud)
 hook_event(HOOK_ON_LEVEL_INIT, jer_jess_reset_extra_states)
 hook_event(HOOK_ALLOW_HAZARD_SURFACE, jer_vanish_surface)
 
@@ -1178,8 +1183,10 @@ _G.charSelect.character_hook_moveset(CT_JESS, HOOK_ON_SET_MARIO_ACTION, jess_set
 _G.charSelect.character_hook_moveset(CT_JESS, HOOK_BEFORE_PHYS_STEP, jess_before_phys_step)
 _G.charSelect.character_hook_moveset(CT_JESS, HOOK_ON_INTERACT, jess_interact)
 _G.charSelect.character_hook_moveset(CT_JESS, HOOK_BEFORE_SET_MARIO_ACTION, jess_before_set_action)
+_G.charSelect.character_hook_moveset(CT_JESS, HOOK_ON_HUD_RENDER_BEHIND, jess_hud)
 
 _G.charSelect.character_hook_moveset(CT_JER, HOOK_MARIO_UPDATE, jer_update)
 _G.charSelect.character_hook_moveset(CT_JER, HOOK_ON_SET_MARIO_ACTION, jer_set_action)
 _G.charSelect.character_hook_moveset(CT_JER, HOOK_BEFORE_PHYS_STEP, jer_before_phys_step)
 _G.charSelect.character_hook_moveset(CT_JER, HOOK_BEFORE_SET_MARIO_ACTION, jer_before_set_action)
+_G.charSelect.character_hook_moveset(CT_JER, HOOK_ON_HUD_RENDER_BEHIND, jer_hud)

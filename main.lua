@@ -515,6 +515,17 @@ local function on_character_snore(m)
     if _G.charSelect.character_get_voice(m) == VOICETABLE_JESS then return _G.charSelect.voice.snore(m) end
 end
 
+local function menu_pose(m)
+    -- menu pose (Concept by Wall_E20)
+    if m.marioObj.header.gfx.animInfo.animID == charSelect.CS_ANIM_MENU and is_jer() and m.playerIndex == 0 then
+        m.marioBodyState.eyeState = MARIO_EYES_LOOK_LEFT
+    end
+    if m.marioObj.header.gfx.animInfo.animID == charSelect.CS_ANIM_MENU and is_jess() and m.playerIndex == 0 then
+        m.marioBodyState.eyeState = MARIO_EYES_LOOK_RIGHT
+    end
+end
+
 hook_event(HOOK_ON_MODS_LOADED, on_character_select_load)
 hook_event(HOOK_CHARACTER_SOUND, on_character_sound)
 hook_event(HOOK_MARIO_UPDATE, on_character_snore)
+hook_event(HOOK_MARIO_UPDATE, menu_pose)
