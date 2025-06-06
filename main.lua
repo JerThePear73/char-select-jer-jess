@@ -12,16 +12,19 @@ end
 
 -- Models --
 local E_MODEL_JER = smlua_model_util_get_id('jer_nos_geo')
-local E_MODEL_JESS = smlua_model_util_get_id('jess_geo')
-
 local E_MODEL_JER_BEACH = smlua_model_util_get_id('beach_jer_nos_geo')
 local E_MODEL_LUCKY = smlua_model_util_get_id('lucky_geo')
+
+local E_MODEL_JESS = smlua_model_util_get_id('jess_geo')
 local E_MODEL_JESS_BEACH = smlua_model_util_get_id('beach_jess_geo')
 local E_MODEL_JESSILYNN = smlua_model_util_get_id('jessilynn_geo')
+
+local E_MODEL_DAVY = smlua_model_util_get_id('davy_geo')
 
 -- Textures --
 local TEX_JER = get_texture_info('jer_icon')
 local TEX_JESS = get_texture_info('jess_icon')
+local TEX_DAVY = get_texture_info('davy_icon')
 
 VOICETABLE_JER = { -- Voices from Scooter and other male characters from Lego Racers (1999)
     [CHAR_SOUND_ATTACKED] = {'jer_no.ogg', 'jer_ouch.ogg'},
@@ -111,6 +114,52 @@ VOICETABLE_JESS = { -- Voices from Veronica Voltage and other female characters 
     [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = {'jess_yahoo.ogg', 'jess_woohoo.ogg' },
     [CHAR_SOUND_YAH_WAH_HOO] = {'jess_ha.ogg', 'jess_ya.ogg', 'jess_yeah.ogg' },
     [CHAR_SOUND_OKEY_DOKEY] = 'jess_oh_yeah.ogg'
+}
+
+VOICETABLE_DAVY = { -- Voices from Skeleton character from Lego Racers (1999)
+    [CHAR_SOUND_ATTACKED] = {'davy_ouch.ogg', 'davy_ahh.ogg'},
+    [CHAR_SOUND_COUGHING1] = nil,
+    [CHAR_SOUND_COUGHING2] = nil,
+    [CHAR_SOUND_COUGHING3] = nil,
+    [CHAR_SOUND_DOH] = 'davy_ouch.ogg', -- long jump bump
+    [CHAR_SOUND_DROWNING] = nil,
+    [CHAR_SOUND_DYING] = 'davy_ohno.ogg',
+    [CHAR_SOUND_EEUH] = nil, -- climbing ledge
+    [CHAR_SOUND_GROUND_POUND_WAH] = 'davy_huehue.ogg',
+    [CHAR_SOUND_HAHA] = 'davy_tada.ogg',
+    [CHAR_SOUND_HAHA_2] = 'davy_tada.ogg',
+    [CHAR_SOUND_HERE_WE_GO] = 'davy_laugh.ogg', -- getting star/power up
+    [CHAR_SOUND_HOOHOO] = {'davy_huehue.ogg', 'davy_wohee.ogg'},
+    [CHAR_SOUND_HRMM] = nil, -- lifting
+    [CHAR_SOUND_IMA_TIRED] = nil,
+    [CHAR_SOUND_MAMA_MIA] = 'davy_ohno.ogg',
+    [CHAR_SOUND_LETS_A_GO] = 'davy_heehee.ogg', -- starting level
+    [CHAR_SOUND_ON_FIRE] = {'davy_ahoey.ogg', 'davy_yeow.ogg'},
+    [CHAR_SOUND_OOOF] = 'davy_ouch.ogg',
+    [CHAR_SOUND_OOOF2] = 'davy_ouch.ogg', -- thrown out of painting
+    [CHAR_SOUND_PANTING] = nil,
+    [CHAR_SOUND_PANTING_COLD] = nil,
+    [CHAR_SOUND_PUNCH_HOO] = 'davy_wohee.ogg', -- kick
+    [CHAR_SOUND_PUNCH_WAH] = 'davy_huehue.ogg', -- punch 2
+    [CHAR_SOUND_PUNCH_YAH] = 'davy_ya.ogg', -- punch 1
+    [CHAR_SOUND_SO_LONGA_BOWSER] = {'davy_laugh.ogg', 'davy_hohoyeahah.ogg'},
+    [CHAR_SOUND_SNORING1] = 'davy_snore1.ogg',
+    [CHAR_SOUND_SNORING2] = 'davy_snore2.ogg',
+    [CHAR_SOUND_SNORING3] = nil,
+    [CHAR_SOUND_TWIRL_BOUNCE] = 'davy_hohoyeahah.ogg',
+    [CHAR_SOUND_UH] = 'davy_ouch.ogg', -- wall bonk
+    [CHAR_SOUND_UH2] = nil, -- landing long jump
+    [CHAR_SOUND_UH2_2] = nil, -- same as uh2 maybe??
+    [CHAR_SOUND_WAAAOOOW] = 'davy_ahoey.ogg',
+    [CHAR_SOUND_WAH2] = 'davy_haha.ogg', -- throw
+    [CHAR_SOUND_WHOA] = 'davy_ahoey.ogg',
+    [CHAR_SOUND_YAHOO] = {'davy_heehee.ogg', 'davy_yeawohee.ogg'},
+    [CHAR_SOUND_YAWNING] = nil,
+    [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = {'davy_yeawohee.ogg', 'davy_hohoyeahah.ogg'},
+    [CHAR_SOUND_YAH_WAH_HOO] = {'davy_haha.ogg', 'davy_ya.ogg'},
+    [CHAR_SOUND_HELLO] = nil,
+    [CHAR_SOUND_PRESS_START_TO_PLAY] = nil,
+    [CHAR_SOUND_OKEY_DOKEY] = 'davy_hohoyeahah.ogg'
 }
 
 local PALETTE_JER = {
@@ -256,6 +305,28 @@ local PALETTE_ANNA = {
     [EMBLEM] = "ffc300",
 }
 
+
+local PALETTE_DAVY =  {
+    [PANTS]  = "ff8000",
+    [SHIRT]  = "222222",
+    [GLOVES] = "ff8000",
+    [SHOES]  = "552945",
+    [HAIR]   = "ffffff",
+    [SKIN]   = "ffffff",
+    [CAP]    = "ff8000",
+    [EMBLEM] = "ff8000",
+}
+local PALETTE_GREEDY =  {
+    [PANTS]  = "ff8000",
+    [SHIRT]  = "222222",
+    [GLOVES] = "ff8000",
+    [SHOES]  = "552945",
+    [HAIR]   = "ffffff",
+    [SKIN]   = "ffffff",
+    [CAP]    = "ff8000",
+    [EMBLEM] = "ff8000",
+}
+
 local capJER = {
     normal = smlua_model_util_get_id("j_cap_geo"),
     wing = smlua_model_util_get_id("nos_tank_geo"),
@@ -291,6 +362,13 @@ local capJESSILYNN = {
     metalWing = nil
 }
 
+local capDAVY = {
+    normal = smlua_model_util_get_id("davy_cap_geo"),
+    wing = smlua_model_util_get_id("davy_wing_cap_geo"),
+    metal = smlua_model_util_get_id("screw_geo"),
+    metalWing = smlua_model_util_get_id("davy_metal_wing_cap_geo")
+}
+
 local ANIMTABLE_JER = {
     [_G.charSelect.CS_ANIM_MENU] = "jer_menu_pose",
     [CHAR_ANIM_RUNNING] = "jer_run", -- Credit: Custom Run Animations Lua; By: STREAMING LION
@@ -305,7 +383,7 @@ local ANIMTABLE_JER = {
 }
 
 local ANIMTABLE_JESS = {
-    [charSelect.CS_ANIM_MENU] = "jess_menu_pose",
+    [_G.charSelect.CS_ANIM_MENU] = "jess_menu_pose",
     [CHAR_ANIM_RUNNING] = "jess_run",
     [CHAR_ANIM_IDLE_HEAD_LEFT] = "jess_idle",
     [CHAR_ANIM_IDLE_HEAD_RIGHT] = "jess_idle",
@@ -320,6 +398,10 @@ local ANIMTABLE_JESS = {
     [CHAR_ANIM_GENERAL_LAND] = "jess_land_general",
     [CHAR_ANIM_LAND_FROM_DOUBLE_JUMP] = "jess_land_double",
     [CHAR_ANIM_STOP_SLIDE] = "jess_getup_slide",
+}
+
+local ANIMTABLE_DAVY = {
+    [_G.charSelect.CS_ANIM_MENU] = "davy_menu_pose"
 }
 
 local HEALTH_METER_JER = {
@@ -343,6 +425,23 @@ local HEALTH_METER_JESS = {
     label = {
         left = get_texture_info("jess-hp-left"),
         right = get_texture_info("jess-hp-right"),
+    },
+    pie = {
+        [1] = get_texture_info("hp-1"),
+        [2] = get_texture_info("hp-2"),
+        [3] = get_texture_info("hp-3"),
+        [4] = get_texture_info("hp-4"),
+        [5] = get_texture_info("hp-5"),
+        [6] = get_texture_info("hp-6"),
+        [7] = get_texture_info("hp-7"),
+        [8] = get_texture_info("hp-8"),
+    }
+}
+
+local HEALTH_METER_DAVY = {
+    label = {
+        left = get_texture_info("davy-hp-left"),
+        right = get_texture_info("davy-hp-right"),
     },
     pie = {
         [1] = get_texture_info("hp-1"),
@@ -385,6 +484,20 @@ if _G.charSelectExists then
                                                     "Type '/jj-moves' for help.",
                                                     "Ver "..VER_NUM
                                                     }, "JerThePear", {r = 000, g = 255, b = 200}, E_MODEL_JESS, CT_MARIO, TEX_JESS)
+    CT_DAVY = _G.charSelect.character_add("Davy", { "A skeleton-cyborg mix bent on chaos.",
+                                                    "A friend of Jer's.",
+                                                    "Age:  ??,    Height:  6'9",
+                                                    "",
+                                                    "Davy's moveset is just meant to be",
+                                                    " silly, aside from his bomb throw",
+                                                    "ability.",
+                                                    "",
+                                                    "",
+                                                    "",
+                                                    "",
+                                                    "Type '/davy-moves' for help.",
+                                                    "Ver "..VER_NUM
+                                                    }, "JerThePear", {r = 255, g = 165, b = 000}, E_MODEL_DAVY, CT_MARIO, TEX_DAVY)
 end
 
 local CSloaded = false
@@ -402,6 +515,13 @@ local function on_character_select_load()
     _G.charSelect.character_add_caps(E_MODEL_JESS, capJESS)
     _G.charSelect.character_add_health_meter(CT_JESS, HEALTH_METER_JESS)
     _G.charSelect.character_add_voice(E_MODEL_JESS, VOICETABLE_JESS)
+
+    _G.charSelect.character_add_palette_preset(E_MODEL_DAVY, PALETTE_DAVY, "Default")
+    _G.charSelect.character_add_palette_preset(E_MODEL_DAVY, PALETTE_GREEDY, "Greedy")
+    _G.charSelect.character_add_voice(E_MODEL_DAVY, VOICETABLE_DAVY)
+    _G.charSelect.character_add_caps(E_MODEL_DAVY, capDAVY)
+    _G.charSelect.character_add_health_meter(CT_DAVY, HEALTH_METER_DAVY)
+    _G.charSelect.character_add_animations(E_MODEL_DAVY, ANIMTABLE_DAVY)
     -- SHADES --
     _G.charSelect.character_add_costume(CT_JER, "Shades", { "Jer dressed for a sunny vacation.",
                                                     "Jess' older brother.",
@@ -488,9 +608,11 @@ local function on_character_select_load()
     -- Categories
     _G.charSelect.character_set_category(CT_JER, "Jer + Jess")
     _G.charSelect.character_set_category(CT_JESS, "Jer + Jess")
+    _G.charSelect.character_set_category(CT_DAVY, "Jer + Jess")
 
     _G.charSelect.character_set_category(CT_JER, "Squishy Workshop")
     _G.charSelect.character_set_category(CT_JESS, "Squishy Workshop")
+    _G.charSelect.character_set_category(CT_DAVY, "Squishy Workshop")
 
     CSloaded = true
 end
@@ -502,17 +624,22 @@ end
 function _G.is_jer()
     return CT_JER == _G.charSelect.character_get_current_number()
 end
+function _G.is_davy()
+    return CT_DAVY == _G.charSelect.character_get_current_number()
+end
 
 local function on_character_sound(m, sound)
     if not CSloaded then return end
     if _G.charSelect.character_get_voice(m) == VOICETABLE_JER then return _G.charSelect.voice.sound(m, sound) end
     if _G.charSelect.character_get_voice(m) == VOICETABLE_JESS then return _G.charSelect.voice.sound(m, sound) end
+    if _G.charSelect.character_get_voice(m) == VOICETABLE_DAVY then return _G.charSelect.voice.sound(m, sound) end
 end
 
 local function on_character_snore(m)
     if not CSloaded then return end
     if _G.charSelect.character_get_voice(m) == VOICETABLE_JER then return _G.charSelect.voice.snore(m) end
     if _G.charSelect.character_get_voice(m) == VOICETABLE_JESS then return _G.charSelect.voice.snore(m) end
+    if _G.charSelect.character_get_voice(m) == VOICETABLE_DAVY then return _G.charSelect.voice.snore(m) end
 end
 
 local function menu_pose(m)
@@ -521,6 +648,9 @@ local function menu_pose(m)
         m.marioBodyState.eyeState = MARIO_EYES_LOOK_LEFT
     end
     if m.marioObj.header.gfx.animInfo.animID == charSelect.CS_ANIM_MENU and is_jess() and m.playerIndex == 0 then
+        m.marioBodyState.eyeState = MARIO_EYES_LOOK_RIGHT
+    end
+    if m.marioObj.header.gfx.animInfo.animID == charSelect.CS_ANIM_MENU and is_davy() and m.playerIndex == 0 then
         m.marioBodyState.eyeState = MARIO_EYES_LOOK_RIGHT
     end
 end
