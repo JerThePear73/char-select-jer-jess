@@ -1,5 +1,6 @@
 local ACT_ELEGANT_JUMP = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION | ACT_FLAG_CONTROL_JUMP_HEIGHT) -- Credit: Character Movesets; By: steven3004
 local ACT_WALL_SLIDE = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_MOVING | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION) -- Credit: Character Movesets; By: steven3004
+local ACT_FLUTTER = allocate_mario_action(ACT_FLAG_AIR | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION | ACT_GROUP_AIRBORNE) -- this is just taken from extra chars cuz i dont feel like coding this from scratch rn
 
 local ACT_ICE_SKATING = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING | ACT_FLAG_ATTACKING | ACT_FLAG_RIDING_SHELL)
 local ACT_ICE_DIVE_SLIDE = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING | ACT_FLAG_ATTACKING | ACT_FLAG_RIDING_SHELL)
@@ -8,6 +9,8 @@ local ACT_FLUDD_HOVER = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR 
 local ACT_SPRINGFLIP = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION)
 local ACT_CARTWHEEL = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING | ACT_FLAG_ATTACKING)
 local ACT_GALAXY_SPIN = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING)
+local ACT_DAVY_MISSILE = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_MOVING | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION | ACT_FLAG_ATTACKING)
+local ACT_DAVY_DASH = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_MOVING | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION | ACT_FLAG_ATTACKING)
 
 local function limit_angle(a)
     return (a + 0x8000) % 0x10000 - 0x8000
@@ -36,6 +39,10 @@ local function jer_jess_reset_extra_states(index)
         animArg = 0,
         rotAngle = 0,
         metalRotation = 0,
+        davyBomb = 0,
+        davyCanGPCancel = true,
+        canFlutter = false,
+        canDash = true,
     }
     if gNetworkPlayers[0].currLevelNum == 29 then 
         gJerJessExtraStates[index].jessWater = jessMaxWater
@@ -56,6 +63,9 @@ local SOUND_COMEDIC_METAL_PIPE = audio_sample_load("pipe.ogg")
 local SOUND_ZAP = audio_sample_load("zap.mp3")
 local SOUND_WHEEL_STEP = audio_sample_load("wheel_step.mp3")
 local SOUND_GALAXY_SPIN = audio_sample_load("smg_spin.mp3") -- this is an edited sound effect from extra characters
+
+local E_MODEL_POCKET_EXPLOSIVE = smlua_model_util_get_id('pocket_explosive_geo')
+local E_MODEL_DYNAMITE = smlua_model_util_get_id('dynamite_geo')
 
 
 
@@ -456,6 +466,152 @@ local function act_galaxy_spin(m)
     return 0
 end
 hook_mario_action(ACT_GALAXY_SPIN, act_galaxy_spin)
+
+local function act_davy_missile(m)
+    local j = gJerJessExtraStates[m.playerIndex]
+    if m.actionTimer == 0 then
+    -- shake screen somehow here
+        play_sound(SOUND_GENERAL_BOWSER_BOMB_EXPLOSION, m.marioObj.header.gfx.cameraToObject)
+        m.faceAngle.y = m.intendedYaw
+        m.forwardVel = 85
+        m.vel.y = 50
+    end
+    local stepResult = common_air_action_step(m, ACT_DIVE, MARIO_ANIM_GROUND_POUND, AIR_STEP_NONE)
+    smlua_anim_util_set_animation(m.marioObj, "davy_missile")
+    m.particleFlags = m.particleFlags | PARTICLE_FIRE
+    m.marioBodyState.eyeState = MARIO_EYES_LOOK_UP
+    
+    if stepResult == AIR_STEP_LANDED then
+        if should_get_stuck_in_ground(m) ~= 0 then
+            queue_rumble_data_mario(m, 5, 80)
+            play_character_sound(m, CHAR_SOUND_OOOF2)
+            m.particleFlags = m.particleFlags | PARTICLE_MIST_CIRCLE
+            set_mario_action(m, ACT_HEAD_STUCK_IN_GROUND, 0)
+        --elseif check_fall_damage(m, ACT_HARD_FORWARD_GROUND_KB) ~= 0 then
+            --set_mario_action(m, ACT_FORWARD_AIR_KB, 0)
+            --m.vel.y = 40
+            --m.forwardVel = 10
+            --spawn_non_sync_object(id_bhvExplosion, E_MODEL_EXPLOSION, m.pos.x, m.pos.y, m.pos.z,
+                --function (o)
+                    --o.oDamageOrCoinValue = 0
+                    --obj_scale(o, 2)
+                --end)
+        else
+            play_sound(SOUND_ACTION_TERRAIN_LANDING, m.marioObj.header.gfx.cameraToObject)
+            set_mario_action(m, ACT_DIVE_SLIDE, 0)
+        end
+    elseif stepResult == AIR_STEP_HIT_WALL then
+        spawn_non_sync_object(id_bhvExplosion, E_MODEL_EXPLOSION, m.pos.x, m.pos.y, m.pos.z,
+            function (o)
+                o.oDamageOrCoinValue = 0
+                obj_scale(o, 2)
+            end)
+        m.particleFlags = m.particleFlags | PARTICLE_VERTICAL_STAR
+        set_mario_action(m, ACT_BACKWARD_AIR_KB, 0)
+    end
+
+    m.vel.y = m.vel.y + 1
+
+    j.rotAngle = j.rotAngle + 0x3000
+    m.marioObj.header.gfx.angle.z = j.rotAngle
+    m.marioObj.header.gfx.angle.x = (m.vel.y * -120)
+    
+    m.actionTimer = m.actionTimer + 1
+    return 0
+end
+hook_mario_action(ACT_DAVY_MISSILE, act_davy_missile)
+
+local function act_davy_dash(m)
+    local j = gJerJessExtraStates[m.playerIndex]
+
+    if m.actionTimer == 0 then
+        m.particleFlags = m.particleFlags | PARTICLE_VERTICAL_STAR
+    end
+    if m.actionTimer > 20 then
+        if m.flags & MARIO_WING_CAP ~= 0 then
+            m.faceAngle.z = m.marioObj.header.gfx.angle.z
+            m.faceAngle.x = 0
+            set_mario_action(m, ACT_FLYING, 0)
+        else
+            set_mario_action(m, ACT_FREEFALL, 0)
+        end
+    else
+        play_sound(SOUND_AIR_BOWSER_SPIT_FIRE, m.marioObj.header.gfx.cameraToObject)
+    end
+
+    m.forwardVel = 65
+    m.faceAngle.y = m.intendedYaw - approach_s32(limit_angle(m.intendedYaw - m.faceAngle.y), 0, 0x200, 0x200)
+    m.vel.y = 0
+
+    local stepResult = common_air_action_step(m, ACT_DIVE_SLIDE, MARIO_ANIM_TRIPLE_JUMP_FLY, AIR_STEP_NONE)
+    smlua_anim_util_set_animation(m.marioObj, "davy_missile")
+    m.particleFlags = m.particleFlags | PARTICLE_FIRE
+    m.marioBodyState.eyeState = MARIO_EYES_LOOK_UP
+    
+    if stepResult == AIR_STEP_HIT_WALL then
+        spawn_non_sync_object(id_bhvExplosion, E_MODEL_EXPLOSION, m.pos.x, m.pos.y, m.pos.z,
+            function (o)
+                o.oDamageOrCoinValue = 0
+                obj_scale(o, 2)
+            end)
+        m.particleFlags = m.particleFlags | PARTICLE_VERTICAL_STAR
+        set_mario_action(m, ACT_BACKWARD_AIR_KB, 0)
+    end
+
+    if m.input & INPUT_Z_PRESSED ~= 0 then
+        m.marioObj.header.gfx.angle.z = 0
+        set_mario_action(m, ACT_GROUND_POUND, 0)
+    else
+        j.rotAngle = j.rotAngle + 0x2000
+        m.marioObj.header.gfx.angle.z = j.rotAngle
+    end
+
+    m.actionTimer = m.actionTimer + 1
+    return false
+end
+hook_mario_action(ACT_DAVY_DASH, act_davy_dash)
+
+-- Flutterable actions, these don't match the DS flutterable actions
+local flutterWhiteList = {
+    [ACT_JUMP] = true,
+    [ACT_DOUBLE_JUMP] = true,
+    [ACT_TRIPLE_JUMP] = true,
+    [ACT_LONG_JUMP] = true,
+    [ACT_FREEFALL] = true,
+    [ACT_SIDE_FLIP] = true
+}
+---@param m MarioState
+function act_flutter(m)
+
+    -- End flutter after 1 second
+    if m.actionTimer >= 30 or (m.input & INPUT_A_DOWN) == 0 then
+        return set_mario_action(m, ACT_FREEFALL, 0)
+    end
+
+    local ended = common_air_action_step(m, ACT_JUMP_LAND, CHAR_ANIM_RUNNING_UNUSED, 0) ~= 0 -- Checks if the action ended earlier due to forced actions like bonking or landing
+
+    if m.actionTimer == 0 and not ended then
+        play_character_sound(m, CHAR_SOUND_TWIRL_BOUNCE) -- Play audio sample
+    end
+
+    smlua_anim_util_set_animation(m.marioObj, "davy_flutter") -- Sets the animation
+
+    m.marioBodyState.eyeState = MARIO_EYES_LOOK_DOWN ---@type MarioEyesGSCId Eye State
+    m.marioBodyState.handState = MARIO_HAND_OPEN
+    m.vel.y = approach_f32(m.vel.y, m.actionTimer / 1.25, 8, 8) -- Height increases faster as the 1 second passes
+    m.marioObj.header.gfx.animInfo.animAccel = 32768 * 4 -- Animation Speed
+    
+    if m.forwardVel > 25 then
+        m.forwardVel = m.forwardVel - 2 -- nerf velocity cuz this shit busted
+    end
+    if m.input & INPUT_B_PRESSED ~= 0 then
+        set_mario_action(m, ACT_DAVY_DASH, 0)
+    end
+
+    m.actionTimer = m.actionTimer + 1
+    return false
+end
+hook_mario_action(ACT_FLUTTER, act_flutter)
 
 ----------
 -- JESS --
@@ -1045,8 +1201,131 @@ local function jer_update(m)
     end
 end
 
+----------
+-- DAVY --
+----------
+
+function davy_update(m)
+    local j = gJerJessExtraStates[m.playerIndex]
+
+    -- unique tilt
+    if m.action == ACT_WALKING then
+        m.marioBodyState.torsoAngle.x = (m.forwardVel - 15) * -100
+        m.marioBodyState.torsoAngle.z = 0
+    end
+    -- skeletal missile
+    if m.action == ACT_GROUND_POUND_LAND and (m.input & INPUT_A_PRESSED) ~= 0 then
+        set_mario_action(m, ACT_DAVY_MISSILE, 0)
+    end
+    -- GP cancel kick
+    if m.action == ACT_GROUND_POUND and (m.input & INPUT_B_PRESSED) ~= 0 and j.davyCanGPCancel then
+        m.faceAngle.y = m.intendedYaw
+        set_mario_action(m, ACT_SLIDE_KICK, 0)
+        m.forwardVel = 50
+        m.vel.y = 10
+        j.davyCanGPCancel = false
+    end
+    if m.pos.y == m.floorHeight then
+        j.davyCanGPCancel = true
+    end
+    -- bomb
+    if j.davyBomb < 1500 then
+        j.davyBomb = j.davyBomb + 1
+    elseif j.davyBomb > 1500 then
+        j.davyBomb = 1500
+    end
+    -- flutter
+    if flutterWhiteList[m.action] and m.input & INPUT_A_PRESSED ~= 0 and m.vel.y < 0 and j.canFlutter then
+        set_mario_action(m, ACT_FLUTTER, 0)
+        j.canFlutter = false
+    end
+    if m.pos.y == m.floorHeight then
+        j.canDash = true
+        j.canFlutter = true
+    end
+    -- slippery
+    if m.action == ACT_BRAKING or m.action == ACT_TURNING_AROUND or m.action == ACT_CROUCH_SLIDE then
+        if m.floor.type == SURFACE_SLIPPERY or m.floor.type == SURFACE_VERY_SLIPPERY then
+            m.forwardVel = m.forwardVel + 0.5
+        else
+            m.forwardVel = m.forwardVel + 2.5
+        end
+    end
+    if m.action == ACT_WALKING and m.forwardVel < 10 and m.forwardVel > 0 then
+        m.forwardVel = m.forwardVel - 0.53
+    end
+end
+
+function davy_set_action(m)
+    local j = gJerJessExtraStates[m.playerIndex]
+    local bombTable = {
+                    E_MODEL_BLACK_BOBOMB,
+                    E_MODEL_BOBOMB_BUDDY,
+                    E_MODEL_POCKET_EXPLOSIVE, 
+                    E_MODEL_DYNAMITE
+                    }
+    local bombRand = math.floor(math.random(1,4))
 
 
+    if (m.action == ACT_PUNCHING or m.action == ACT_MOVE_PUNCHING) and j.davyBomb > 500 then -- make action condition kick when bomb spawning fixed
+        j.davyBomb = j.davyBomb - 500
+        set_mario_action(m, ACT_AIR_THROW, 0)
+        m.forwardVel = m.forwardVel + 10
+        m.vel.y = 20
+
+        spawn_sync_object(id_bhvBobomb, bombTable[bombRand], m.pos.x, m.pos.y, m.pos.z, -- fix spawn location to not always snap to floor
+            ---@param o Object
+            function (o)
+                o.oAction = BOBOMB_ACT_LAUNCHED
+                obj_scale(o, 0.75)
+                o.oFaceAngleYaw = m.faceAngle.y
+                o.oForwardVel = 15 + m.forwardVel
+                o.oVelY = 40
+                o.globalPlayerIndex = network_global_index_from_local(m.playerIndex)
+        end)
+    end
+
+    -- wall slide
+    if m.action == ACT_SOFT_BONK then
+        m.faceAngle.y = m.faceAngle.y + 0x8000
+        set_mario_action(m, ACT_WALL_SLIDE, 0)
+        m.vel.x = 0
+        m.vel.y = 0
+        m.vel.z = 0
+    end
+    -- twirl landing momentum
+    if m.action == ACT_TWIRL_LAND and m.input & INPUT_NONZERO_ANALOG ~= 0 then
+        set_mario_action(m, ACT_WALKING, 0)
+    end
+    -- dash
+    if m.action == ACT_DIVE and m.input & INPUT_A_DOWN ~= 0 and j.canDash then
+       set_mario_action(m, ACT_DAVY_DASH, 0)
+       j.canDash = false
+    end
+end
+
+function davy_before_step(m)
+    local hScale = 1.0
+
+    -- faster holding item
+    if m.action == ACT_HOLD_WALKING and m.forwardVel < 30 then
+        hScale = hScale * 2.5
+    end
+
+    m.vel.x = m.vel.x * hScale
+    m.vel.z = m.vel.z * hScale
+end
+
+function davy_interact(m, o, intee)
+    local j = gJerJessExtraStates[m.playerIndex]
+    if m == gMarioStates[0] and intee == INTERACT_COIN then
+        j.davyBomb = j.davyBomb + (25 * o.oDamageOrCoinValue)
+    end
+end
+
+---------
+-- HUD --
+---------
 
 local jerMeterEmpty = get_texture_info("jer-boost-meter0")
 local jerMeterFull = get_texture_info("jer-boost-meter1")
@@ -1061,6 +1340,19 @@ local jessHoverBar = get_texture_info("water_hover_bar")
 
 local speedometerBack = get_texture_info("speedometer")
 local speedometerFront = get_texture_info("needle")
+
+local bombMeterTable = {
+                    get_texture_info("bomb-meter0"),
+                    get_texture_info("bomb-meter1"),
+                    get_texture_info("bomb-meter2"),
+                    get_texture_info("bomb-meter3")
+                    }
+local bombBarTable = {
+                    get_texture_info("bomb-bar1"),
+                    get_texture_info("bomb-bar2"),
+                    get_texture_info("bomb-bar3"),
+                    get_texture_info("bomb-bar3")
+                    }
 
 function jer_hud()
   for i = 0, MAX_PLAYERS - 1 do
@@ -1149,12 +1441,44 @@ local function jess_hud()
   end
 end
 
+function davy_hud()
+    for i = 0, MAX_PLAYERS - 1 do
+        local m = gMarioStates[i]
+        local j = gJerJessExtraStates[i]
+        local davyBombCount = 0
+        local davyBombMeterScale = ((j.davyBomb / 500) * 10)
+
+        djui_hud_set_color(255, 255, 255, 255)
+        djui_hud_set_resolution(RESOLUTION_N64)
+
+        if j.davyBomb == 1500 then
+            davyBombCount = 3
+        elseif j.davyBomb > 999 then
+            davyBombCount = 2
+        elseif j.davyBomb > 499 then
+            davyBombCount = 1
+        else
+            davyBombCount = 0
+        end
+
+        if davyBombMeterScale > 10 then
+            davyBombMeterScale = (((j.davyBomb / 500) * 10) - (10 * davyBombCount))
+        end
+
+        djui_hud_render_texture(bombMeterTable[davyBombCount + 1], 15, 50, 1, 1)
+        djui_hud_render_texture(bombBarTable[davyBombCount + 1], 15, (169 - (8 * davyBombMeterScale)), 1, davyBombMeterScale)
+     
+        --djui_hud_set_font(FONT_HUD)
+        --djui_hud_print_text(string.format("BOMBS ;%.0f", davyBombCount) , 25, 205, 1)
+    end
+end
+
 -- DEBUG --
 --local function debug_hud()
 --        local m = gMarioStates[0]
 --        local floorNormalY = m.floor.normal.y
         
---        djui_hud_set_color(50, 50, 255, 255)
+--        djui_hud_set_color(255, 150, 0, 255)
 --        djui_hud_set_resolution(RESOLUTION_DJUI)
 --        djui_hud_set_font(FONT_ALIASED)
 
@@ -1190,3 +1514,9 @@ _G.charSelect.character_hook_moveset(CT_JER, HOOK_ON_SET_MARIO_ACTION, jer_set_a
 _G.charSelect.character_hook_moveset(CT_JER, HOOK_BEFORE_PHYS_STEP, jer_before_phys_step)
 _G.charSelect.character_hook_moveset(CT_JER, HOOK_BEFORE_SET_MARIO_ACTION, jer_before_set_action)
 _G.charSelect.character_hook_moveset(CT_JER, HOOK_ON_HUD_RENDER_BEHIND, jer_hud)
+
+_G.charSelect.character_hook_moveset(CT_DAVY, HOOK_MARIO_UPDATE, davy_update)
+_G.charSelect.character_hook_moveset(CT_DAVY, HOOK_ON_SET_MARIO_ACTION, davy_set_action)
+_G.charSelect.character_hook_moveset(CT_DAVY, HOOK_BEFORE_PHYS_STEP, davy_before_step)
+_G.charSelect.character_hook_moveset(CT_DAVY, HOOK_ON_INTERACT, davy_interact)
+_G.charSelect.character_hook_moveset(CT_DAVY, HOOK_ON_HUD_RENDER_BEHIND, davy_hud)
