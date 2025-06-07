@@ -26,7 +26,7 @@ Lights1 lucky_Metal__METAL__lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0x0, 0x0, 0x0, 0x28, 0x28, 0x28);
 
-Lights1 lucky_Helmet__SKIN__lights = gdSPDefLights1(
+Lights1 lucky_Helmet_lights = gdSPDefLights1(
 	0xB, 0xB, 0xB,
 	0x22, 0x22, 0x22, 0x28, 0x28, 0x28);
 
@@ -1981,8 +1981,8 @@ Gfx mat_revert_lucky_Metal__METAL_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_lucky_Helmet__SKIN_[] = {
-	gsSPCopyLightsPlayerPart(SKIN),
+Gfx mat_lucky_Helmet[] = {
+	gsSPSetLights1(lucky_Helmet_lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
@@ -2022,7 +2022,7 @@ Gfx mat_revert_lucky_Steel[] = {
 };
 
 Gfx mat_lucky_Spoiler[] = {
-	gsSPCopyLightsPlayerPart(SKIN),
+	gsSPSetLights1(lucky_Spoiler_lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
@@ -2030,7 +2030,7 @@ Gfx mat_lucky_Spoiler[] = {
 };
 
 Gfx mat_lucky_Spoiler_Voltex[] = {
-	gsSPCopyLightsPlayerPart(SKIN),
+	gsSPSetLights1(lucky_Spoiler_Voltex_lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
@@ -2108,7 +2108,7 @@ Gfx lucky_Torso_mesh_layer_1_mat_override_Metal__METAL__0[] = {
 };
 
 Gfx lucky_Head_DL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_lucky_Helmet__SKIN_),
+	gsSPDisplayList(mat_lucky_Helmet),
 	gsSPDisplayList(lucky_Head_DL_mesh_layer_1_tri_0),
 	gsSPDisplayList(mat_lucky_Stripes__HAIR_),
 	gsSPDisplayList(lucky_Head_DL_mesh_layer_1_tri_1),
@@ -2206,13 +2206,6 @@ Gfx lucky_Nos_Tank_DL_mesh_layer_4[] = {
 	gsSPDisplayList(mat_lucky_Spoiler_Post),
 	gsSPDisplayList(lucky_Nos_Tank_DL_mesh_layer_4_tri_0),
 	gsSPDisplayList(mat_revert_lucky_Spoiler_Post),
-	gsDPPipeSync(),
-	gsSPSetGeometryMode(G_LIGHTING),
-	gsSPClearGeometryMode(G_TEXTURE_GEN),
-	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
-	gsSPTexture(65535, 65535, 0, 0, 0),
-	gsDPSetEnvColor(255, 255, 255, 255),
-	gsDPSetAlphaCompare(G_AC_NONE),
 	gsSPEndDisplayList(),
 };
 
@@ -2220,13 +2213,6 @@ Gfx lucky_Nos_Tank_DL_mesh_layer_4_mat_override_Metal__METAL__0[] = {
 	gsSPDisplayList(mat_lucky_Metal__METAL_),
 	gsSPDisplayList(lucky_Nos_Tank_DL_mesh_layer_4_tri_0),
 	gsSPDisplayList(mat_revert_lucky_Metal__METAL_),
-	gsDPPipeSync(),
-	gsSPSetGeometryMode(G_LIGHTING),
-	gsSPClearGeometryMode(G_TEXTURE_GEN),
-	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
-	gsSPTexture(65535, 65535, 0, 0, 0),
-	gsDPSetEnvColor(255, 255, 255, 255),
-	gsDPSetAlphaCompare(G_AC_NONE),
 	gsSPEndDisplayList(),
 };
 
@@ -2374,26 +2360,6 @@ Gfx lucky_Right_Leg_mesh_layer_1_mat_override_Metal__METAL__0[] = {
 Gfx lucky_Right_Shoe_DL_mesh_layer_1[] = {
 	gsSPDisplayList(mat_lucky_Boots__SHOES_),
 	gsSPDisplayList(lucky_Right_Shoe_DL_mesh_layer_1_tri_0),
-	gsDPPipeSync(),
-	gsSPSetGeometryMode(G_LIGHTING),
-	gsSPClearGeometryMode(G_TEXTURE_GEN),
-	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
-	gsSPTexture(65535, 65535, 0, 0, 0),
-	gsDPSetEnvColor(255, 255, 255, 255),
-	gsDPSetAlphaCompare(G_AC_NONE),
-
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, 0),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 1023, 256),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
-	gsDPSetTileSize(0, 0, 0, 124, 124),
-
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, 0),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 256, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(6, 0, 0, 1023, 256),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 256, 1, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
-	gsDPSetTileSize(1, 0, 0, 124, 124),
-
 	gsSPEndDisplayList(),
 };
 
@@ -2401,6 +2367,10 @@ Gfx lucky_Right_Shoe_DL_mesh_layer_1_mat_override_Metal__METAL__0[] = {
 	gsSPDisplayList(mat_lucky_Metal__METAL_),
 	gsSPDisplayList(lucky_Right_Shoe_DL_mesh_layer_1_tri_0),
 	gsSPDisplayList(mat_revert_lucky_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx lucky_material_revert_render_settings[] = {
 	gsDPPipeSync(),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPClearGeometryMode(G_TEXTURE_GEN),
@@ -2408,18 +2378,16 @@ Gfx lucky_Right_Shoe_DL_mesh_layer_1_mat_override_Metal__METAL__0[] = {
 	gsSPTexture(65535, 65535, 0, 0, 0),
 	gsDPSetEnvColor(255, 255, 255, 255),
 	gsDPSetAlphaCompare(G_AC_NONE),
-
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, 0),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
+	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP  | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(0, 0, 0, 124, 124),
-
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, 0),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 256, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(6, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 256, 1, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(1, 0, 0, 124, 124),
-
 	gsSPEndDisplayList(),
 };
+

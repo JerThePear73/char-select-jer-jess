@@ -2,7 +2,7 @@
 -- description: Mod that adds My characters to SM64 along with their own custom movesets.\n\n\\#ff7777\\This Pack requires Character Select\nto use as a Library!
 
 local TEXT_MOD_NAME = "Jer + Jess"
-local VER_NUM = "0.15.5"
+local VER_NUM = "0.16.0"
 
 -- Stops mod from loading if Character Select isn't on
 if not _G.charSelectExists then
@@ -11,8 +11,8 @@ if not _G.charSelectExists then
 end
 
 -- Models --
-local E_MODEL_JER = smlua_model_util_get_id('jer_nos_geo')
-local E_MODEL_JER_BEACH = smlua_model_util_get_id('beach_jer_nos_geo')
+local E_MODEL_JER = smlua_model_util_get_id('jer_geo')
+local E_MODEL_JER_BEACH = smlua_model_util_get_id('beach_jer_geo')
 local E_MODEL_LUCKY = smlua_model_util_get_id('lucky_geo')
 
 local E_MODEL_JESS = smlua_model_util_get_id('jess_geo')
@@ -168,7 +168,7 @@ local PALETTE_JER = {
     [GLOVES] = "008040",
     [SHOES]  = "462c1e",
     [HAIR]   = "00ff00",
-    [SKIN]   = "4C4C4C",
+    [SKIN]   = "ffba90",
     [CAP]    = "008040",
     [EMBLEM] = "008040",
 }
@@ -178,9 +178,19 @@ local PALETTE_JER_LEGACY = {
     [GLOVES] = "008000",
     [SHOES]  = "462c1e",
     [HAIR]   = "00ff00",
-    [SKIN]   = "4C4C4C",
+    [SKIN]   = "ffba90",
     [CAP]    = "008000",
     [EMBLEM] = "008000",
+}
+local PALETTE_JER_FIRE = {
+    [PANTS]  = "ff4000",
+    [SHIRT]  = "222222",
+    [GLOVES] = "ff4000",
+    [SHOES]  = "462c1e",
+    [HAIR]   = "ff7700",
+    [SKIN]   = "ffba90",
+    [CAP]    = "ff4000",
+    [EMBLEM] = "ff4000",
 }
 local PALETTE_JER_BEACH = {
     [PANTS]  = "FF8900",
@@ -188,8 +198,8 @@ local PALETTE_JER_BEACH = {
     [GLOVES] = "FF8900",
     [SHOES]  = "BC00BC",
     [HAIR]   = "00ff00",
-    [SKIN]   = "4C4C4C",
-    [CAP]    = "ffba90",
+    [SKIN]   = "ffba90",
+    [CAP]    = "BC00BC",
     [EMBLEM] = "BC00BC",
 }
 local PALETTE_80_SUNSET = {
@@ -198,8 +208,8 @@ local PALETTE_80_SUNSET = {
     [GLOVES] = "00ff80",
     [SHOES]  = "ff0080",
     [HAIR]   = "00ff80",
-    [SKIN]   = "00ff80",
-    [CAP]    = "ffba90",
+    [SKIN]   = "ffba90",
+    [CAP]    = "8000ff",
     [EMBLEM] = "8000ff",
 }
 local PALETTE_LUCKY = {
@@ -208,7 +218,7 @@ local PALETTE_LUCKY = {
     [GLOVES] = "222222",
     [SHOES]  = "222222",
     [HAIR]   = "008000",
-    [SKIN]   = "333333",
+    [SKIN]   = "ffba90",
     [CAP]    = "FFC900",
     [EMBLEM] = "FFC900",
 }
@@ -218,7 +228,7 @@ local PALETTE_BURNOUT = {
     [GLOVES] = "222222",
     [SHOES]  = "222222",
     [HAIR]   = "ff0000",
-    [SKIN]   = "777777",
+    [SKIN]   = "ffba90",
     [CAP]    = "222222",
     [EMBLEM] = "ff0000",
 }
@@ -228,7 +238,7 @@ local PALETTE_LENNY = {
     [GLOVES] = "222222",
     [SHOES]  = "555555",
     [HAIR]   = "d2002b",
-    [SKIN]   = "d2002b",
+    [SKIN]   = "ffba90",
     [CAP]    = "000000",
     [EMBLEM] = "ff6900",
 }
@@ -317,14 +327,14 @@ local PALETTE_DAVY =  {
     [EMBLEM] = "ff8000",
 }
 local PALETTE_GREEDY =  {
-    [PANTS]  = "ff8000",
-    [SHIRT]  = "222222",
-    [GLOVES] = "ff8000",
-    [SHOES]  = "552945",
-    [HAIR]   = "ffffff",
-    [SKIN]   = "ffffff",
-    [CAP]    = "ff8000",
-    [EMBLEM] = "ff8000",
+    [PANTS]  = "5724aa",
+    [SHIRT]  = "ff8000",
+    [GLOVES] = "ffffb2",
+    [SHOES]  = "bc0000",
+    [HAIR]   = "ffa200",
+    [SKIN]   = "ffffb2",
+    [CAP]    = "5724aa",
+    [EMBLEM] = "5724aa",
 }
 
 local capJER = {
@@ -401,7 +411,12 @@ local ANIMTABLE_JESS = {
 }
 
 local ANIMTABLE_DAVY = {
-    [_G.charSelect.CS_ANIM_MENU] = "davy_menu_pose"
+    [_G.charSelect.CS_ANIM_MENU] = "davy_menu_pose",
+    [CHAR_ANIM_SINGLE_JUMP] = "davy_single_jump",
+    [CHAR_ANIM_IDLE_HEAD_LEFT] = "davy_idle",
+    [CHAR_ANIM_IDLE_HEAD_RIGHT] = "davy_idle",
+    [CHAR_ANIM_IDLE_HEAD_CENTER] = "davy_idle",
+    [CHAR_ANIM_FIRST_PERSON] = "davy_idle"
 }
 
 local HEALTH_METER_JER = {
@@ -504,6 +519,7 @@ local CSloaded = false
 local function on_character_select_load()
     _G.charSelect.character_add_palette_preset(E_MODEL_JER, PALETTE_JER, "Default")
     _G.charSelect.character_add_palette_preset(E_MODEL_JER, PALETTE_JER_LEGACY, "Legacy")
+    _G.charSelect.character_add_palette_preset(E_MODEL_JER, PALETTE_JER_FIRE, "Fire")
     _G.charSelect.character_add_animations(E_MODEL_JER, ANIMTABLE_JER)
     _G.charSelect.character_add_caps(E_MODEL_JER, capJER)
     _G.charSelect.character_add_health_meter(CT_JER, HEALTH_METER_JER)

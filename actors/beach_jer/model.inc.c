@@ -1,175 +1,175 @@
-Lights1 beach_jer_nos_Pants__PANTS__lights = gdSPDefLights1(
+Lights1 beach_jer_Pants__PANTS__lights = gdSPDefLights1(
 	0x7F, 0x41, 0x0,
 	0xFF, 0x89, 0x0, 0x28, 0x28, 0x28);
 
-Lights1 beach_jer_nos_Skin__SKIN__lights = gdSPDefLights1(
+Lights1 beach_jer_Skin__SKIN__lights = gdSPDefLights1(
 	0x7F, 0x66, 0x56,
 	0xFF, 0xCF, 0xB0, 0x28, 0x28, 0x28);
 
-Lights1 beach_jer_nos_Shirt__SHIRT__lights = gdSPDefLights1(
+Lights1 beach_jer_Shirt__SHIRT__lights = gdSPDefLights1(
 	0x49, 0x7F, 0x12,
 	0x98, 0xFF, 0x2E, 0x28, 0x28, 0x28);
 
-Lights1 beach_jer_nos_Shirt_Unculled__SHIRT__lights = gdSPDefLights1(
+Lights1 beach_jer_Shirt_Unculled__SHIRT__lights = gdSPDefLights1(
 	0x49, 0x7F, 0x12,
 	0x98, 0xFF, 0x2E, 0x28, 0x28, 0x28);
 
-Lights1 beach_jer_nos_Helmet__CAP__lights = gdSPDefLights1(
+Lights1 beach_jer_Helmet_lights = gdSPDefLights1(
 	0x21, 0x21, 0x21,
 	0x4C, 0x4C, 0x4C, 0x28, 0x28, 0x28);
 
-Lights1 beach_jer_nos_Stripes__HAIR__lights = gdSPDefLights1(
+Lights1 beach_jer_Stripes__HAIR__lights = gdSPDefLights1(
 	0x0, 0x7F, 0x0,
 	0x0, 0xFF, 0x0, 0x28, 0x28, 0x28);
 
-Lights1 beach_jer_nos_Eyes_lights = gdSPDefLights1(
+Lights1 beach_jer_Eyes_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
 
-Lights1 beach_jer_nos_Visor_lights = gdSPDefLights1(
+Lights1 beach_jer_Visor_lights = gdSPDefLights1(
 	0x0, 0x0, 0x0,
 	0x0, 0x0, 0x0, 0x28, 0x28, 0x28);
 
-Lights1 beach_jer_nos_Sunglasses__EMBLEM__lights = gdSPDefLights1(
+Lights1 beach_jer_Sunglasses__EMBLEM__lights = gdSPDefLights1(
 	0x70, 0x0, 0x70,
 	0xE2, 0x0, 0xE2, 0x28, 0x28, 0x28);
 
-Lights1 beach_jer_nos_Eyes_Half_lights = gdSPDefLights1(
+Lights1 beach_jer_Eyes_Half_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
 
-Lights1 beach_jer_nos_Eyes_Closed_lights = gdSPDefLights1(
+Lights1 beach_jer_Eyes_Closed_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
 
-Lights1 beach_jer_nos_Eyes_Left_lights = gdSPDefLights1(
+Lights1 beach_jer_Eyes_Left_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
 
-Lights1 beach_jer_nos_Eyes_Right_lights = gdSPDefLights1(
+Lights1 beach_jer_Eyes_Right_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
 
-Lights1 beach_jer_nos_Eyes_Up_lights = gdSPDefLights1(
+Lights1 beach_jer_Eyes_Up_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
 
-Lights1 beach_jer_nos_Eyes_Down_lights = gdSPDefLights1(
+Lights1 beach_jer_Eyes_Down_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
 
-Lights1 beach_jer_nos_Eyes_Dead_lights = gdSPDefLights1(
+Lights1 beach_jer_Eyes_Dead_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
 
-Lights1 beach_jer_nos_Gloves__GLOVES__lights = gdSPDefLights1(
+Lights1 beach_jer_Gloves__GLOVES__lights = gdSPDefLights1(
 	0x7F, 0x41, 0x0,
 	0xFF, 0x89, 0x0, 0x28, 0x28, 0x28);
 
-Lights1 beach_jer_nos_NOS_Tank_lights = gdSPDefLights1(
+Lights1 beach_jer_NOS_Tank_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
 
-Lights1 beach_jer_nos_Spoiler_lights = gdSPDefLights1(
+Lights1 beach_jer_Spoiler_lights = gdSPDefLights1(
 	0x11, 0x11, 0x11,
 	0x2C, 0x2C, 0x2C, 0x28, 0x28, 0x28);
 
-Lights1 beach_jer_nos_Spoiler_Voltex_lights = gdSPDefLights1(
+Lights1 beach_jer_Spoiler_Voltex_lights = gdSPDefLights1(
 	0x11, 0x11, 0x11,
 	0x2C, 0x2C, 0x2C, 0x28, 0x28, 0x28);
 
-Lights1 beach_jer_nos_Spoiler_Post_lights = gdSPDefLights1(
+Lights1 beach_jer_Spoiler_Post_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
 
-Lights1 beach_jer_nos_Shoes__SHOES__lights = gdSPDefLights1(
+Lights1 beach_jer_Shoes__SHOES__lights = gdSPDefLights1(
 	0x5C, 0x0, 0x5C,
 	0xBC, 0x0, 0xBC, 0x28, 0x28, 0x28);
 
-Lights1 beach_jer_nos_Metal__METAL__lights = gdSPDefLights1(
+Lights1 beach_jer_Metal__METAL__lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0x0, 0x0, 0x0, 0x28, 0x28, 0x28);
 
-Lights1 beach_jer_nos_Metal_Unculled__METAL__lights = gdSPDefLights1(
+Lights1 beach_jer_Metal_Unculled__METAL__lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0x0, 0x0, 0x0, 0x28, 0x28, 0x28);
 
-Gfx beach_jer_nos_jer_eyes_center_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 beach_jer_nos_jer_eyes_center_rgba16_rgba16[] = {
-	#include "actors/beach_jer_nos/jer_eyes_center.rgba16.inc.c"
+Gfx beach_jer_jer_eyes_center_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
+u8 beach_jer_jer_eyes_center_rgba16_rgba16[] = {
+	#include "actors/beach_jer/jer_eyes_center.rgba16.inc.c"
 };
 
-Gfx beach_jer_nos_jer_metal_base_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 beach_jer_nos_jer_metal_base_rgba16[] = {
-	#include "actors/beach_jer_nos/jer_metal_base.rgba16.inc.c"
+Gfx beach_jer_jer_metal_base_rgba16_aligner[] = {gsSPEndDisplayList()};
+u8 beach_jer_jer_metal_base_rgba16[] = {
+	#include "actors/beach_jer/jer_metal_base.rgba16.inc.c"
 };
 
-Gfx beach_jer_nos_jer_eyes_half_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 beach_jer_nos_jer_eyes_half_rgba16_rgba16[] = {
-	#include "actors/beach_jer_nos/jer_eyes_half.rgba16.inc.c"
+Gfx beach_jer_jer_eyes_half_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
+u8 beach_jer_jer_eyes_half_rgba16_rgba16[] = {
+	#include "actors/beach_jer/jer_eyes_half.rgba16.inc.c"
 };
 
-Gfx beach_jer_nos_jer_eyes_closed_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 beach_jer_nos_jer_eyes_closed_rgba16_rgba16[] = {
-	#include "actors/beach_jer_nos/jer_eyes_closed.rgba16.inc.c"
+Gfx beach_jer_jer_eyes_closed_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
+u8 beach_jer_jer_eyes_closed_rgba16_rgba16[] = {
+	#include "actors/beach_jer/jer_eyes_closed.rgba16.inc.c"
 };
 
-Gfx beach_jer_nos_jer_eyes_left_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 beach_jer_nos_jer_eyes_left_rgba16_rgba16[] = {
-	#include "actors/beach_jer_nos/jer_eyes_left.rgba16.inc.c"
+Gfx beach_jer_jer_eyes_left_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
+u8 beach_jer_jer_eyes_left_rgba16_rgba16[] = {
+	#include "actors/beach_jer/jer_eyes_left.rgba16.inc.c"
 };
 
-Gfx beach_jer_nos_jer_eyes_right_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 beach_jer_nos_jer_eyes_right_rgba16_rgba16[] = {
-	#include "actors/beach_jer_nos/jer_eyes_right.rgba16.inc.c"
+Gfx beach_jer_jer_eyes_right_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
+u8 beach_jer_jer_eyes_right_rgba16_rgba16[] = {
+	#include "actors/beach_jer/jer_eyes_right.rgba16.inc.c"
 };
 
-Gfx beach_jer_nos_jer_eyes_up_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 beach_jer_nos_jer_eyes_up_rgba16_rgba16[] = {
-	#include "actors/beach_jer_nos/jer_eyes_up.rgba16.inc.c"
+Gfx beach_jer_jer_eyes_up_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
+u8 beach_jer_jer_eyes_up_rgba16_rgba16[] = {
+	#include "actors/beach_jer/jer_eyes_up.rgba16.inc.c"
 };
 
-Gfx beach_jer_nos_jer_eyes_down_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 beach_jer_nos_jer_eyes_down_rgba16_rgba16[] = {
-	#include "actors/beach_jer_nos/jer_eyes_down.rgba16.inc.c"
+Gfx beach_jer_jer_eyes_down_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
+u8 beach_jer_jer_eyes_down_rgba16_rgba16[] = {
+	#include "actors/beach_jer/jer_eyes_down.rgba16.inc.c"
 };
 
-Gfx beach_jer_nos_jer_eyes_dead_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 beach_jer_nos_jer_eyes_dead_rgba16_rgba16[] = {
-	#include "actors/beach_jer_nos/jer_eyes_dead.rgba16.inc.c"
+Gfx beach_jer_jer_eyes_dead_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
+u8 beach_jer_jer_eyes_dead_rgba16_rgba16[] = {
+	#include "actors/beach_jer/jer_eyes_dead.rgba16.inc.c"
 };
 
-Gfx beach_jer_nos_jer_tank_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 beach_jer_nos_jer_tank_rgba16[] = {
-	#include "actors/beach_jer_nos/jer-tank.rgba16.inc.c"
+Gfx beach_jer_jer_tank_rgba16_aligner[] = {gsSPEndDisplayList()};
+u8 beach_jer_jer_tank_rgba16[] = {
+	#include "actors/beach_jer/jer-tank.rgba16.inc.c"
 };
 
-Gfx beach_jer_nos_stainless_steel_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 beach_jer_nos_stainless_steel_rgba16[] = {
-	#include "actors/beach_jer_nos/stainless_steel.rgba16.inc.c"
+Gfx beach_jer_stainless_steel_rgba16_aligner[] = {gsSPEndDisplayList()};
+u8 beach_jer_stainless_steel_rgba16[] = {
+	#include "actors/beach_jer/stainless_steel.rgba16.inc.c"
 };
 
-Gfx beach_jer_nos_voltex_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 beach_jer_nos_voltex_rgba16[] = {
-	#include "actors/beach_jer_nos/voltex.rgba16.inc.c"
+Gfx beach_jer_voltex_rgba16_aligner[] = {gsSPEndDisplayList()};
+u8 beach_jer_voltex_rgba16[] = {
+	#include "actors/beach_jer/voltex.rgba16.inc.c"
 };
 
-Gfx beach_jer_nos_spoiler_posts_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 beach_jer_nos_spoiler_posts_rgba16[] = {
-	#include "actors/beach_jer_nos/spoiler_posts.rgba16.inc.c"
+Gfx beach_jer_spoiler_posts_rgba16_aligner[] = {gsSPEndDisplayList()};
+u8 beach_jer_spoiler_posts_rgba16[] = {
+	#include "actors/beach_jer/spoiler_posts.rgba16.inc.c"
 };
 
-Gfx beach_jer_nos_jer_metal_base_rgba16_copy_aligner[] = {gsSPEndDisplayList()};
-u8 beach_jer_nos_jer_metal_base_rgba16_copy[] = {
-	#include "actors/beach_jer_nos/jer_metal_base.rgba16.inc.c"
+Gfx beach_jer_jer_metal_base_rgba16_copy_aligner[] = {gsSPEndDisplayList()};
+u8 beach_jer_jer_metal_base_rgba16_copy[] = {
+	#include "actors/beach_jer/jer_metal_base.rgba16.inc.c"
 };
 
-Gfx beach_jer_nos_jer_metal_shine_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 beach_jer_nos_jer_metal_shine_rgba16[] = {
-	#include "actors/beach_jer_nos/jer_metal_shine.rgba16.inc.c"
+Gfx beach_jer_jer_metal_shine_rgba16_aligner[] = {gsSPEndDisplayList()};
+u8 beach_jer_jer_metal_shine_rgba16[] = {
+	#include "actors/beach_jer/jer_metal_shine.rgba16.inc.c"
 };
 
-Vtx beach_jer_nos_Torso_mesh_layer_1_vtx_0[51] = {
+Vtx beach_jer_Torso_mesh_layer_1_vtx_0[51] = {
 	{{ {-65, 15, -20}, 0, {-16, -16}, {142, 49, 230, 255} }},
 	{{ {-62, -13, 26}, 0, {-16, -16}, {143, 212, 38, 255} }},
 	{{ {-65, 15, 20}, 0, {-16, -16}, {142, 50, 26, 255} }},
@@ -223,8 +223,8 @@ Vtx beach_jer_nos_Torso_mesh_layer_1_vtx_0[51] = {
 	{{ {-24, 5, -53}, 0, {-16, -16}, {2, 0, 129, 255} }},
 };
 
-Gfx beach_jer_nos_Torso_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Torso_mesh_layer_1_vtx_0 + 0, 32, 0),
+Gfx beach_jer_Torso_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Torso_mesh_layer_1_vtx_0 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(3, 0, 4, 0, 5, 4, 0, 0),
 	gsSP2Triangles(6, 5, 0, 0, 0, 7, 6, 0),
@@ -246,7 +246,7 @@ Gfx beach_jer_nos_Torso_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(28, 9, 10, 0, 29, 28, 10, 0),
 	gsSP2Triangles(10, 30, 29, 0, 10, 31, 30, 0),
 	gsSP1Triangle(10, 11, 31, 0),
-	gsSPVertex(beach_jer_nos_Torso_mesh_layer_1_vtx_0 + 32, 19, 0),
+	gsSPVertex(beach_jer_Torso_mesh_layer_1_vtx_0 + 32, 19, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(3, 0, 4, 0, 3, 4, 5, 0),
 	gsSP2Triangles(6, 5, 4, 0, 7, 6, 4, 0),
@@ -259,7 +259,7 @@ Gfx beach_jer_nos_Torso_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Torso_mesh_layer_1_vtx_1[64] = {
+Vtx beach_jer_Torso_mesh_layer_1_vtx_1[64] = {
 	{{ {56, 29, 28}, 0, {18, 90}, {45, 117, 22, 255} }},
 	{{ {39, 34, 20}, 0, {-76, 556}, {28, 124, 7, 255} }},
 	{{ {23, 37, 27}, 0, {164, 946}, {10, 125, 20, 255} }},
@@ -326,8 +326,8 @@ Vtx beach_jer_nos_Torso_mesh_layer_1_vtx_1[64] = {
 	{{ {56, 29, -27}, 0, {834, 56}, {44, 117, 234, 255} }},
 };
 
-Gfx beach_jer_nos_Torso_mesh_layer_1_tri_1[] = {
-	gsSPVertex(beach_jer_nos_Torso_mesh_layer_1_vtx_1 + 0, 32, 0),
+Gfx beach_jer_Torso_mesh_layer_1_tri_1[] = {
+	gsSPVertex(beach_jer_Torso_mesh_layer_1_vtx_1 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 4, 5, 0),
 	gsSP2Triangles(6, 3, 5, 0, 6, 7, 3, 0),
 	gsSP2Triangles(6, 8, 7, 0, 8, 6, 9, 0),
@@ -342,7 +342,7 @@ Gfx beach_jer_nos_Torso_mesh_layer_1_tri_1[] = {
 	gsSP2Triangles(26, 25, 24, 0, 26, 24, 27, 0),
 	gsSP2Triangles(26, 27, 28, 0, 26, 28, 29, 0),
 	gsSP2Triangles(30, 29, 28, 0, 30, 31, 29, 0),
-	gsSPVertex(beach_jer_nos_Torso_mesh_layer_1_vtx_1 + 32, 32, 0),
+	gsSPVertex(beach_jer_Torso_mesh_layer_1_vtx_1 + 32, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 4, 5, 0),
 	gsSP2Triangles(6, 5, 4, 0, 7, 6, 4, 0),
 	gsSP2Triangles(8, 7, 4, 0, 8, 9, 7, 0),
@@ -359,7 +359,7 @@ Gfx beach_jer_nos_Torso_mesh_layer_1_tri_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Torso_mesh_layer_1_vtx_2[64] = {
+Vtx beach_jer_Torso_mesh_layer_1_vtx_2[64] = {
 	{{ {43, 27, -45}, 0, {-40, 294}, {19, 94, 173, 255} }},
 	{{ {31, 29, -44}, 0, {-74, 626}, {18, 89, 167, 255} }},
 	{{ {56, 29, -27}, 0, {834, 56}, {44, 117, 234, 255} }},
@@ -426,8 +426,8 @@ Vtx beach_jer_nos_Torso_mesh_layer_1_vtx_2[64] = {
 	{{ {14, 28, 48}, 0, {-16, -16}, {23, 63, 108, 255} }},
 };
 
-Gfx beach_jer_nos_Torso_mesh_layer_1_tri_2[] = {
-	gsSPVertex(beach_jer_nos_Torso_mesh_layer_1_vtx_2 + 0, 32, 0),
+Gfx beach_jer_Torso_mesh_layer_1_tri_2[] = {
+	gsSPVertex(beach_jer_Torso_mesh_layer_1_vtx_2 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 2, 3, 0, 0),
 	gsSP2Triangles(4, 2, 5, 0, 5, 6, 4, 0),
 	gsSP2Triangles(5, 7, 6, 0, 8, 7, 5, 0),
@@ -443,7 +443,7 @@ Gfx beach_jer_nos_Torso_mesh_layer_1_tri_2[] = {
 	gsSP2Triangles(25, 27, 23, 0, 28, 27, 25, 0),
 	gsSP2Triangles(29, 27, 28, 0, 28, 30, 29, 0),
 	gsSP1Triangle(30, 31, 29, 0),
-	gsSPVertex(beach_jer_nos_Torso_mesh_layer_1_vtx_2 + 32, 32, 0),
+	gsSPVertex(beach_jer_Torso_mesh_layer_1_vtx_2 + 32, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 1, 3, 0, 5, 4, 3, 0),
 	gsSP2Triangles(5, 6, 4, 0, 7, 6, 5, 0),
@@ -463,7 +463,7 @@ Gfx beach_jer_nos_Torso_mesh_layer_1_tri_2[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Torso_mesh_layer_1_vtx_3[28] = {
+Vtx beach_jer_Torso_mesh_layer_1_vtx_3[28] = {
 	{{ {13, 33, -43}, 0, {-16, -16}, {11, 112, 198, 255} }},
 	{{ {-10, 37, -32}, 0, {-16, -16}, {19, 125, 241, 255} }},
 	{{ {12, 35, -28}, 0, {-16, -16}, {247, 126, 241, 255} }},
@@ -494,8 +494,8 @@ Vtx beach_jer_nos_Torso_mesh_layer_1_vtx_3[28] = {
 	{{ {-7, -39, 17}, 0, {-16, 1008}, {42, 140, 29, 255} }},
 };
 
-Gfx beach_jer_nos_Torso_mesh_layer_1_tri_3[] = {
-	gsSPVertex(beach_jer_nos_Torso_mesh_layer_1_vtx_3 + 0, 28, 0),
+Gfx beach_jer_Torso_mesh_layer_1_tri_3[] = {
+	gsSPVertex(beach_jer_Torso_mesh_layer_1_vtx_3 + 0, 28, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 5, 3, 0),
 	gsSP2Triangles(6, 5, 4, 0, 6, 7, 5, 0),
@@ -510,7 +510,7 @@ Gfx beach_jer_nos_Torso_mesh_layer_1_tri_3[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Head_DL_mesh_layer_1_vtx_0[116] = {
+Vtx beach_jer_Head_DL_mesh_layer_1_vtx_0[116] = {
 	{{ {45, 54, 48}, 0, {397, 791}, {225, 84, 90, 255} }},
 	{{ {-8, 63, 0}, 0, {-16, 1345}, {158, 81, 0, 255} }},
 	{{ {3, 49, 38}, 0, {294, 1233}, {171, 54, 77, 255} }},
@@ -629,8 +629,8 @@ Vtx beach_jer_nos_Head_DL_mesh_layer_1_vtx_0[116] = {
 	{{ {97, 69, -37}, 0, {951, 1251}, {6, 119, 211, 255} }},
 };
 
-Gfx beach_jer_nos_Head_DL_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Head_DL_mesh_layer_1_vtx_0 + 0, 32, 0),
+Gfx beach_jer_Head_DL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Head_DL_mesh_layer_1_vtx_0 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(4, 1, 3, 0, 5, 1, 4, 0),
 	gsSP2Triangles(6, 7, 8, 0, 6, 9, 7, 0),
@@ -644,7 +644,7 @@ Gfx beach_jer_nos_Head_DL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(24, 23, 8, 0, 24, 25, 23, 0),
 	gsSP2Triangles(26, 27, 28, 0, 29, 28, 27, 0),
 	gsSP2Triangles(29, 30, 28, 0, 28, 30, 31, 0),
-	gsSPVertex(beach_jer_nos_Head_DL_mesh_layer_1_vtx_0 + 32, 32, 0),
+	gsSPVertex(beach_jer_Head_DL_mesh_layer_1_vtx_0 + 32, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 2, 1, 3, 0),
 	gsSP2Triangles(0, 2, 4, 0, 0, 4, 5, 0),
 	gsSP2Triangles(5, 4, 6, 0, 5, 6, 7, 0),
@@ -660,7 +660,7 @@ Gfx beach_jer_nos_Head_DL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(25, 15, 18, 0, 26, 0, 5, 0),
 	gsSP2Triangles(27, 28, 29, 0, 27, 29, 30, 0),
 	gsSP1Triangle(31, 30, 29, 0),
-	gsSPVertex(beach_jer_nos_Head_DL_mesh_layer_1_vtx_0 + 64, 32, 0),
+	gsSPVertex(beach_jer_Head_DL_mesh_layer_1_vtx_0 + 64, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 4, 0),
 	gsSP2Triangles(5, 4, 3, 0, 5, 6, 4, 0),
 	gsSP2Triangles(6, 5, 7, 0, 6, 7, 8, 0),
@@ -678,7 +678,7 @@ Gfx beach_jer_nos_Head_DL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(6, 27, 28, 0, 28, 4, 6, 0),
 	gsSP2Triangles(28, 29, 4, 0, 30, 4, 29, 0),
 	gsSP1Triangle(31, 20, 18, 0),
-	gsSPVertex(beach_jer_nos_Head_DL_mesh_layer_1_vtx_0 + 96, 20, 0),
+	gsSPVertex(beach_jer_Head_DL_mesh_layer_1_vtx_0 + 96, 20, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(1, 3, 4, 0, 5, 1, 4, 0),
 	gsSP2Triangles(5, 4, 6, 0, 7, 5, 6, 0),
@@ -691,7 +691,7 @@ Gfx beach_jer_nos_Head_DL_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Head_DL_mesh_layer_1_vtx_1[54] = {
+Vtx beach_jer_Head_DL_mesh_layer_1_vtx_1[54] = {
 	{{ {12, -3, 37}, 0, {953, -357}, {147, 212, 47, 255} }},
 	{{ {2, -3, 13}, 0, {734, -367}, {147, 212, 47, 255} }},
 	{{ {10, -15, 13}, 0, {733, -295}, {156, 189, 40, 255} }},
@@ -748,8 +748,8 @@ Vtx beach_jer_nos_Head_DL_mesh_layer_1_vtx_1[54] = {
 	{{ {2, -3, -13}, 0, {734, -367}, {147, 212, 209, 255} }},
 };
 
-Gfx beach_jer_nos_Head_DL_mesh_layer_1_tri_1[] = {
-	gsSPVertex(beach_jer_nos_Head_DL_mesh_layer_1_vtx_1 + 0, 32, 0),
+Gfx beach_jer_Head_DL_mesh_layer_1_tri_1[] = {
+	gsSPVertex(beach_jer_Head_DL_mesh_layer_1_vtx_1 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(3, 2, 4, 0, 3, 4, 5, 0),
 	gsSP2Triangles(4, 6, 5, 0, 4, 7, 6, 0),
@@ -764,7 +764,7 @@ Gfx beach_jer_nos_Head_DL_mesh_layer_1_tri_1[] = {
 	gsSP2Triangles(24, 22, 23, 0, 24, 23, 25, 0),
 	gsSP2Triangles(26, 27, 28, 0, 26, 28, 29, 0),
 	gsSP2Triangles(29, 28, 30, 0, 29, 30, 31, 0),
-	gsSPVertex(beach_jer_nos_Head_DL_mesh_layer_1_vtx_1 + 32, 22, 0),
+	gsSPVertex(beach_jer_Head_DL_mesh_layer_1_vtx_1 + 32, 22, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 0, 3, 0, 4, 3, 5, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
@@ -778,7 +778,7 @@ Gfx beach_jer_nos_Head_DL_mesh_layer_1_tri_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Head_DL_mesh_layer_1_vtx_2[10] = {
+Vtx beach_jer_Head_DL_mesh_layer_1_vtx_2[10] = {
 	{{ {45, 54, 48}, 0, {900, 767}, {225, 84, 90, 255} }},
 	{{ {97, 60, 60}, 0, {1004, 279}, {4, 86, 94, 255} }},
 	{{ {97, 69, 37}, 0, {805, 262}, {6, 119, 45, 255} }},
@@ -791,8 +791,8 @@ Vtx beach_jer_nos_Head_DL_mesh_layer_1_vtx_2[10] = {
 	{{ {97, 60, -60}, 0, {-9, 269}, {4, 86, 162, 255} }},
 };
 
-Gfx beach_jer_nos_Head_DL_mesh_layer_1_tri_2[] = {
-	gsSPVertex(beach_jer_nos_Head_DL_mesh_layer_1_vtx_2 + 0, 10, 0),
+Gfx beach_jer_Head_DL_mesh_layer_1_tri_2[] = {
+	gsSPVertex(beach_jer_Head_DL_mesh_layer_1_vtx_2 + 0, 10, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
 	gsSP2Triangles(2, 4, 3, 0, 4, 5, 3, 0),
 	gsSP2Triangles(3, 5, 6, 0, 6, 7, 3, 0),
@@ -800,7 +800,7 @@ Gfx beach_jer_nos_Head_DL_mesh_layer_1_tri_2[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Head_DL_mesh_layer_1_vtx_3[8] = {
+Vtx beach_jer_Head_DL_mesh_layer_1_vtx_3[8] = {
 	{{ {45, 54, 48}, 0, {388, 794}, {225, 84, 90, 255} }},
 	{{ {70, 37, 60}, 0, {582, 596}, {225, 36, 118, 255} }},
 	{{ {97, 60, 60}, 0, {528, 234}, {4, 86, 94, 255} }},
@@ -811,14 +811,14 @@ Vtx beach_jer_nos_Head_DL_mesh_layer_1_vtx_3[8] = {
 	{{ {97, 30, -69}, 0, {717, 233}, {3, 35, 134, 255} }},
 };
 
-Gfx beach_jer_nos_Head_DL_mesh_layer_1_tri_3[] = {
-	gsSPVertex(beach_jer_nos_Head_DL_mesh_layer_1_vtx_3 + 0, 8, 0),
+Gfx beach_jer_Head_DL_mesh_layer_1_tri_3[] = {
+	gsSPVertex(beach_jer_Head_DL_mesh_layer_1_vtx_3 + 0, 8, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 	gsSP2Triangles(4, 5, 6, 0, 7, 4, 6, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Head_DL_mesh_layer_1_vtx_4[62] = {
+Vtx beach_jer_Head_DL_mesh_layer_1_vtx_4[62] = {
 	{{ {137, 63, 67}, 0, {-529, 1788}, {207, 167, 76, 255} }},
 	{{ {138, 65, 67}, 0, {-529, 1788}, {11, 78, 100, 255} }},
 	{{ {107, 76, 61}, 0, {-529, 1788}, {203, 88, 75, 255} }},
@@ -883,8 +883,8 @@ Vtx beach_jer_nos_Head_DL_mesh_layer_1_vtx_4[62] = {
 	{{ {107, 76, -61}, 0, {495, -260}, {203, 88, 181, 255} }},
 };
 
-Gfx beach_jer_nos_Head_DL_mesh_layer_1_tri_4[] = {
-	gsSPVertex(beach_jer_nos_Head_DL_mesh_layer_1_vtx_4 + 0, 31, 0),
+Gfx beach_jer_Head_DL_mesh_layer_1_tri_4[] = {
+	gsSPVertex(beach_jer_Head_DL_mesh_layer_1_vtx_4 + 0, 31, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 3, 2, 0, 4, 2, 5, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
@@ -902,7 +902,7 @@ Gfx beach_jer_nos_Head_DL_mesh_layer_1_tri_4[] = {
 	gsSP2Triangles(20, 23, 25, 0, 23, 26, 25, 0),
 	gsSP2Triangles(25, 27, 20, 0, 28, 27, 25, 0),
 	gsSP2Triangles(28, 25, 29, 0, 30, 20, 27, 0),
-	gsSPVertex(beach_jer_nos_Head_DL_mesh_layer_1_vtx_4 + 31, 31, 0),
+	gsSPVertex(beach_jer_Head_DL_mesh_layer_1_vtx_4 + 31, 31, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(6, 5, 0, 0, 5, 6, 7, 0),
@@ -923,7 +923,7 @@ Gfx beach_jer_nos_Head_DL_mesh_layer_1_tri_4[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Head_DL_mesh_layer_1_vtx_5[42] = {
+Vtx beach_jer_Head_DL_mesh_layer_1_vtx_5[42] = {
 	{{ {150, 59, 69}, 0, {90, -16}, {227, 165, 84, 255} }},
 	{{ {137, 63, 67}, 0, {357, -16}, {207, 167, 76, 255} }},
 	{{ {121, 7, 81}, 0, {357, -16}, {192, 46, 100, 255} }},
@@ -968,8 +968,8 @@ Vtx beach_jer_nos_Head_DL_mesh_layer_1_vtx_5[42] = {
 	{{ {151, 64, -9}, 0, {-16, 1008}, {86, 87, 35, 255} }},
 };
 
-Gfx beach_jer_nos_Head_DL_mesh_layer_1_tri_5[] = {
-	gsSPVertex(beach_jer_nos_Head_DL_mesh_layer_1_vtx_5 + 0, 30, 0),
+Gfx beach_jer_Head_DL_mesh_layer_1_tri_5[] = {
+	gsSPVertex(beach_jer_Head_DL_mesh_layer_1_vtx_5 + 0, 30, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(3, 2, 4, 0, 3, 4, 5, 0),
 	gsSP2Triangles(3, 5, 6, 0, 5, 7, 6, 0),
@@ -986,7 +986,7 @@ Gfx beach_jer_nos_Head_DL_mesh_layer_1_tri_5[] = {
 	gsSP2Triangles(27, 26, 20, 0, 20, 26, 28, 0),
 	gsSP2Triangles(28, 26, 24, 0, 24, 29, 28, 0),
 	gsSP2Triangles(24, 27, 29, 0, 27, 25, 26, 0),
-	gsSPVertex(beach_jer_nos_Head_DL_mesh_layer_1_vtx_5 + 30, 12, 0),
+	gsSPVertex(beach_jer_Head_DL_mesh_layer_1_vtx_5 + 30, 12, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(1, 3, 4, 0, 1, 4, 5, 0),
 	gsSP2Triangles(1, 5, 6, 0, 6, 5, 7, 0),
@@ -997,7 +997,7 @@ Gfx beach_jer_nos_Head_DL_mesh_layer_1_tri_5[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0[115] = {
+Vtx beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0[115] = {
 	{{ {45, 54, 48}, 0, {397, 791}, {225, 84, 90, 255} }},
 	{{ {-8, 63, 0}, 0, {-16, 1345}, {158, 81, 0, 255} }},
 	{{ {3, 49, 38}, 0, {294, 1233}, {171, 54, 77, 255} }},
@@ -1115,8 +1115,8 @@ Vtx beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0[115
 	{{ {13, -3, -37}, 0, {953, -357}, {147, 212, 209, 255} }},
 };
 
-Gfx beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 0, 32, 0),
+Gfx beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(4, 1, 3, 0, 5, 1, 4, 0),
 	gsSP2Triangles(6, 7, 8, 0, 6, 9, 7, 0),
@@ -1132,7 +1132,7 @@ Gfx beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0[] =
 	gsSP2Triangles(25, 26, 27, 0, 27, 28, 25, 0),
 	gsSP2Triangles(27, 29, 28, 0, 28, 29, 30, 0),
 	gsSP1Triangle(30, 29, 31, 0),
-	gsSPVertex(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 32, 32, 0),
+	gsSPVertex(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 32, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
 	gsSP2Triangles(3, 4, 0, 0, 5, 0, 4, 0),
 	gsSP2Triangles(5, 6, 0, 0, 7, 8, 9, 0),
@@ -1146,7 +1146,7 @@ Gfx beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0[] =
 	gsSP2Triangles(22, 23, 24, 0, 24, 25, 22, 0),
 	gsSP2Triangles(24, 26, 25, 0, 27, 28, 29, 0),
 	gsSP2Triangles(28, 30, 29, 0, 28, 31, 30, 0),
-	gsSPVertex(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 64, 31, 0),
+	gsSPVertex(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 64, 31, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 4, 5, 3, 0),
 	gsSP2Triangles(5, 6, 3, 0, 5, 7, 6, 0),
@@ -1164,7 +1164,7 @@ Gfx beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0[] =
 	gsSP2Triangles(25, 26, 1, 0, 27, 1, 26, 0),
 	gsSP2Triangles(27, 28, 1, 0, 29, 28, 27, 0),
 	gsSP1Triangle(17, 15, 30, 0),
-	gsSPVertex(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 95, 20, 0),
+	gsSPVertex(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_0 + 95, 20, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 	gsSP2Triangles(3, 1, 4, 0, 4, 1, 5, 0),
 	gsSP2Triangles(4, 5, 6, 0, 7, 6, 5, 0),
@@ -1177,7 +1177,7 @@ Gfx beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0[] =
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_1[8] = {
+Vtx beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_1[8] = {
 	{{ {45, 54, 48}, 0, {388, 794}, {225, 84, 90, 255} }},
 	{{ {70, 37, 60}, 0, {582, 596}, {225, 36, 118, 255} }},
 	{{ {98, 60, 60}, 0, {528, 234}, {4, 86, 94, 255} }},
@@ -1188,14 +1188,14 @@ Vtx beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_1[8] 
 	{{ {45, 54, -48}, 0, {388, 794}, {225, 84, 166, 255} }},
 };
 
-Gfx beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1[] = {
-	gsSPVertex(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_1 + 0, 8, 0),
+Gfx beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1[] = {
+	gsSPVertex(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_1 + 0, 8, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 	gsSP2Triangles(4, 5, 6, 0, 5, 7, 6, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_2[10] = {
+Vtx beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_2[10] = {
 	{{ {45, 54, 48}, 0, {900, 767}, {225, 84, 90, 255} }},
 	{{ {98, 60, 60}, 0, {1004, 279}, {4, 86, 94, 255} }},
 	{{ {98, 69, 37}, 0, {805, 262}, {6, 119, 45, 255} }},
@@ -1208,8 +1208,8 @@ Vtx beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_2[10]
 	{{ {98, 60, -60}, 0, {-9, 269}, {4, 86, 162, 255} }},
 };
 
-Gfx beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2[] = {
-	gsSPVertex(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_2 + 0, 10, 0),
+Gfx beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2[] = {
+	gsSPVertex(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_2 + 0, 10, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
 	gsSP2Triangles(2, 4, 3, 0, 4, 5, 3, 0),
 	gsSP2Triangles(3, 5, 6, 0, 6, 7, 3, 0),
@@ -1217,7 +1217,7 @@ Gfx beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2[] =
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_3[54] = {
+Vtx beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_3[54] = {
 	{{ {98, 69, 37}, 0, {951, 1251}, {6, 119, 45, 255} }},
 	{{ {111, 74, 14}, 0, {736, 1166}, {40, 114, 39, 255} }},
 	{{ {98, 78, 14}, 0, {743, 1251}, {7, 119, 45, 255} }},
@@ -1274,8 +1274,8 @@ Vtx beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_3[54]
 	{{ {2, -3, -13}, 0, {734, -367}, {147, 212, 209, 255} }},
 };
 
-Gfx beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3[] = {
-	gsSPVertex(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_3 + 0, 32, 0),
+Gfx beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3[] = {
+	gsSPVertex(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_3 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(3, 4, 1, 0, 3, 5, 4, 0),
 	gsSP2Triangles(6, 4, 5, 0, 6, 7, 4, 0),
@@ -1290,7 +1290,7 @@ Gfx beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3[] =
 	gsSP2Triangles(24, 23, 22, 0, 24, 25, 23, 0),
 	gsSP2Triangles(26, 27, 28, 0, 26, 28, 29, 0),
 	gsSP2Triangles(29, 28, 30, 0, 29, 30, 31, 0),
-	gsSPVertex(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_3 + 32, 22, 0),
+	gsSPVertex(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_vtx_3 + 32, 22, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 0, 3, 0, 4, 3, 5, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
@@ -1304,7 +1304,7 @@ Gfx beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3[] =
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Left_Arm_Color_mesh_layer_1_vtx_0[20] = {
+Vtx beach_jer_Left_Arm_Color_mesh_layer_1_vtx_0[20] = {
 	{{ {14, -25, -3}, 0, {-16, 1008}, {212, 137, 254, 255} }},
 	{{ {-2, -6, -16}, 0, {-16, 1008}, {159, 237, 176, 255} }},
 	{{ {15, -9, -24}, 0, {-16, 1008}, {214, 225, 140, 255} }},
@@ -1327,8 +1327,8 @@ Vtx beach_jer_nos_Left_Arm_Color_mesh_layer_1_vtx_0[20] = {
 	{{ {69, 8, 6}, 0, {-16, 1008}, {126, 11, 9, 255} }},
 };
 
-Gfx beach_jer_nos_Left_Arm_Color_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Left_Arm_Color_mesh_layer_1_vtx_0 + 0, 20, 0),
+Gfx beach_jer_Left_Arm_Color_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Left_Arm_Color_mesh_layer_1_vtx_0 + 0, 20, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 0, 5, 0),
 	gsSP2Triangles(0, 6, 5, 0, 0, 2, 6, 0),
@@ -1350,7 +1350,7 @@ Gfx beach_jer_nos_Left_Arm_Color_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Left_Forearm_mesh_layer_1_vtx_0[16] = {
+Vtx beach_jer_Left_Forearm_mesh_layer_1_vtx_0[16] = {
 	{{ {-8, 13, -14}, 0, {-16, 1008}, {232, 105, 188, 255} }},
 	{{ {-22, 8, -10}, 0, {-16, 1008}, {162, 76, 215, 255} }},
 	{{ {-22, 6, 6}, 0, {-16, 1008}, {160, 64, 53, 255} }},
@@ -1369,8 +1369,8 @@ Vtx beach_jer_nos_Left_Forearm_mesh_layer_1_vtx_0[16] = {
 	{{ {55, -10, 15}, 0, {-16, 1008}, {41, 215, 113, 255} }},
 };
 
-Gfx beach_jer_nos_Left_Forearm_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Left_Forearm_mesh_layer_1_vtx_0 + 0, 16, 0),
+Gfx beach_jer_Left_Forearm_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Left_Forearm_mesh_layer_1_vtx_0 + 0, 16, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 0, 4, 0, 0, 5, 4, 0),
 	gsSP2Triangles(0, 6, 5, 0, 0, 2, 6, 0),
@@ -1388,7 +1388,7 @@ Gfx beach_jer_nos_Left_Forearm_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Left_Hand_DL_mesh_layer_1_vtx_0[19] = {
+Vtx beach_jer_Left_Hand_DL_mesh_layer_1_vtx_0[19] = {
 	{{ {18, -18, -22}, 0, {-16, 1008}, {25, 201, 144, 255} }},
 	{{ {23, 5, -31}, 0, {-16, 1008}, {197, 253, 144, 255} }},
 	{{ {56, -22, -43}, 0, {-16, 1008}, {27, 181, 157, 255} }},
@@ -1410,8 +1410,8 @@ Vtx beach_jer_nos_Left_Hand_DL_mesh_layer_1_vtx_0[19] = {
 	{{ {63, 12, -33}, 0, {-16, 1008}, {70, 49, 162, 255} }},
 };
 
-Gfx beach_jer_nos_Left_Hand_DL_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Left_Hand_DL_mesh_layer_1_vtx_0 + 0, 19, 0),
+Gfx beach_jer_Left_Hand_DL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Left_Hand_DL_mesh_layer_1_vtx_0 + 0, 19, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 1, 3, 0, 5, 4, 3, 0),
 	gsSP2Triangles(3, 6, 5, 0, 6, 7, 5, 0),
@@ -1431,7 +1431,7 @@ Gfx beach_jer_nos_Left_Hand_DL_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Left_Hand_DL_mesh_layer_1_vtx_1[11] = {
+Vtx beach_jer_Left_Hand_DL_mesh_layer_1_vtx_1[11] = {
 	{{ {12, -26, -27}, 0, {-16, 1008}, {1, 183, 152, 255} }},
 	{{ {18, -18, -22}, 0, {-16, 1008}, {25, 201, 144, 255} }},
 	{{ {24, -28, 2}, 0, {-16, 1008}, {57, 149, 38, 255} }},
@@ -1445,8 +1445,8 @@ Vtx beach_jer_nos_Left_Hand_DL_mesh_layer_1_vtx_1[11] = {
 	{{ {3, 17, -22}, 0, {-16, 1008}, {244, 64, 147, 255} }},
 };
 
-Gfx beach_jer_nos_Left_Hand_DL_mesh_layer_1_tri_1[] = {
-	gsSPVertex(beach_jer_nos_Left_Hand_DL_mesh_layer_1_vtx_1 + 0, 11, 0),
+Gfx beach_jer_Left_Hand_DL_mesh_layer_1_tri_1[] = {
+	gsSPVertex(beach_jer_Left_Hand_DL_mesh_layer_1_vtx_1 + 0, 11, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(0, 4, 3, 0, 5, 4, 0, 0),
 	gsSP2Triangles(2, 5, 0, 0, 6, 5, 2, 0),
@@ -1458,7 +1458,7 @@ Gfx beach_jer_nos_Left_Hand_DL_mesh_layer_1_tri_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_vtx_0[24] = {
+Vtx beach_jer_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_vtx_0[24] = {
 	{{ {93, 59, -5}, 0, {-16, -16}, {76, 93, 41, 255} }},
 	{{ {57, 71, -5}, 0, {-16, -16}, {241, 126, 251, 255} }},
 	{{ {61, 35, 24}, 0, {-16, -16}, {18, 35, 121, 255} }},
@@ -1485,8 +1485,8 @@ Vtx beach_jer_nos_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_vtx_0
 	{{ {7, 19, -21}, 0, {-16, -16}, {215, 30, 140, 255} }},
 };
 
-Gfx beach_jer_nos_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_vtx_0 + 0, 24, 0),
+Gfx beach_jer_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_vtx_0 + 0, 24, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(0, 4, 3, 0, 4, 0, 2, 0),
 	gsSP2Triangles(5, 4, 2, 0, 5, 2, 6, 0),
@@ -1511,7 +1511,7 @@ Gfx beach_jer_nos_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_0
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_vtx_1[15] = {
+Vtx beach_jer_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_vtx_1[15] = {
 	{{ {7, 8, 25}, 0, {-16, -16}, {248, 19, 125, 255} }},
 	{{ {13, 10, 18}, 0, {-16, -16}, {6, 25, 124, 255} }},
 	{{ {4, 32, 1}, 0, {-16, -16}, {209, 115, 27, 255} }},
@@ -1529,8 +1529,8 @@ Vtx beach_jer_nos_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_vtx_1
 	{{ {-4, 11, -17}, 0, {-16, -16}, {143, 230, 205, 255} }},
 };
 
-Gfx beach_jer_nos_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_1[] = {
-	gsSPVertex(beach_jer_nos_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_vtx_1 + 0, 15, 0),
+Gfx beach_jer_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_1[] = {
+	gsSPVertex(beach_jer_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_vtx_1 + 0, 15, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(0, 6, 5, 0, 7, 6, 0, 0),
@@ -1546,7 +1546,7 @@ Gfx beach_jer_nos_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_1
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Nos_Tank_DL_mesh_layer_1_vtx_0[76] = {
+Vtx beach_jer_Nos_Tank_DL_mesh_layer_1_vtx_0[76] = {
 	{{ {97, -59, -35}, 0, {1110, -16}, {32, 0, 133, 255} }},
 	{{ {-25, -90, -18}, 0, {693, 2032}, {179, 169, 206, 255} }},
 	{{ {-25, -59, -35}, 0, {1110, 2032}, {179, 0, 155, 255} }},
@@ -1625,8 +1625,8 @@ Vtx beach_jer_nos_Nos_Tank_DL_mesh_layer_1_vtx_0[76] = {
 	{{ {164, -47, -7}, 0, {94, 441}, {179, 87, 206, 255} }},
 };
 
-Gfx beach_jer_nos_Nos_Tank_DL_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Nos_Tank_DL_mesh_layer_1_vtx_0 + 0, 32, 0),
+Gfx beach_jer_Nos_Tank_DL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Nos_Tank_DL_mesh_layer_1_vtx_0 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(5, 6, 4, 0, 5, 7, 6, 0),
@@ -1642,7 +1642,7 @@ Gfx beach_jer_nos_Nos_Tank_DL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(23, 27, 26, 0, 23, 28, 27, 0),
 	gsSP2Triangles(28, 29, 27, 0, 28, 30, 29, 0),
 	gsSP1Triangle(27, 29, 31, 0),
-	gsSPVertex(beach_jer_nos_Nos_Tank_DL_mesh_layer_1_vtx_0 + 32, 32, 0),
+	gsSPVertex(beach_jer_Nos_Tank_DL_mesh_layer_1_vtx_0 + 32, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 2, 1, 3, 0),
 	gsSP2Triangles(2, 3, 4, 0, 5, 2, 4, 0),
 	gsSP2Triangles(5, 4, 6, 0, 5, 6, 7, 0),
@@ -1659,7 +1659,7 @@ Gfx beach_jer_nos_Nos_Tank_DL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(28, 27, 25, 0, 27, 28, 29, 0),
 	gsSP2Triangles(28, 21, 29, 0, 21, 30, 29, 0),
 	gsSP2Triangles(23, 30, 21, 0, 23, 31, 30, 0),
-	gsSPVertex(beach_jer_nos_Nos_Tank_DL_mesh_layer_1_vtx_0 + 64, 12, 0),
+	gsSPVertex(beach_jer_Nos_Tank_DL_mesh_layer_1_vtx_0 + 64, 12, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 4, 1, 0, 5, 4, 3, 0),
 	gsSP2Triangles(5, 6, 4, 0, 7, 6, 5, 0),
@@ -1671,7 +1671,7 @@ Gfx beach_jer_nos_Nos_Tank_DL_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Nos_Tank_DL_mesh_layer_1_vtx_1[18] = {
+Vtx beach_jer_Nos_Tank_DL_mesh_layer_1_vtx_1[18] = {
 	{{ {150, -65, -5}, 0, {432, 188}, {0, 139, 206, 255} }},
 	{{ {133, -65, 5}, 0, {-260, 495}, {73, 183, 73, 255} }},
 	{{ {133, -65, -5}, 0, {-260, 495}, {115, 218, 218, 255} }},
@@ -1692,8 +1692,8 @@ Vtx beach_jer_nos_Nos_Tank_DL_mesh_layer_1_vtx_1[18] = {
 	{{ {133, -54, 5}, 0, {-260, 495}, {115, 38, 38, 255} }},
 };
 
-Gfx beach_jer_nos_Nos_Tank_DL_mesh_layer_1_tri_1[] = {
-	gsSPVertex(beach_jer_nos_Nos_Tank_DL_mesh_layer_1_vtx_1 + 0, 18, 0),
+Gfx beach_jer_Nos_Tank_DL_mesh_layer_1_tri_1[] = {
+	gsSPVertex(beach_jer_Nos_Tank_DL_mesh_layer_1_vtx_1 + 0, 18, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(4, 3, 0, 0, 1, 3, 5, 0),
 	gsSP2Triangles(6, 5, 3, 0, 7, 5, 6, 0),
@@ -1708,7 +1708,7 @@ Gfx beach_jer_nos_Nos_Tank_DL_mesh_layer_1_tri_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Nos_Tank_DL_mesh_layer_1_vtx_2[48] = {
+Vtx beach_jer_Nos_Tank_DL_mesh_layer_1_vtx_2[48] = {
 	{{ {109, -112, 173}, 0, {-16, 1008}, {5, 3, 129, 255} }},
 	{{ {54, -149, 173}, 0, {-16, 1008}, {248, 249, 129, 255} }},
 	{{ {69, -130, 173}, 0, {-16, 1008}, {221, 43, 142, 255} }},
@@ -1759,8 +1759,8 @@ Vtx beach_jer_nos_Nos_Tank_DL_mesh_layer_1_vtx_2[48] = {
 	{{ {109, -112, 173}, 0, {624, 496}, {5, 3, 129, 255} }},
 };
 
-Gfx beach_jer_nos_Nos_Tank_DL_mesh_layer_1_tri_2[] = {
-	gsSPVertex(beach_jer_nos_Nos_Tank_DL_mesh_layer_1_vtx_2 + 0, 32, 0),
+Gfx beach_jer_Nos_Tank_DL_mesh_layer_1_tri_2[] = {
+	gsSPVertex(beach_jer_Nos_Tank_DL_mesh_layer_1_vtx_2 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 4, 5, 0),
 	gsSP2Triangles(6, 7, 8, 0, 6, 9, 7, 0),
 	gsSP2Triangles(10, 9, 6, 0, 10, 11, 9, 0),
@@ -1773,7 +1773,7 @@ Gfx beach_jer_nos_Nos_Tank_DL_mesh_layer_1_tri_2[] = {
 	gsSP2Triangles(25, 24, 26, 0, 25, 26, 27, 0),
 	gsSP2Triangles(28, 27, 26, 0, 28, 26, 29, 0),
 	gsSP2Triangles(30, 28, 29, 0, 30, 29, 31, 0),
-	gsSPVertex(beach_jer_nos_Nos_Tank_DL_mesh_layer_1_vtx_2 + 32, 16, 0),
+	gsSPVertex(beach_jer_Nos_Tank_DL_mesh_layer_1_vtx_2 + 32, 16, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 1, 0, 0, 4, 5, 1, 0),
 	gsSP2Triangles(5, 6, 1, 0, 5, 7, 6, 0),
@@ -1784,7 +1784,7 @@ Gfx beach_jer_nos_Nos_Tank_DL_mesh_layer_1_tri_2[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Nos_Tank_DL_mesh_layer_1_vtx_3[22] = {
+Vtx beach_jer_Nos_Tank_DL_mesh_layer_1_vtx_3[22] = {
 	{{ {111, -66, 173}, 0, {-135, 1271}, {0, 0, 127, 255} }},
 	{{ {28, -85, 173}, 0, {1856, 1840}, {0, 0, 127, 255} }},
 	{{ {46, -170, 173}, 0, {2422, -254}, {0, 0, 127, 255} }},
@@ -1809,8 +1809,8 @@ Vtx beach_jer_nos_Nos_Tank_DL_mesh_layer_1_vtx_3[22] = {
 	{{ {46, -170, -173}, 0, {-16, 496}, {0, 0, 127, 255} }},
 };
 
-Gfx beach_jer_nos_Nos_Tank_DL_mesh_layer_1_tri_3[] = {
-	gsSPVertex(beach_jer_nos_Nos_Tank_DL_mesh_layer_1_vtx_3 + 0, 22, 0),
+Gfx beach_jer_Nos_Tank_DL_mesh_layer_1_tri_3[] = {
+	gsSPVertex(beach_jer_Nos_Tank_DL_mesh_layer_1_vtx_3 + 0, 22, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
 	gsSP2Triangles(8, 9, 10, 0, 9, 8, 11, 0),
@@ -1823,7 +1823,7 @@ Gfx beach_jer_nos_Nos_Tank_DL_mesh_layer_1_tri_3[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Nos_Tank_DL_mesh_layer_4_vtx_0[8] = {
+Vtx beach_jer_Nos_Tank_DL_mesh_layer_4_vtx_0[8] = {
 	{{ {69, -130, 44}, 0, {-16, -16}, {184, 103, 22, 255} }},
 	{{ {113, -120, 44}, 0, {496, -16}, {42, 13, 119, 255} }},
 	{{ {129, -22, 44}, 0, {496, 496}, {0, 0, 127, 255} }},
@@ -1834,14 +1834,14 @@ Vtx beach_jer_nos_Nos_Tank_DL_mesh_layer_4_vtx_0[8] = {
 	{{ {113, -120, -44}, 0, {496, -16}, {42, 13, 137, 255} }},
 };
 
-Gfx beach_jer_nos_Nos_Tank_DL_mesh_layer_4_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Nos_Tank_DL_mesh_layer_4_vtx_0 + 0, 8, 0),
+Gfx beach_jer_Nos_Tank_DL_mesh_layer_4_tri_0[] = {
+	gsSPVertex(beach_jer_Nos_Tank_DL_mesh_layer_4_vtx_0 + 0, 8, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Right_Arm_Color_mesh_layer_1_vtx_0[20] = {
+Vtx beach_jer_Right_Arm_Color_mesh_layer_1_vtx_0[20] = {
 	{{ {68, -8, -9}, 0, {-16, 1008}, {124, 247, 231, 255} }},
 	{{ {68, -19, 4}, 0, {-16, 1008}, {124, 229, 254, 255} }},
 	{{ {62, -37, 3}, 0, {-16, 1008}, {52, 141, 249, 255} }},
@@ -1864,8 +1864,8 @@ Vtx beach_jer_nos_Right_Arm_Color_mesh_layer_1_vtx_0[20] = {
 	{{ {-3, -7, -7}, 0, {-16, 1008}, {158, 240, 177, 255} }},
 };
 
-Gfx beach_jer_nos_Right_Arm_Color_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Right_Arm_Color_mesh_layer_1_vtx_0 + 0, 20, 0),
+Gfx beach_jer_Right_Arm_Color_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Right_Arm_Color_mesh_layer_1_vtx_0 + 0, 20, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 0, 5, 0),
 	gsSP2Triangles(5, 0, 2, 0, 5, 2, 6, 0),
@@ -1887,7 +1887,7 @@ Gfx beach_jer_nos_Right_Arm_Color_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Right_Forearm_mesh_layer_1_vtx_0[16] = {
+Vtx beach_jer_Right_Forearm_mesh_layer_1_vtx_0[16] = {
 	{{ {-22, -9, 18}, 0, {-16, 1008}, {156, 237, 76, 255} }},
 	{{ {-22, -18, 4}, 0, {-16, 1008}, {156, 178, 250, 255} }},
 	{{ {-9, -25, 4}, 0, {-16, 1008}, {229, 132, 249, 255} }},
@@ -1906,8 +1906,8 @@ Vtx beach_jer_nos_Right_Forearm_mesh_layer_1_vtx_0[16] = {
 	{{ {56, 10, 17}, 0, {-16, 1008}, {42, 94, 74, 255} }},
 };
 
-Gfx beach_jer_nos_Right_Forearm_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Right_Forearm_mesh_layer_1_vtx_0 + 0, 16, 0),
+Gfx beach_jer_Right_Forearm_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Right_Forearm_mesh_layer_1_vtx_0 + 0, 16, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(3, 0, 4, 0, 4, 0, 2, 0),
 	gsSP2Triangles(5, 4, 2, 0, 6, 5, 2, 0),
@@ -1925,7 +1925,7 @@ Gfx beach_jer_nos_Right_Forearm_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Right_Hand_DL_mesh_layer_1_vtx_0[11] = {
+Vtx beach_jer_Right_Hand_DL_mesh_layer_1_vtx_0[11] = {
 	{{ {-9, 18, 28}, 0, {-16, 1008}, {198, 52, 100, 255} }},
 	{{ {1, 17, 24}, 0, {-16, 1008}, {240, 63, 109, 255} }},
 	{{ {-1, 28, -1}, 0, {-16, 1008}, {215, 112, 211, 255} }},
@@ -1939,8 +1939,8 @@ Vtx beach_jer_nos_Right_Hand_DL_mesh_layer_1_vtx_0[11] = {
 	{{ {17, -40, -3}, 0, {-16, 1008}, {25, 137, 218, 255} }},
 };
 
-Gfx beach_jer_nos_Right_Hand_DL_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Right_Hand_DL_mesh_layer_1_vtx_0 + 0, 11, 0),
+Gfx beach_jer_Right_Hand_DL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Right_Hand_DL_mesh_layer_1_vtx_0 + 0, 11, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(6, 5, 0, 0, 2, 6, 0, 0),
@@ -1952,7 +1952,7 @@ Gfx beach_jer_nos_Right_Hand_DL_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Right_Hand_DL_mesh_layer_1_vtx_1[19] = {
+Vtx beach_jer_Right_Hand_DL_mesh_layer_1_vtx_1[19] = {
 	{{ {20, 4, 35}, 0, {-16, 1008}, {190, 248, 108, 255} }},
 	{{ {1, 17, 24}, 0, {-16, 1008}, {240, 63, 109, 255} }},
 	{{ {16, -18, 24}, 0, {-16, 1008}, {17, 193, 109, 255} }},
@@ -1974,8 +1974,8 @@ Vtx beach_jer_nos_Right_Hand_DL_mesh_layer_1_vtx_1[19] = {
 	{{ {69, 27, 17}, 0, {-16, 1008}, {108, 61, 28, 255} }},
 };
 
-Gfx beach_jer_nos_Right_Hand_DL_mesh_layer_1_tri_1[] = {
-	gsSPVertex(beach_jer_nos_Right_Hand_DL_mesh_layer_1_vtx_1 + 0, 19, 0),
+Gfx beach_jer_Right_Hand_DL_mesh_layer_1_tri_1[] = {
+	gsSPVertex(beach_jer_Right_Hand_DL_mesh_layer_1_vtx_1 + 0, 19, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(3, 0, 4, 0, 5, 4, 0, 0),
 	gsSP2Triangles(5, 0, 2, 0, 6, 5, 2, 0),
@@ -1995,7 +1995,7 @@ Gfx beach_jer_nos_Right_Hand_DL_mesh_layer_1_tri_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_vtx_0[24] = {
+Vtx beach_jer_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_vtx_0[24] = {
 	{{ {101, 27, 19}, 0, {-16, -16}, {79, 217, 91, 255} }},
 	{{ {92, 57, 20}, 0, {-16, -16}, {55, 67, 93, 255} }},
 	{{ {63, 49, 14}, 0, {-16, -16}, {250, 25, 124, 255} }},
@@ -2022,8 +2022,8 @@ Vtx beach_jer_nos_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_vtx
 	{{ {7, 19, 20}, 0, {-16, -16}, {215, 30, 116, 255} }},
 };
 
-Gfx beach_jer_nos_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_vtx_0 + 0, 24, 0),
+Gfx beach_jer_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_vtx_0 + 0, 24, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 0, 5, 0),
 	gsSP2Triangles(5, 0, 2, 0, 5, 2, 6, 0),
@@ -2048,7 +2048,7 @@ Gfx beach_jer_nos_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_vtx_1[15] = {
+Vtx beach_jer_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_vtx_1[15] = {
 	{{ {0, 17, 23}, 0, {-16, -16}, {214, 36, 114, 255} }},
 	{{ {7, 19, 20}, 0, {-16, -16}, {215, 30, 116, 255} }},
 	{{ {4, 32, -2}, 0, {-16, -16}, {209, 115, 229, 255} }},
@@ -2066,8 +2066,8 @@ Vtx beach_jer_nos_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_vtx
 	{{ {2, 4, -18}, 0, {-16, -16}, {148, 225, 196, 255} }},
 };
 
-Gfx beach_jer_nos_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_1[] = {
-	gsSPVertex(beach_jer_nos_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_vtx_1 + 0, 15, 0),
+Gfx beach_jer_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_1[] = {
+	gsSPVertex(beach_jer_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_vtx_1 + 0, 15, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(0, 6, 5, 0, 7, 6, 0, 0),
@@ -2083,13 +2083,13 @@ Gfx beach_jer_nos_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_vtx_0[15] = {
+Vtx beach_jer_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_vtx_0[15] = {
 	{{ {-8, -20, 24}, 0, {-16, -16}, {215, 149, 201, 255} }},
 	{{ {-27, -2, 21}, 0, {-16, -16}, {166, 206, 181, 255} }},
 	{{ {-8, 15, 1}, 0, {-16, -16}, {195, 243, 145, 255} }},
 	{{ {-35, 3, 32}, 0, {-16, -16}, {134, 4, 35, 255} }},
 	{{ {-9, -23, 37}, 0, {-16, -16}, {231, 152, 68, 255} }},
-	{{ {22, -13, 6}, 0, {-16, -16}, {4, 157, 177, 255} }},
+	{{ {22, -13, 7}, 0, {-16, -16}, {4, 157, 177, 255} }},
 	{{ {22, 7, -9}, 0, {-16, -16}, {247, 221, 134, 255} }},
 	{{ {34, 16, -9}, 0, {-16, -16}, {83, 43, 170, 255} }},
 	{{ {-10, 28, 4}, 0, {-16, -16}, {199, 100, 202, 255} }},
@@ -2101,8 +2101,8 @@ Vtx beach_jer_nos_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_v
 	{{ {31, 18, 3}, 0, {-16, -16}, {88, 54, 183, 255} }},
 };
 
-Gfx beach_jer_nos_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_vtx_0 + 0, 15, 0),
+Gfx beach_jer_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_vtx_0 + 0, 15, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 0, 4, 0, 4, 0, 5, 0),
 	gsSP2Triangles(5, 0, 2, 0, 2, 6, 5, 0),
@@ -2118,7 +2118,7 @@ Gfx beach_jer_nos_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_t
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_vtx_1[28] = {
+Vtx beach_jer_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_vtx_1[28] = {
 	{{ {43, -2, 22}, 0, {-16, -16}, {49, 141, 234, 255} }},
 	{{ {31, -6, 19}, 0, {-16, -16}, {97, 179, 27, 255} }},
 	{{ {31, 18, 3}, 0, {-16, -16}, {88, 54, 183, 255} }},
@@ -2149,8 +2149,8 @@ Vtx beach_jer_nos_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_v
 	{{ {38, 57, 62}, 0, {-16, 1008}, {57, 97, 60, 255} }},
 };
 
-Gfx beach_jer_nos_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_1[] = {
-	gsSPVertex(beach_jer_nos_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_vtx_1 + 0, 28, 0),
+Gfx beach_jer_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_1[] = {
+	gsSPVertex(beach_jer_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_vtx_1 + 0, 28, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(5, 0, 6, 0, 6, 0, 7, 0),
@@ -2179,7 +2179,7 @@ Gfx beach_jer_nos_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_t
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0[25] = {
+Vtx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0[25] = {
 	{{ {37, 40, 26}, 0, {-16, -16}, {23, 83, 93, 255} }},
 	{{ {19, 46, 19}, 0, {-16, -16}, {208, 90, 76, 255} }},
 	{{ {40, 9, 42}, 0, {-16, -16}, {243, 22, 124, 255} }},
@@ -2190,7 +2190,7 @@ Vtx beach_jer_nos_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0[25]
 	{{ {53, -22, 42}, 0, {-16, -16}, {27, 180, 98, 255} }},
 	{{ {19, 5, 30}, 0, {-16, -16}, {193, 250, 110, 255} }},
 	{{ {-1, 18, 21}, 0, {-16, -16}, {246, 63, 110, 255} }},
-	{{ {5, 44, -9}, 0, {-16, -16}, {175, 86, 209, 255} }},
+	{{ {5, 44, -8}, 0, {-16, -16}, {175, 86, 209, 255} }},
 	{{ {23, 6, -32}, 0, {-16, -16}, {230, 243, 132, 255} }},
 	{{ {59, 22, -30}, 0, {-16, -16}, {66, 27, 151, 255} }},
 	{{ {74, -18, -5}, 0, {-16, -16}, {102, 192, 215, 255} }},
@@ -2207,8 +2207,8 @@ Vtx beach_jer_nos_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0[25]
 	{{ {16, -41, -7}, 0, {-16, -16}, {28, 137, 220, 255} }},
 };
 
-Gfx beach_jer_nos_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0 + 0, 25, 0),
+Gfx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0 + 0, 25, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(0, 4, 3, 0, 4, 0, 5, 0),
 	gsSP2Triangles(5, 0, 2, 0, 6, 5, 2, 0),
@@ -2258,7 +2258,7 @@ Gfx beach_jer_nos_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0[] =
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_1[62] = {
+Vtx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_1[62] = {
 	{{ {82, 33, 184}, 0, {-529, 1788}, {175, 194, 76, 255} }},
 	{{ {83, 34, 184}, 0, {-529, 1788}, {41, 67, 100, 255} }},
 	{{ {60, 57, 178}, 0, {-529, 1788}, {242, 102, 75, 255} }},
@@ -2323,8 +2323,8 @@ Vtx beach_jer_nos_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_1[62]
 	{{ {60, 57, 56}, 0, {495, -260}, {242, 102, 181, 255} }},
 };
 
-Gfx beach_jer_nos_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_1[] = {
-	gsSPVertex(beach_jer_nos_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_1 + 0, 31, 0),
+Gfx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_1[] = {
+	gsSPVertex(beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_1 + 0, 31, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 3, 2, 0, 4, 2, 5, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
@@ -2342,7 +2342,7 @@ Gfx beach_jer_nos_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_1[] =
 	gsSP2Triangles(20, 23, 25, 0, 23, 26, 25, 0),
 	gsSP2Triangles(25, 27, 20, 0, 28, 27, 25, 0),
 	gsSP2Triangles(28, 25, 29, 0, 30, 20, 27, 0),
-	gsSPVertex(beach_jer_nos_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_1 + 31, 31, 0),
+	gsSPVertex(beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_1 + 31, 31, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(6, 5, 0, 0, 5, 6, 7, 0),
@@ -2363,7 +2363,7 @@ Gfx beach_jer_nos_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_1[] =
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_2[42] = {
+Vtx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_2[42] = {
 	{{ {92, 24, 186}, 0, {90, -16}, {193, 185, 84, 255} }},
 	{{ {82, 33, 184}, 0, {357, -16}, {175, 194, 76, 255} }},
 	{{ {45, -12, 199}, 0, {357, -16}, {216, 67, 100, 255} }},
@@ -2408,8 +2408,8 @@ Vtx beach_jer_nos_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_2[42]
 	{{ {96, 28, 108}, 0, {-16, 1008}, {114, 45, 35, 255} }},
 };
 
-Gfx beach_jer_nos_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_2[] = {
-	gsSPVertex(beach_jer_nos_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_2 + 0, 30, 0),
+Gfx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_2[] = {
+	gsSPVertex(beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_2 + 0, 30, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(3, 2, 4, 0, 3, 4, 5, 0),
 	gsSP2Triangles(3, 5, 6, 0, 5, 7, 6, 0),
@@ -2426,7 +2426,7 @@ Gfx beach_jer_nos_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_2[] =
 	gsSP2Triangles(27, 26, 20, 0, 20, 26, 28, 0),
 	gsSP2Triangles(28, 26, 24, 0, 24, 29, 28, 0),
 	gsSP2Triangles(24, 27, 29, 0, 27, 25, 26, 0),
-	gsSPVertex(beach_jer_nos_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_2 + 30, 12, 0),
+	gsSPVertex(beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_2 + 30, 12, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(1, 3, 4, 0, 1, 4, 5, 0),
 	gsSP2Triangles(1, 5, 6, 0, 6, 5, 7, 0),
@@ -2437,7 +2437,7 @@ Gfx beach_jer_nos_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_2[] =
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0[25] = {
+Vtx beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0[25] = {
 	{{ {39, 41, 25}, 0, {-16, -16}, {23, 83, 93, 255} }},
 	{{ {21, 46, 19}, 0, {-16, -16}, {208, 90, 76, 255} }},
 	{{ {41, 9, 42}, 0, {-16, -16}, {243, 22, 124, 255} }},
@@ -2465,8 +2465,8 @@ Vtx beach_jer_nos_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_lay
 	{{ {17, -41, -7}, 0, {-16, -16}, {28, 137, 220, 255} }},
 };
 
-Gfx beach_jer_nos_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0 + 0, 25, 0),
+Gfx beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0 + 0, 25, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(0, 4, 3, 0, 4, 0, 5, 0),
 	gsSP2Triangles(5, 0, 2, 0, 6, 5, 2, 0),
@@ -2516,7 +2516,7 @@ Gfx beach_jer_nos_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_lay
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_1[62] = {
+Vtx beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_1[62] = {
 	{{ {82, 33, 184}, 0, {-529, 1788}, {175, 194, 76, 255} }},
 	{{ {83, 34, 184}, 0, {-529, 1788}, {41, 67, 100, 255} }},
 	{{ {60, 57, 178}, 0, {-529, 1788}, {242, 102, 75, 255} }},
@@ -2581,8 +2581,8 @@ Vtx beach_jer_nos_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_lay
 	{{ {60, 57, 56}, 0, {495, -260}, {242, 102, 181, 255} }},
 };
 
-Gfx beach_jer_nos_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_1[] = {
-	gsSPVertex(beach_jer_nos_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_1 + 0, 31, 0),
+Gfx beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_1[] = {
+	gsSPVertex(beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_1 + 0, 31, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 3, 2, 0, 4, 2, 5, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
@@ -2600,7 +2600,7 @@ Gfx beach_jer_nos_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_lay
 	gsSP2Triangles(20, 23, 25, 0, 23, 26, 25, 0),
 	gsSP2Triangles(25, 27, 20, 0, 28, 27, 25, 0),
 	gsSP2Triangles(28, 25, 29, 0, 30, 20, 27, 0),
-	gsSPVertex(beach_jer_nos_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_1 + 31, 31, 0),
+	gsSPVertex(beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_1 + 31, 31, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(6, 5, 0, 0, 5, 6, 7, 0),
@@ -2621,7 +2621,7 @@ Gfx beach_jer_nos_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_lay
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_2[42] = {
+Vtx beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_2[42] = {
 	{{ {92, 24, 186}, 0, {90, -16}, {193, 185, 84, 255} }},
 	{{ {82, 33, 184}, 0, {357, -16}, {175, 194, 76, 255} }},
 	{{ {45, -12, 199}, 0, {357, -16}, {216, 67, 100, 255} }},
@@ -2666,8 +2666,8 @@ Vtx beach_jer_nos_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_lay
 	{{ {96, 28, 108}, 0, {-16, 1008}, {114, 45, 35, 255} }},
 };
 
-Gfx beach_jer_nos_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_2[] = {
-	gsSPVertex(beach_jer_nos_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_2 + 0, 30, 0),
+Gfx beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_2[] = {
+	gsSPVertex(beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_2 + 0, 30, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(3, 2, 4, 0, 3, 4, 5, 0),
 	gsSP2Triangles(3, 5, 6, 0, 5, 7, 6, 0),
@@ -2684,7 +2684,7 @@ Gfx beach_jer_nos_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_lay
 	gsSP2Triangles(27, 26, 20, 0, 20, 26, 28, 0),
 	gsSP2Triangles(28, 26, 24, 0, 24, 29, 28, 0),
 	gsSP2Triangles(24, 27, 29, 0, 27, 25, 26, 0),
-	gsSPVertex(beach_jer_nos_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_2 + 30, 12, 0),
+	gsSPVertex(beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_2 + 30, 12, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(1, 3, 4, 0, 1, 4, 5, 0),
 	gsSP2Triangles(1, 5, 6, 0, 6, 5, 7, 0),
@@ -2695,7 +2695,7 @@ Gfx beach_jer_nos_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_lay
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Left_Thigh_Color_mesh_layer_1_vtx_0[17] = {
+Vtx beach_jer_Left_Thigh_Color_mesh_layer_1_vtx_0[17] = {
 	{{ {-1, -6, 23}, 0, {-16, 1008}, {191, 220, 103, 255} }},
 	{{ {-16, -1, 4}, 0, {-16, 1008}, {130, 242, 252, 255} }},
 	{{ {1, -22, 5}, 0, {-16, 1008}, {196, 144, 1, 255} }},
@@ -2715,8 +2715,8 @@ Vtx beach_jer_nos_Left_Thigh_Color_mesh_layer_1_vtx_0[17] = {
 	{{ {100, 4, 5}, 0, {-16, 1008}, {127, 0, 0, 255} }},
 };
 
-Gfx beach_jer_nos_Left_Thigh_Color_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Left_Thigh_Color_mesh_layer_1_vtx_0 + 0, 17, 0),
+Gfx beach_jer_Left_Thigh_Color_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Left_Thigh_Color_mesh_layer_1_vtx_0 + 0, 17, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 0, 4, 0, 4, 0, 2, 0),
 	gsSP2Triangles(4, 2, 5, 0, 5, 2, 6, 0),
@@ -2735,7 +2735,7 @@ Gfx beach_jer_nos_Left_Thigh_Color_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Left_Leg_mesh_layer_1_vtx_0[12] = {
+Vtx beach_jer_Left_Leg_mesh_layer_1_vtx_0[12] = {
 	{{ {5, 24, 18}, 0, {-16, 1008}, {221, 100, 70, 255} }},
 	{{ {55, 20, 17}, 0, {-16, 1008}, {53, 92, 70, 255} }},
 	{{ {56, 20, -6}, 0, {-16, 1008}, {55, 92, 188, 255} }},
@@ -2750,8 +2750,8 @@ Vtx beach_jer_nos_Left_Leg_mesh_layer_1_vtx_0[12] = {
 	{{ {3, -3, -15}, 0, {-16, 1008}, {216, 221, 141, 255} }},
 };
 
-Gfx beach_jer_nos_Left_Leg_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Left_Leg_mesh_layer_1_vtx_0 + 0, 12, 0),
+Gfx beach_jer_Left_Leg_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Left_Leg_mesh_layer_1_vtx_0 + 0, 12, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(6, 5, 0, 0, 2, 6, 0, 0),
@@ -2765,7 +2765,7 @@ Gfx beach_jer_nos_Left_Leg_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Left_Shoe_mesh_layer_1_vtx_0[26] = {
+Vtx beach_jer_Left_Shoe_mesh_layer_1_vtx_0[26] = {
 	{{ {-24, -1, -15}, 0, {-16, 1008}, {181, 203, 168, 255} }},
 	{{ {3, -9, -19}, 0, {-16, 1008}, {221, 192, 152, 255} }},
 	{{ {19, -33, 7}, 0, {-16, 1008}, {227, 132, 252, 255} }},
@@ -2794,8 +2794,8 @@ Vtx beach_jer_nos_Left_Shoe_mesh_layer_1_vtx_0[26] = {
 	{{ {37, -32, 6}, 0, {-16, 1008}, {7, 129, 248, 255} }},
 };
 
-Gfx beach_jer_nos_Left_Shoe_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Left_Shoe_mesh_layer_1_vtx_0 + 0, 26, 0),
+Gfx beach_jer_Left_Shoe_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Left_Shoe_mesh_layer_1_vtx_0 + 0, 26, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 0, 4, 0, 5, 4, 0, 0),
 	gsSP2Triangles(6, 5, 0, 0, 6, 0, 7, 0),
@@ -2812,7 +2812,7 @@ Gfx beach_jer_nos_Left_Shoe_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Left_Shoe_mesh_layer_1_vtx_1[42] = {
+Vtx beach_jer_Left_Shoe_mesh_layer_1_vtx_1[42] = {
 	{{ {-8, 28, 37}, 0, {-16, 1008}, {44, 119, 0, 255} }},
 	{{ {-28, 36, -5}, 0, {-16, 1008}, {44, 119, 0, 255} }},
 	{{ {-29, 36, 18}, 0, {-16, 1008}, {44, 119, 0, 255} }},
@@ -2857,8 +2857,8 @@ Vtx beach_jer_nos_Left_Shoe_mesh_layer_1_vtx_1[42] = {
 	{{ {-8, 29, -22}, 0, {-16, 1008}, {248, 83, 160, 255} }},
 };
 
-Gfx beach_jer_nos_Left_Shoe_mesh_layer_1_tri_1[] = {
-	gsSPVertex(beach_jer_nos_Left_Shoe_mesh_layer_1_vtx_1 + 0, 32, 0),
+Gfx beach_jer_Left_Shoe_mesh_layer_1_tri_1[] = {
+	gsSPVertex(beach_jer_Left_Shoe_mesh_layer_1_vtx_1 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 4, 5, 3, 0),
 	gsSP2Triangles(4, 6, 5, 0, 6, 7, 5, 0),
@@ -2874,7 +2874,7 @@ Gfx beach_jer_nos_Left_Shoe_mesh_layer_1_tri_1[] = {
 	gsSP2Triangles(27, 8, 26, 0, 10, 26, 8, 0),
 	gsSP2Triangles(25, 28, 22, 0, 25, 29, 28, 0),
 	gsSP2Triangles(30, 28, 29, 0, 30, 29, 31, 0),
-	gsSPVertex(beach_jer_nos_Left_Shoe_mesh_layer_1_vtx_1 + 32, 10, 0),
+	gsSPVertex(beach_jer_Left_Shoe_mesh_layer_1_vtx_1 + 32, 10, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 	gsSP2Triangles(1, 4, 3, 0, 3, 4, 5, 0),
 	gsSP2Triangles(5, 6, 3, 0, 5, 7, 6, 0),
@@ -2882,7 +2882,7 @@ Gfx beach_jer_nos_Left_Shoe_mesh_layer_1_tri_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Right_Thigh_Color_mesh_layer_1_vtx_0[17] = {
+Vtx beach_jer_Right_Thigh_Color_mesh_layer_1_vtx_0[17] = {
 	{{ {92, 36, -25}, 0, {-16, 1008}, {59, 93, 192, 255} }},
 	{{ {92, -7, -40}, 0, {-16, 1008}, {60, 227, 148, 255} }},
 	{{ {19, -7, -29}, 0, {-16, 1008}, {233, 219, 137, 255} }},
@@ -2902,8 +2902,8 @@ Vtx beach_jer_nos_Right_Thigh_Color_mesh_layer_1_vtx_0[17] = {
 	{{ {0, -7, 14}, 0, {-16, 1008}, {195, 215, 104, 255} }},
 };
 
-Gfx beach_jer_nos_Right_Thigh_Color_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Right_Thigh_Color_mesh_layer_1_vtx_0 + 0, 17, 0),
+Gfx beach_jer_Right_Thigh_Color_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Right_Thigh_Color_mesh_layer_1_vtx_0 + 0, 17, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 0, 5, 0),
 	gsSP2Triangles(0, 2, 5, 0, 2, 6, 5, 0),
@@ -2922,7 +2922,7 @@ Gfx beach_jer_nos_Right_Thigh_Color_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Right_Leg_mesh_layer_1_vtx_0[12] = {
+Vtx beach_jer_Right_Leg_mesh_layer_1_vtx_0[12] = {
 	{{ {6, 24, 7}, 0, {-16, 1008}, {223, 97, 75, 255} }},
 	{{ {-20, 6, -5}, 0, {-16, 1008}, {129, 10, 4, 255} }},
 	{{ {3, -3, 14}, 0, {-16, 1008}, {216, 219, 115, 255} }},
@@ -2937,8 +2937,8 @@ Vtx beach_jer_nos_Right_Leg_mesh_layer_1_vtx_0[12] = {
 	{{ {52, -17, -7}, 0, {-16, 1008}, {39, 135, 251, 255} }},
 };
 
-Gfx beach_jer_nos_Right_Leg_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Right_Leg_mesh_layer_1_vtx_0 + 0, 12, 0),
+Gfx beach_jer_Right_Leg_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Right_Leg_mesh_layer_1_vtx_0 + 0, 12, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 0, 4, 0, 5, 4, 0, 0),
 	gsSP2Triangles(0, 2, 5, 0, 5, 2, 6, 0),
@@ -2952,7 +2952,7 @@ Gfx beach_jer_nos_Right_Leg_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Right_Shoe_DL_mesh_layer_1_vtx_0[42] = {
+Vtx beach_jer_Right_Shoe_DL_mesh_layer_1_vtx_0[42] = {
 	{{ {52, 6, 28}, 0, {-16, 1008}, {44, 119, 0, 255} }},
 	{{ {76, -3, 14}, 0, {-16, 1008}, {44, 119, 0, 255} }},
 	{{ {76, -3, -25}, 0, {-16, 1008}, {44, 119, 0, 255} }},
@@ -2997,8 +2997,8 @@ Vtx beach_jer_nos_Right_Shoe_DL_mesh_layer_1_vtx_0[42] = {
 	{{ {24, 8, 24}, 0, {-16, 1008}, {234, 242, 124, 255} }},
 };
 
-Gfx beach_jer_nos_Right_Shoe_DL_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Right_Shoe_DL_mesh_layer_1_vtx_0 + 0, 32, 0),
+Gfx beach_jer_Right_Shoe_DL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Right_Shoe_DL_mesh_layer_1_vtx_0 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 0, 3, 0, 4, 3, 5, 0),
 	gsSP2Triangles(6, 4, 5, 0, 7, 6, 5, 0),
@@ -3014,7 +3014,7 @@ Gfx beach_jer_nos_Right_Shoe_DL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(27, 24, 28, 0, 28, 29, 27, 0),
 	gsSP2Triangles(28, 30, 29, 0, 28, 8, 30, 0),
 	gsSP2Triangles(31, 30, 8, 0, 8, 10, 31, 0),
-	gsSPVertex(beach_jer_nos_Right_Shoe_DL_mesh_layer_1_vtx_0 + 32, 10, 0),
+	gsSPVertex(beach_jer_Right_Shoe_DL_mesh_layer_1_vtx_0 + 32, 10, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
 	gsSP2Triangles(4, 3, 2, 0, 4, 2, 5, 0),
 	gsSP2Triangles(5, 6, 4, 0, 7, 4, 6, 0),
@@ -3022,7 +3022,7 @@ Gfx beach_jer_nos_Right_Shoe_DL_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Right_Shoe_DL_mesh_layer_1_vtx_1[26] = {
+Vtx beach_jer_Right_Shoe_DL_mesh_layer_1_vtx_1[26] = {
 	{{ {46, 0, 27}, 0, {-16, 1008}, {8, 213, 119, 255} }},
 	{{ {24, 8, 24}, 0, {-16, 1008}, {234, 242, 124, 255} }},
 	{{ {31, -16, 22}, 0, {-16, 1008}, {251, 182, 103, 255} }},
@@ -3051,8 +3051,8 @@ Vtx beach_jer_nos_Right_Shoe_DL_mesh_layer_1_vtx_1[26] = {
 	{{ {-28, 27, -23}, 0, {-16, 1008}, {160, 14, 174, 255} }},
 };
 
-Gfx beach_jer_nos_Right_Shoe_DL_mesh_layer_1_tri_1[] = {
-	gsSPVertex(beach_jer_nos_Right_Shoe_DL_mesh_layer_1_vtx_1 + 0, 26, 0),
+Gfx beach_jer_Right_Shoe_DL_mesh_layer_1_tri_1[] = {
+	gsSPVertex(beach_jer_Right_Shoe_DL_mesh_layer_1_vtx_1 + 0, 26, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
 	gsSP2Triangles(2, 4, 3, 0, 2, 5, 4, 0),
 	gsSP2Triangles(5, 2, 6, 0, 6, 7, 5, 0),
@@ -3069,7 +3069,7 @@ Gfx beach_jer_nos_Right_Shoe_DL_mesh_layer_1_tri_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Metal_Jer_Switch_Option_Torso_mesh_layer_1_vtx_0[199] = {
+Vtx beach_jer_Metal_Jer_Switch_Option_Torso_mesh_layer_1_vtx_0[199] = {
 	{{ {56, 29, 28}, 0, {-495, -48}, {45, 117, 22, 255} }},
 	{{ {39, 34, 20}, 0, {-589, 884}, {28, 124, 7, 255} }},
 	{{ {23, 37, 27}, 0, {-349, 1664}, {10, 125, 20, 255} }},
@@ -3271,8 +3271,8 @@ Vtx beach_jer_nos_Metal_Jer_Switch_Option_Torso_mesh_layer_1_vtx_0[199] = {
 	{{ {56, 24, -39}, 0, {-217, -260}, {53, 102, 201, 255} }},
 };
 
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Torso_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Torso_mesh_layer_1_vtx_0 + 0, 32, 0),
+Gfx beach_jer_Metal_Jer_Switch_Option_Torso_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Torso_mesh_layer_1_vtx_0 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 4, 5, 0),
 	gsSP2Triangles(3, 6, 4, 0, 6, 7, 3, 0),
 	gsSP2Triangles(6, 8, 7, 0, 6, 9, 8, 0),
@@ -3289,7 +3289,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Torso_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(29, 25, 26, 0, 30, 29, 26, 0),
 	gsSP2Triangles(29, 30, 31, 0, 31, 30, 7, 0),
 	gsSP1Triangle(7, 30, 3, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Torso_mesh_layer_1_vtx_0 + 32, 32, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Torso_mesh_layer_1_vtx_0 + 32, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 	gsSP2Triangles(4, 2, 3, 0, 4, 5, 2, 0),
 	gsSP2Triangles(5, 4, 6, 0, 4, 7, 6, 0),
@@ -3305,7 +3305,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Torso_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(25, 26, 24, 0, 27, 26, 25, 0),
 	gsSP2Triangles(28, 27, 25, 0, 29, 27, 28, 0),
 	gsSP2Triangles(29, 30, 27, 0, 30, 29, 31, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Torso_mesh_layer_1_vtx_0 + 64, 32, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Torso_mesh_layer_1_vtx_0 + 64, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 2, 1, 0),
 	gsSP2Triangles(4, 3, 1, 0, 1, 5, 4, 0),
 	gsSP2Triangles(4, 6, 3, 0, 7, 6, 4, 0),
@@ -3322,7 +3322,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Torso_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(22, 27, 26, 0, 22, 28, 27, 0),
 	gsSP2Triangles(28, 29, 27, 0, 30, 29, 28, 0),
 	gsSP1Triangle(30, 28, 31, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Torso_mesh_layer_1_vtx_0 + 96, 32, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Torso_mesh_layer_1_vtx_0 + 96, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 	gsSP2Triangles(4, 2, 3, 0, 3, 5, 4, 0),
 	gsSP2Triangles(6, 5, 3, 0, 7, 2, 4, 0),
@@ -3339,7 +3339,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Torso_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(25, 26, 24, 0, 27, 26, 25, 0),
 	gsSP2Triangles(27, 28, 26, 0, 22, 23, 29, 0),
 	gsSP2Triangles(22, 29, 30, 0, 30, 29, 31, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Torso_mesh_layer_1_vtx_0 + 128, 32, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Torso_mesh_layer_1_vtx_0 + 128, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 2, 0),
 	gsSP2Triangles(0, 4, 3, 0, 4, 0, 5, 0),
 	gsSP2Triangles(6, 5, 0, 0, 6, 0, 7, 0),
@@ -3355,7 +3355,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Torso_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(27, 25, 26, 0, 27, 26, 28, 0),
 	gsSP2Triangles(29, 27, 28, 0, 29, 28, 30, 0),
 	gsSP1Triangle(22, 31, 18, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Torso_mesh_layer_1_vtx_0 + 160, 32, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Torso_mesh_layer_1_vtx_0 + 160, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
 	gsSP2Triangles(3, 2, 4, 0, 5, 4, 2, 0),
 	gsSP2Triangles(3, 4, 6, 0, 7, 6, 4, 0),
@@ -3375,13 +3375,13 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Torso_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(10, 12, 14, 0, 25, 26, 27, 0),
 	gsSP2Triangles(28, 26, 25, 0, 29, 28, 25, 0),
 	gsSP2Triangles(25, 30, 29, 0, 30, 31, 29, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Torso_mesh_layer_1_vtx_0 + 192, 7, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Torso_mesh_layer_1_vtx_0 + 192, 7, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 4, 5, 0),
 	gsSP1Triangle(5, 6, 3, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_vtx_0[285] = {
+Vtx beach_jer_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_vtx_0[285] = {
 	{{ {45, 54, 48}, 0, {-115, 1355}, {225, 84, 90, 255} }},
 	{{ {-8, 63, 0}, 0, {-529, 2463}, {158, 81, 0, 255} }},
 	{{ {3, 49, 38}, 0, {-219, 2238}, {171, 54, 77, 255} }},
@@ -3669,8 +3669,8 @@ Vtx beach_jer_nos_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_vtx_0[285] = {
 	{{ {48, -50, 50}, 0, {448, 561}, {196, 174, 76, 255} }},
 };
 
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_vtx_0 + 0, 32, 0),
+Gfx beach_jer_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_vtx_0 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(4, 1, 3, 0, 5, 1, 4, 0),
 	gsSP2Triangles(6, 7, 8, 0, 9, 6, 8, 0),
@@ -3684,7 +3684,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(26, 25, 24, 0, 26, 24, 27, 0),
 	gsSP2Triangles(26, 27, 28, 0, 26, 28, 29, 0),
 	gsSP2Triangles(29, 28, 30, 0, 29, 30, 31, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_vtx_0 + 32, 32, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_vtx_0 + 32, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 0, 3, 0, 4, 3, 5, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
@@ -3703,7 +3703,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(27, 25, 28, 0, 27, 22, 26, 0),
 	gsSP2Triangles(27, 29, 22, 0, 30, 29, 27, 0),
 	gsSP1Triangle(29, 30, 31, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_vtx_0 + 64, 32, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_vtx_0 + 64, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 2, 1, 0, 4, 1, 5, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
@@ -3719,7 +3719,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(26, 25, 22, 0, 27, 24, 25, 0),
 	gsSP2Triangles(27, 28, 24, 0, 27, 29, 28, 0),
 	gsSP2Triangles(27, 30, 29, 0, 30, 31, 29, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_vtx_0 + 96, 32, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_vtx_0 + 96, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(1, 3, 4, 0, 5, 4, 3, 0),
 	gsSP2Triangles(3, 5, 6, 0, 6, 5, 7, 0),
@@ -3734,7 +3734,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(23, 25, 26, 0, 26, 25, 27, 0),
 	gsSP2Triangles(26, 27, 28, 0, 26, 28, 29, 0),
 	gsSP2Triangles(28, 30, 29, 0, 31, 29, 30, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_vtx_0 + 128, 32, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_vtx_0 + 128, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 0, 1, 0),
 	gsSP2Triangles(4, 3, 1, 0, 5, 4, 1, 0),
 	gsSP2Triangles(0, 5, 1, 0, 3, 4, 6, 0),
@@ -3751,7 +3751,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(26, 27, 24, 0, 27, 26, 28, 0),
 	gsSP2Triangles(28, 26, 29, 0, 28, 29, 30, 0),
 	gsSP1Triangle(31, 30, 29, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_vtx_0 + 160, 32, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_vtx_0 + 160, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(2, 4, 3, 0, 4, 2, 5, 0),
 	gsSP2Triangles(4, 5, 6, 0, 5, 7, 6, 0),
@@ -3767,7 +3767,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(25, 26, 24, 0, 27, 26, 25, 0),
 	gsSP2Triangles(27, 25, 28, 0, 28, 29, 27, 0),
 	gsSP2Triangles(30, 29, 28, 0, 30, 28, 31, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_vtx_0 + 192, 32, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_vtx_0 + 192, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
 	gsSP2Triangles(3, 2, 4, 0, 5, 4, 2, 0),
 	gsSP2Triangles(6, 4, 5, 0, 5, 7, 6, 0),
@@ -3785,7 +3785,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(25, 26, 22, 0, 27, 26, 25, 0),
 	gsSP2Triangles(27, 28, 26, 0, 27, 29, 28, 0),
 	gsSP2Triangles(27, 30, 29, 0, 30, 31, 29, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_vtx_0 + 224, 32, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_vtx_0 + 224, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 2, 1, 0),
 	gsSP2Triangles(3, 4, 2, 0, 4, 5, 2, 0),
 	gsSP2Triangles(6, 2, 5, 0, 6, 5, 7, 0),
@@ -3803,7 +3803,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(27, 7, 25, 0, 6, 7, 27, 0),
 	gsSP2Triangles(8, 15, 7, 0, 15, 16, 7, 0),
 	gsSP2Triangles(28, 29, 30, 0, 31, 30, 29, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_vtx_0 + 256, 29, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_vtx_0 + 256, 29, 0),
 	gsSP2Triangles(0, 1, 2, 0, 2, 1, 3, 0),
 	gsSP2Triangles(2, 3, 4, 0, 4, 3, 5, 0),
 	gsSP2Triangles(6, 4, 5, 0, 7, 6, 5, 0),
@@ -3823,7 +3823,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Metal_Jer_Switch_Option_Head_Capless_Switch_Option_Head_Capless_mesh_layer_1_vtx_0[157] = {
+Vtx beach_jer_Metal_Jer_Switch_Option_Head_Capless_Switch_Option_Head_Capless_mesh_layer_1_vtx_0[157] = {
 	{{ {2, 49, 38}, 0, {-219, 2238}, {172, 56, 77, 255} }},
 	{{ {96, 60, 60}, 0, {13, 258}, {4, 86, 94, 255} }},
 	{{ {96, 69, 37}, 0, {-212, 253}, {5, 119, 45, 255} }},
@@ -3983,8 +3983,8 @@ Vtx beach_jer_nos_Metal_Jer_Switch_Option_Head_Capless_Switch_Option_Head_Caples
 	{{ {166, 13, -13}, 0, {220, 1061}, {117, 35, 221, 255} }},
 };
 
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Head_Capless_Switch_Option_Head_Capless_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Head_Capless_Switch_Option_Head_Capless_mesh_layer_1_vtx_0 + 0, 32, 0),
+Gfx beach_jer_Metal_Jer_Switch_Option_Head_Capless_Switch_Option_Head_Capless_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Head_Capless_Switch_Option_Head_Capless_mesh_layer_1_vtx_0 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 2, 3, 0, 0),
 	gsSP2Triangles(4, 0, 3, 0, 0, 4, 5, 0),
 	gsSP2Triangles(6, 5, 4, 0, 4, 7, 6, 0),
@@ -4000,7 +4000,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Head_Capless_Switch_Option_Head_Caples
 	gsSP2Triangles(26, 23, 27, 0, 26, 27, 28, 0),
 	gsSP2Triangles(28, 27, 29, 0, 28, 29, 30, 0),
 	gsSP1Triangle(31, 28, 30, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Head_Capless_Switch_Option_Head_Capless_mesh_layer_1_vtx_0 + 32, 32, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Head_Capless_Switch_Option_Head_Capless_mesh_layer_1_vtx_0 + 32, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 2, 1, 0),
 	gsSP2Triangles(3, 4, 2, 0, 5, 6, 7, 0),
 	gsSP2Triangles(5, 8, 6, 0, 8, 9, 6, 0),
@@ -4015,7 +4015,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Head_Capless_Switch_Option_Head_Caples
 	gsSP2Triangles(24, 26, 25, 0, 26, 24, 27, 0),
 	gsSP2Triangles(26, 27, 28, 0, 27, 29, 28, 0),
 	gsSP2Triangles(27, 30, 29, 0, 30, 31, 29, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Head_Capless_Switch_Option_Head_Capless_mesh_layer_1_vtx_0 + 64, 32, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Head_Capless_Switch_Option_Head_Capless_mesh_layer_1_vtx_0 + 64, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(1, 3, 4, 0, 4, 5, 1, 0),
 	gsSP2Triangles(4, 6, 5, 0, 6, 7, 5, 0),
@@ -4031,7 +4031,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Head_Capless_Switch_Option_Head_Caples
 	gsSP2Triangles(25, 23, 26, 0, 27, 25, 26, 0),
 	gsSP2Triangles(26, 28, 27, 0, 28, 29, 27, 0),
 	gsSP2Triangles(28, 30, 29, 0, 30, 31, 29, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Head_Capless_Switch_Option_Head_Capless_mesh_layer_1_vtx_0 + 96, 32, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Head_Capless_Switch_Option_Head_Capless_mesh_layer_1_vtx_0 + 96, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 3, 2, 0, 4, 2, 5, 0),
 	gsSP2Triangles(6, 5, 2, 0, 7, 5, 6, 0),
@@ -4048,7 +4048,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Head_Capless_Switch_Option_Head_Caples
 	gsSP2Triangles(20, 22, 26, 0, 20, 26, 27, 0),
 	gsSP2Triangles(28, 27, 26, 0, 28, 26, 29, 0),
 	gsSP2Triangles(30, 29, 26, 0, 31, 29, 30, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Head_Capless_Switch_Option_Head_Capless_mesh_layer_1_vtx_0 + 128, 29, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Head_Capless_Switch_Option_Head_Capless_mesh_layer_1_vtx_0 + 128, 29, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 2, 1, 0),
 	gsSP2Triangles(3, 4, 2, 0, 5, 4, 3, 0),
 	gsSP2Triangles(5, 6, 4, 0, 5, 7, 6, 0),
@@ -4069,7 +4069,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Head_Capless_Switch_Option_Head_Caples
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Metal_Jer_Switch_Option_Left_Arm_Color_mesh_layer_1_vtx_0[20] = {
+Vtx beach_jer_Metal_Jer_Switch_Option_Left_Arm_Color_mesh_layer_1_vtx_0[20] = {
 	{{ {14, -25, -3}, 0, {-529, 1788}, {212, 137, 254, 255} }},
 	{{ {-2, -6, -16}, 0, {-529, 1788}, {159, 237, 176, 255} }},
 	{{ {15, -9, -24}, 0, {-529, 1788}, {214, 225, 140, 255} }},
@@ -4092,8 +4092,8 @@ Vtx beach_jer_nos_Metal_Jer_Switch_Option_Left_Arm_Color_mesh_layer_1_vtx_0[20] 
 	{{ {69, 8, 6}, 0, {-529, 1788}, {126, 11, 9, 255} }},
 };
 
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Left_Arm_Color_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Left_Arm_Color_mesh_layer_1_vtx_0 + 0, 20, 0),
+Gfx beach_jer_Metal_Jer_Switch_Option_Left_Arm_Color_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Left_Arm_Color_mesh_layer_1_vtx_0 + 0, 20, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 0, 5, 0),
 	gsSP2Triangles(0, 6, 5, 0, 0, 2, 6, 0),
@@ -4115,7 +4115,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Left_Arm_Color_mesh_layer_1_tri_0[] = 
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Metal_Jer_Switch_Option_Left_Forearm_mesh_layer_1_vtx_0[16] = {
+Vtx beach_jer_Metal_Jer_Switch_Option_Left_Forearm_mesh_layer_1_vtx_0[16] = {
 	{{ {-8, 13, -14}, 0, {-529, 1788}, {232, 105, 188, 255} }},
 	{{ {-22, 8, -10}, 0, {-529, 1788}, {162, 76, 215, 255} }},
 	{{ {-22, 6, 6}, 0, {-529, 1788}, {160, 64, 53, 255} }},
@@ -4134,8 +4134,8 @@ Vtx beach_jer_nos_Metal_Jer_Switch_Option_Left_Forearm_mesh_layer_1_vtx_0[16] = 
 	{{ {55, -10, 15}, 0, {-529, 1788}, {41, 215, 113, 255} }},
 };
 
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Left_Forearm_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Left_Forearm_mesh_layer_1_vtx_0 + 0, 16, 0),
+Gfx beach_jer_Metal_Jer_Switch_Option_Left_Forearm_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Left_Forearm_mesh_layer_1_vtx_0 + 0, 16, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 0, 4, 0, 0, 5, 4, 0),
 	gsSP2Triangles(0, 6, 5, 0, 0, 2, 6, 0),
@@ -4153,7 +4153,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Left_Forearm_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Metal_Jer_Switch_Option_Left_Hand_DL_mesh_layer_1_vtx_0[25] = {
+Vtx beach_jer_Metal_Jer_Switch_Option_Left_Hand_DL_mesh_layer_1_vtx_0[25] = {
 	{{ {18, -18, -22}, 0, {-529, 1788}, {25, 201, 144, 255} }},
 	{{ {23, 5, -31}, 0, {-529, 1788}, {197, 253, 144, 255} }},
 	{{ {56, -22, -43}, 0, {-529, 1788}, {27, 181, 157, 255} }},
@@ -4181,8 +4181,8 @@ Vtx beach_jer_nos_Metal_Jer_Switch_Option_Left_Hand_DL_mesh_layer_1_vtx_0[25] = 
 	{{ {41, 57, 5}, 0, {-529, 1788}, {20, 121, 33, 255} }},
 };
 
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Left_Hand_DL_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Left_Hand_DL_mesh_layer_1_vtx_0 + 0, 25, 0),
+Gfx beach_jer_Metal_Jer_Switch_Option_Left_Hand_DL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Left_Hand_DL_mesh_layer_1_vtx_0 + 0, 25, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 3, 0, 0, 0, 5, 4, 0),
 	gsSP2Triangles(5, 0, 6, 0, 7, 6, 0, 0),
@@ -4209,7 +4209,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Left_Hand_DL_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Metal_Jer_Switch_Option_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_vtx_0[40] = {
+Vtx beach_jer_Metal_Jer_Switch_Option_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_vtx_0[40] = {
 	{{ {93, 59, -5}, 0, {-529, -260}, {76, 93, 39, 255} }},
 	{{ {57, 71, -6}, 0, {-529, -260}, {241, 126, 249, 255} }},
 	{{ {61, 35, 24}, 0, {-529, -260}, {18, 37, 120, 255} }},
@@ -4252,8 +4252,8 @@ Vtx beach_jer_nos_Metal_Jer_Switch_Option_Left_Hand_Open_Switch_Option_Left_Hand
 	{{ {10, -21, 11}, 0, {-529, -260}, {166, 174, 36, 255} }},
 };
 
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_vtx_0 + 0, 32, 0),
+Gfx beach_jer_Metal_Jer_Switch_Option_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_vtx_0 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(0, 4, 3, 0, 4, 0, 2, 0),
 	gsSP2Triangles(5, 4, 2, 0, 5, 2, 6, 0),
@@ -4282,7 +4282,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Left_Hand_Open_Switch_Option_Left_Hand
 	gsSP2Triangles(22, 23, 27, 0, 23, 29, 27, 0),
 	gsSP2Triangles(30, 29, 23, 0, 24, 30, 23, 0),
 	gsSP2Triangles(25, 30, 24, 0, 25, 31, 30, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_vtx_0 + 32, 8, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_vtx_0 + 32, 8, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
 	gsSP2Triangles(4, 0, 3, 0, 4, 5, 0, 0),
 	gsSP2Triangles(6, 5, 4, 0, 1, 5, 6, 0),
@@ -4290,7 +4290,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Left_Hand_Open_Switch_Option_Left_Hand
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_vtx_0[157] = {
+Vtx beach_jer_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_vtx_0[157] = {
 	{{ {109, -112, 173}, 0, {-529, 1788}, {5, 3, 129, 255} }},
 	{{ {54, -149, 173}, 0, {-529, 1788}, {248, 249, 129, 255} }},
 	{{ {69, -130, 173}, 0, {-529, 1788}, {221, 43, 142, 255} }},
@@ -4450,8 +4450,8 @@ Vtx beach_jer_nos_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_vtx_0[157] = 
 	{{ {46, -170, -173}, 0, {-529, 1788}, {0, 0, 127, 255} }},
 };
 
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_vtx_0 + 0, 32, 0),
+Gfx beach_jer_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_vtx_0 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 4, 5, 0),
 	gsSP2Triangles(6, 7, 8, 0, 6, 9, 7, 0),
 	gsSP2Triangles(6, 10, 9, 0, 6, 11, 10, 0),
@@ -4465,7 +4465,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(23, 24, 25, 0, 25, 26, 23, 0),
 	gsSP2Triangles(25, 27, 26, 0, 26, 28, 23, 0),
 	gsSP1Triangle(29, 30, 31, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_vtx_0 + 32, 32, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_vtx_0 + 32, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 4, 5, 3, 0),
 	gsSP2Triangles(4, 6, 5, 0, 3, 5, 7, 0),
@@ -4485,7 +4485,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(30, 20, 27, 0, 27, 20, 22, 0),
 	gsSP2Triangles(22, 31, 27, 0, 22, 25, 31, 0),
 	gsSP2Triangles(25, 26, 31, 0, 27, 31, 26, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_vtx_0 + 64, 32, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_vtx_0 + 64, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 4, 5, 0),
 	gsSP2Triangles(3, 6, 4, 0, 7, 6, 3, 0),
 	gsSP2Triangles(7, 8, 6, 0, 9, 8, 7, 0),
@@ -4499,7 +4499,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(25, 23, 26, 0, 27, 25, 26, 0),
 	gsSP2Triangles(27, 26, 28, 0, 29, 27, 28, 0),
 	gsSP2Triangles(29, 28, 30, 0, 31, 27, 29, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_vtx_0 + 96, 31, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_vtx_0 + 96, 31, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 	gsSP2Triangles(1, 4, 3, 0, 4, 5, 3, 0),
 	gsSP2Triangles(4, 6, 5, 0, 7, 5, 6, 0),
@@ -4513,7 +4513,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(28, 27, 26, 0, 29, 28, 26, 0),
 	gsSP2Triangles(30, 28, 29, 0, 30, 29, 23, 0),
 	gsSP1Triangle(29, 21, 23, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_vtx_0 + 127, 30, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_vtx_0 + 127, 30, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 2, 1, 0),
 	gsSP2Triangles(1, 4, 3, 0, 3, 4, 5, 0),
 	gsSP2Triangles(5, 4, 6, 0, 7, 6, 4, 0),
@@ -4537,7 +4537,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_vtx_1[8] = {
+Vtx beach_jer_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_vtx_1[8] = {
 	{{ {69, -130, 44}, 0, {-529, -260}, {184, 103, 22, 255} }},
 	{{ {113, -120, 44}, 0, {495, -260}, {42, 13, 119, 255} }},
 	{{ {129, -22, 44}, 0, {495, 1788}, {0, 0, 127, 255} }},
@@ -4548,14 +4548,14 @@ Vtx beach_jer_nos_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_vtx_1[8] = {
 	{{ {113, -120, -44}, 0, {495, -260}, {42, 13, 137, 255} }},
 };
 
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_tri_1[] = {
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_vtx_1 + 0, 8, 0),
+Gfx beach_jer_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_tri_1[] = {
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_vtx_1 + 0, 8, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Metal_Jer_Switch_Option_Right_Arm_Color_mesh_layer_1_vtx_0[20] = {
+Vtx beach_jer_Metal_Jer_Switch_Option_Right_Arm_Color_mesh_layer_1_vtx_0[20] = {
 	{{ {68, -8, -9}, 0, {-529, 1788}, {124, 247, 231, 255} }},
 	{{ {68, -19, 4}, 0, {-529, 1788}, {124, 229, 254, 255} }},
 	{{ {62, -37, 3}, 0, {-529, 1788}, {52, 141, 249, 255} }},
@@ -4578,8 +4578,8 @@ Vtx beach_jer_nos_Metal_Jer_Switch_Option_Right_Arm_Color_mesh_layer_1_vtx_0[20]
 	{{ {-3, -7, -7}, 0, {-529, 1788}, {158, 240, 177, 255} }},
 };
 
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Arm_Color_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Right_Arm_Color_mesh_layer_1_vtx_0 + 0, 20, 0),
+Gfx beach_jer_Metal_Jer_Switch_Option_Right_Arm_Color_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Right_Arm_Color_mesh_layer_1_vtx_0 + 0, 20, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 0, 5, 0),
 	gsSP2Triangles(5, 0, 2, 0, 5, 2, 6, 0),
@@ -4601,7 +4601,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Arm_Color_mesh_layer_1_tri_0[] =
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Metal_Jer_Switch_Option_Right_Forearm_mesh_layer_1_vtx_0[16] = {
+Vtx beach_jer_Metal_Jer_Switch_Option_Right_Forearm_mesh_layer_1_vtx_0[16] = {
 	{{ {-22, -9, 18}, 0, {-529, 1788}, {156, 237, 76, 255} }},
 	{{ {-22, -18, 4}, 0, {-529, 1788}, {156, 178, 250, 255} }},
 	{{ {-9, -25, 4}, 0, {-529, 1788}, {229, 132, 249, 255} }},
@@ -4620,8 +4620,8 @@ Vtx beach_jer_nos_Metal_Jer_Switch_Option_Right_Forearm_mesh_layer_1_vtx_0[16] =
 	{{ {56, 10, 17}, 0, {-529, 1788}, {42, 94, 74, 255} }},
 };
 
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Forearm_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Right_Forearm_mesh_layer_1_vtx_0 + 0, 16, 0),
+Gfx beach_jer_Metal_Jer_Switch_Option_Right_Forearm_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Right_Forearm_mesh_layer_1_vtx_0 + 0, 16, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(3, 0, 4, 0, 4, 0, 2, 0),
 	gsSP2Triangles(5, 4, 2, 0, 6, 5, 2, 0),
@@ -4639,7 +4639,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Forearm_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_DL_mesh_layer_1_vtx_0[25] = {
+Vtx beach_jer_Metal_Jer_Switch_Option_Right_Hand_DL_mesh_layer_1_vtx_0[25] = {
 	{{ {-9, 18, 28}, 0, {-529, 1788}, {198, 52, 100, 255} }},
 	{{ {1, 17, 24}, 0, {-529, 1788}, {240, 63, 109, 255} }},
 	{{ {-1, 28, -1}, 0, {-529, 1788}, {215, 112, 211, 255} }},
@@ -4667,8 +4667,8 @@ Vtx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_DL_mesh_layer_1_vtx_0[25] =
 	{{ {60, 11, 37}, 0, {-529, 1788}, {67, 47, 98, 255} }},
 };
 
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_DL_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_DL_mesh_layer_1_vtx_0 + 0, 25, 0),
+Gfx beach_jer_Metal_Jer_Switch_Option_Right_Hand_DL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Right_Hand_DL_mesh_layer_1_vtx_0 + 0, 25, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(6, 5, 0, 0, 2, 6, 0, 0),
@@ -4695,7 +4695,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_DL_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_vtx_0[41] = {
+Vtx beach_jer_Metal_Jer_Switch_Option_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_vtx_0[41] = {
 	{{ {101, 27, 19}, 0, {-529, -260}, {79, 217, 91, 255} }},
 	{{ {92, 57, 20}, 0, {-529, -260}, {55, 67, 93, 255} }},
 	{{ {63, 49, 14}, 0, {-529, -260}, {250, 25, 124, 255} }},
@@ -4739,8 +4739,8 @@ Vtx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Open_Switch_Option_Right_Ha
 	{{ {-6, 36, -2}, 0, {-529, -260}, {198, 112, 241, 255} }},
 };
 
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_vtx_0 + 0, 32, 0),
+Gfx beach_jer_Metal_Jer_Switch_Option_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_vtx_0 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 0, 5, 0),
 	gsSP2Triangles(5, 0, 2, 0, 5, 2, 6, 0),
@@ -4769,7 +4769,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Open_Switch_Option_Right_Ha
 	gsSP2Triangles(30, 19, 20, 0, 20, 31, 30, 0),
 	gsSP2Triangles(25, 31, 20, 0, 20, 22, 25, 0),
 	gsSP1Triangle(21, 22, 20, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_vtx_0 + 32, 9, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_vtx_0 + 32, 9, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 1, 3, 0, 3, 5, 4, 0),
 	gsSP2Triangles(5, 6, 4, 0, 7, 4, 6, 0),
@@ -4778,7 +4778,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Open_Switch_Option_Right_Ha
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_vtx_0[49] = {
+Vtx beach_jer_Metal_Jer_Switch_Option_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_vtx_0[49] = {
 	{{ {-8, -20, 24}, 0, {-529, -260}, {215, 149, 201, 255} }},
 	{{ {-27, -2, 21}, 0, {-529, -260}, {166, 206, 181, 255} }},
 	{{ {-8, 15, 1}, 0, {-529, -260}, {195, 243, 145, 255} }},
@@ -4830,8 +4830,8 @@ Vtx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Peace_Switch_Option_Right_H
 	{{ {72, 21, -16}, 0, {-529, -260}, {0, 9, 129, 255} }},
 };
 
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_vtx_0 + 0, 32, 0),
+Gfx beach_jer_Metal_Jer_Switch_Option_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_vtx_0 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 0, 4, 0, 4, 0, 5, 0),
 	gsSP2Triangles(5, 0, 2, 0, 2, 6, 5, 0),
@@ -4858,7 +4858,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Peace_Switch_Option_Right_H
 	gsSP2Triangles(19, 29, 28, 0, 19, 30, 29, 0),
 	gsSP2Triangles(30, 19, 20, 0, 20, 21, 30, 0),
 	gsSP1Triangle(21, 31, 30, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_vtx_0 + 32, 17, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_vtx_0 + 32, 17, 0),
 	gsSP2Triangles(0, 1, 2, 0, 2, 1, 3, 0),
 	gsSP2Triangles(3, 4, 2, 0, 5, 4, 3, 0),
 	gsSP2Triangles(5, 6, 4, 0, 7, 6, 5, 0),
@@ -4873,7 +4873,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Peace_Switch_Option_Right_H
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0[153] = {
+Vtx beach_jer_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0[153] = {
 	{{ {82, 33, 184}, 0, {-529, 1788}, {175, 194, 76, 255} }},
 	{{ {83, 34, 184}, 0, {-529, 1788}, {41, 67, 100, 255} }},
 	{{ {60, 57, 178}, 0, {-529, 1788}, {242, 102, 75, 255} }},
@@ -5029,8 +5029,8 @@ Vtx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Ca
 	{{ {8, 0, -22}, 0, {-529, -260}, {7, 0, 129, 255} }},
 };
 
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0 + 0, 32, 0),
+Gfx beach_jer_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 3, 2, 0, 4, 2, 5, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
@@ -5052,7 +5052,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Ca
 	gsSP2Triangles(27, 25, 26, 0, 28, 25, 27, 0),
 	gsSP2Triangles(28, 27, 29, 0, 27, 26, 29, 0),
 	gsSP2Triangles(28, 29, 30, 0, 28, 30, 31, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0 + 32, 32, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0 + 32, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 2, 1, 0),
 	gsSP2Triangles(3, 1, 4, 0, 3, 0, 2, 0),
 	gsSP2Triangles(3, 5, 0, 0, 6, 5, 3, 0),
@@ -5070,7 +5070,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Ca
 	gsSP2Triangles(26, 27, 25, 0, 26, 28, 27, 0),
 	gsSP2Triangles(28, 26, 29, 0, 30, 29, 26, 0),
 	gsSP1Triangle(31, 28, 29, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0 + 64, 32, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0 + 64, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 4, 5, 3, 0),
 	gsSP2Triangles(4, 6, 5, 0, 4, 7, 6, 0),
@@ -5086,7 +5086,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Ca
 	gsSP2Triangles(25, 20, 26, 0, 25, 26, 27, 0),
 	gsSP2Triangles(25, 27, 28, 0, 28, 27, 29, 0),
 	gsSP2Triangles(28, 29, 30, 0, 28, 30, 31, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0 + 96, 32, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0 + 96, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 2, 1, 0),
 	gsSP2Triangles(4, 3, 1, 0, 2, 4, 3, 0),
 	gsSP2Triangles(5, 2, 3, 0, 6, 5, 3, 0),
@@ -5112,7 +5112,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Ca
 	gsSP2Triangles(24, 29, 28, 0, 30, 29, 24, 0),
 	gsSP2Triangles(25, 30, 24, 0, 31, 30, 25, 0),
 	gsSP2Triangles(25, 26, 31, 0, 31, 26, 27, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0 + 128, 25, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0 + 128, 25, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 4, 1, 0, 1, 4, 2, 0),
 	gsSP2Triangles(2, 4, 5, 0, 6, 7, 8, 0),
@@ -5142,7 +5142,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Ca
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0[153] = {
+Vtx beach_jer_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0[153] = {
 	{{ {82, 33, 184}, 0, {-529, 1788}, {175, 194, 76, 255} }},
 	{{ {83, 34, 184}, 0, {-529, 1788}, {41, 67, 100, 255} }},
 	{{ {60, 57, 178}, 0, {-529, 1788}, {242, 102, 75, 255} }},
@@ -5298,8 +5298,8 @@ Vtx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Righ
 	{{ {10, 1, -23}, 0, {-529, -260}, {7, 0, 129, 255} }},
 };
 
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0 + 0, 32, 0),
+Gfx beach_jer_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 3, 2, 0, 4, 2, 5, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
@@ -5321,7 +5321,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Righ
 	gsSP2Triangles(27, 25, 26, 0, 28, 25, 27, 0),
 	gsSP2Triangles(28, 27, 29, 0, 27, 26, 29, 0),
 	gsSP2Triangles(28, 29, 30, 0, 28, 30, 31, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0 + 32, 32, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0 + 32, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 2, 1, 0),
 	gsSP2Triangles(3, 1, 4, 0, 3, 0, 2, 0),
 	gsSP2Triangles(3, 5, 0, 0, 6, 5, 3, 0),
@@ -5339,7 +5339,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Righ
 	gsSP2Triangles(26, 27, 25, 0, 26, 28, 27, 0),
 	gsSP2Triangles(28, 26, 29, 0, 30, 29, 26, 0),
 	gsSP1Triangle(31, 28, 29, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0 + 64, 32, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0 + 64, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 4, 5, 3, 0),
 	gsSP2Triangles(4, 6, 5, 0, 4, 7, 6, 0),
@@ -5355,7 +5355,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Righ
 	gsSP2Triangles(25, 20, 26, 0, 25, 26, 27, 0),
 	gsSP2Triangles(25, 27, 28, 0, 28, 27, 29, 0),
 	gsSP2Triangles(28, 29, 30, 0, 28, 30, 31, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0 + 96, 32, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0 + 96, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 2, 1, 0),
 	gsSP2Triangles(4, 3, 1, 0, 2, 4, 3, 0),
 	gsSP2Triangles(5, 2, 3, 0, 6, 5, 3, 0),
@@ -5381,7 +5381,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Righ
 	gsSP2Triangles(24, 29, 28, 0, 30, 29, 24, 0),
 	gsSP2Triangles(25, 30, 24, 0, 31, 30, 25, 0),
 	gsSP2Triangles(25, 26, 31, 0, 31, 26, 27, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0 + 128, 25, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0 + 128, 25, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 4, 1, 0, 1, 4, 2, 0),
 	gsSP2Triangles(2, 4, 5, 0, 6, 7, 8, 0),
@@ -5411,7 +5411,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Righ
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Metal_Jer_Switch_Option_Left_Thigh_Color_mesh_layer_1_vtx_0[17] = {
+Vtx beach_jer_Metal_Jer_Switch_Option_Left_Thigh_Color_mesh_layer_1_vtx_0[17] = {
 	{{ {-1, -6, 23}, 0, {-529, 1788}, {191, 220, 103, 255} }},
 	{{ {-16, -1, 4}, 0, {-529, 1788}, {130, 242, 252, 255} }},
 	{{ {1, -22, 5}, 0, {-529, 1788}, {196, 144, 1, 255} }},
@@ -5431,8 +5431,8 @@ Vtx beach_jer_nos_Metal_Jer_Switch_Option_Left_Thigh_Color_mesh_layer_1_vtx_0[17
 	{{ {100, 4, 5}, 0, {-529, 1788}, {127, 0, 0, 255} }},
 };
 
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Left_Thigh_Color_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Left_Thigh_Color_mesh_layer_1_vtx_0 + 0, 17, 0),
+Gfx beach_jer_Metal_Jer_Switch_Option_Left_Thigh_Color_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Left_Thigh_Color_mesh_layer_1_vtx_0 + 0, 17, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 0, 4, 0, 4, 0, 2, 0),
 	gsSP2Triangles(4, 2, 5, 0, 5, 2, 6, 0),
@@ -5451,7 +5451,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Left_Thigh_Color_mesh_layer_1_tri_0[] 
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Metal_Jer_Switch_Option_Left_Leg_mesh_layer_1_vtx_0[12] = {
+Vtx beach_jer_Metal_Jer_Switch_Option_Left_Leg_mesh_layer_1_vtx_0[12] = {
 	{{ {5, 24, 18}, 0, {-529, 1788}, {221, 100, 70, 255} }},
 	{{ {55, 20, 17}, 0, {-529, 1788}, {53, 92, 70, 255} }},
 	{{ {56, 20, -6}, 0, {-529, 1788}, {55, 92, 188, 255} }},
@@ -5466,8 +5466,8 @@ Vtx beach_jer_nos_Metal_Jer_Switch_Option_Left_Leg_mesh_layer_1_vtx_0[12] = {
 	{{ {3, -3, -15}, 0, {-529, 1788}, {216, 221, 141, 255} }},
 };
 
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Left_Leg_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Left_Leg_mesh_layer_1_vtx_0 + 0, 12, 0),
+Gfx beach_jer_Metal_Jer_Switch_Option_Left_Leg_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Left_Leg_mesh_layer_1_vtx_0 + 0, 12, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(6, 5, 0, 0, 2, 6, 0, 0),
@@ -5481,7 +5481,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Left_Leg_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Metal_Jer_Switch_Option_Left_Shoe_mesh_layer_1_vtx_0[58] = {
+Vtx beach_jer_Metal_Jer_Switch_Option_Left_Shoe_mesh_layer_1_vtx_0[58] = {
 	{{ {-8, 28, 37}, 0, {-529, 1788}, {44, 119, 0, 255} }},
 	{{ {-28, 36, -5}, 0, {-529, 1788}, {44, 119, 0, 255} }},
 	{{ {-29, 36, 18}, 0, {-529, 1788}, {44, 119, 0, 255} }},
@@ -5542,8 +5542,8 @@ Vtx beach_jer_nos_Metal_Jer_Switch_Option_Left_Shoe_mesh_layer_1_vtx_0[58] = {
 	{{ {37, -32, 6}, 0, {-529, 1788}, {7, 129, 248, 255} }},
 };
 
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Left_Shoe_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Left_Shoe_mesh_layer_1_vtx_0 + 0, 32, 0),
+Gfx beach_jer_Metal_Jer_Switch_Option_Left_Shoe_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Left_Shoe_mesh_layer_1_vtx_0 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 4, 5, 3, 0),
 	gsSP2Triangles(4, 6, 5, 0, 6, 7, 5, 0),
@@ -5559,7 +5559,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Left_Shoe_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(27, 24, 28, 0, 28, 29, 27, 0),
 	gsSP2Triangles(30, 29, 28, 0, 30, 28, 8, 0),
 	gsSP2Triangles(8, 31, 30, 0, 8, 10, 31, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Left_Shoe_mesh_layer_1_vtx_0 + 32, 26, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Left_Shoe_mesh_layer_1_vtx_0 + 32, 26, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 2, 1, 0),
 	gsSP2Triangles(3, 4, 2, 0, 5, 4, 3, 0),
 	gsSP2Triangles(5, 3, 6, 0, 6, 7, 5, 0),
@@ -5580,7 +5580,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Left_Shoe_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Metal_Jer_Switch_Option_Right_Thigh_Color_mesh_layer_1_vtx_0[17] = {
+Vtx beach_jer_Metal_Jer_Switch_Option_Right_Thigh_Color_mesh_layer_1_vtx_0[17] = {
 	{{ {92, 36, -25}, 0, {-529, 1788}, {59, 93, 192, 255} }},
 	{{ {92, -7, -40}, 0, {-529, 1788}, {60, 227, 148, 255} }},
 	{{ {19, -7, -29}, 0, {-529, 1788}, {233, 219, 137, 255} }},
@@ -5600,8 +5600,8 @@ Vtx beach_jer_nos_Metal_Jer_Switch_Option_Right_Thigh_Color_mesh_layer_1_vtx_0[1
 	{{ {0, -7, 14}, 0, {-529, 1788}, {195, 215, 104, 255} }},
 };
 
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Thigh_Color_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Right_Thigh_Color_mesh_layer_1_vtx_0 + 0, 17, 0),
+Gfx beach_jer_Metal_Jer_Switch_Option_Right_Thigh_Color_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Right_Thigh_Color_mesh_layer_1_vtx_0 + 0, 17, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 0, 5, 0),
 	gsSP2Triangles(0, 2, 5, 0, 2, 6, 5, 0),
@@ -5620,7 +5620,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Thigh_Color_mesh_layer_1_tri_0[]
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Metal_Jer_Switch_Option_Right_Leg_mesh_layer_1_vtx_0[12] = {
+Vtx beach_jer_Metal_Jer_Switch_Option_Right_Leg_mesh_layer_1_vtx_0[12] = {
 	{{ {6, 24, 7}, 0, {-529, 1788}, {223, 97, 75, 255} }},
 	{{ {-20, 6, -5}, 0, {-529, 1788}, {129, 10, 4, 255} }},
 	{{ {3, -3, 14}, 0, {-529, 1788}, {216, 219, 115, 255} }},
@@ -5635,8 +5635,8 @@ Vtx beach_jer_nos_Metal_Jer_Switch_Option_Right_Leg_mesh_layer_1_vtx_0[12] = {
 	{{ {52, -17, -7}, 0, {-529, 1788}, {39, 135, 251, 255} }},
 };
 
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Leg_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Right_Leg_mesh_layer_1_vtx_0 + 0, 12, 0),
+Gfx beach_jer_Metal_Jer_Switch_Option_Right_Leg_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Right_Leg_mesh_layer_1_vtx_0 + 0, 12, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 0, 4, 0, 5, 4, 0, 0),
 	gsSP2Triangles(0, 2, 5, 0, 5, 2, 6, 0),
@@ -5650,7 +5650,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Leg_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_nos_Metal_Jer_Switch_Option_Right_Shoe_DL_mesh_layer_1_vtx_0[58] = {
+Vtx beach_jer_Metal_Jer_Switch_Option_Right_Shoe_DL_mesh_layer_1_vtx_0[58] = {
 	{{ {52, 6, 28}, 0, {-529, 1788}, {44, 119, 0, 255} }},
 	{{ {76, -3, 14}, 0, {-529, 1788}, {44, 119, 0, 255} }},
 	{{ {76, -3, -25}, 0, {-529, 1788}, {44, 119, 0, 255} }},
@@ -5711,8 +5711,8 @@ Vtx beach_jer_nos_Metal_Jer_Switch_Option_Right_Shoe_DL_mesh_layer_1_vtx_0[58] =
 	{{ {19, -33, -7}, 0, {-529, 1788}, {231, 132, 8, 255} }},
 };
 
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Shoe_DL_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Right_Shoe_DL_mesh_layer_1_vtx_0 + 0, 32, 0),
+Gfx beach_jer_Metal_Jer_Switch_Option_Right_Shoe_DL_mesh_layer_1_tri_0[] = {
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Right_Shoe_DL_mesh_layer_1_vtx_0 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 0, 3, 0, 4, 3, 5, 0),
 	gsSP2Triangles(6, 4, 5, 0, 7, 6, 5, 0),
@@ -5728,7 +5728,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Shoe_DL_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(27, 24, 28, 0, 28, 29, 27, 0),
 	gsSP2Triangles(28, 30, 29, 0, 28, 8, 30, 0),
 	gsSP2Triangles(31, 30, 8, 0, 8, 10, 31, 0),
-	gsSPVertex(beach_jer_nos_Metal_Jer_Switch_Option_Right_Shoe_DL_mesh_layer_1_vtx_0 + 32, 26, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Right_Shoe_DL_mesh_layer_1_vtx_0 + 32, 26, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 	gsSP2Triangles(2, 3, 4, 0, 5, 2, 4, 0),
 	gsSP2Triangles(4, 6, 5, 0, 4, 7, 6, 0),
@@ -5750,7 +5750,7 @@ Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Shoe_DL_mesh_layer_1_tri_0[] = {
 };
 
 
-Gfx mat_beach_jer_nos_Pants__PANTS_[] = {
+Gfx mat_beach_jer_Pants__PANTS_[] = {
 	gsSPCopyLightsPlayerPart(PANTS),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
@@ -5758,38 +5758,7 @@ Gfx mat_beach_jer_nos_Pants__PANTS_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_beach_jer_nos_Skin__SKIN_[] = {
-	gsSPCopyLightsPlayerPart(CAP),
-	gsDPPipeSync(),
-	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
-	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_beach_jer_nos_Shirt__SHIRT_[] = {
-	gsSPCopyLightsPlayerPart(SHIRT),
-	gsDPPipeSync(),
-	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
-	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_beach_jer_nos_Shirt_Unculled__SHIRT_[] = {
-	gsSPGeometryMode(G_CULL_BACK, 0),
-	gsSPCopyLightsPlayerPart(SHIRT),
-	gsDPPipeSync(),
-	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
-	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_revert_beach_jer_nos_Shirt_Unculled__SHIRT_[] = {
-	gsSPGeometryMode(0, G_CULL_BACK),
-	gsDPPipeSync(),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_beach_jer_nos_Helmet__CAP_[] = {
+Gfx mat_beach_jer_Skin__SKIN_[] = {
 	gsSPCopyLightsPlayerPart(SKIN),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
@@ -5797,7 +5766,38 @@ Gfx mat_beach_jer_nos_Helmet__CAP_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_beach_jer_nos_Stripes__HAIR_[] = {
+Gfx mat_beach_jer_Shirt__SHIRT_[] = {
+	gsSPCopyLightsPlayerPart(SHIRT),
+	gsDPPipeSync(),
+	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
+	gsSPTexture(65535, 65535, 0, 0, 1),
+	gsSPEndDisplayList(),
+};
+
+Gfx mat_beach_jer_Shirt_Unculled__SHIRT_[] = {
+	gsSPGeometryMode(G_CULL_BACK, 0),
+	gsSPCopyLightsPlayerPart(SHIRT),
+	gsDPPipeSync(),
+	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
+	gsSPTexture(65535, 65535, 0, 0, 1),
+	gsSPEndDisplayList(),
+};
+
+Gfx mat_revert_beach_jer_Shirt_Unculled__SHIRT_[] = {
+	gsSPGeometryMode(0, G_CULL_BACK),
+	gsDPPipeSync(),
+	gsSPEndDisplayList(),
+};
+
+Gfx mat_beach_jer_Helmet[] = {
+	gsSPSetLights1(beach_jer_Helmet_lights),
+	gsDPPipeSync(),
+	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
+	gsSPTexture(65535, 65535, 0, 0, 1),
+	gsSPEndDisplayList(),
+};
+
+Gfx mat_beach_jer_Stripes__HAIR_[] = {
 	gsSPCopyLightsPlayerPart(HAIR),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
@@ -5805,12 +5805,12 @@ Gfx mat_beach_jer_nos_Stripes__HAIR_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_beach_jer_nos_Eyes[] = {
-	gsSPSetLights1(beach_jer_nos_Eyes_lights),
+Gfx mat_beach_jer_Eyes[] = {
+	gsSPSetLights1(beach_jer_Eyes_lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_nos_jer_eyes_center_rgba16_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_jer_eyes_center_rgba16_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -5818,20 +5818,20 @@ Gfx mat_beach_jer_nos_Eyes[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_beach_jer_nos_Visor[] = {
-	gsSPSetLights1(beach_jer_nos_Visor_lights),
+Gfx mat_beach_jer_Visor[] = {
+	gsSPSetLights1(beach_jer_Visor_lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_beach_jer_nos_Sunglasses_reflection[] = {
+Gfx mat_beach_jer_Sunglasses_reflection[] = {
 	gsSPGeometryMode(0, G_TEXTURE_GEN),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(1984, 4032, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_nos_jer_metal_base_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_jer_metal_base_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 2047, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
@@ -5839,13 +5839,13 @@ Gfx mat_beach_jer_nos_Sunglasses_reflection[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_beach_jer_nos_Sunglasses_reflection[] = {
+Gfx mat_revert_beach_jer_Sunglasses_reflection[] = {
 	gsSPGeometryMode(G_TEXTURE_GEN, 0),
 	gsDPPipeSync(),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_beach_jer_nos_Sunglasses__EMBLEM_[] = {
+Gfx mat_beach_jer_Sunglasses__EMBLEM_[] = {
 	gsSPCopyLightsPlayerPart(EMBLEM),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
@@ -5853,12 +5853,12 @@ Gfx mat_beach_jer_nos_Sunglasses__EMBLEM_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_beach_jer_nos_Eyes_Half[] = {
-	gsSPSetLights1(beach_jer_nos_Eyes_Half_lights),
+Gfx mat_beach_jer_Eyes_Half[] = {
+	gsSPSetLights1(beach_jer_Eyes_Half_lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_nos_jer_eyes_half_rgba16_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_jer_eyes_half_rgba16_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -5866,12 +5866,12 @@ Gfx mat_beach_jer_nos_Eyes_Half[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_beach_jer_nos_Eyes_Closed[] = {
-	gsSPSetLights1(beach_jer_nos_Eyes_Closed_lights),
+Gfx mat_beach_jer_Eyes_Closed[] = {
+	gsSPSetLights1(beach_jer_Eyes_Closed_lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_nos_jer_eyes_closed_rgba16_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_jer_eyes_closed_rgba16_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -5879,12 +5879,12 @@ Gfx mat_beach_jer_nos_Eyes_Closed[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_beach_jer_nos_Eyes_Left[] = {
-	gsSPSetLights1(beach_jer_nos_Eyes_Left_lights),
+Gfx mat_beach_jer_Eyes_Left[] = {
+	gsSPSetLights1(beach_jer_Eyes_Left_lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_nos_jer_eyes_left_rgba16_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_jer_eyes_left_rgba16_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -5892,12 +5892,12 @@ Gfx mat_beach_jer_nos_Eyes_Left[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_beach_jer_nos_Eyes_Right[] = {
-	gsSPSetLights1(beach_jer_nos_Eyes_Right_lights),
+Gfx mat_beach_jer_Eyes_Right[] = {
+	gsSPSetLights1(beach_jer_Eyes_Right_lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_nos_jer_eyes_right_rgba16_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_jer_eyes_right_rgba16_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -5905,12 +5905,12 @@ Gfx mat_beach_jer_nos_Eyes_Right[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_beach_jer_nos_Eyes_Up[] = {
-	gsSPSetLights1(beach_jer_nos_Eyes_Up_lights),
+Gfx mat_beach_jer_Eyes_Up[] = {
+	gsSPSetLights1(beach_jer_Eyes_Up_lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_nos_jer_eyes_up_rgba16_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_jer_eyes_up_rgba16_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -5918,12 +5918,12 @@ Gfx mat_beach_jer_nos_Eyes_Up[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_beach_jer_nos_Eyes_Down[] = {
-	gsSPSetLights1(beach_jer_nos_Eyes_Down_lights),
+Gfx mat_beach_jer_Eyes_Down[] = {
+	gsSPSetLights1(beach_jer_Eyes_Down_lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_nos_jer_eyes_down_rgba16_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_jer_eyes_down_rgba16_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -5931,12 +5931,12 @@ Gfx mat_beach_jer_nos_Eyes_Down[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_beach_jer_nos_Eyes_Dead[] = {
-	gsSPSetLights1(beach_jer_nos_Eyes_Dead_lights),
+Gfx mat_beach_jer_Eyes_Dead[] = {
+	gsSPSetLights1(beach_jer_Eyes_Dead_lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_nos_jer_eyes_dead_rgba16_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_jer_eyes_dead_rgba16_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -5944,7 +5944,7 @@ Gfx mat_beach_jer_nos_Eyes_Dead[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_beach_jer_nos_Gloves__GLOVES_[] = {
+Gfx mat_beach_jer_Gloves__GLOVES_[] = {
 	gsSPCopyLightsPlayerPart(GLOVES),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
@@ -5952,12 +5952,12 @@ Gfx mat_beach_jer_nos_Gloves__GLOVES_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_beach_jer_nos_NOS_Tank[] = {
-	gsSPSetLights1(beach_jer_nos_NOS_Tank_lights),
+Gfx mat_beach_jer_NOS_Tank[] = {
+	gsSPSetLights1(beach_jer_NOS_Tank_lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_nos_jer_tank_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_jer_tank_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 2047, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
@@ -5965,12 +5965,12 @@ Gfx mat_beach_jer_nos_NOS_Tank[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_beach_jer_nos_Steel[] = {
+Gfx mat_beach_jer_Steel[] = {
 	gsSPGeometryMode(0, G_TEXTURE_GEN),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(4032, 1984, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_nos_stainless_steel_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_stainless_steel_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 2047, 128),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0),
@@ -5978,26 +5978,26 @@ Gfx mat_beach_jer_nos_Steel[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_beach_jer_nos_Steel[] = {
+Gfx mat_revert_beach_jer_Steel[] = {
 	gsSPGeometryMode(G_TEXTURE_GEN, 0),
 	gsDPPipeSync(),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_beach_jer_nos_Spoiler[] = {
-	gsSPCopyLightsPlayerPart(CAP),
+Gfx mat_beach_jer_Spoiler[] = {
+	gsSPSetLights1(beach_jer_Spoiler_lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_beach_jer_nos_Spoiler_Voltex[] = {
-	gsSPCopyLightsPlayerPart(CAP),
+Gfx mat_beach_jer_Spoiler_Voltex[] = {
+	gsSPSetLights1(beach_jer_Spoiler_Voltex_lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_nos_voltex_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_voltex_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 1023, 128),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 4, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0),
@@ -6005,13 +6005,13 @@ Gfx mat_beach_jer_nos_Spoiler_Voltex[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_beach_jer_nos_Spoiler_Post[] = {
+Gfx mat_beach_jer_Spoiler_Post[] = {
 	gsSPGeometryMode(G_CULL_BACK, 0),
-	gsSPSetLights1(beach_jer_nos_Spoiler_Post_lights),
+	gsSPSetLights1(beach_jer_Spoiler_Post_lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, ENVIRONMENT, 0, TEXEL0, 0, SHADE, 0, TEXEL0, 0, ENVIRONMENT, 0),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_nos_spoiler_posts_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_spoiler_posts_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 255, 512),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 4, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 4, 0, G_TX_CLAMP | G_TX_NOMIRROR, 4, 0),
@@ -6019,13 +6019,13 @@ Gfx mat_beach_jer_nos_Spoiler_Post[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_beach_jer_nos_Spoiler_Post[] = {
+Gfx mat_revert_beach_jer_Spoiler_Post[] = {
 	gsSPGeometryMode(0, G_CULL_BACK),
 	gsDPPipeSync(),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_beach_jer_nos_Shoes__SHOES_[] = {
+Gfx mat_beach_jer_Shoes__SHOES_[] = {
 	gsSPCopyLightsPlayerPart(SHOES),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
@@ -6033,18 +6033,18 @@ Gfx mat_beach_jer_nos_Shoes__SHOES_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_beach_jer_nos_Metal__METAL_[] = {
+Gfx mat_beach_jer_Metal__METAL_[] = {
 	gsSPGeometryMode(0, G_TEXTURE_GEN),
-	gsSPSetLights1(beach_jer_nos_Metal__METAL__lights),
+	gsSPSetLights1(beach_jer_Metal__METAL__lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, TEXEL1, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, TEXEL1, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(1984, 4032, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_nos_jer_metal_base_rgba16_copy),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_jer_metal_base_rgba16_copy),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 2047, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(0, 0, 0, 124, 252),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_nos_jer_metal_shine_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_jer_metal_shine_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 512, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(6, 0, 0, 2047, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 512, 1, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
@@ -6052,24 +6052,24 @@ Gfx mat_beach_jer_nos_Metal__METAL_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_beach_jer_nos_Metal__METAL_[] = {
+Gfx mat_revert_beach_jer_Metal__METAL_[] = {
 	gsSPGeometryMode(G_TEXTURE_GEN, 0),
 	gsDPPipeSync(),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_beach_jer_nos_Metal_Unculled__METAL_[] = {
+Gfx mat_beach_jer_Metal_Unculled__METAL_[] = {
 	gsSPGeometryMode(0, G_TEXTURE_GEN),
-	gsSPSetLights1(beach_jer_nos_Metal_Unculled__METAL__lights),
+	gsSPSetLights1(beach_jer_Metal_Unculled__METAL__lights),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, TEXEL1, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, TEXEL1, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(1984, 4032, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_nos_jer_metal_base_rgba16_copy),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_jer_metal_base_rgba16_copy),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 2047, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(0, 0, 0, 124, 252),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_nos_jer_metal_shine_rgba16),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, beach_jer_jer_metal_shine_rgba16),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 512, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(6, 0, 0, 2047, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 512, 1, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
@@ -6077,302 +6077,554 @@ Gfx mat_beach_jer_nos_Metal_Unculled__METAL_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_beach_jer_nos_Metal_Unculled__METAL_[] = {
+Gfx mat_revert_beach_jer_Metal_Unculled__METAL_[] = {
 	gsSPGeometryMode(G_TEXTURE_GEN, 0),
 	gsDPPipeSync(),
 	gsSPEndDisplayList(),
 };
 
-Gfx beach_jer_nos_Torso_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Pants__PANTS_),
-	gsSPDisplayList(beach_jer_nos_Torso_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_nos_Skin__SKIN_),
-	gsSPDisplayList(beach_jer_nos_Torso_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_beach_jer_nos_Shirt__SHIRT_),
-	gsSPDisplayList(beach_jer_nos_Torso_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_beach_jer_nos_Shirt_Unculled__SHIRT_),
-	gsSPDisplayList(beach_jer_nos_Torso_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Shirt_Unculled__SHIRT_),
+Gfx beach_jer_Torso_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Pants__PANTS_),
+	gsSPDisplayList(beach_jer_Torso_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_beach_jer_Skin__SKIN_),
+	gsSPDisplayList(beach_jer_Torso_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_beach_jer_Shirt__SHIRT_),
+	gsSPDisplayList(beach_jer_Torso_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_beach_jer_Shirt_Unculled__SHIRT_),
+	gsSPDisplayList(beach_jer_Torso_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_revert_beach_jer_Shirt_Unculled__SHIRT_),
 	gsSPEndDisplayList(),
 };
 
-Gfx beach_jer_nos_Head_DL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Helmet__CAP_),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_nos_Stripes__HAIR_),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_beach_jer_nos_Eyes),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_beach_jer_nos_Visor),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_beach_jer_nos_Sunglasses_reflection),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_4),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Sunglasses_reflection),
-	gsSPDisplayList(mat_beach_jer_nos_Sunglasses__EMBLEM_),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_5),
+Gfx beach_jer_Head_DL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Helmet),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_beach_jer_Stripes__HAIR_),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_beach_jer_Eyes),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_beach_jer_Visor),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_beach_jer_Sunglasses_reflection),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_4),
+	gsSPDisplayList(mat_revert_beach_jer_Sunglasses_reflection),
+	gsSPDisplayList(mat_beach_jer_Sunglasses__EMBLEM_),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_5),
 	gsSPEndDisplayList(),
 };
 
-Gfx beach_jer_nos_Head_DL_mesh_layer_1_mat_override_Eyes_Half_0[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Helmet__CAP_),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_nos_Stripes__HAIR_),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_beach_jer_nos_Eyes_Half),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_beach_jer_nos_Visor),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_beach_jer_nos_Sunglasses_reflection),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_4),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Sunglasses_reflection),
-	gsSPDisplayList(mat_beach_jer_nos_Sunglasses__EMBLEM_),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_5),
+Gfx beach_jer_Head_DL_mesh_layer_1_mat_override_Eyes_Half_0[] = {
+	gsSPDisplayList(mat_beach_jer_Helmet),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_beach_jer_Stripes__HAIR_),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_beach_jer_Eyes_Half),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_beach_jer_Visor),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_beach_jer_Sunglasses_reflection),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_4),
+	gsSPDisplayList(mat_revert_beach_jer_Sunglasses_reflection),
+	gsSPDisplayList(mat_beach_jer_Sunglasses__EMBLEM_),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_5),
 	gsSPEndDisplayList(),
 };
 
-Gfx beach_jer_nos_Head_DL_mesh_layer_1_mat_override_Eyes_Closed_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Helmet__CAP_),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_nos_Stripes__HAIR_),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_beach_jer_nos_Eyes_Closed),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_beach_jer_nos_Visor),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_beach_jer_nos_Sunglasses_reflection),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_4),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Sunglasses_reflection),
-	gsSPDisplayList(mat_beach_jer_nos_Sunglasses__EMBLEM_),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_5),
+Gfx beach_jer_Head_DL_mesh_layer_1_mat_override_Eyes_Closed_1[] = {
+	gsSPDisplayList(mat_beach_jer_Helmet),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_beach_jer_Stripes__HAIR_),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_beach_jer_Eyes_Closed),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_beach_jer_Visor),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_beach_jer_Sunglasses_reflection),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_4),
+	gsSPDisplayList(mat_revert_beach_jer_Sunglasses_reflection),
+	gsSPDisplayList(mat_beach_jer_Sunglasses__EMBLEM_),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_5),
 	gsSPEndDisplayList(),
 };
 
-Gfx beach_jer_nos_Head_DL_mesh_layer_1_mat_override_Eyes_Left_2[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Helmet__CAP_),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_nos_Stripes__HAIR_),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_beach_jer_nos_Eyes_Left),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_beach_jer_nos_Visor),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_beach_jer_nos_Sunglasses_reflection),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_4),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Sunglasses_reflection),
-	gsSPDisplayList(mat_beach_jer_nos_Sunglasses__EMBLEM_),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_5),
+Gfx beach_jer_Head_DL_mesh_layer_1_mat_override_Eyes_Left_2[] = {
+	gsSPDisplayList(mat_beach_jer_Helmet),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_beach_jer_Stripes__HAIR_),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_beach_jer_Eyes_Left),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_beach_jer_Visor),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_beach_jer_Sunglasses_reflection),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_4),
+	gsSPDisplayList(mat_revert_beach_jer_Sunglasses_reflection),
+	gsSPDisplayList(mat_beach_jer_Sunglasses__EMBLEM_),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_5),
 	gsSPEndDisplayList(),
 };
 
-Gfx beach_jer_nos_Head_DL_mesh_layer_1_mat_override_Eyes_Right_3[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Helmet__CAP_),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_nos_Stripes__HAIR_),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_beach_jer_nos_Eyes_Right),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_beach_jer_nos_Visor),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_beach_jer_nos_Sunglasses_reflection),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_4),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Sunglasses_reflection),
-	gsSPDisplayList(mat_beach_jer_nos_Sunglasses__EMBLEM_),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_5),
+Gfx beach_jer_Head_DL_mesh_layer_1_mat_override_Eyes_Right_3[] = {
+	gsSPDisplayList(mat_beach_jer_Helmet),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_beach_jer_Stripes__HAIR_),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_beach_jer_Eyes_Right),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_beach_jer_Visor),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_beach_jer_Sunglasses_reflection),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_4),
+	gsSPDisplayList(mat_revert_beach_jer_Sunglasses_reflection),
+	gsSPDisplayList(mat_beach_jer_Sunglasses__EMBLEM_),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_5),
 	gsSPEndDisplayList(),
 };
 
-Gfx beach_jer_nos_Head_DL_mesh_layer_1_mat_override_Eyes_Up_4[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Helmet__CAP_),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_nos_Stripes__HAIR_),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_beach_jer_nos_Eyes_Up),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_beach_jer_nos_Visor),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_beach_jer_nos_Sunglasses_reflection),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_4),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Sunglasses_reflection),
-	gsSPDisplayList(mat_beach_jer_nos_Sunglasses__EMBLEM_),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_5),
+Gfx beach_jer_Head_DL_mesh_layer_1_mat_override_Eyes_Up_4[] = {
+	gsSPDisplayList(mat_beach_jer_Helmet),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_beach_jer_Stripes__HAIR_),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_beach_jer_Eyes_Up),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_beach_jer_Visor),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_beach_jer_Sunglasses_reflection),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_4),
+	gsSPDisplayList(mat_revert_beach_jer_Sunglasses_reflection),
+	gsSPDisplayList(mat_beach_jer_Sunglasses__EMBLEM_),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_5),
 	gsSPEndDisplayList(),
 };
 
-Gfx beach_jer_nos_Head_DL_mesh_layer_1_mat_override_Eyes_Down_5[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Helmet__CAP_),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_nos_Stripes__HAIR_),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_beach_jer_nos_Eyes_Down),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_beach_jer_nos_Visor),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_beach_jer_nos_Sunglasses_reflection),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_4),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Sunglasses_reflection),
-	gsSPDisplayList(mat_beach_jer_nos_Sunglasses__EMBLEM_),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_5),
+Gfx beach_jer_Head_DL_mesh_layer_1_mat_override_Eyes_Down_5[] = {
+	gsSPDisplayList(mat_beach_jer_Helmet),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_beach_jer_Stripes__HAIR_),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_beach_jer_Eyes_Down),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_beach_jer_Visor),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_beach_jer_Sunglasses_reflection),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_4),
+	gsSPDisplayList(mat_revert_beach_jer_Sunglasses_reflection),
+	gsSPDisplayList(mat_beach_jer_Sunglasses__EMBLEM_),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_5),
 	gsSPEndDisplayList(),
 };
 
-Gfx beach_jer_nos_Head_DL_mesh_layer_1_mat_override_Eyes_Dead_6[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Helmet__CAP_),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_nos_Stripes__HAIR_),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_beach_jer_nos_Eyes_Dead),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_beach_jer_nos_Visor),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_beach_jer_nos_Sunglasses_reflection),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_4),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Sunglasses_reflection),
-	gsSPDisplayList(mat_beach_jer_nos_Sunglasses__EMBLEM_),
-	gsSPDisplayList(beach_jer_nos_Head_DL_mesh_layer_1_tri_5),
+Gfx beach_jer_Head_DL_mesh_layer_1_mat_override_Eyes_Dead_6[] = {
+	gsSPDisplayList(mat_beach_jer_Helmet),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_beach_jer_Stripes__HAIR_),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_beach_jer_Eyes_Dead),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_beach_jer_Visor),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_3),
+	gsSPDisplayList(mat_beach_jer_Sunglasses_reflection),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_4),
+	gsSPDisplayList(mat_revert_beach_jer_Sunglasses_reflection),
+	gsSPDisplayList(mat_beach_jer_Sunglasses__EMBLEM_),
+	gsSPDisplayList(beach_jer_Head_DL_mesh_layer_1_tri_5),
 	gsSPEndDisplayList(),
 };
 
-Gfx beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Helmet__CAP_),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_nos_Visor),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_beach_jer_nos_Eyes),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_beach_jer_nos_Stripes__HAIR_),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
+Gfx beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Helmet),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_beach_jer_Visor),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_beach_jer_Eyes),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_beach_jer_Stripes__HAIR_),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
 	gsSPEndDisplayList(),
 };
 
-Gfx beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Eyes_Half_0[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Helmet__CAP_),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_nos_Visor),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_beach_jer_nos_Eyes_Half),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_beach_jer_nos_Stripes__HAIR_),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
+Gfx beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Eyes_Half_0[] = {
+	gsSPDisplayList(mat_beach_jer_Helmet),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_beach_jer_Visor),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_beach_jer_Eyes_Half),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_beach_jer_Stripes__HAIR_),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
 	gsSPEndDisplayList(),
 };
 
-Gfx beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Eyes_Closed_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Helmet__CAP_),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_nos_Visor),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_beach_jer_nos_Eyes_Closed),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_beach_jer_nos_Stripes__HAIR_),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
+Gfx beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Eyes_Closed_1[] = {
+	gsSPDisplayList(mat_beach_jer_Helmet),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_beach_jer_Visor),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_beach_jer_Eyes_Closed),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_beach_jer_Stripes__HAIR_),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
 	gsSPEndDisplayList(),
 };
 
-Gfx beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Eyes_Left_2[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Helmet__CAP_),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_nos_Visor),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_beach_jer_nos_Eyes_Left),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_beach_jer_nos_Stripes__HAIR_),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
+Gfx beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Eyes_Left_2[] = {
+	gsSPDisplayList(mat_beach_jer_Helmet),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_beach_jer_Visor),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_beach_jer_Eyes_Left),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_beach_jer_Stripes__HAIR_),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
 	gsSPEndDisplayList(),
 };
 
-Gfx beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Eyes_Right_3[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Helmet__CAP_),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_nos_Visor),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_beach_jer_nos_Eyes_Right),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_beach_jer_nos_Stripes__HAIR_),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
+Gfx beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Eyes_Right_3[] = {
+	gsSPDisplayList(mat_beach_jer_Helmet),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_beach_jer_Visor),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_beach_jer_Eyes_Right),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_beach_jer_Stripes__HAIR_),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
 	gsSPEndDisplayList(),
 };
 
-Gfx beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Eyes_Up_4[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Helmet__CAP_),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_nos_Visor),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_beach_jer_nos_Eyes_Up),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_beach_jer_nos_Stripes__HAIR_),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
+Gfx beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Eyes_Up_4[] = {
+	gsSPDisplayList(mat_beach_jer_Helmet),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_beach_jer_Visor),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_beach_jer_Eyes_Up),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_beach_jer_Stripes__HAIR_),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
 	gsSPEndDisplayList(),
 };
 
-Gfx beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Eyes_Down_5[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Helmet__CAP_),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_nos_Visor),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_beach_jer_nos_Eyes_Down),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_beach_jer_nos_Stripes__HAIR_),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
+Gfx beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Eyes_Down_5[] = {
+	gsSPDisplayList(mat_beach_jer_Helmet),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_beach_jer_Visor),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_beach_jer_Eyes_Down),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_beach_jer_Stripes__HAIR_),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
 	gsSPEndDisplayList(),
 };
 
-Gfx beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Eyes_Dead_6[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Helmet__CAP_),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_nos_Visor),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_beach_jer_nos_Eyes_Dead),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_beach_jer_nos_Stripes__HAIR_),
-	gsSPDisplayList(beach_jer_nos_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
+Gfx beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Eyes_Dead_6[] = {
+	gsSPDisplayList(mat_beach_jer_Helmet),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_beach_jer_Visor),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_beach_jer_Eyes_Dead),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_beach_jer_Stripes__HAIR_),
+	gsSPDisplayList(beach_jer_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_3),
 	gsSPEndDisplayList(),
 };
 
-Gfx beach_jer_nos_Left_Arm_Color_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Shirt__SHIRT_),
-	gsSPDisplayList(beach_jer_nos_Left_Arm_Color_mesh_layer_1_tri_0),
+Gfx beach_jer_Left_Arm_Color_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Shirt__SHIRT_),
+	gsSPDisplayList(beach_jer_Left_Arm_Color_mesh_layer_1_tri_0),
 	gsSPEndDisplayList(),
 };
 
-Gfx beach_jer_nos_Left_Forearm_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Skin__SKIN_),
-	gsSPDisplayList(beach_jer_nos_Left_Forearm_mesh_layer_1_tri_0),
+Gfx beach_jer_Left_Forearm_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Skin__SKIN_),
+	gsSPDisplayList(beach_jer_Left_Forearm_mesh_layer_1_tri_0),
 	gsSPEndDisplayList(),
 };
 
-Gfx beach_jer_nos_Left_Hand_DL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Skin__SKIN_),
-	gsSPDisplayList(beach_jer_nos_Left_Hand_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_nos_Gloves__GLOVES_),
-	gsSPDisplayList(beach_jer_nos_Left_Hand_DL_mesh_layer_1_tri_1),
+Gfx beach_jer_Left_Hand_DL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Skin__SKIN_),
+	gsSPDisplayList(beach_jer_Left_Hand_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_beach_jer_Gloves__GLOVES_),
+	gsSPDisplayList(beach_jer_Left_Hand_DL_mesh_layer_1_tri_1),
 	gsSPEndDisplayList(),
 };
 
-Gfx beach_jer_nos_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Skin__SKIN_),
-	gsSPDisplayList(beach_jer_nos_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_nos_Gloves__GLOVES_),
-	gsSPDisplayList(beach_jer_nos_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_1),
+Gfx beach_jer_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Skin__SKIN_),
+	gsSPDisplayList(beach_jer_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_beach_jer_Gloves__GLOVES_),
+	gsSPDisplayList(beach_jer_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_1),
 	gsSPEndDisplayList(),
 };
 
-Gfx beach_jer_nos_Nos_Tank_DL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_NOS_Tank),
-	gsSPDisplayList(beach_jer_nos_Nos_Tank_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_nos_Steel),
-	gsSPDisplayList(beach_jer_nos_Nos_Tank_DL_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Steel),
-	gsSPDisplayList(mat_beach_jer_nos_Spoiler),
-	gsSPDisplayList(beach_jer_nos_Nos_Tank_DL_mesh_layer_1_tri_2),
-	gsSPDisplayList(mat_beach_jer_nos_Spoiler_Voltex),
-	gsSPDisplayList(beach_jer_nos_Nos_Tank_DL_mesh_layer_1_tri_3),
+Gfx beach_jer_Nos_Tank_DL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_NOS_Tank),
+	gsSPDisplayList(beach_jer_Nos_Tank_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_beach_jer_Steel),
+	gsSPDisplayList(beach_jer_Nos_Tank_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_beach_jer_Steel),
+	gsSPDisplayList(mat_beach_jer_Spoiler),
+	gsSPDisplayList(beach_jer_Nos_Tank_DL_mesh_layer_1_tri_2),
+	gsSPDisplayList(mat_beach_jer_Spoiler_Voltex),
+	gsSPDisplayList(beach_jer_Nos_Tank_DL_mesh_layer_1_tri_3),
 	gsSPEndDisplayList(),
 };
 
-Gfx beach_jer_nos_Nos_Tank_DL_mesh_layer_4[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Spoiler_Post),
-	gsSPDisplayList(beach_jer_nos_Nos_Tank_DL_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Spoiler_Post),
+Gfx beach_jer_Nos_Tank_DL_mesh_layer_4[] = {
+	gsSPDisplayList(mat_beach_jer_Spoiler_Post),
+	gsSPDisplayList(beach_jer_Nos_Tank_DL_mesh_layer_4_tri_0),
+	gsSPDisplayList(mat_revert_beach_jer_Spoiler_Post),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Right_Arm_Color_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Shirt__SHIRT_),
+	gsSPDisplayList(beach_jer_Right_Arm_Color_mesh_layer_1_tri_0),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Right_Forearm_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Skin__SKIN_),
+	gsSPDisplayList(beach_jer_Right_Forearm_mesh_layer_1_tri_0),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Right_Hand_DL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Gloves__GLOVES_),
+	gsSPDisplayList(beach_jer_Right_Hand_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_beach_jer_Skin__SKIN_),
+	gsSPDisplayList(beach_jer_Right_Hand_DL_mesh_layer_1_tri_1),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Skin__SKIN_),
+	gsSPDisplayList(beach_jer_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_beach_jer_Gloves__GLOVES_),
+	gsSPDisplayList(beach_jer_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_1),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Gloves__GLOVES_),
+	gsSPDisplayList(beach_jer_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_beach_jer_Skin__SKIN_),
+	gsSPDisplayList(beach_jer_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_1),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Skin__SKIN_),
+	gsSPDisplayList(beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_beach_jer_Sunglasses_reflection),
+	gsSPDisplayList(beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_beach_jer_Sunglasses_reflection),
+	gsSPDisplayList(mat_beach_jer_Sunglasses__EMBLEM_),
+	gsSPDisplayList(beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_2),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Skin__SKIN_),
+	gsSPDisplayList(beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_beach_jer_Sunglasses_reflection),
+	gsSPDisplayList(beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_beach_jer_Sunglasses_reflection),
+	gsSPDisplayList(mat_beach_jer_Sunglasses__EMBLEM_),
+	gsSPDisplayList(beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_2),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Left_Thigh_Color_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Pants__PANTS_),
+	gsSPDisplayList(beach_jer_Left_Thigh_Color_mesh_layer_1_tri_0),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Left_Leg_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Skin__SKIN_),
+	gsSPDisplayList(beach_jer_Left_Leg_mesh_layer_1_tri_0),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Left_Shoe_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Skin__SKIN_),
+	gsSPDisplayList(beach_jer_Left_Shoe_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_beach_jer_Shoes__SHOES_),
+	gsSPDisplayList(beach_jer_Left_Shoe_mesh_layer_1_tri_1),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Right_Thigh_Color_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Pants__PANTS_),
+	gsSPDisplayList(beach_jer_Right_Thigh_Color_mesh_layer_1_tri_0),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Right_Leg_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Skin__SKIN_),
+	gsSPDisplayList(beach_jer_Right_Leg_mesh_layer_1_tri_0),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Right_Shoe_DL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Shoes__SHOES_),
+	gsSPDisplayList(beach_jer_Right_Shoe_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_beach_jer_Skin__SKIN_),
+	gsSPDisplayList(beach_jer_Right_Shoe_DL_mesh_layer_1_tri_1),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Metal_Jer_Switch_Option_Torso_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Metal__METAL_),
+	gsSPDisplayList(beach_jer_Metal_Jer_Switch_Option_Torso_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_beach_jer_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Metal__METAL_),
+	gsSPDisplayList(beach_jer_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_beach_jer_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Metal_Jer_Switch_Option_Head_Capless_Switch_Option_Head_Capless_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Metal__METAL_),
+	gsSPDisplayList(beach_jer_Metal_Jer_Switch_Option_Head_Capless_Switch_Option_Head_Capless_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_beach_jer_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Metal_Jer_Switch_Option_Left_Arm_Color_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Metal__METAL_),
+	gsSPDisplayList(beach_jer_Metal_Jer_Switch_Option_Left_Arm_Color_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_beach_jer_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Metal_Jer_Switch_Option_Left_Forearm_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Metal__METAL_),
+	gsSPDisplayList(beach_jer_Metal_Jer_Switch_Option_Left_Forearm_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_beach_jer_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Metal_Jer_Switch_Option_Left_Hand_DL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Metal__METAL_),
+	gsSPDisplayList(beach_jer_Metal_Jer_Switch_Option_Left_Hand_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_beach_jer_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Metal_Jer_Switch_Option_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Metal__METAL_),
+	gsSPDisplayList(beach_jer_Metal_Jer_Switch_Option_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_beach_jer_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Metal__METAL_),
+	gsSPDisplayList(beach_jer_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_beach_jer_Metal__METAL_),
+	gsSPDisplayList(mat_beach_jer_Metal_Unculled__METAL_),
+	gsSPDisplayList(beach_jer_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_revert_beach_jer_Metal_Unculled__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Metal_Jer_Switch_Option_Right_Arm_Color_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Metal__METAL_),
+	gsSPDisplayList(beach_jer_Metal_Jer_Switch_Option_Right_Arm_Color_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_beach_jer_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Metal_Jer_Switch_Option_Right_Forearm_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Metal__METAL_),
+	gsSPDisplayList(beach_jer_Metal_Jer_Switch_Option_Right_Forearm_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_beach_jer_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Metal_Jer_Switch_Option_Right_Hand_DL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Metal__METAL_),
+	gsSPDisplayList(beach_jer_Metal_Jer_Switch_Option_Right_Hand_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_beach_jer_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Metal_Jer_Switch_Option_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Metal__METAL_),
+	gsSPDisplayList(beach_jer_Metal_Jer_Switch_Option_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_beach_jer_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Metal_Jer_Switch_Option_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Metal__METAL_),
+	gsSPDisplayList(beach_jer_Metal_Jer_Switch_Option_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_beach_jer_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Metal__METAL_),
+	gsSPDisplayList(beach_jer_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_beach_jer_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Metal__METAL_),
+	gsSPDisplayList(beach_jer_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_beach_jer_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Metal_Jer_Switch_Option_Left_Thigh_Color_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Metal__METAL_),
+	gsSPDisplayList(beach_jer_Metal_Jer_Switch_Option_Left_Thigh_Color_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_beach_jer_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Metal_Jer_Switch_Option_Left_Leg_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Metal__METAL_),
+	gsSPDisplayList(beach_jer_Metal_Jer_Switch_Option_Left_Leg_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_beach_jer_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Metal_Jer_Switch_Option_Left_Shoe_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Metal__METAL_),
+	gsSPDisplayList(beach_jer_Metal_Jer_Switch_Option_Left_Shoe_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_beach_jer_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Metal_Jer_Switch_Option_Right_Thigh_Color_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Metal__METAL_),
+	gsSPDisplayList(beach_jer_Metal_Jer_Switch_Option_Right_Thigh_Color_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_beach_jer_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Metal_Jer_Switch_Option_Right_Leg_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Metal__METAL_),
+	gsSPDisplayList(beach_jer_Metal_Jer_Switch_Option_Right_Leg_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_beach_jer_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_Metal_Jer_Switch_Option_Right_Shoe_DL_mesh_layer_1[] = {
+	gsSPDisplayList(mat_beach_jer_Metal__METAL_),
+	gsSPDisplayList(beach_jer_Metal_Jer_Switch_Option_Right_Shoe_DL_mesh_layer_1_tri_0),
+	gsSPDisplayList(mat_revert_beach_jer_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jer_material_revert_render_settings[] = {
 	gsDPPipeSync(),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPClearGeometryMode(G_TEXTURE_GEN),
@@ -6380,280 +6632,16 @@ Gfx beach_jer_nos_Nos_Tank_DL_mesh_layer_4[] = {
 	gsSPTexture(65535, 65535, 0, 0, 0),
 	gsDPSetEnvColor(255, 255, 255, 255),
 	gsDPSetAlphaCompare(G_AC_NONE),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Right_Arm_Color_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Shirt__SHIRT_),
-	gsSPDisplayList(beach_jer_nos_Right_Arm_Color_mesh_layer_1_tri_0),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Right_Forearm_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Skin__SKIN_),
-	gsSPDisplayList(beach_jer_nos_Right_Forearm_mesh_layer_1_tri_0),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Right_Hand_DL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Gloves__GLOVES_),
-	gsSPDisplayList(beach_jer_nos_Right_Hand_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_nos_Skin__SKIN_),
-	gsSPDisplayList(beach_jer_nos_Right_Hand_DL_mesh_layer_1_tri_1),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Skin__SKIN_),
-	gsSPDisplayList(beach_jer_nos_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_nos_Gloves__GLOVES_),
-	gsSPDisplayList(beach_jer_nos_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_1),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Gloves__GLOVES_),
-	gsSPDisplayList(beach_jer_nos_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_nos_Skin__SKIN_),
-	gsSPDisplayList(beach_jer_nos_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_1),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Skin__SKIN_),
-	gsSPDisplayList(beach_jer_nos_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_nos_Sunglasses_reflection),
-	gsSPDisplayList(beach_jer_nos_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Sunglasses_reflection),
-	gsSPDisplayList(mat_beach_jer_nos_Sunglasses__EMBLEM_),
-	gsSPDisplayList(beach_jer_nos_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_2),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Skin__SKIN_),
-	gsSPDisplayList(beach_jer_nos_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_nos_Sunglasses_reflection),
-	gsSPDisplayList(beach_jer_nos_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Sunglasses_reflection),
-	gsSPDisplayList(mat_beach_jer_nos_Sunglasses__EMBLEM_),
-	gsSPDisplayList(beach_jer_nos_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_2),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Left_Thigh_Color_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Pants__PANTS_),
-	gsSPDisplayList(beach_jer_nos_Left_Thigh_Color_mesh_layer_1_tri_0),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Left_Leg_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Skin__SKIN_),
-	gsSPDisplayList(beach_jer_nos_Left_Leg_mesh_layer_1_tri_0),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Left_Shoe_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Skin__SKIN_),
-	gsSPDisplayList(beach_jer_nos_Left_Shoe_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_nos_Shoes__SHOES_),
-	gsSPDisplayList(beach_jer_nos_Left_Shoe_mesh_layer_1_tri_1),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Right_Thigh_Color_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Pants__PANTS_),
-	gsSPDisplayList(beach_jer_nos_Right_Thigh_Color_mesh_layer_1_tri_0),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Right_Leg_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Skin__SKIN_),
-	gsSPDisplayList(beach_jer_nos_Right_Leg_mesh_layer_1_tri_0),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Right_Shoe_DL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Shoes__SHOES_),
-	gsSPDisplayList(beach_jer_nos_Right_Shoe_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_nos_Skin__SKIN_),
-	gsSPDisplayList(beach_jer_nos_Right_Shoe_DL_mesh_layer_1_tri_1),
-	gsDPPipeSync(),
-	gsSPSetGeometryMode(G_LIGHTING),
-	gsSPClearGeometryMode(G_TEXTURE_GEN),
-	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
-	gsSPTexture(65535, 65535, 0, 0, 0),
-	gsDPSetEnvColor(255, 255, 255, 255),
-	gsDPSetAlphaCompare(G_AC_NONE),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Torso_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Metal__METAL_),
-	gsSPDisplayList(beach_jer_nos_Metal_Jer_Switch_Option_Torso_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Metal__METAL_),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Metal__METAL_),
-	gsSPDisplayList(beach_jer_nos_Metal_Jer_Switch_Option_Head_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Metal__METAL_),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Head_Capless_Switch_Option_Head_Capless_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Metal__METAL_),
-	gsSPDisplayList(beach_jer_nos_Metal_Jer_Switch_Option_Head_Capless_Switch_Option_Head_Capless_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Metal__METAL_),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Left_Arm_Color_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Metal__METAL_),
-	gsSPDisplayList(beach_jer_nos_Metal_Jer_Switch_Option_Left_Arm_Color_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Metal__METAL_),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Left_Forearm_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Metal__METAL_),
-	gsSPDisplayList(beach_jer_nos_Metal_Jer_Switch_Option_Left_Forearm_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Metal__METAL_),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Left_Hand_DL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Metal__METAL_),
-	gsSPDisplayList(beach_jer_nos_Metal_Jer_Switch_Option_Left_Hand_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Metal__METAL_),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Metal__METAL_),
-	gsSPDisplayList(beach_jer_nos_Metal_Jer_Switch_Option_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Metal__METAL_),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Metal__METAL_),
-	gsSPDisplayList(beach_jer_nos_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Metal__METAL_),
-	gsSPDisplayList(mat_beach_jer_nos_Metal_Unculled__METAL_),
-	gsSPDisplayList(beach_jer_nos_Metal_Jer_Switch_Option_Nos_Tank_DL_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Metal_Unculled__METAL_),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Arm_Color_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Metal__METAL_),
-	gsSPDisplayList(beach_jer_nos_Metal_Jer_Switch_Option_Right_Arm_Color_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Metal__METAL_),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Forearm_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Metal__METAL_),
-	gsSPDisplayList(beach_jer_nos_Metal_Jer_Switch_Option_Right_Forearm_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Metal__METAL_),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_DL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Metal__METAL_),
-	gsSPDisplayList(beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Metal__METAL_),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Metal__METAL_),
-	gsSPDisplayList(beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Metal__METAL_),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Metal__METAL_),
-	gsSPDisplayList(beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Metal__METAL_),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Metal__METAL_),
-	gsSPDisplayList(beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Metal__METAL_),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Metal__METAL_),
-	gsSPDisplayList(beach_jer_nos_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Metal__METAL_),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Left_Thigh_Color_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Metal__METAL_),
-	gsSPDisplayList(beach_jer_nos_Metal_Jer_Switch_Option_Left_Thigh_Color_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Metal__METAL_),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Left_Leg_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Metal__METAL_),
-	gsSPDisplayList(beach_jer_nos_Metal_Jer_Switch_Option_Left_Leg_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Metal__METAL_),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Left_Shoe_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Metal__METAL_),
-	gsSPDisplayList(beach_jer_nos_Metal_Jer_Switch_Option_Left_Shoe_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Metal__METAL_),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Thigh_Color_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Metal__METAL_),
-	gsSPDisplayList(beach_jer_nos_Metal_Jer_Switch_Option_Right_Thigh_Color_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Metal__METAL_),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Leg_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Metal__METAL_),
-	gsSPDisplayList(beach_jer_nos_Metal_Jer_Switch_Option_Right_Leg_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Metal__METAL_),
-	gsSPEndDisplayList(),
-};
-
-Gfx beach_jer_nos_Metal_Jer_Switch_Option_Right_Shoe_DL_mesh_layer_1[] = {
-	gsSPDisplayList(mat_beach_jer_nos_Metal__METAL_),
-	gsSPDisplayList(beach_jer_nos_Metal_Jer_Switch_Option_Right_Shoe_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_beach_jer_nos_Metal__METAL_),
-	gsDPPipeSync(),
-	gsSPSetGeometryMode(G_LIGHTING),
-	gsSPClearGeometryMode(G_TEXTURE_GEN),
-	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
-	gsSPTexture(65535, 65535, 0, 0, 0),
-	gsDPSetEnvColor(255, 255, 255, 255),
-	gsDPSetAlphaCompare(G_AC_NONE),
-
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, 0),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
+	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP  | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(0, 0, 0, 124, 124),
-
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, 0),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 256, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(6, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 256, 1, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(1, 0, 0, 124, 124),
-
 	gsSPEndDisplayList(),
 };
+

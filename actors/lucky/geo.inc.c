@@ -628,6 +628,9 @@ const GeoLayout lucky_geo[] = {
 				GEO_ASM((LAYER_TRANSPARENT << 2) | 1, geo_mirror_mario_backface_culling),
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),
+		GEO_DISPLAY_LIST(LAYER_OPAQUE, lucky_material_revert_render_settings),
+		GEO_DISPLAY_LIST(LAYER_ALPHA, lucky_material_revert_render_settings),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, lucky_material_revert_render_settings),
 	GEO_CLOSE_NODE(),
 	GEO_END(),
 };
