@@ -77,14 +77,6 @@ local function command_jess_fludd_coins(msg)
 	return false
 end
 
-function command_reset_save()
-	mod_storage_save_number("davyProgress", 0)
-	djui_chat_message_create("[Davy save reset]")
-	davyProgress = 0
-	return true
-end
-
 hook_chat_command("jj-moves", "[jer|jess|davy] - shows moveset guide for the character", command_moveset_guide)
 hook_chat_command("jj-passives", "[jer|jess|davy] - shows passives for the character", command_moveset_passives)
 hook_chat_command("jj-fludd-coins", "- toggles whether collecting coins should refill Fludd water (host only)", command_jess_fludd_coins)
-hook_chat_command("jj-resetsave", " - resets Davy unlock progress", command_reset_save)

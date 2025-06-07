@@ -3536,26 +3536,31 @@ smlua_anim_util_register_animation('jess_tada',
 });
 gDavyStateExtras = {}
 for i = 0, (MAX_PLAYERS - 1) do
+	local m = gMarioStates[i]
 	gDavyStateExtras[i] = {}
-    local m = gMarioStates[i]
-    davyProgress = mod_storage_load_number("davyProgress")
+    davyProgress = mod_storage_load_number("davyUnlockProgress")
 	hellMode = false
 	darkTimer = 0
 end
 
 local davy_laugh = audio_sample_load("davy_laugh.ogg")
 
-local function unlock_progress(m)
+hook_event(HOOK_MARIO_UPDATE, function(m)
+	if davyProgress == 6 then
+		mod_storage_save_number("davyUnlockProgress", 7)
+	end
+end)
+
+local function unlock_progress()
+  if davyProgress ~= 7 then
+	local m = gMarioStates[0]
+	local d = gDavyStateExtras[i]
 	local LEVEL = gNetworkPlayers[0].currLevelNum
 
 	if hellMode then
 		if m.playerIndex == 0 then
-			play_cap_music(0)
+			set_volume_level(0)
 		end
-	end
-
-	if davyProgress ~= 7 then
-		_G.charSelect.character_set_locked(CT_DAVY, true, false)
 	end
 
 	if davyProgress == 0 then
@@ -3599,28 +3604,44 @@ local function unlock_progress(m)
 	elseif davyProgress == 5 then
 		warp_to_level(26, 1, 1)
 		darkTimer = darkTimer + 1
-		if darkTimer > 30*30 then
+		if darkTimer > 30*5 then
 			davyProgress = davyProgress + 1
 			darkTimer = 0
 			djui_chat_message_create("You can now play as \\#ff8000\\Davy")
+			_G.charSelect.character_set_current_number(CT_DAVY)
 		end
 	elseif davyProgress == 6 then
-		_G.charSelect.character_set_current_number(_G.charSelect.character_get_number_from_string("Davy"))
 		m.pos.x = 0
 		m.pos.y = 0
 		m.pos.z = -1500
 		m.faceAngle.y = -32768
-		darkTimer = darkTimer + 1
 		set_mario_action(m, ACT_SPECIAL_EXIT_AIRBORNE, 0)
 		hellMode = false
-		if darkTimer > 10 then
-			play_sound_with_freq_scale(SOUND_MENU_COLLECT_SECRET, m.pos, 0.9)
-			davyProgress = 7
-			mod_storage_save_number("davyProgress", 7)
-		end
+		play_sound_with_freq_scale(SOUND_MENU_COLLECT_SECRET, m.pos, 0.9)
+		davyProgress = davyProgress + 1
 	end
+  end
+	return davyProgress == 7
 end
-hook_event(HOOK_MARIO_UPDATE, unlock_progress)
+hook_event(HOOK_ON_MODS_LOADED, function()
+	_G.charSelect.character_set_locked(CT_DAVY, unlock_progress, false)
+end)
+function command_reset_save()
+	mod_storage_save_number("davyUnlockProgress", 0)
+	djui_chat_message_create("[Davy save reset]")
+	davyProgress = mod_storage_load_number("davyUnlockProgress")
+	return true
+end
+hook_chat_command("jj-resetsave", " - resets Davy unlock progress (requires reboot)", command_reset_save)
+-- DEBUG --
+--hook_event(HOOK_ON_HUD_RENDER_BEHIND, function()
+        --local m = gMarioStates[0]
+        --djui_hud_set_color(0, 0, 0, 255)
+        --djui_hud_set_resolution(RESOLUTION_DJUI)
+        --djui_hud_set_font(FONT_ALIASED)
+        --djui_hud_print_text(string.format("davyProgress:  "..davyProgress.." ") , 25, 574, 1)
+		--djui_hud_print_text(string.format("mod_storage:  "..mod_storage_load_number("davyUnlockProgress").." ") , 25, 550, 1)
+--end)
 smlua_anim_util_register_animation('jess_getup_slide',
 	1,
 	0,

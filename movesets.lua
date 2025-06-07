@@ -1583,6 +1583,7 @@ end
 --        djui_hud_print_text("j.driveAngle:  "..j.driveAngle.." " , 25, 525, 1)
 --        djui_hud_print_text("m.faceAngle.y:  "..m.faceAngle.y.." " , 25, 550, 1)
 --        djui_hud_print_text("Skid:  "..(math.abs(approach_s32(limit_angle(j.driveAngle - m.faceAngle.y), 0, 0x190, 0x190))).." " , 25, 550, 1)
+--        djui_hud_print_text(string.format("davyProgress:  "..davyProgress.." ") , 25, 574, 1)
 --end
 --hook_event(HOOK_ON_HUD_RENDER_BEHIND, debug_hud)
 
