@@ -46,13 +46,10 @@ for i = 0, MAX_PLAYERS - 1 do
         canFlutter = false,
         canDash = true,
     }
-    if gNetworkPlayers[0].currLevelNum == 29 then 
-        gJerJessExtraStates[index].jessWater = jessMaxWater
-        gJerJessExtraStates[index].jessHover = jessMaxHover  
-    end
-end
-for i = 0, MAX_PLAYERS - 1 do
-    jer_jess_reset_extra_states(i)
+    --if gNetworkPlayers[0].currLevelNum == 29 then 
+        --gJerJessExtraStates[i].jessWater = jessMaxWater
+        --gJerJessExtraStates[i].jessHover = jessMaxHover  
+    --end
 end
 --for i = 0, MAX_PLAYERS - 1 do
 --    jer_jess_reset_extra_states(i)
