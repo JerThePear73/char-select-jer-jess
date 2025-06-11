@@ -316,12 +316,14 @@ local function act_fludd_hover(m)
     smlua_anim_util_set_animation(m.marioObj, "jess_fludd_hover")
     m.faceAngle.y = m.intendedYaw - approach_s32(limit_angle(m.intendedYaw - m.faceAngle.y), 0, 0x400, 0x400)
     m.particleFlags = m.particleFlags | PARTICLE_SNOW
-    if j.jessHover > 45 then
-        m.vel.y = (j.jessHover/2) - 20.5
-    else
-        m.vel.y = 2
-    end
-    if m.forwardVel > 30 then
+    --if j.jessHover > 45 then
+        --m.vel.y = (j.jessHover/2) - 20.5
+    --else
+        --m.vel.y = 2
+    --end
+    m.vel.y = approach_f32(m.vel.y, 3 / 1.1, 5, 5)
+
+    if m.forwardVel > 25 then
         m.forwardVel = m.forwardVel - 1
     end
     if stepResult == AIR_STEP_LANDED then
@@ -646,7 +648,8 @@ local flutterWhiteList = {
     [ACT_TRIPLE_JUMP] = true,
     [ACT_LONG_JUMP] = true,
     [ACT_FREEFALL] = true,
-    [ACT_SIDE_FLIP] = true
+    [ACT_SIDE_FLIP] = true,
+    [ACT_WALL_KICK_AIR] = true
 }
 ---@param m MarioState
 function act_flutter(m)
@@ -933,11 +936,15 @@ local function jess_update(m)
     end
     -- twirl cancel
     if m.action == ACT_TWIRLING and (m.input & INPUT_B_PRESSED) ~= 0 then
-        m.faceAngle.y = m.intendedYaw
-        m.particleFlags = m.particleFlags | PARTICLE_HORIZONTAL_STAR
-        set_mario_action(m, ACT_DIVE, 0)
-        m.forwardVel = 40
-        m.vel.y = 20
+        if m.input & INPUT_NONZERO_ANALOG ~= 0 then
+            m.faceAngle.y = m.intendedYaw
+            m.particleFlags = m.particleFlags | PARTICLE_HORIZONTAL_STAR
+            set_mario_action(m, ACT_DIVE, 0)
+            m.forwardVel = 40
+            m.vel.y = 20
+        else
+            set_mario_action(m, ACT_GALAXY_SPIN, 0)
+        end
     end
     -- galaxy spin extra conditions
     if (m.input & INPUT_B_PRESSED) ~= 0 and (m.action == ACT_BACKFLIP or m.action == ACT_LONG_JUMP or m.action == ACT_ELEGANT_JUMP or (m.action == ACT_SPRINGFLIP and m.actionTimer > 20)) then
@@ -1323,6 +1330,21 @@ function davy_set_action(m)
        set_mario_action(m, ACT_DAVY_DASH, 0)
        j.canDash = false
     end
+
+    --slippery
+    local slipperyTable = {
+        [SURFACE_SLIPPERY] = true,
+        [SURFACE_VERY_SLIPPERY] = true,
+        [SURFACE_HARD_SLIPPERY] = true,
+        [SURFACE_HARD_VERY_SLIPPERY] = true,
+        [SURFACE_CLASS_SLIPPERY] = true,
+        [SURFACE_CLASS_VERY_SLIPPERY] = true
+        }
+    if m.action == ACT_BRAKING or m.action == ACT_TURNING_AROUND or m.action == ACT_CROUCH_SLIDE then
+        if not slipperyTable[m.floor.type] then
+            m.forwardVel = m.forwardVel + 10
+        end
+    end
 end
 
 function davy_before_set_action(m, act)
@@ -1394,15 +1416,8 @@ function davy_update(m)
         j.canFlutter = true
     end
     -- slippery
-    if m.action == ACT_BRAKING or m.action == ACT_TURNING_AROUND or m.action == ACT_CROUCH_SLIDE then
-        if m.floor.type == SURFACE_SLIPPERY or m.floor.type == SURFACE_VERY_SLIPPERY then
-            m.forwardVel = m.forwardVel + 0.5
-        else
-            m.forwardVel = m.forwardVel + 2.5
-        end
-    end
-    if m.action == ACT_WALKING and m.forwardVel < 10 and m.forwardVel > 0 then
-        m.forwardVel = m.forwardVel - 0.53
+    if m.action == ACT_WALKING and m.forwardVel < 10 and m.forwardVel > 0 and m.floor.normal.y > 0.94 then
+        m.forwardVel = m.forwardVel - 0.4
     end
 end
 

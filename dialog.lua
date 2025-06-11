@@ -16,6 +16,8 @@ local function dialogs(m)
         set_dialog_override_color(0, 70, 0, 150, 255, 255, 255, 255)
     elseif is_jess() then
         set_dialog_override_color(0, 50, 70, 150, 255, 255, 255, 255)
+    elseif is_davy() then
+        set_dialog_override_color(150, 100, 0, 150, 255, 255, 255, 255)
     else
         reset_dialog_override_color()
     end

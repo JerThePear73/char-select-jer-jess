@@ -2,7 +2,7 @@
 -- description: Mod that adds My characters to SM64 along with their own custom movesets.\n\n\\#ff7777\\This Pack requires Character Select\nto use as a Library!
 
 local TEXT_MOD_NAME = "Jer + Jess"
-local VER_NUM = "0.16.1"
+local VER_NUM = "0.16.2"
 
 -- Stops mod from loading if Character Select isn't on
 if not _G.charSelectExists then
@@ -380,7 +380,7 @@ local capDAVY = {
 }
 
 local ANIMTABLE_JER = {
-    [_G.charSelect.CS_ANIM_MENU] = "jer_menu_pose",
+    [_G.charSelect.CS_ANIM_MENU] = "jer_menu_anim",
     [CHAR_ANIM_RUNNING] = "jer_run", -- Credit: Custom Run Animations Lua; By: STREAMING LION
     [CHAR_ANIM_TWIRL] = "jer_twirl",
     [CHAR_ANIM_START_TWIRL] = "jer_twirl_start",
@@ -393,7 +393,7 @@ local ANIMTABLE_JER = {
 }
 
 local ANIMTABLE_JESS = {
-    [_G.charSelect.CS_ANIM_MENU] = "jess_menu_pose",
+    [_G.charSelect.CS_ANIM_MENU] = "jess_menu_anim",
     [CHAR_ANIM_RUNNING] = "jess_run",
     [CHAR_ANIM_IDLE_HEAD_LEFT] = "jess_idle",
     [CHAR_ANIM_IDLE_HEAD_RIGHT] = "jess_idle",
@@ -411,7 +411,7 @@ local ANIMTABLE_JESS = {
 }
 
 local ANIMTABLE_DAVY = {
-    [_G.charSelect.CS_ANIM_MENU] = "davy_menu_pose",
+    [_G.charSelect.CS_ANIM_MENU] = "davy_menu_anim",
     [CHAR_ANIM_SINGLE_JUMP] = "davy_single_jump",
     [CHAR_ANIM_IDLE_HEAD_LEFT] = "davy_idle",
     [CHAR_ANIM_IDLE_HEAD_RIGHT] = "davy_idle",
@@ -661,7 +661,11 @@ end
 local function menu_pose(m)
     -- menu pose (Concept by Wall_E20)
     if m.marioObj.header.gfx.animInfo.animID == charSelect.CS_ANIM_MENU and is_jer() and m.playerIndex == 0 then
-        m.marioBodyState.eyeState = MARIO_EYES_LOOK_LEFT
+        if m.marioObj.header.gfx.animInfo.animFrame > 45 and m.marioObj.header.gfx.animInfo.animFrame < 95 then
+            m.marioBodyState.eyeState = MARIO_EYES_LOOK_RIGHT
+        else
+            m.marioBodyState.eyeState = MARIO_EYES_LOOK_LEFT
+        end
     end
     if m.marioObj.header.gfx.animInfo.animID == charSelect.CS_ANIM_MENU and is_jess() and m.playerIndex == 0 then
         m.marioBodyState.eyeState = MARIO_EYES_LOOK_RIGHT
