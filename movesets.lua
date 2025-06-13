@@ -425,8 +425,13 @@ local function act_cartwheel(m)
     elseif j.driveAngle < (0 - angleMax) then
         j.driveAngle = angleMax
     end
-
-    local turnRate = 20000/m.forwardVel
+    local gripMult = 1
+    if m.input & INPUT_NONZERO_ANALOG ~= 0 then
+        gripMult = 1
+    else
+        gripMult = 2
+    end
+    local turnRate = (20000/m.forwardVel)*gripMult
     m.faceAngle.y = j.driveAngle - approach_s32(limit_angle(j.driveAngle - m.faceAngle.y), 0, turnRate, turnRate)
     j.driveAngle = j.driveAngle + m.controller.stickX*-10
 
@@ -467,8 +472,15 @@ local function act_cartwheel(m)
 
     if m.input & INPUT_B_PRESSED ~= 0 then
         m.faceAngle.y = j.driveAngle
-        m.particleFlags = m.particleFlags | PARTICLE_VERTICAL_STAR
-        set_mario_action(m, ACT_BRAKING, 0)
+        if m.input & INPUT_NONZERO_ANALOG ~= 0 then
+            if m.forwardVel > 50 then
+                m.forwardVel = 50
+            end
+            set_mario_action(m, ACT_FORWARD_ROLLOUT, 0)
+        else
+            m.particleFlags = m.particleFlags | PARTICLE_VERTICAL_STAR
+            set_mario_action(m, ACT_BRAKING, 0)
+        end
     elseif m.input & INPUT_A_PRESSED ~= 0 then
         m.pos.y = m.pos.y + 30
         m.vel.y = 45
