@@ -2,7 +2,7 @@
 -- description: Mod that adds My characters to SM64 along with their own custom movesets.\n\n\\#ff7777\\This Pack requires Character Select\nto use as a Library!
 
 local TEXT_MOD_NAME = "Jer + Jess"
-local VER_NUM = "0.16.2"
+local VER_NUM = "0.16.3"
 
 -- Stops mod from loading if Character Select isn't on
 if not _G.charSelectExists then
@@ -143,8 +143,8 @@ VOICETABLE_DAVY = { -- Voices from Skeleton character from Lego Racers (1999)
     [CHAR_SOUND_PUNCH_WAH] = 'davy_huehue.ogg', -- punch 2
     [CHAR_SOUND_PUNCH_YAH] = 'davy_ya.ogg', -- punch 1
     [CHAR_SOUND_SO_LONGA_BOWSER] = {'davy_laugh.ogg', 'davy_hohoyeahah.ogg'},
-    [CHAR_SOUND_SNORING1] = 'davy_snore1.ogg',
-    [CHAR_SOUND_SNORING2] = 'davy_snore2.ogg',
+    [CHAR_SOUND_SNORING1] = 'jer_snore1.ogg',
+    [CHAR_SOUND_SNORING2] = 'jer_snore2.ogg',
     [CHAR_SOUND_SNORING3] = nil,
     [CHAR_SOUND_TWIRL_BOUNCE] = 'davy_hohoyeahah.ogg',
     [CHAR_SOUND_UH] = 'davy_ouch.ogg', -- wall bonk

@@ -4,12 +4,10 @@ for i = 0, (MAX_PLAYERS - 1) do
     local m = gMarioStates[i]
     IceTimer = 0
     VanishTimer = 0
-    OldIceCapTheme = false
 end
 
-ICE_CAP_MUSIC_WING = audio_stream_load("ice_cap_theme.mp3") -- by Moikey
-ICE_CAP_MUSIC_NEW = audio_stream_load("ice_cap_theme_new.mp3") -- by Jer
-VANISH_CAP_MUSIC = audio_stream_load("vanish_cap_theme.mp3") -- by Jer
+ICE_CAP_MUSIC = audio_stream_load("ice_cap_theme.mp3")
+VANISH_CAP_MUSIC = audio_stream_load("vanish_cap_theme.mp3")
 
 local function get_cap_volume()
     local m = gMarioStates[0]
@@ -30,12 +28,6 @@ end
 
 function themes(m)
     local m = gMarioStates[0]
-
-    if OldIceCapTheme then
-        ICE_CAP_MUSIC = ICE_CAP_MUSIC_WING
-    else
-        ICE_CAP_MUSIC = ICE_CAP_MUSIC_NEW
-    end 
    
     if IceTimer > 0 then
         stop_cap_music()
@@ -104,13 +96,3 @@ hook_event(HOOK_ON_PLAY_SOUND, function (id)
         end
     end
 end)
-
-local function set_old_ice_theme()
-    audio_stream_stop(ICE_CAP_MUSIC)
-    if OldIceCapTheme then
-        OldIceCapTheme = false
-    else
-        OldIceCapTheme = true
-    end
-end
-hook_mod_menu_checkbox("Old Ice Cap Theme", false, set_old_ice_theme)
