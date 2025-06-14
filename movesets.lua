@@ -45,26 +45,7 @@ for i = 0, MAX_PLAYERS - 1 do
         canFlutter = false,
         canDash = true,
     }
-    --if gNetworkPlayers[0].currLevelNum == 29 then 
-        --gJerJessExtraStates[i].jessWater = jessMaxWater
-        --gJerJessExtraStates[i].jessHover = jessMaxHover  
-    --end
 end
---for i = 0, MAX_PLAYERS - 1 do
---    jer_jess_reset_extra_states(i)
---end
-
---local gStateExtras = {}
---for i = 0, MAX_PLAYERS - 1 do
---    gStateExtras[i] = {}
---    local m = gMarioStates[i]
---    local e = gStateExtras[i]
---    e.rotAngle = 0
---    e.davyBomb = 0
---    e.davyCanGPCancel = true
---    e.canFlutter = false
---    e.canDash = true
---end
 
 local SOUND_JER_BOOST_PULSE = audio_sample_load("jer_boost_pulse.mp3")
 local SOUND_JER_BOOST_HOLD = audio_sample_load("jer_boost_hold.mp3")
@@ -76,8 +57,6 @@ local SOUND_COMEDIC_METAL_PIPE = audio_sample_load("pipe.ogg")
 local SOUND_ZAP = audio_sample_load("zap.mp3")
 local SOUND_WHEEL_STEP = audio_sample_load("wheel_step.mp3")
 local SOUND_GALAXY_SPIN = audio_sample_load("smg_spin.mp3") -- this is an edited sound effect from extra characters
---local SOUND_ENGINE_LOOP = audio_stream_load("engine_loop.mp3")
---local SOUND_SKID = audio_sample_load("skid.mp3")
 
 local E_MODEL_POCKET_EXPLOSIVE = smlua_model_util_get_id('pocket_explosive_geo')
 local E_MODEL_DYNAMITE = smlua_model_util_get_id('dynamite_geo')
@@ -471,7 +450,7 @@ local function act_cartwheel(m)
 
     if m.input & INPUT_B_PRESSED ~= 0 then
         m.faceAngle.y = j.driveAngle
-        if m.input & INPUT_NONZERO_ANALOG ~= 0 then
+        if m.input & INPUT_Z_DOWN ~= 0 then
             if m.forwardVel > 50 then
                 m.forwardVel = 50
             end
