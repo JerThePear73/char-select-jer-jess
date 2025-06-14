@@ -36,7 +36,6 @@ for i = 0, MAX_PLAYERS - 1 do
         twirlNerf = false,
         wheelAccel = 0,
         wheelSpeed = 0,
-        prevAction = 0,
         animArg = 0,
         rotAngle = 0,
         metalRotation = 0,
@@ -228,7 +227,7 @@ hook_mario_action(ACT_ICE_DIVE_SLIDE, act_ice_dive_slide)
 local function act_elegant_jump(m)
     local j = gJerJessExtraStates[m.playerIndex]
 
-    if m.actionTimer == 1 then
+    if m.actionTimer <= 1 then
         m.particleFlags = m.particleFlags | PARTICLE_MIST_CIRCLE
         play_character_sound(m, CHAR_SOUND_HAHA)
         j.animArg = math.floor(math.random(1,3))
@@ -743,7 +742,7 @@ local function jess_set_action(m)
         set_mario_action(m, ACT_FREEFALL, 0)
     end
     -- galaxy spin
-    if (m.action == ACT_JUMP_KICK or (m.action == ACT_DIVE and (((m.forwardVel < 30) or (m.input & INPUT_NONZERO_ANALOG) == 0) and (j.prevAction ~= ACT_GROUND_POUND and j.prevAction ~= ACT_WALKING)))) then
+    if (m.action == ACT_JUMP_KICK or (m.action == ACT_DIVE and ((m.input & INPUT_A_DOWN ~= 0) and (m.prevAction ~= ACT_GROUND_POUND and m.prevAction ~= ACT_WALKING and m.prevAction ~= ACT_ICE_SKATING and m.prevAction ~= ACT_FORWARD_ROLLOUT)))) then
         if m.action == ACT_DIVE then
             m.forwardVel = m.forwardVel - 15
         end
@@ -753,8 +752,6 @@ local function jess_set_action(m)
     if m.action == ACT_WATER_JUMP then
         m.vel.y = m.vel.y + 10
     end
-    
-    j.prevAction = m.action
 end
 
 local function jess_before_set_action(m, act)
@@ -811,10 +808,16 @@ local function jess_update(m)
     -- GP cancel
     if m.action == ACT_GROUND_POUND and (m.input & INPUT_B_PRESSED) ~= 0 then
         m.faceAngle.y = m.intendedYaw
-        set_mario_action(m, ACT_DIVE, 0)
-        m.particleFlags = m.particleFlags | PARTICLE_MIST_CIRCLE
-        m.vel.y = 30
-        m.forwardVel = 20
+        if m.prevAction ~= ACT_GALAXY_SPIN then
+            set_mario_action(m, ACT_DIVE, 0)
+            m.particleFlags = m.particleFlags | PARTICLE_MIST_CIRCLE
+            m.vel.y = 30
+            m.forwardVel = 20
+        else
+            set_mario_action(m, ACT_DIVE, 0)
+            m.vel.y = 0
+            m.forwardVel = 20
+        end
     end
 
 
@@ -1050,12 +1053,10 @@ local function jer_set_action(m)
         audio_sample_play(SOUND_ZAP, m.pos, 1)
     end
     -- slide kick persists if holding Z
-    if j.prevAction == ACT_SLIDE_KICK and m.action == ACT_FREEFALL and (m.input & INPUT_Z_DOWN) ~= 0 and (m.flags & MARIO_VANISH_CAP) == 0 then
+    if m.prevAction == ACT_SLIDE_KICK and m.action == ACT_FREEFALL and (m.input & INPUT_Z_DOWN) ~= 0 and (m.flags & MARIO_VANISH_CAP) == 0 then
         m.actionTimer = 2
         m.action = ACT_SLIDE_KICK
     end
-
-    j.prevAction = m.action
 end
 
 local function jer_before_set_action(m, act)
@@ -1342,21 +1343,6 @@ function davy_set_action(m)
        set_mario_action(m, ACT_DAVY_DASH, 0)
        j.canDash = false
     end
-
-    --slippery
-    local slipperyTable = {
-        [SURFACE_SLIPPERY] = true,
-        [SURFACE_VERY_SLIPPERY] = true,
-        [SURFACE_HARD_SLIPPERY] = true,
-        [SURFACE_HARD_VERY_SLIPPERY] = true,
-        [SURFACE_CLASS_SLIPPERY] = true,
-        [SURFACE_CLASS_VERY_SLIPPERY] = true
-        }
-    if m.action == ACT_BRAKING or m.action == ACT_TURNING_AROUND or m.action == ACT_CROUCH_SLIDE then
-        if not slipperyTable[m.floor.type] then
-            m.forwardVel = m.forwardVel + 10
-        end
-    end
 end
 
 function davy_before_set_action(m, act)
@@ -1370,10 +1356,31 @@ end
 
 function davy_before_step(m)
     local hScale = 1.0
+    local floorClass = mario_get_floor_class(m)
 
     -- faster holding item
     if m.action == ACT_HOLD_WALKING and m.forwardVel < 30 then
         hScale = hScale * 2.5
+    end
+    -- slippery
+    if (m.action == ACT_WALKING) then
+        if (floorClass == 19 or floorClass == 20) then
+            hScale = -(m.forwardVel / 64) + 1.5
+        else
+            hScale = (m.forwardVel / 64) + 0.5
+        end
+    end
+    if (m.action == ACT_BRAKING or m.action == ACT_TURNING_AROUND) then
+        if floorClass == 20 then
+            hScale = hScale * 0.8
+            m.forwardVel = m.forwardVel + hScale
+        elseif floorClass ~= 19 then
+            hScale = hScale * 1.6
+            m.forwardVel = m.forwardVel + hScale
+        end
+        if (m.forwardVel < 0) then
+            m.forwardVel = 0
+        end
     end
 
     m.vel.x = m.vel.x * hScale
@@ -1426,10 +1433,6 @@ function davy_update(m)
     if m.pos.y == m.floorHeight then
         j.canDash = true
         j.canFlutter = true
-    end
-    -- slippery
-    if m.action == ACT_WALKING and m.forwardVel < 10 and m.forwardVel > 0 and m.floor.normal.y > 0.94 then
-        m.forwardVel = m.forwardVel - 0.4
     end
 end
 
@@ -1590,30 +1593,6 @@ function davy_hud()
     end
 end
 
--- DEBUG --
---local function debug_hud()
---        local m = gMarioStates[0]
---        local j = gJerJessExtraStates[0]
---        local floorNormalY = m.floor.normal.y
-        
---        djui_hud_set_color(0, 0, 0, 255)
---        djui_hud_set_resolution(RESOLUTION_DJUI)
---        djui_hud_set_font(FONT_ALIASED)
-
-
---        djui_hud_print_text(string.format("j.jessHover:  "..j.jessHover.." ") , 25, 350, 1)
---        djui_hud_print_text(string.format("j.jessWater:  "..j.jessWater.." ") , 25, 375, 1)
---        djui_hud_print_text(string.format("m.floor.normal.y:  "..floorNormalY.." ") , 25, 350, 1)
---        djui_hud_print_text(string.format("accel:  "..accel.." ") , 25, 500, 1)
---        djui_hud_print_text("m.actionTimer:  "..m.actionTimer.." " , 25, 500, 1)
---        djui_hud_print_text("m.controller.stickX:  "..m.controller.stickX.." " , 25, 500, 1)
---        djui_hud_print_text("j.driveAngle:  "..j.driveAngle.." " , 25, 525, 1)
---        djui_hud_print_text("m.faceAngle.y:  "..m.faceAngle.y.." " , 25, 550, 1)
---        djui_hud_print_text("Skid:  "..(math.abs(approach_s32(limit_angle(j.driveAngle - m.faceAngle.y), 0, 0x190, 0x190))).." " , 25, 550, 1)
---        djui_hud_print_text(string.format("davyProgress:  "..davyProgress.." ") , 25, 574, 1)
---end
---hook_event(HOOK_ON_HUD_RENDER_BEHIND, debug_hud)
-
 local function jer_vanish_surface(m)
     if is_jer() and (m.flags & MARIO_VANISH_CAP) ~= 0 and m.floor.type ~= SURFACE_BURNING then -- a little glitchy, will do some weird spam dying thing on other peoples screen
         return false
@@ -1651,3 +1630,48 @@ _G.charSelect.character_hook_moveset(CT_DAVY, HOOK_BEFORE_PHYS_STEP, davy_before
 _G.charSelect.character_hook_moveset(CT_DAVY, HOOK_ON_INTERACT, davy_interact)
 _G.charSelect.character_hook_moveset(CT_DAVY, HOOK_BEFORE_SET_MARIO_ACTION, davy_before_set_action)
 _G.charSelect.character_hook_moveset(CT_DAVY, HOOK_ON_HUD_RENDER_BEHIND, davy_hud)
+
+-- DEBUG Hud of Evil Swag --
+DebugHud = mod_storage_load_bool("DebugHud")
+local function debug_hud()
+    if DebugHud and network_is_server() then
+        local m = gMarioStates[0]
+        local j = gJerJessExtraStates[0]
+        local floorNormalY = m.floor.normal.y
+        
+        djui_hud_set_color(255, 0, 0, 255)
+        djui_hud_set_resolution(RESOLUTION_DJUI)
+        djui_hud_set_font(FONT_ALIASED)
+
+
+        djui_hud_print_text(string.format("j.jessHover:  "..j.jessHover.." ") , 25, 150, 1)
+        djui_hud_print_text(string.format("j.jessWater:  "..j.jessWater.." ") , 25, 175, 1)
+        djui_hud_print_text("j.driveAngle:  "..j.driveAngle.." " , 25, 200, 1)
+
+        djui_hud_print_text(string.format("m.floor.normal.y:  "..floorNormalY.." ") , 25, 250, 1)
+        djui_hud_print_text("m.actionTimer:  "..m.actionTimer.." " , 25, 275, 1)
+        djui_hud_print_text("m.controller.stickX:  "..m.controller.stickX.." " , 25, 300, 1)
+        djui_hud_print_text(string.format("floorClass:  "..mario_get_floor_class(m).." ") , 25, 325, 1)
+        djui_hud_print_text(string.format("angle.x:  "..m.marioObj.header.gfx.angle.x.." ") , 25, 350, 1)
+
+        djui_hud_print_text("Skid:  "..(math.abs(approach_s32(limit_angle(j.driveAngle - m.faceAngle.y), 0, 0x190, 0x190))).." " , 25, 400, 1)
+        djui_hud_print_text(string.format("davyProgress:  "..davyProgress.." ") , 25, 425, 1)
+    end
+end
+hook_event(HOOK_ON_HUD_RENDER_BEHIND, debug_hud)
+local function command_debug_hud()
+	if not network_is_server() then
+		djui_chat_message_create("\\#ffaaaa\\Only the host may use this command")
+		return true
+	else
+	    if DebugHud then
+			DebugHud = false
+		else
+			DebugHud = true
+		end
+		mod_storage_save_bool("DebugHud", DebugHud)
+		return true
+	end
+	return false
+end
+hook_chat_command("jj-debug", "Used for debugging", command_debug_hud)
