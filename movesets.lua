@@ -44,6 +44,7 @@ for i = 0, MAX_PLAYERS - 1 do
         davyCanGPCancel = true,
         canFlutter = false,
         canDash = true,
+        prevPosY = 0,
     }
 end
 
@@ -318,9 +319,6 @@ local function act_fludd_hover(m)
     if (m.input & INPUT_Z_PRESSED) ~= 0 then
         set_mario_action(m, ACT_GROUND_POUND, 0)
     end
-    if (m.input & INPUT_B_PRESSED) ~= 0 then
-        set_mario_action(m, ACT_DIVE, 0)
-    end
 
  
     m.actionTimer = m.actionTimer + 1
@@ -366,6 +364,8 @@ hook_mario_action(ACT_SPRINGFLIP, act_springflip)
 local function act_cartwheel(m)
     local j = gJerJessExtraStates[m.playerIndex]
 
+    j.prevPosY = m.pos.y
+
     set_mario_anim_with_accel(m, MARIO_ANIM_RUNNING_UNUSED, m.forwardVel / 5 * 11000)
     smlua_anim_util_set_animation(m.marioObj, "jer_wheel")
     if (m.marioObj.header.gfx.animInfo.animFrame > 8 and m.marioObj.header.gfx.animInfo.animFrame < 12) or m.marioObj.header.gfx.animInfo.animFrame == 0 then
@@ -375,27 +375,13 @@ local function act_cartwheel(m)
         end
     end
 
-    --if math.abs(approach_s32(limit_angle(j.driveAngle - m.faceAngle.y), 0, 0x190, 0x190)) > 4000 then
-        --audio_sample_play(SOUND_SKID, m.pos, 0.5)
-    --end
-    --local engineVol = 0
-    --if m.input & INPUT_Z_DOWN ~= 0 then
-        --audio_stream_play(SOUND_ENGINE_LOOP, false, 1)
-    --end
-    --audio_stream_set_frequency(SOUND_ENGINE_LOOP, (m.forwardVel/50))
-
     if m.actionTimer == 0 then
-        j.wheelSpeed = m.forwardVel
-        j.wheelAccel = 0
-        j.driveAngle = m.faceAngle.y
+        j.wheelSpeed = m.forwardVel + 10
+        m.particleFlags = m.particleFlags | PARTICLE_VERTICAL_STAR
     elseif m.actionTimer == 1 then
         m.vel.y = 0
     end
-    if (m.input & INPUT_Z_DOWN) ~= 0 and j.wheelAccel < 4 then
-        j.wheelAccel = j.wheelAccel + 0.2
-    elseif j.wheelAccel > -1 then
-        j.wheelAccel = j.wheelAccel - 0.4
-    end
+
     -- steering
     local angleMax = 32768
     if j.driveAngle > angleMax then
@@ -403,37 +389,16 @@ local function act_cartwheel(m)
     elseif j.driveAngle < (0 - angleMax) then
         j.driveAngle = angleMax
     end
-    local gripMult = 1
-    if m.input & INPUT_NONZERO_ANALOG ~= 0 then
-        gripMult = 1
-    else
-        gripMult = 2
-    end
-    local turnRate = (20000/m.forwardVel)*gripMult
-    m.faceAngle.y = j.driveAngle - approach_s32(limit_angle(j.driveAngle - m.faceAngle.y), 0, turnRate, turnRate)
-    j.driveAngle = j.driveAngle + m.controller.stickX*-10
 
+    --local turnRate = (m.forwardVel)*10
+    m.faceAngle.y = m.intendedYaw - approach_s32(limit_angle(m.intendedYaw - m.faceAngle.y), 0, 400, 400)
 
-    if j.wheelSpeed > 25 or j.wheelAccel > 0 then
-        j.wheelSpeed = j.wheelSpeed + j.wheelAccel
-    end
-    if j.wheelSpeed > 40 then
+    if j.wheelSpeed > 30 then
         m.particleFlags = m.particleFlags | PARTICLE_DUST
-    end
-    if j.wheelSpeed > 90 then
-      if m.flags & MARIO_METAL_CAP == 0 then
-        m.vel.y = 40
-        m.action = ACT_FORWARD_AIR_KB
-        m.particleFlags = m.particleFlags | PARTICLE_VERTICAL_STAR
-        spawn_mist_particles_variable(20, 0, 50)
-        play_sound(SOUND_GENERAL_BREAK_BOX, m.marioObj.header.gfx.cameraToObject)
-      elseif j.wheelSpeed > 110 then
-        j.wheelSpeed = 110
-      end
     end
 
     mario_set_forward_vel(m, j.wheelSpeed)
-    
+
     local stepResult = perform_ground_step(m)
     if stepResult == GROUND_STEP_HIT_WALL then
         m.vel.y = j.wheelSpeed*0.8
@@ -444,21 +409,19 @@ local function act_cartwheel(m)
     elseif stepResult == GROUND_STEP_LEFT_GROUND then
         m.action = ACT_CARTWHEEL_JUMP
         m.vel.y = 5
+    end
+
+    if j.wheelSpeed <= 110 then
+        j.wheelSpeed = j.wheelSpeed - 0.5 + (j.prevPosY - m.pos.y)*0.1
     else
-        mario_set_forward_vel(m, j.wheelSpeed)
+        j.wheelSpeed = 110
+    end
+    if j.wheelSpeed < 15 then
+        set_mario_action(m, ACT_BRAKING, 0)
     end
 
     if m.input & INPUT_B_PRESSED ~= 0 then
-        m.faceAngle.y = j.driveAngle
-        if m.input & INPUT_Z_DOWN ~= 0 then
-            if m.forwardVel > 50 then
-                m.forwardVel = 50
-            end
-            set_mario_action(m, ACT_FORWARD_ROLLOUT, 0)
-        else
-            m.particleFlags = m.particleFlags | PARTICLE_VERTICAL_STAR
-            set_mario_action(m, ACT_BRAKING, 0)
-        end
+        set_mario_action(m, ACT_FORWARD_ROLLOUT, 0)
     elseif m.input & INPUT_A_PRESSED ~= 0 then
         m.pos.y = m.pos.y + 30
         m.vel.y = 45
@@ -470,8 +433,7 @@ local function act_cartwheel(m)
     end
 
     -- tilt
-    m.marioObj.header.gfx.angle.y = j.driveAngle
-    m.marioObj.header.gfx.angle.z = 0 - approach_s32(limit_angle(j.driveAngle - m.faceAngle.y), 0, 0x190, 0x190)/2
+    m.marioObj.header.gfx.angle.z = 0 - approach_s32(limit_angle(m.intendedYaw - m.faceAngle.y), 0, 0x190, 0x190)/(2.5/(m.forwardVel/110))
 
     m.actionTimer = m.actionTimer + 1
     return 0
@@ -487,7 +449,8 @@ local function act_cartwheel_jump(m)
     m.particleFlags = m.particleFlags | PARTICLE_DUST
 
     m.forwardVel = j.wheelSpeed
-    m.faceAngle.y = j.driveAngle
+    --m.faceAngle.y = j.driveAngle
+    j.wheelSpeed = j.wheelSpeed - 0.2
 
     if m.actionTimer == 1 then
         play_character_sound(m, CHAR_SOUND_HOOHOO)
@@ -721,7 +684,7 @@ local function jess_set_action(m)
         set_mario_action(m, ACT_FREEFALL, 0)
     end
     -- galaxy spin
-    if (m.action == ACT_JUMP_KICK or (m.action == ACT_DIVE and ((m.input & INPUT_A_DOWN ~= 0) and (m.prevAction ~= ACT_GROUND_POUND and m.prevAction ~= ACT_WALKING and m.prevAction ~= ACT_ICE_SKATING and m.prevAction ~= ACT_FORWARD_ROLLOUT)))) then
+    if (m.action == ACT_JUMP_KICK or (m.action == ACT_DIVE and ((m.input & INPUT_NONZERO_ANALOG == 0) and m.vel.y < 15 and (m.prevAction ~= ACT_GROUND_POUND and m.prevAction ~= ACT_WALKING and m.prevAction ~= ACT_ICE_SKATING and m.prevAction ~= ACT_FORWARD_ROLLOUT)))) then
         if m.action == ACT_DIVE then
             m.forwardVel = m.forwardVel - 15
         end
@@ -800,7 +763,7 @@ local function jess_update(m)
     end
 
 
-    -- twirl cancel
+    -- twirl GP
     if m.action == ACT_TWIRLING and (m.input & INPUT_Z_PRESSED) ~= 0 then
         set_mario_action(m, ACT_GROUND_POUND, 0)
     end
@@ -936,7 +899,7 @@ local function jess_update(m)
             set_mario_action(m, ACT_DIVE, 0)
             m.forwardVel = 40
             m.vel.y = 20
-        else
+        elseif m.input & INPUT_NONZERO_ANALOG == 0 then
             set_mario_action(m, ACT_GALAXY_SPIN, 0)
         end
     end
@@ -1012,12 +975,8 @@ local function jer_set_action(m)
         m.forwardVel = m.forwardVel + 18
     end
     -- burst slide kick
-    if (m.action == ACT_PUNCHING or m.action == ACT_MOVE_PUNCHING) and m.input & INPUT_Z_DOWN ~= 0 and m.forwardVel < 10 then
-        m.particleFlags = m.particleFlags | PARTICLE_MIST_CIRCLE
-        set_mario_action(m, ACT_SLIDE_KICK, 0)
-        m.forwardVel = 65
-        m.vel.y = 25
-    end
+    --if (m.action == ACT_PUNCHING or m.action == ACT_MOVE_PUNCHING) and m.input & INPUT_Z_DOWN ~= 0 and m.forwardVel < 10 then
+
     -- pipe sound
     if (m.flags & MARIO_METAL_CAP) ~= 0 and m.action == ACT_HARD_BACKWARD_GROUND_KB then
         audio_sample_play(SOUND_COMEDIC_METAL_PIPE, m.pos, 1)
@@ -1110,13 +1069,15 @@ local function jer_update(m)
         end
         m.vel.y = m.vel.y - 4
     end
-    -- cartwheel
+    -- burst slide kick
     if m.action == ACT_GROUND_POUND_LAND and (m.input & INPUT_B_PRESSED) ~= 0 then
+        m.faceAngle.y = m.intendedYaw
+        m.particleFlags = m.particleFlags | PARTICLE_MIST_CIRCLE
+        set_mario_action(m, ACT_SLIDE_KICK, 0)
         m.forwardVel = 60
-        play_character_sound(m, CHAR_SOUND_HELLO)
-        set_mario_action(m, ACT_CARTWHEEL, 0)
+        m.vel.y = 25
     end
-    -- slide kick to wheel
+    -- cartwheel
     if (m.action == ACT_SLIDE_KICK_SLIDE or m.action == ACT_DIVE_SLIDE) and (m.input & INPUT_Z_PRESSED) ~= 0 then
         set_mario_action(m, ACT_CARTWHEEL, 0)
     end
@@ -1477,7 +1438,7 @@ function jer_hud()
             djui_hud_set_resolution(RESOLUTION_N64)
 
             local widthCenter = djui_hud_get_screen_width()/2
-            local rotation = degrees_to_sm64(140 - (m.forwardVel*2.5))
+            local rotation = degrees_to_sm64(115 - (m.forwardVel*2.5))
             
 
             djui_hud_render_texture(speedometerBack, (widthCenter - 16), 60, 1, 1)
@@ -1626,15 +1587,16 @@ local function debug_hud()
         djui_hud_print_text(string.format("j.jessHover:  "..j.jessHover.." ") , 25, 150, 1)
         djui_hud_print_text(string.format("j.jessWater:  "..j.jessWater.." ") , 25, 175, 1)
         djui_hud_print_text("j.driveAngle:  "..j.driveAngle.." " , 25, 200, 1)
+        djui_hud_print_text("j.prevPosY - m.pos.y:  "..(j.prevPosY - m.pos.y).." " , 25, 225, 1)
 
-        djui_hud_print_text(string.format("m.floor.normal.y:  "..floorNormalY.." ") , 25, 250, 1)
-        djui_hud_print_text("m.actionTimer:  "..m.actionTimer.." " , 25, 275, 1)
-        djui_hud_print_text("m.controller.stickX:  "..m.controller.stickX.." " , 25, 300, 1)
-        djui_hud_print_text(string.format("floorClass:  "..mario_get_floor_class(m).." ") , 25, 325, 1)
-        djui_hud_print_text(string.format("angle.x:  "..m.marioObj.header.gfx.angle.x.." ") , 25, 350, 1)
+        djui_hud_print_text(string.format("m.floor.normal.y:  "..floorNormalY.." ") , 25, 400, 1)
+        djui_hud_print_text("m.actionTimer:  "..m.actionTimer.." " , 25, 425, 1)
+        djui_hud_print_text("m.controller.stickX:  "..m.controller.stickX.." " , 25, 450, 1)
+        djui_hud_print_text(string.format("floorClass:  "..mario_get_floor_class(m).." ") , 25, 475, 1)
+        djui_hud_print_text(string.format("angle.x:  "..m.marioObj.header.gfx.angle.x.." ") , 25, 500, 1)
 
-        djui_hud_print_text("Skid:  "..(math.abs(approach_s32(limit_angle(j.driveAngle - m.faceAngle.y), 0, 0x190, 0x190))).." " , 25, 400, 1)
-        djui_hud_print_text(string.format("davyProgress:  "..davyProgress.." ") , 25, 425, 1)
+        djui_hud_print_text("Skid:  "..(math.abs(approach_s32(limit_angle(j.driveAngle - m.faceAngle.y), 0, 0x190, 0x190))).." " , 25, 550, 1)
+        djui_hud_print_text(string.format("davyProgress:  "..davyProgress.." ") , 25, 575, 1)
     end
 end
 hook_event(HOOK_ON_HUD_RENDER_BEHIND, debug_hud)
