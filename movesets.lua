@@ -960,16 +960,6 @@ end
 local function jer_set_action(m)
     local j = gJerJessExtraStates[m.playerIndex]
 
-    -- wall slide
-    if m.action == ACT_SOFT_BONK then
-        m.faceAngle.y = m.faceAngle.y + 0x8000
-        set_mario_action(m, ACT_WALL_SLIDE, 0)
-        m.vel.x = 0
-        m.vel.y = 0
-        m.vel.z = 0
-    end
-
-
     -- faster slide kick
     if m.action == ACT_SLIDE_KICK then
         m.forwardVel = m.forwardVel + 18
@@ -995,10 +985,18 @@ local function jer_set_action(m)
         m.actionTimer = 2
         m.action = ACT_SLIDE_KICK
     end
+    -- wall kick from ledge grab
+    if m.action == ACT_SOFT_BONK and m.prevAction == ACT_LEDGE_GRAB and m.input & INPUT_Z_DOWN ~= 0 then
+        m.faceAngle.y = m.faceAngle.y + 0x8000
+        set_mario_action(m, ACT_WALL_SLIDE, 0)
+        m.vel.x = 0
+        m.vel.y = 0
+        m.vel.z = 0
+    end
 end
 
 local function jer_before_set_action(m, act)
-    if act == ACT_START_CROUCHING or act == ACT_STOP_CRAWLING or act == ACT_LONG_JUMP_LAND_STOP then -- derpy crouch
+    if act == ACT_START_CROUCHING or act == ACT_STOP_CRAWLING then -- derpy crouch
         return ACT_CROUCHING
     elseif act == ACT_STOP_CROUCHING then
         return ACT_IDLE
@@ -1193,7 +1191,14 @@ local function jer_update(m)
     if (m.input & INPUT_NONZERO_ANALOG ~= 0) and m.action == ACT_METAL_WATER_FALLING then
         m.forwardVel = 20
     end
-
+    -- forgiving soft bonk
+    if m.action == ACT_SOFT_BONK then
+        if m.input & INPUT_Z_PRESSED ~= 0 then
+            set_mario_action(m, ACT_GROUND_POUND, 0)
+        elseif m.input & INPUT_B_PRESSED ~= 0 then
+            set_mario_action(m, ACT_JUMP_KICK, 0)
+        end
+    end
 
 
     -- ANIMS --
@@ -1212,11 +1217,18 @@ local function jer_update(m)
             j.stepMax = 5
         end
     end
+    -- firsties
+    if m.action == ACT_WALL_KICK_AIR and m.prevAction == ACT_AIR_HIT_WALL then
+        smlua_anim_util_set_animation(m.marioObj, "jer_wallkick_alt")
+        if m.marioObj.header.gfx.animInfo.animFrame < 10 then
+            m.particleFlags = m.particleFlags | PARTICLE_SPARKLES
+        end
+    end
+
     -- kirby crouch
     local actCrouchSquish = {
         [ACT_CROUCHING] = true,
-        [ACT_CROUCH_SLIDE] = true,
-        [ACT_LONG_JUMP_LAND] = true
+        [ACT_CROUCH_SLIDE] = true
     }
 
     if actCrouchSquish[m.action] then
@@ -1244,7 +1256,7 @@ function davy_set_action(m)
     local bombRand = math.floor(math.random(1,4))
 
 
-    if (m.action == ACT_PUNCHING or m.action == ACT_MOVE_PUNCHING) and j.davyBomb > 500 then -- make action condition kick when bomb spawning fixed
+    if (m.action == ACT_PUNCHING or m.action == ACT_MOVE_PUNCHING) and j.davyBomb > 500 and m.input & INPUT_Z_DOWN == 0 and m.input & INPUT_A_DOWN == 0 then -- make action condition kick when bomb spawning fixed
         j.davyBomb = j.davyBomb - 500
         set_mario_action(m, ACT_AIR_THROW, 0)
         m.forwardVel = m.forwardVel + 10
@@ -1279,7 +1291,7 @@ function davy_set_action(m)
         set_mario_action(m, ACT_WALKING, 0)
     end
     -- dash
-    if m.action == ACT_DIVE and m.input & INPUT_A_DOWN ~= 0 and j.canDash then
+    if m.action == ACT_DIVE and m.input & INPUT_A_DOWN ~= 0 and j.canDash and m.pos.y > (m.floorHeight + 20) then
        set_mario_action(m, ACT_DAVY_DASH, 0)
        j.canDash = false
     end

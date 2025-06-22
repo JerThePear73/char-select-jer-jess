@@ -9,6 +9,7 @@ local function command_moveset_guide(msg)
 		djui_chat_message_create("GP (Ground) + B = Burst Slide Kick")
 		djui_chat_message_create("Cartwheel + A = Cartwheel Jump")
 		djui_chat_message_create("Slide Kick/Dive (Ground) + Z = Cartwheel")
+		djui_chat_message_create("Ledge Grab + Z = Wall Slide")
 		djui_chat_message_create("Wing Cap + A = Boost")
 		return true
 	elseif msg == "jess" or (msg == "" and is_jess()) then
@@ -45,6 +46,7 @@ local function command_moveset_passives(msg)
 		return true
 	elseif msg == "jess" or (msg == "" and is_jess()) then
 		djui_chat_message_create("\\#00ffff\\Jess (Passives):")
+		djui_chat_message_create("- Wall Sliding")
 		djui_chat_message_create("- Higher Triple Jump & Backflip")
 		djui_chat_message_create("- Faster swimming")
 		djui_chat_message_create("- Better jump out of water")
@@ -53,6 +55,8 @@ local function command_moveset_passives(msg)
 		djui_chat_message_create("- Fludd (Wing Cap) will last as long as you have water, no timer!")
 		return true
 	elseif msg == "davy" or (msg == "" and is_davy()) then
+		djui_chat_message_create("\\#ff8000\\Davy (Passives):")
+		djui_chat_message_create("- Wall Sliding")
 		djui_chat_message_create("- Faster while carrying things")
 		djui_chat_message_create("- Coins grant bombs faster")
 	end

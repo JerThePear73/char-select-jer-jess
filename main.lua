@@ -2,7 +2,7 @@
 -- description: Mod that adds My characters to SM64 along with their own custom movesets.\n\n\\#ff7777\\This Pack requires Character Select\nto use as a Library!
 
 local TEXT_MOD_NAME = "Jer + Jess"
-local VER_NUM = "0.17.0"
+local VER_NUM = "0.18.0"
 
 -- Stops mod from loading if Character Select isn't on
 if not _G.charSelectExists then
@@ -389,7 +389,8 @@ local ANIMTABLE_JER = {
     [CHAR_ANIM_START_RIDING_SHELL] = "jer_shell_start",
     [CHAR_ANIM_JUMP_RIDING_SHELL] = "jer_shell_fall",
     [CHAR_ANIM_SINGLE_JUMP] = "jer_single_jump",
-    [CHAR_ANIM_SLIDEFLIP] = "unused_sideflip",
+    [CHAR_ANIM_SLIDEFLIP] = "beytah_slideflip",
+    [CHAR_ANIM_SLIDEJUMP] = "jer_wallkick",
 }
 
 local ANIMTABLE_JESS = {
@@ -400,7 +401,7 @@ local ANIMTABLE_JESS = {
     [CHAR_ANIM_IDLE_HEAD_CENTER] = "jess_idle",
     [CHAR_ANIM_FIRST_PERSON] = "jess_idle",
     [CHAR_ANIM_WAKE_FROM_LYING] = "jess_wakeup",
-    [CHAR_ANIM_SLIDEFLIP] = "unused_sideflip",
+    [CHAR_ANIM_SLIDEFLIP] = "jess_slideflip",
     [CHAR_ANIM_STOP_SKID] = "jess_brake",
     [CHAR_ANIM_TRIPLE_JUMP_LAND] = "jess_tada",
     [CHAR_ANIM_SINGLE_JUMP] = "jess_single_jump",

@@ -2179,7 +2179,7 @@ Gfx beach_jer_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_1
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0[25] = {
+Vtx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0[19] = {
 	{{ {37, 40, 26}, 0, {-16, -16}, {23, 83, 93, 255} }},
 	{{ {19, 46, 19}, 0, {-16, -16}, {208, 90, 76, 255} }},
 	{{ {40, 9, 42}, 0, {-16, -16}, {243, 22, 124, 255} }},
@@ -2196,19 +2196,13 @@ Vtx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0[25] = {
 	{{ {74, -18, -5}, 0, {-16, -16}, {102, 192, 215, 255} }},
 	{{ {38, -32, -8}, 0, {-16, -16}, {7, 139, 207, 255} }},
 	{{ {15, -18, 21}, 0, {-16, -16}, {20, 194, 109, 255} }},
-	{{ {-12, 20, 25}, 0, {-16, -16}, {199, 54, 100, 255} }},
-	{{ {-4, 30, -6}, 0, {-16, -16}, {218, 113, 212, 255} }},
-	{{ {8, 0, -22}, 0, {-16, -16}, {7, 0, 129, 255} }},
 	{{ {21, -29, -5}, 0, {-16, -16}, {61, 151, 217, 255} }},
-	{{ {8, -27, 26}, 0, {-16, -16}, {254, 180, 102, 255} }},
-	{{ {-14, -8, 0}, 0, {-16, -16}, {139, 207, 249, 255} }},
-	{{ {-16, 34, -8}, 0, {-16, -16}, {189, 101, 218, 255} }},
-	{{ {0, -3, -29}, 0, {-16, -16}, {236, 247, 131, 255} }},
-	{{ {16, -41, -7}, 0, {-16, -16}, {28, 137, 220, 255} }},
+	{{ {8, 0, -22}, 0, {-16, -16}, {7, 0, 129, 255} }},
+	{{ {-4, 30, -6}, 0, {-16, -16}, {218, 113, 212, 255} }},
 };
 
 Gfx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0 + 0, 25, 0),
+	gsSPVertex(beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0 + 0, 19, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(0, 4, 3, 0, 4, 0, 5, 0),
 	gsSP2Triangles(5, 0, 2, 0, 6, 5, 2, 0),
@@ -2220,45 +2214,42 @@ Gfx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0[] = {
 	gsSP2Triangles(13, 4, 6, 0, 6, 4, 5, 0),
 	gsSP2Triangles(13, 6, 7, 0, 14, 13, 7, 0),
 	gsSP2Triangles(14, 7, 15, 0, 7, 8, 15, 0),
-	gsSP2Triangles(8, 9, 15, 0, 15, 9, 16, 0),
-	gsSP2Triangles(16, 9, 17, 0, 10, 17, 9, 0),
-	gsSP2Triangles(10, 11, 17, 0, 11, 18, 17, 0),
-	gsSP2Triangles(19, 18, 11, 0, 11, 14, 19, 0),
-	gsSP2Triangles(11, 13, 14, 0, 11, 12, 13, 0),
-	gsSP2Triangles(15, 19, 14, 0, 19, 15, 20, 0),
-	gsSP2Triangles(16, 20, 15, 0, 16, 21, 20, 0),
-	gsSP2Triangles(22, 21, 16, 0, 17, 22, 16, 0),
-	gsSP2Triangles(23, 22, 17, 0, 17, 18, 23, 0),
-	gsSP2Triangles(23, 18, 19, 0, 19, 24, 23, 0),
-	gsSP2Triangles(20, 24, 19, 0, 20, 21, 24, 0),
-	gsSP2Triangles(24, 21, 23, 0, 23, 21, 22, 0),
-	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
-	gsSP2Triangles(0, 4, 3, 0, 4, 0, 5, 0),
-	gsSP2Triangles(5, 0, 2, 0, 6, 5, 2, 0),
-	gsSP2Triangles(7, 6, 2, 0, 7, 2, 8, 0),
-	gsSP2Triangles(1, 8, 2, 0, 9, 8, 1, 0),
-	gsSP2Triangles(1, 10, 9, 0, 3, 10, 1, 0),
-	gsSP2Triangles(10, 3, 11, 0, 3, 12, 11, 0),
-	gsSP2Triangles(3, 4, 12, 0, 12, 4, 13, 0),
-	gsSP2Triangles(13, 4, 6, 0, 6, 4, 5, 0),
-	gsSP2Triangles(13, 6, 7, 0, 14, 13, 7, 0),
-	gsSP2Triangles(14, 7, 15, 0, 7, 8, 15, 0),
-	gsSP2Triangles(8, 9, 15, 0, 15, 9, 16, 0),
-	gsSP2Triangles(16, 9, 17, 0, 10, 17, 9, 0),
-	gsSP2Triangles(10, 11, 17, 0, 11, 18, 17, 0),
-	gsSP2Triangles(19, 18, 11, 0, 11, 14, 19, 0),
-	gsSP2Triangles(11, 13, 14, 0, 11, 12, 13, 0),
-	gsSP2Triangles(15, 19, 14, 0, 19, 15, 20, 0),
-	gsSP2Triangles(16, 20, 15, 0, 16, 21, 20, 0),
-	gsSP2Triangles(22, 21, 16, 0, 17, 22, 16, 0),
-	gsSP2Triangles(23, 22, 17, 0, 17, 18, 23, 0),
-	gsSP2Triangles(23, 18, 19, 0, 19, 24, 23, 0),
-	gsSP2Triangles(20, 24, 19, 0, 20, 21, 24, 0),
-	gsSP2Triangles(24, 21, 23, 0, 23, 21, 22, 0),
+	gsSP2Triangles(8, 9, 15, 0, 15, 16, 14, 0),
+	gsSP2Triangles(11, 14, 16, 0, 16, 17, 11, 0),
+	gsSP2Triangles(11, 17, 18, 0, 10, 11, 18, 0),
+	gsSP2Triangles(10, 18, 9, 0, 11, 13, 14, 0),
+	gsSP1Triangle(11, 12, 13, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_1[62] = {
+Vtx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_1[11] = {
+	{{ {21, -29, -5}, 0, {-16, -16}, {61, 151, 217, 255} }},
+	{{ {15, -18, 21}, 0, {-16, -16}, {20, 194, 109, 255} }},
+	{{ {8, -27, 26}, 0, {-16, -16}, {254, 180, 102, 255} }},
+	{{ {-12, 20, 25}, 0, {-16, -16}, {199, 54, 100, 255} }},
+	{{ {-1, 18, 21}, 0, {-16, -16}, {246, 63, 110, 255} }},
+	{{ {-4, 30, -6}, 0, {-16, -16}, {218, 113, 212, 255} }},
+	{{ {-16, 34, -8}, 0, {-16, -16}, {189, 101, 218, 255} }},
+	{{ {0, -3, -29}, 0, {-16, -16}, {236, 247, 131, 255} }},
+	{{ {8, 0, -22}, 0, {-16, -16}, {7, 0, 129, 255} }},
+	{{ {16, -41, -7}, 0, {-16, -16}, {28, 137, 220, 255} }},
+	{{ {-14, -8, 0}, 0, {-16, -16}, {139, 207, 249, 255} }},
+};
+
+Gfx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_1[] = {
+	gsSPVertex(beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_1 + 0, 11, 0),
+	gsSP2Triangles(0, 1, 2, 0, 3, 2, 1, 0),
+	gsSP2Triangles(1, 4, 3, 0, 3, 4, 5, 0),
+	gsSP2Triangles(5, 6, 3, 0, 7, 6, 5, 0),
+	gsSP2Triangles(5, 8, 7, 0, 7, 8, 0, 0),
+	gsSP2Triangles(0, 9, 7, 0, 2, 9, 0, 0),
+	gsSP2Triangles(2, 10, 9, 0, 3, 10, 2, 0),
+	gsSP2Triangles(6, 10, 3, 0, 7, 10, 6, 0),
+	gsSP1Triangle(9, 10, 7, 0),
+	gsSPEndDisplayList(),
+};
+
+Vtx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_2[62] = {
 	{{ {82, 33, 184}, 0, {-529, 1788}, {175, 194, 76, 255} }},
 	{{ {83, 34, 184}, 0, {-529, 1788}, {41, 67, 100, 255} }},
 	{{ {60, 57, 178}, 0, {-529, 1788}, {242, 102, 75, 255} }},
@@ -2323,8 +2314,8 @@ Vtx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_1[62] = {
 	{{ {60, 57, 56}, 0, {495, -260}, {242, 102, 181, 255} }},
 };
 
-Gfx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_1[] = {
-	gsSPVertex(beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_1 + 0, 31, 0),
+Gfx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_2[] = {
+	gsSPVertex(beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_2 + 0, 31, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 3, 2, 0, 4, 2, 5, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
@@ -2342,7 +2333,7 @@ Gfx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_1[] = {
 	gsSP2Triangles(20, 23, 25, 0, 23, 26, 25, 0),
 	gsSP2Triangles(25, 27, 20, 0, 28, 27, 25, 0),
 	gsSP2Triangles(28, 25, 29, 0, 30, 20, 27, 0),
-	gsSPVertex(beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_1 + 31, 31, 0),
+	gsSPVertex(beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_2 + 31, 31, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(6, 5, 0, 0, 5, 6, 7, 0),
@@ -2363,7 +2354,7 @@ Gfx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_2[42] = {
+Vtx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_3[42] = {
 	{{ {92, 24, 186}, 0, {90, -16}, {193, 185, 84, 255} }},
 	{{ {82, 33, 184}, 0, {357, -16}, {175, 194, 76, 255} }},
 	{{ {45, -12, 199}, 0, {357, -16}, {216, 67, 100, 255} }},
@@ -2408,8 +2399,8 @@ Vtx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_2[42] = {
 	{{ {96, 28, 108}, 0, {-16, 1008}, {114, 45, 35, 255} }},
 };
 
-Gfx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_2[] = {
-	gsSPVertex(beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_2 + 0, 30, 0),
+Gfx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_3[] = {
+	gsSPVertex(beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_3 + 0, 30, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(3, 2, 4, 0, 3, 4, 5, 0),
 	gsSP2Triangles(3, 5, 6, 0, 5, 7, 6, 0),
@@ -2426,7 +2417,7 @@ Gfx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_2[] = {
 	gsSP2Triangles(27, 26, 20, 0, 20, 26, 28, 0),
 	gsSP2Triangles(28, 26, 24, 0, 24, 29, 28, 0),
 	gsSP2Triangles(24, 27, 29, 0, 27, 25, 26, 0),
-	gsSPVertex(beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_2 + 30, 12, 0),
+	gsSPVertex(beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_3 + 30, 12, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(1, 3, 4, 0, 1, 4, 5, 0),
 	gsSP2Triangles(1, 5, 6, 0, 6, 5, 7, 0),
@@ -2437,7 +2428,7 @@ Gfx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_2[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0[25] = {
+Vtx beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0[19] = {
 	{{ {39, 41, 25}, 0, {-16, -16}, {23, 83, 93, 255} }},
 	{{ {21, 46, 19}, 0, {-16, -16}, {208, 90, 76, 255} }},
 	{{ {41, 9, 42}, 0, {-16, -16}, {243, 22, 124, 255} }},
@@ -2454,19 +2445,13 @@ Vtx beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1
 	{{ {75, -17, -5}, 0, {-16, -16}, {102, 192, 215, 255} }},
 	{{ {40, -31, -8}, 0, {-16, -16}, {7, 139, 207, 255} }},
 	{{ {17, -17, 20}, 0, {-16, -16}, {20, 194, 109, 255} }},
-	{{ {-10, 20, 25}, 0, {-16, -16}, {199, 54, 100, 255} }},
-	{{ {-2, 30, -6}, 0, {-16, -16}, {218, 113, 212, 255} }},
-	{{ {10, 1, -23}, 0, {-16, -16}, {7, 0, 129, 255} }},
 	{{ {22, -28, -5}, 0, {-16, -16}, {61, 151, 217, 255} }},
-	{{ {9, -26, 25}, 0, {-16, -16}, {254, 180, 102, 255} }},
-	{{ {-12, -8, 0}, 0, {-16, -16}, {139, 207, 249, 255} }},
-	{{ {-15, 35, -8}, 0, {-16, -16}, {189, 101, 218, 255} }},
-	{{ {2, -2, -29}, 0, {-16, -16}, {236, 247, 131, 255} }},
-	{{ {17, -41, -7}, 0, {-16, -16}, {28, 137, 220, 255} }},
+	{{ {10, 1, -23}, 0, {-16, -16}, {7, 0, 129, 255} }},
+	{{ {-2, 30, -6}, 0, {-16, -16}, {218, 113, 212, 255} }},
 };
 
 Gfx beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0[] = {
-	gsSPVertex(beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0 + 0, 25, 0),
+	gsSPVertex(beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0 + 0, 19, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(0, 4, 3, 0, 4, 0, 5, 0),
 	gsSP2Triangles(5, 0, 2, 0, 6, 5, 2, 0),
@@ -2478,45 +2463,42 @@ Gfx beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1
 	gsSP2Triangles(13, 4, 6, 0, 6, 4, 5, 0),
 	gsSP2Triangles(13, 6, 7, 0, 14, 13, 7, 0),
 	gsSP2Triangles(14, 7, 15, 0, 7, 8, 15, 0),
-	gsSP2Triangles(8, 9, 15, 0, 15, 9, 16, 0),
-	gsSP2Triangles(16, 9, 17, 0, 10, 17, 9, 0),
-	gsSP2Triangles(10, 11, 17, 0, 11, 18, 17, 0),
-	gsSP2Triangles(19, 18, 11, 0, 11, 14, 19, 0),
-	gsSP2Triangles(11, 13, 14, 0, 11, 12, 13, 0),
-	gsSP2Triangles(15, 19, 14, 0, 19, 15, 20, 0),
-	gsSP2Triangles(16, 20, 15, 0, 16, 21, 20, 0),
-	gsSP2Triangles(22, 21, 16, 0, 17, 22, 16, 0),
-	gsSP2Triangles(23, 22, 17, 0, 17, 18, 23, 0),
-	gsSP2Triangles(23, 18, 19, 0, 19, 24, 23, 0),
-	gsSP2Triangles(20, 24, 19, 0, 20, 21, 24, 0),
-	gsSP2Triangles(24, 21, 23, 0, 23, 21, 22, 0),
-	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
-	gsSP2Triangles(0, 4, 3, 0, 4, 0, 5, 0),
-	gsSP2Triangles(5, 0, 2, 0, 6, 5, 2, 0),
-	gsSP2Triangles(7, 6, 2, 0, 7, 2, 8, 0),
-	gsSP2Triangles(1, 8, 2, 0, 9, 8, 1, 0),
-	gsSP2Triangles(1, 10, 9, 0, 3, 10, 1, 0),
-	gsSP2Triangles(10, 3, 11, 0, 3, 12, 11, 0),
-	gsSP2Triangles(3, 4, 12, 0, 12, 4, 13, 0),
-	gsSP2Triangles(13, 4, 6, 0, 6, 4, 5, 0),
-	gsSP2Triangles(13, 6, 7, 0, 14, 13, 7, 0),
-	gsSP2Triangles(14, 7, 15, 0, 7, 8, 15, 0),
-	gsSP2Triangles(8, 9, 15, 0, 15, 9, 16, 0),
-	gsSP2Triangles(16, 9, 17, 0, 10, 17, 9, 0),
-	gsSP2Triangles(10, 11, 17, 0, 11, 18, 17, 0),
-	gsSP2Triangles(19, 18, 11, 0, 11, 14, 19, 0),
-	gsSP2Triangles(11, 13, 14, 0, 11, 12, 13, 0),
-	gsSP2Triangles(15, 19, 14, 0, 19, 15, 20, 0),
-	gsSP2Triangles(16, 20, 15, 0, 16, 21, 20, 0),
-	gsSP2Triangles(22, 21, 16, 0, 17, 22, 16, 0),
-	gsSP2Triangles(23, 22, 17, 0, 17, 18, 23, 0),
-	gsSP2Triangles(23, 18, 19, 0, 19, 24, 23, 0),
-	gsSP2Triangles(20, 24, 19, 0, 20, 21, 24, 0),
-	gsSP2Triangles(24, 21, 23, 0, 23, 21, 22, 0),
+	gsSP2Triangles(8, 9, 15, 0, 15, 16, 14, 0),
+	gsSP2Triangles(11, 14, 16, 0, 16, 17, 11, 0),
+	gsSP2Triangles(11, 17, 18, 0, 10, 11, 18, 0),
+	gsSP2Triangles(10, 18, 9, 0, 11, 13, 14, 0),
+	gsSP1Triangle(11, 12, 13, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_1[62] = {
+Vtx beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_1[11] = {
+	{{ {22, -28, -5}, 0, {-16, -16}, {61, 151, 217, 255} }},
+	{{ {17, -17, 20}, 0, {-16, -16}, {20, 194, 109, 255} }},
+	{{ {9, -26, 25}, 0, {-16, -16}, {254, 180, 102, 255} }},
+	{{ {-10, 20, 25}, 0, {-16, -16}, {199, 54, 100, 255} }},
+	{{ {1, 19, 20}, 0, {-16, -16}, {246, 63, 110, 255} }},
+	{{ {-2, 30, -6}, 0, {-16, -16}, {218, 113, 212, 255} }},
+	{{ {-15, 35, -8}, 0, {-16, -16}, {189, 101, 218, 255} }},
+	{{ {2, -2, -29}, 0, {-16, -16}, {236, 247, 131, 255} }},
+	{{ {10, 1, -23}, 0, {-16, -16}, {7, 0, 129, 255} }},
+	{{ {17, -41, -7}, 0, {-16, -16}, {28, 137, 220, 255} }},
+	{{ {-12, -8, 0}, 0, {-16, -16}, {139, 207, 249, 255} }},
+};
+
+Gfx beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_1[] = {
+	gsSPVertex(beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_1 + 0, 11, 0),
+	gsSP2Triangles(0, 1, 2, 0, 3, 2, 1, 0),
+	gsSP2Triangles(1, 4, 3, 0, 3, 4, 5, 0),
+	gsSP2Triangles(5, 6, 3, 0, 7, 6, 5, 0),
+	gsSP2Triangles(5, 8, 7, 0, 7, 8, 0, 0),
+	gsSP2Triangles(0, 9, 7, 0, 2, 9, 0, 0),
+	gsSP2Triangles(2, 10, 9, 0, 3, 10, 2, 0),
+	gsSP2Triangles(6, 10, 3, 0, 7, 10, 6, 0),
+	gsSP1Triangle(9, 10, 7, 0),
+	gsSPEndDisplayList(),
+};
+
+Vtx beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_2[62] = {
 	{{ {82, 33, 184}, 0, {-529, 1788}, {175, 194, 76, 255} }},
 	{{ {83, 34, 184}, 0, {-529, 1788}, {41, 67, 100, 255} }},
 	{{ {60, 57, 178}, 0, {-529, 1788}, {242, 102, 75, 255} }},
@@ -2581,8 +2563,8 @@ Vtx beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1
 	{{ {60, 57, 56}, 0, {495, -260}, {242, 102, 181, 255} }},
 };
 
-Gfx beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_1[] = {
-	gsSPVertex(beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_1 + 0, 31, 0),
+Gfx beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_2[] = {
+	gsSPVertex(beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_2 + 0, 31, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(4, 3, 2, 0, 4, 2, 5, 0),
 	gsSP2Triangles(4, 5, 6, 0, 4, 6, 7, 0),
@@ -2600,7 +2582,7 @@ Gfx beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1
 	gsSP2Triangles(20, 23, 25, 0, 23, 26, 25, 0),
 	gsSP2Triangles(25, 27, 20, 0, 28, 27, 25, 0),
 	gsSP2Triangles(28, 25, 29, 0, 30, 20, 27, 0),
-	gsSPVertex(beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_1 + 31, 31, 0),
+	gsSPVertex(beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_2 + 31, 31, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(0, 4, 3, 0, 0, 5, 4, 0),
 	gsSP2Triangles(6, 5, 0, 0, 5, 6, 7, 0),
@@ -2621,7 +2603,7 @@ Gfx beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_2[42] = {
+Vtx beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_3[42] = {
 	{{ {92, 24, 186}, 0, {90, -16}, {193, 185, 84, 255} }},
 	{{ {82, 33, 184}, 0, {357, -16}, {175, 194, 76, 255} }},
 	{{ {45, -12, 199}, 0, {357, -16}, {216, 67, 100, 255} }},
@@ -2666,8 +2648,8 @@ Vtx beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1
 	{{ {96, 28, 108}, 0, {-16, 1008}, {114, 45, 35, 255} }},
 };
 
-Gfx beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_2[] = {
-	gsSPVertex(beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_2 + 0, 30, 0),
+Gfx beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_3[] = {
+	gsSPVertex(beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_3 + 0, 30, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(3, 2, 4, 0, 3, 4, 5, 0),
 	gsSP2Triangles(3, 5, 6, 0, 5, 7, 6, 0),
@@ -2684,7 +2666,7 @@ Gfx beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1
 	gsSP2Triangles(27, 26, 20, 0, 20, 26, 28, 0),
 	gsSP2Triangles(28, 26, 24, 0, 24, 29, 28, 0),
 	gsSP2Triangles(24, 27, 29, 0, 27, 25, 26, 0),
-	gsSPVertex(beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_2 + 30, 12, 0),
+	gsSPVertex(beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_3 + 30, 12, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 0, 3, 0),
 	gsSP2Triangles(1, 3, 4, 0, 1, 4, 5, 0),
 	gsSP2Triangles(1, 5, 6, 0, 6, 5, 7, 0),
@@ -4873,7 +4855,7 @@ Gfx beach_jer_Metal_Jer_Switch_Option_Right_Hand_Peace_Switch_Option_Right_Hand_
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0[153] = {
+Vtx beach_jer_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0[134] = {
 	{{ {82, 33, 184}, 0, {-529, 1788}, {175, 194, 76, 255} }},
 	{{ {83, 34, 184}, 0, {-529, 1788}, {41, 67, 100, 255} }},
 	{{ {60, 57, 178}, 0, {-529, 1788}, {242, 102, 75, 255} }},
@@ -5008,25 +4990,6 @@ Vtx beach_jer_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_me
 	{{ {8, -27, 26}, 0, {-529, -260}, {254, 180, 102, 255} }},
 	{{ {-14, -8, 0}, 0, {-529, -260}, {139, 207, 249, 255} }},
 	{{ {-16, 34, -8}, 0, {-529, -260}, {189, 101, 218, 255} }},
-	{{ {37, 40, 26}, 0, {-529, -260}, {23, 83, 93, 255} }},
-	{{ {19, 46, 19}, 0, {-529, -260}, {208, 90, 76, 255} }},
-	{{ {40, 9, 42}, 0, {-529, -260}, {243, 22, 124, 255} }},
-	{{ {40, 60, -6}, 0, {-529, -260}, {22, 121, 226, 255} }},
-	{{ {68, 29, 11}, 0, {-529, -260}, {107, 63, 25, 255} }},
-	{{ {61, 13, 32}, 0, {-529, -260}, {70, 48, 95, 255} }},
-	{{ {68, -4, 32}, 0, {-529, -260}, {104, 252, 73, 255} }},
-	{{ {53, -22, 42}, 0, {-529, -260}, {27, 180, 98, 255} }},
-	{{ {19, 5, 30}, 0, {-529, -260}, {193, 250, 110, 255} }},
-	{{ {-1, 18, 21}, 0, {-529, -260}, {246, 63, 110, 255} }},
-	{{ {5, 44, -9}, 0, {-529, -260}, {175, 86, 209, 255} }},
-	{{ {23, 6, -32}, 0, {-529, -260}, {230, 243, 132, 255} }},
-	{{ {59, 22, -30}, 0, {-529, -260}, {66, 27, 151, 255} }},
-	{{ {74, -18, -5}, 0, {-529, -260}, {102, 192, 215, 255} }},
-	{{ {38, -32, -8}, 0, {-529, -260}, {7, 139, 207, 255} }},
-	{{ {15, -18, 21}, 0, {-529, -260}, {20, 194, 109, 255} }},
-	{{ {-12, 20, 25}, 0, {-529, -260}, {199, 54, 100, 255} }},
-	{{ {-4, 30, -6}, 0, {-529, -260}, {218, 113, 212, 255} }},
-	{{ {8, 0, -22}, 0, {-529, -260}, {7, 0, 129, 255} }},
 };
 
 Gfx beach_jer_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0[] = {
@@ -5112,37 +5075,14 @@ Gfx beach_jer_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_me
 	gsSP2Triangles(24, 29, 28, 0, 30, 29, 24, 0),
 	gsSP2Triangles(25, 30, 24, 0, 31, 30, 25, 0),
 	gsSP2Triangles(25, 26, 31, 0, 31, 26, 27, 0),
-	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0 + 128, 25, 0),
-	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
-	gsSP2Triangles(3, 4, 1, 0, 1, 4, 2, 0),
-	gsSP2Triangles(2, 4, 5, 0, 6, 7, 8, 0),
-	gsSP2Triangles(7, 6, 9, 0, 6, 10, 9, 0),
-	gsSP2Triangles(10, 6, 11, 0, 11, 6, 8, 0),
-	gsSP2Triangles(12, 11, 8, 0, 13, 12, 8, 0),
-	gsSP2Triangles(13, 8, 14, 0, 7, 14, 8, 0),
-	gsSP2Triangles(15, 14, 7, 0, 7, 16, 15, 0),
-	gsSP2Triangles(9, 16, 7, 0, 16, 9, 17, 0),
-	gsSP2Triangles(9, 18, 17, 0, 9, 10, 18, 0),
-	gsSP2Triangles(18, 10, 19, 0, 19, 10, 12, 0),
-	gsSP2Triangles(12, 10, 11, 0, 19, 12, 13, 0),
-	gsSP2Triangles(20, 19, 13, 0, 20, 13, 21, 0),
-	gsSP2Triangles(13, 14, 21, 0, 14, 15, 21, 0),
-	gsSP2Triangles(21, 15, 22, 0, 22, 15, 23, 0),
-	gsSP2Triangles(16, 23, 15, 0, 16, 17, 23, 0),
-	gsSP2Triangles(17, 24, 23, 0, 0, 24, 17, 0),
-	gsSP2Triangles(17, 20, 0, 0, 17, 19, 20, 0),
-	gsSP2Triangles(17, 18, 19, 0, 21, 0, 20, 0),
-	gsSP2Triangles(0, 21, 3, 0, 22, 3, 21, 0),
-	gsSP2Triangles(22, 4, 3, 0, 5, 4, 22, 0),
-	gsSP2Triangles(23, 5, 22, 0, 2, 5, 23, 0),
-	gsSP2Triangles(23, 24, 2, 0, 2, 24, 0, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_vtx_0 + 128, 6, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 4, 1, 0, 1, 4, 2, 0),
 	gsSP1Triangle(2, 4, 5, 0),
 	gsSPEndDisplayList(),
 };
 
-Vtx beach_jer_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0[153] = {
+Vtx beach_jer_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0[134] = {
 	{{ {82, 33, 184}, 0, {-529, 1788}, {175, 194, 76, 255} }},
 	{{ {83, 34, 184}, 0, {-529, 1788}, {41, 67, 100, 255} }},
 	{{ {60, 57, 178}, 0, {-529, 1788}, {242, 102, 75, 255} }},
@@ -5277,25 +5217,6 @@ Vtx beach_jer_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Ha
 	{{ {9, -26, 25}, 0, {-529, -260}, {254, 180, 102, 255} }},
 	{{ {-12, -8, 0}, 0, {-529, -260}, {139, 207, 249, 255} }},
 	{{ {-15, 35, -8}, 0, {-529, -260}, {189, 101, 218, 255} }},
-	{{ {39, 41, 25}, 0, {-529, -260}, {23, 83, 93, 255} }},
-	{{ {21, 46, 19}, 0, {-529, -260}, {208, 90, 76, 255} }},
-	{{ {41, 9, 42}, 0, {-529, -260}, {243, 22, 124, 255} }},
-	{{ {41, 60, -7}, 0, {-529, -260}, {22, 121, 226, 255} }},
-	{{ {70, 30, 11}, 0, {-529, -260}, {107, 63, 25, 255} }},
-	{{ {62, 13, 32}, 0, {-529, -260}, {70, 48, 95, 255} }},
-	{{ {70, -4, 32}, 0, {-529, -260}, {104, 252, 73, 255} }},
-	{{ {55, -22, 42}, 0, {-529, -260}, {27, 180, 98, 255} }},
-	{{ {21, 6, 30}, 0, {-529, -260}, {193, 250, 110, 255} }},
-	{{ {1, 19, 20}, 0, {-529, -260}, {246, 63, 110, 255} }},
-	{{ {6, 44, -9}, 0, {-529, -260}, {175, 86, 209, 255} }},
-	{{ {25, 6, -33}, 0, {-529, -260}, {230, 243, 132, 255} }},
-	{{ {61, 22, -30}, 0, {-529, -260}, {66, 27, 151, 255} }},
-	{{ {75, -17, -5}, 0, {-529, -260}, {102, 192, 215, 255} }},
-	{{ {40, -31, -8}, 0, {-529, -260}, {7, 139, 207, 255} }},
-	{{ {17, -17, 20}, 0, {-529, -260}, {20, 194, 109, 255} }},
-	{{ {-10, 20, 25}, 0, {-529, -260}, {199, 54, 100, 255} }},
-	{{ {-2, 30, -6}, 0, {-529, -260}, {218, 113, 212, 255} }},
-	{{ {10, 1, -23}, 0, {-529, -260}, {7, 0, 129, 255} }},
 };
 
 Gfx beach_jer_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0[] = {
@@ -5381,30 +5302,7 @@ Gfx beach_jer_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Ha
 	gsSP2Triangles(24, 29, 28, 0, 30, 29, 24, 0),
 	gsSP2Triangles(25, 30, 24, 0, 31, 30, 25, 0),
 	gsSP2Triangles(25, 26, 31, 0, 31, 26, 27, 0),
-	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0 + 128, 25, 0),
-	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
-	gsSP2Triangles(3, 4, 1, 0, 1, 4, 2, 0),
-	gsSP2Triangles(2, 4, 5, 0, 6, 7, 8, 0),
-	gsSP2Triangles(7, 6, 9, 0, 6, 10, 9, 0),
-	gsSP2Triangles(10, 6, 11, 0, 11, 6, 8, 0),
-	gsSP2Triangles(12, 11, 8, 0, 13, 12, 8, 0),
-	gsSP2Triangles(13, 8, 14, 0, 7, 14, 8, 0),
-	gsSP2Triangles(15, 14, 7, 0, 7, 16, 15, 0),
-	gsSP2Triangles(9, 16, 7, 0, 16, 9, 17, 0),
-	gsSP2Triangles(9, 18, 17, 0, 9, 10, 18, 0),
-	gsSP2Triangles(18, 10, 19, 0, 19, 10, 12, 0),
-	gsSP2Triangles(12, 10, 11, 0, 19, 12, 13, 0),
-	gsSP2Triangles(20, 19, 13, 0, 20, 13, 21, 0),
-	gsSP2Triangles(13, 14, 21, 0, 14, 15, 21, 0),
-	gsSP2Triangles(21, 15, 22, 0, 22, 15, 23, 0),
-	gsSP2Triangles(16, 23, 15, 0, 16, 17, 23, 0),
-	gsSP2Triangles(17, 24, 23, 0, 0, 24, 17, 0),
-	gsSP2Triangles(17, 20, 0, 0, 17, 19, 20, 0),
-	gsSP2Triangles(17, 18, 19, 0, 21, 0, 20, 0),
-	gsSP2Triangles(0, 21, 3, 0, 22, 3, 21, 0),
-	gsSP2Triangles(22, 4, 3, 0, 5, 4, 22, 0),
-	gsSP2Triangles(23, 5, 22, 0, 2, 5, 23, 0),
-	gsSP2Triangles(23, 24, 2, 0, 2, 24, 0, 0),
+	gsSPVertex(beach_jer_Metal_Jer_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_vtx_0 + 128, 6, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
 	gsSP2Triangles(3, 4, 1, 0, 1, 4, 2, 0),
 	gsSP1Triangle(2, 4, 5, 0),
@@ -6415,22 +6313,26 @@ Gfx beach_jer_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1[] = {
 Gfx beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1[] = {
 	gsSPDisplayList(mat_beach_jer_Skin__SKIN_),
 	gsSPDisplayList(beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_Sunglasses_reflection),
+	gsSPDisplayList(mat_beach_jer_Gloves__GLOVES_),
 	gsSPDisplayList(beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_beach_jer_Sunglasses_reflection),
+	gsSPDisplayList(beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_2),
 	gsSPDisplayList(mat_revert_beach_jer_Sunglasses_reflection),
 	gsSPDisplayList(mat_beach_jer_Sunglasses__EMBLEM_),
-	gsSPDisplayList(beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_2),
+	gsSPDisplayList(beach_jer_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_3),
 	gsSPEndDisplayList(),
 };
 
 Gfx beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1[] = {
 	gsSPDisplayList(mat_beach_jer_Skin__SKIN_),
 	gsSPDisplayList(beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_beach_jer_Sunglasses_reflection),
+	gsSPDisplayList(mat_beach_jer_Gloves__GLOVES_),
 	gsSPDisplayList(beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_1),
+	gsSPDisplayList(mat_beach_jer_Sunglasses_reflection),
+	gsSPDisplayList(beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_2),
 	gsSPDisplayList(mat_revert_beach_jer_Sunglasses_reflection),
 	gsSPDisplayList(mat_beach_jer_Sunglasses__EMBLEM_),
-	gsSPDisplayList(beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_2),
+	gsSPDisplayList(beach_jer_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_3),
 	gsSPEndDisplayList(),
 };
 
