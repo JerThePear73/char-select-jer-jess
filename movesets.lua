@@ -58,6 +58,7 @@ local SOUND_COMEDIC_METAL_PIPE = audio_sample_load("pipe.ogg")
 local SOUND_ZAP = audio_sample_load("zap.mp3")
 local SOUND_WHEEL_STEP = audio_sample_load("wheel_step.mp3")
 local SOUND_GALAXY_SPIN = audio_sample_load("smg_spin.mp3") -- this is an edited sound effect from extra characters
+local SOUND_JER_GP_JUMP = audio_sample_load("le_jump.mp3")
 
 local E_MODEL_POCKET_EXPLOSIVE = smlua_model_util_get_id('pocket_explosive_geo')
 local E_MODEL_DYNAMITE = smlua_model_util_get_id('dynamite_geo')
@@ -1063,9 +1064,20 @@ local function jer_update(m)
         if (m.flags & MARIO_WING_CAP) ~= 0 then
             set_mario_action(m, ACT_FLYING_TRIPLE_JUMP, 0)
         else
-            set_mario_action(m, ACT_TRIPLE_JUMP, 0)
+            m.faceAngle.y = m.intendedYaw
+            set_mario_action(m, ACT_JUMP, 0)
+            audio_sample_play(SOUND_JER_GP_JUMP, m.pos, 1)
         end
-        m.vel.y = m.vel.y - 4
+        m.vel.y = m.vel.y + 20
+    end
+    if m.action == ACT_JUMP and m.prevAction == ACT_GROUND_POUND_LAND and m.flags & MARIO_WING_CAP == 0 then
+        if m.marioObj.header.gfx.animInfo.animFrame == -1 then
+	        play_character_sound(m, CHAR_SOUND_YAWNING)
+        end
+        if m.vel.y > 20 then
+            m.particleFlags = m.particleFlags | PARTICLE_DUST
+        end
+        smlua_anim_util_set_animation(m.marioObj, "jer_gp_jump")
     end
     -- burst slide kick
     if m.action == ACT_GROUND_POUND_LAND and (m.input & INPUT_B_PRESSED) ~= 0 then
