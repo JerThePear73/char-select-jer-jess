@@ -291,7 +291,17 @@ hook_mario_action(ACT_JERNADO, act_jernado)
 
 local function act_fludd_hover(m)
     local j = gJerJessExtraStates[m.playerIndex]
-        
+    local target = 1
+
+    if m.actionTimer <= 1 then
+        j.prevPosY = m.pos.y
+    end
+    if j.prevPosY > m.pos.y and (j.prevPosY - m.pos.y) > 30 then
+        target = (j.prevPosY - m.pos.y)/10
+    else
+        target = 3
+    end
+
     local stepResult = common_air_action_step(m, ACT_FREEFALL, MARIO_ANIM_RUNNING_UNUSED, AIR_STEP_NONE)
     smlua_anim_util_set_animation(m.marioObj, "jess_fludd_hover")
     m.faceAngle.y = m.intendedYaw - approach_s32(limit_angle(m.intendedYaw - m.faceAngle.y), 0, 0x400, 0x400)
@@ -301,7 +311,7 @@ local function act_fludd_hover(m)
     --else
         --m.vel.y = 2
     --end
-    m.vel.y = approach_f32(m.vel.y, 3 / 1.1, 5, 5)
+    m.vel.y = approach_f32(m.vel.y, target, 5, (-3.8))
 
     if m.forwardVel > 25 then
         m.forwardVel = m.forwardVel - 1
@@ -685,7 +695,7 @@ local function jess_set_action(m)
         set_mario_action(m, ACT_FREEFALL, 0)
     end
     -- galaxy spin
-    if (m.action == ACT_JUMP_KICK or (m.action == ACT_DIVE and ((m.input & INPUT_NONZERO_ANALOG == 0) and m.vel.y < 15 and (m.prevAction ~= ACT_GROUND_POUND and m.prevAction ~= ACT_WALKING and m.prevAction ~= ACT_ICE_SKATING and m.prevAction ~= ACT_FORWARD_ROLLOUT)))) then
+    if (m.action == ACT_JUMP_KICK or (m.action == ACT_DIVE and ((m.input & INPUT_NONZERO_ANALOG == 0 or m.forwardVel < 15) and m.vel.y < 15 and (m.prevAction ~= ACT_GROUND_POUND and m.prevAction ~= ACT_WALKING and m.prevAction ~= ACT_ICE_SKATING and m.prevAction ~= ACT_FORWARD_ROLLOUT)))) then
         if m.action == ACT_DIVE then
             m.forwardVel = m.forwardVel - 15
         end
@@ -1612,6 +1622,7 @@ local function debug_hud()
         djui_hud_print_text(string.format("j.jessWater:  "..j.jessWater.." ") , 25, 175, 1)
         djui_hud_print_text("j.driveAngle:  "..j.driveAngle.." " , 25, 200, 1)
         djui_hud_print_text("j.prevPosY - m.pos.y:  "..(j.prevPosY - m.pos.y).." " , 25, 225, 1)
+        djui_hud_print_text("j.prevPosY:  "..(j.prevPosY).." " , 25, 250, 1)
 
         djui_hud_print_text(string.format("m.floor.normal.y:  "..floorNormalY.." ") , 25, 400, 1)
         djui_hud_print_text("m.actionTimer:  "..m.actionTimer.." " , 25, 425, 1)
