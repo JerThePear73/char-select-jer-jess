@@ -387,7 +387,7 @@ local function act_cartwheel(m)
     end
 
     if m.actionTimer == 0 then
-        j.wheelSpeed = m.forwardVel + 10
+        j.wheelSpeed = m.forwardVel + 20
         m.particleFlags = m.particleFlags | PARTICLE_VERTICAL_STAR
     elseif m.actionTimer == 1 then
         m.vel.y = 0
@@ -423,7 +423,7 @@ local function act_cartwheel(m)
     end
 
     if j.wheelSpeed <= 110 then
-        j.wheelSpeed = j.wheelSpeed - 0.5 + (j.prevPosY - m.pos.y)*0.1
+        j.wheelSpeed = j.wheelSpeed - 0.2 + (j.prevPosY - m.pos.y)/10
     else
         j.wheelSpeed = 110
     end
