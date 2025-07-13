@@ -2,7 +2,7 @@
 -- description: Mod that adds My characters to SM64 along with their own custom movesets.\n\n\\#ff7777\\This Pack requires Character Select\nto use as a Library!
 
 local TEXT_MOD_NAME = "Jer + Jess"
-local VER_NUM = "0.18.0"
+local VER_NUM = "0.19.0"
 
 -- Stops mod from loading if Character Select isn't on
 if not _G.charSelectExists then
@@ -14,10 +14,12 @@ end
 local E_MODEL_JER = smlua_model_util_get_id('jer_geo')
 local E_MODEL_JER_BEACH = smlua_model_util_get_id('beach_jer_geo')
 local E_MODEL_LUCKY = smlua_model_util_get_id('lucky_geo')
+local E_MODEL_JER_OG = smlua_model_util_get_id('jer_og_geo')
 
 local E_MODEL_JESS = smlua_model_util_get_id('jess_geo')
 local E_MODEL_JESS_BEACH = smlua_model_util_get_id('beach_jess_geo')
 local E_MODEL_JESSILYNN = smlua_model_util_get_id('jessilynn_geo')
+local E_MODEL_JESS_OG = smlua_model_util_get_id('jess_og_geo')
 
 local E_MODEL_DAVY = smlua_model_util_get_id('davy_geo')
 
@@ -242,6 +244,36 @@ local PALETTE_LENNY = {
     [CAP]    = "000000",
     [EMBLEM] = "ff6900",
 }
+local PALETTE_JER_OG = {
+    [PANTS]  = "303030",
+    [SHIRT]  = "BCBCBC",
+    [GLOVES] = "303030",
+    [SHOES]  = "3F3F3F",
+    [HAIR]   = "462C1E",
+    [SKIN]   = "FFC2AB",
+    [CAP]    = "4C4C4C",
+    [EMBLEM] = "00FF00",
+}
+local PALETTE_CARROT = {
+    [PANTS]  = "472900",
+    [SHIRT]  = "ff6700",
+    [GLOVES] = "FFC2AB",
+    [SHOES]  = "ffffff",
+    [HAIR]   = "ffffff",
+    [SKIN]   = "FFC2AB",
+    [CAP]    = "4C4C4C",
+    [EMBLEM] = "ff6700",
+}
+local PALETTE_DELIRIOUS = {
+    [PANTS]  = "000000",
+    [SHIRT]  = "ff0080",
+    [GLOVES] = "00ff00",
+    [SHOES]  = "00ff00",
+    [HAIR]   = "008000",
+    [SKIN]   = "00ff00",
+    [CAP]    = "008000",
+    [EMBLEM] = "00ff00",
+}
 
 
 local PALETTE_JESS = {
@@ -314,6 +346,36 @@ local PALETTE_ANNA = {
     [CAP]    = "5aa6ff",
     [EMBLEM] = "ffc300",
 }
+local PALETTE_JESS_OG = {
+    [PANTS]  = "77bdff",
+    [SHIRT]  = "ffffff",
+    [GLOVES] = "ffba90",
+    [SHOES]  = "333333",
+    [HAIR]   = "462c1e",
+    [SKIN]   = "ffba90",
+    [CAP]    = "771E16",
+    [EMBLEM] = "FFCC00",
+}
+local PALETTE_DEMON = {
+    [PANTS]  = "333340",
+    [SHIRT]  = "bb0000",
+    [GLOVES] = "ffba90",
+    [SHOES]  = "111111",
+    [HAIR]   = "d0ddff",
+    [SKIN]   = "ffba90",
+    [CAP]    = "111111",
+    [EMBLEM] = "879cb4",
+}
+local PALETTE_JERIA = {
+    [PANTS]  = "2c4654",
+    [SHIRT]  = "333333",
+    [GLOVES] = "FFC2AB",
+    [SHOES]  = "BCBCBC",
+    [HAIR]   = "462c1e",
+    [SKIN]   = "FFC2AB",
+    [CAP]    = "462c1e",
+    [EMBLEM] = "BCBCBC",
+}
 
 
 local PALETTE_DAVY =  {
@@ -346,6 +408,13 @@ local capJER = {
 
 local capJER_BEACH = {
     normal = smlua_model_util_get_id("shades_geo"),
+    wing = smlua_model_util_get_id("nos_tank_geo"),
+    metal = smlua_model_util_get_id("metal_flower_geo"),
+    metalWing = nil
+}
+
+local capJER_HELMET = {
+    normal = smlua_model_util_get_id("helmet_geo"),
     wing = smlua_model_util_get_id("nos_tank_geo"),
     metal = smlua_model_util_get_id("metal_flower_geo"),
     metalWing = nil
@@ -560,7 +629,7 @@ local function on_character_select_load()
     _G.charSelect.character_add_caps(E_MODEL_JER_BEACH, capJER_BEACH)
     _G.charSelect.character_add_voice(E_MODEL_JER_BEACH, VOICETABLE_JER)
     -- LUCKY --
-    _G.charSelect.character_add_costume(CT_JER, "Lucky", { '"Welcome to Fortnite Peter."',
+    _G.charSelect.character_add_costume(CT_JER, "Lucky", { '"Hello Peter, Welcome to Fortnite."',
                                                     "Jess' older brother.",
                                                     "Age:  21,    Height:  6'4",
                                                     "",
@@ -580,6 +649,27 @@ local function on_character_select_load()
     _G.charSelect.character_add_animations(E_MODEL_LUCKY, ANIMTABLE_JER)
     _G.charSelect.character_add_caps(E_MODEL_LUCKY, capJER)
     _G.charSelect.character_add_voice(E_MODEL_LUCKY, VOICETABLE_JER)
+    -- JERAD --
+    _G.charSelect.character_add_costume(CT_JER, "Jerad", { "Jer wearing his usual clothes.",
+                                                    "Jess' older brother.",
+                                                    "Age:  21,    Height:  6'4",
+                                                    "",
+                                                    "Jer's moveset is based around",
+                                                    "maintaining speed but is designed for",
+                                                    "more experienced players.",
+                                                    "His powerups still serve their vanilla",
+                                                    "purpose but have slight adjustments.",
+                                                    "",
+                                                    "",
+                                                    "Type '/jj-moves' for help.",
+                                                    "Ver "..VER_NUM
+                                                    }, "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_JER_OG, CT_MARIO, TEX_JER)
+    _G.charSelect.character_add_palette_preset(E_MODEL_JER_OG, PALETTE_JER_OG, "Default")
+    _G.charSelect.character_add_palette_preset(E_MODEL_JER_OG, PALETTE_CARROT, "Carrot")
+    _G.charSelect.character_add_palette_preset(E_MODEL_JER_OG, PALETTE_DELIRIOUS, "Delirious")
+    _G.charSelect.character_add_animations(E_MODEL_JER_OG, ANIMTABLE_JER)
+    _G.charSelect.character_add_caps(E_MODEL_JER_OG, capJER_HELMET)
+    _G.charSelect.character_add_voice(E_MODEL_JER_OG, VOICETABLE_JER)
     -- BEACHY --
     _G.charSelect.character_add_costume(CT_JESS, "Beachy", { "Jess dressed for a sunny vacation.",
                                                     "Jer's younger sister.",
@@ -621,6 +711,27 @@ local function on_character_select_load()
     _G.charSelect.character_add_animations(E_MODEL_JESSILYNN, ANIMTABLE_JESS)
     _G.charSelect.character_add_caps(E_MODEL_JESSILYNN, capJESSILYNN)
     _G.charSelect.character_add_voice(E_MODEL_JESSILYNN, VOICETABLE_JESS)
+    -- JESSICA --
+    _G.charSelect.character_add_costume(CT_JESS, "Jessica", { "Jess wearing her usual clothes.",
+                                                    "Jer's younger sister.",
+                                                    "Age:  19,    Height:  6'0", 
+                                                    "",
+                                                    "Jess' moveset is designed for less", 
+                                                    "experienced players, with",
+                                                    "easier, assisted platforming.",
+                                                    "Her powerups are different, and will",
+                                                    "make some stars easier to get but",
+                                                    "others impossible without help.",
+                                                    "",
+                                                    "Type '/jj-moves' for help.",
+                                                    "Ver "..VER_NUM
+                                                    }, "JerThePear", {r = 000, g = 255, b = 200}, E_MODEL_JESS_OG, CT_MARIO, TEX_JESS)
+    _G.charSelect.character_add_palette_preset(E_MODEL_JESS_OG, PALETTE_JESS_OG, "Default")
+    _G.charSelect.character_add_palette_preset(E_MODEL_JESS_OG, PALETTE_DEMON, "Demon")
+    _G.charSelect.character_add_palette_preset(E_MODEL_JESS_OG, PALETTE_JERIA, "Jeria")
+    _G.charSelect.character_add_animations(E_MODEL_JESS_OG, ANIMTABLE_JESS)
+    _G.charSelect.character_add_caps(E_MODEL_JESS_OG, capJESS)
+    _G.charSelect.character_add_voice(E_MODEL_JESS_OG, VOICETABLE_JESS)
 
     -- Categories
     _G.charSelect.character_set_category(CT_JER, "Jer + Jess")
