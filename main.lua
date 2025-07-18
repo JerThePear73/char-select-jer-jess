@@ -554,7 +554,7 @@ if _G.charSelectExists then
                                                     "",
                                                     "Type '/jj-moves' for help.",
                                                     "Ver "..VER_NUM
-                                                    }, "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_JER, CT_MARIO, TEX_JER)
+                                                    }, "JerThePear, SaulTube, Kaktus64", {r = 000, g = 255, b = 000}, E_MODEL_JER, CT_MARIO, TEX_JER)
     CT_JESS = _G.charSelect.character_add("Jess", { "A clumsy gal that loves the winter.",
                                                     "Jer's younger sister.",
                                                     "Age:  19,    Height:  6'0", 
@@ -622,7 +622,7 @@ local function on_character_select_load()
                                                     "",
                                                     "Type '/jj-moves' for help.",
                                                     "Ver "..VER_NUM
-                                                    }, "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_JER_BEACH, CT_MARIO, TEX_JER)
+                                                    }, "JerThePear, SaulTube, Kaktus64", {r = 000, g = 255, b = 000}, E_MODEL_JER_BEACH, CT_MARIO, TEX_JER)
     _G.charSelect.character_add_palette_preset(E_MODEL_JER_BEACH, PALETTE_JER_BEACH, "Default")
     _G.charSelect.character_add_palette_preset(E_MODEL_JER_BEACH, PALETTE_80_SUNSET, "80's Sunset")
     _G.charSelect.character_add_animations(E_MODEL_JER_BEACH, ANIMTABLE_JER)
@@ -642,7 +642,7 @@ local function on_character_select_load()
                                                     "",
                                                     "Type '/jj-moves' for help.",
                                                     "Ver "..VER_NUM
-                                                    }, "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_LUCKY, CT_MARIO, TEX_JER)
+                                                    }, "JerThePear, SaulTube, Kaktus64", {r = 000, g = 255, b = 000}, E_MODEL_LUCKY, CT_MARIO, TEX_JER)
     _G.charSelect.character_add_palette_preset(E_MODEL_LUCKY, PALETTE_LUCKY, "Rider")
     _G.charSelect.character_add_palette_preset(E_MODEL_LUCKY, PALETTE_BURNOUT, "Burnout")
     _G.charSelect.character_add_palette_preset(E_MODEL_LUCKY, PALETTE_LENNY, "Lenny")
@@ -663,7 +663,7 @@ local function on_character_select_load()
                                                     "",
                                                     "Type '/jj-moves' for help.",
                                                     "Ver "..VER_NUM
-                                                    }, "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_JER_OG, CT_MARIO, TEX_JER)
+                                                    }, "JerThePear, SaulTube, Kaktus64", {r = 000, g = 255, b = 000}, E_MODEL_JER_OG, CT_MARIO, TEX_JER)
     _G.charSelect.character_add_palette_preset(E_MODEL_JER_OG, PALETTE_JER_OG, "Default")
     _G.charSelect.character_add_palette_preset(E_MODEL_JER_OG, PALETTE_CARROT, "Carrot")
     _G.charSelect.character_add_palette_preset(E_MODEL_JER_OG, PALETTE_DELIRIOUS, "Delirious")
