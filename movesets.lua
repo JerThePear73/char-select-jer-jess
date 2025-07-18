@@ -1250,7 +1250,13 @@ local function jer_update(m)
     -- kirby crouch
     local actCrouchSquish = {
         [ACT_CROUCHING] = true,
-        [ACT_CROUCH_SLIDE] = true
+        [ACT_CROUCH_SLIDE] = true,
+    }
+    local jerSquishGeneral = { --just squishes the char, no anim changes
+        [ACT_LONG_JUMP_LAND_STOP] = true,
+        [ACT_LONG_JUMP_LAND] = true,
+        [ACT_CRAWLING] = true,
+        [ACT_GROUND_POUND_LAND] = true,
     }
 
     if actCrouchSquish[m.action] then
@@ -1258,8 +1264,15 @@ local function jer_update(m)
         m.marioObj.header.gfx.scale.y = 0.4
         m.marioObj.header.gfx.scale.x = 1.4
         m.marioObj.header.gfx.scale.z = 1.4
-    elseif m.action == ACT_CRAWLING then
+    elseif jerSquishGeneral[m.action] then
         m.marioObj.header.gfx.scale.y = 0.6
+        m.marioObj.header.gfx.scale.x = 1.4
+        m.marioObj.header.gfx.scale.z = 1.4
+    end
+    if m.action == ACT_PUNCHING and m.prevAction == ACT_CROUCHING then
+        m.marioObj.header.gfx.scale.y = 0.6
+        m.marioObj.header.gfx.scale.x = 1.2
+        m.marioObj.header.gfx.scale.z = 1.2
     end
 end
 
