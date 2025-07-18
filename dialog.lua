@@ -104,3 +104,29 @@ some awesome slip 'n slide action!\
 end
 
 hook_event(HOOK_MARIO_UPDATE, dialogs)
+
+--cursor stuff
+local TEX_JER_HAND_OPEN = get_texture_info("JERhandopen")
+local TEX_JER_HAND_CLOSED = get_texture_info("JERhandclosed")
+local pastchar = _G.charSelect.character_get_current_number()
+function JERdialog(m)
+if m.playerIndex == 0 then
+    if _G.charSelectExists then
+        if CT_JER == _G.charSelect.character_get_current_number() then
+            set_dialog_override_color(178, 204, 102, 175, 255, 255, 255, 255)
+            texture_override_set("gd_texture_hand_open", TEX_JER_HAND_OPEN)
+            texture_override_set("gd_texture_hand_closed", TEX_JER_HAND_CLOSED)
+        end
+    if _G.charSelect.character_get_current_number() ~= CT_JER then
+        if _G.charSelect.character_get_current_number() ~= pastchar then
+            reset_dialog_override_color()
+            texture_override_reset("gd_texture_hand_open")
+            texture_override_reset("gd_texture_hand_closed")
+        end
+    end
+pastchar = _G.charSelect.character_get_current_number()
+end
+end
+end
+
+hook_event(HOOK_MARIO_UPDATE, JERdialog)
