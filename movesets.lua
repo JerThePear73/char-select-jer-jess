@@ -5,6 +5,7 @@ local ACT_FLUTTER = allocate_mario_action(ACT_FLAG_AIR | ACT_FLAG_ALLOW_VERTICAL
 local ACT_ICE_SKATING = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING | ACT_FLAG_ATTACKING | ACT_FLAG_RIDING_SHELL)
 local ACT_ICE_DIVE_SLIDE = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING | ACT_FLAG_ATTACKING | ACT_FLAG_RIDING_SHELL)
 local ACT_JERNADO = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR)
+local ACT_SAFETY_JUMP = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR)
 local ACT_FLUDD_HOVER = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_CONTROL_JUMP_HEIGHT)
 local ACT_SPRINGFLIP = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION)
 local ACT_CARTWHEEL = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING | ACT_FLAG_ATTACKING)
@@ -45,6 +46,7 @@ for i = 0, MAX_PLAYERS - 1 do
         canFlutter = false,
         canDash = true,
         prevPosY = 0,
+        jerGPAnim = 0,
     }
 end
 
@@ -59,6 +61,7 @@ local SOUND_ZAP = audio_sample_load("zap.mp3")
 local SOUND_WHEEL_STEP = audio_sample_load("wheel_step.mp3")
 local SOUND_GALAXY_SPIN = audio_sample_load("smg_spin.mp3") -- this is an edited sound effect from extra characters
 local SOUND_JER_GP_JUMP = audio_sample_load("le_jump.mp3")
+local SOUND_JER_SPIN_JUMP = audio_sample_load("jer_spin_jump.mp3") --kaktus
 
 local E_MODEL_POCKET_EXPLOSIVE = smlua_model_util_get_id('pocket_explosive_geo')
 local E_MODEL_DYNAMITE = smlua_model_util_get_id('dynamite_geo')
@@ -288,6 +291,15 @@ local function act_jernado(m)
     return 0
 end
 hook_mario_action(ACT_JERNADO, act_jernado)
+
+local function act_safety_jump(m)
+    local stepResult = common_air_action_step(m, ACT_FREEFALL_LAND, MARIO_ANIM_FLUTTERKICK, AIR_STEP_NONE)
+    if m.actionTimer > 1 then
+        m.vel.y = 50
+    end
+    m.actionTimer = m.actionTimer + 1
+end
+hook_mario_action(ACT_SAFETY_JUMP, act_safety_jump)
 
 local function act_fludd_hover(m)
     local j = gJerJessExtraStates[m.playerIndex]
@@ -1007,6 +1019,7 @@ local function jer_set_action(m)
 end
 
 local function jer_before_set_action(m, act)
+    local j = gJerJessExtraStates[m.playerIndex]
     if act == ACT_START_CROUCHING or act == ACT_STOP_CRAWLING then -- derpy crouch
         return ACT_CROUCHING
     elseif act == ACT_STOP_CROUCHING then
@@ -1069,14 +1082,23 @@ local function jer_update(m)
     if m.action == ACT_BUTT_SLIDE and m.forwardVel > 90 then
         m.particleFlags = m.particleFlags | PARTICLE_FIRE 
     end
+
     -- GP jump
+    if m.action == ACT_GROUND_POUND then
+        j.jerGPAnim = math.random(1, 2)
+    end
     if m.action == ACT_GROUND_POUND_LAND and (m.input & INPUT_A_PRESSED) ~= 0 then
         if (m.flags & MARIO_WING_CAP) ~= 0 then
             set_mario_action(m, ACT_FLYING_TRIPLE_JUMP, 0)
         else
             m.faceAngle.y = m.intendedYaw
             set_mario_action(m, ACT_JUMP, 0)
-            audio_sample_play(SOUND_JER_GP_JUMP, m.pos, 1)
+                if j.jerGPAnim == 1 then
+                    audio_sample_play(SOUND_JER_GP_JUMP, m.pos, 1)
+                end
+                if j.jerGPAnim == 2 then
+                    audio_sample_play(SOUND_JER_SPIN_JUMP, m.pos, 2)
+                end
         end
         m.vel.y = m.vel.y + 20
     end
@@ -1087,7 +1109,12 @@ local function jer_update(m)
         if m.vel.y > 20 then
             m.particleFlags = m.particleFlags | PARTICLE_DUST
         end
+        if j.jerGPAnim == 1 then
         smlua_anim_util_set_animation(m.marioObj, "jer_gp_jump")
+        end
+        if j.jerGPAnim == 2 then
+        smlua_anim_util_set_animation(m.marioObj, "jer_spin_jump")
+        end
     end
     -- burst slide kick
     if m.action == ACT_GROUND_POUND_LAND and (m.input & INPUT_B_PRESSED) ~= 0 then
@@ -1581,7 +1608,7 @@ function davy_hud()
 end
 
 local function jer_vanish_surface(m)
-    if is_jer() and (m.flags & MARIO_VANISH_CAP) ~= 0 and m.floor.type ~= SURFACE_BURNING then -- a little glitchy, will do some weird spam dying thing on other peoples screen
+    if (m.flags & MARIO_VANISH_CAP) ~= 0 and m.floor.type ~= SURFACE_BURNING then -- a little glitchy, will do some weird spam dying thing on other peoples screen
         return false
     else
         return true
