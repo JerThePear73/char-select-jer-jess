@@ -1128,7 +1128,7 @@ local function jer_update(m)
         set_mario_action(m, ACT_JERNADO, 0)
         j.canJernado = false
     end
-    if m.pos.y == m.floorHeight and m.action ~= ACT_FREEFALL and m.action ~= ACT_FREEFALL_LAND then
+    if m.pos.y == m.floorHeight then
         j.canJernado = true
     end
     -- water skip
