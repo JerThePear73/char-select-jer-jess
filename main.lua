@@ -194,6 +194,16 @@ local PALETTE_JER_FIRE = {
     [CAP]    = "ff4000",
     [EMBLEM] = "ff4000",
 }
+local PALETTE_JER_RETRO = {
+    [PANTS]  = "ffdba2",
+    [SHIRT]  = "386d00",
+    [GLOVES] = "4c4c4c",
+    [SHOES]  = "4c4c4c",
+    [HAIR]   = "386d00",
+    [SKIN]   = "ffba90",
+    [CAP]    = "386d00",
+    [EMBLEM] = "386d00",
+}
 local PALETTE_JER_BEACH = {
     [PANTS]  = "FF8900",
     [SHIRT]  = "98FF2E",
@@ -273,6 +283,16 @@ local PALETTE_DELIRIOUS = {
     [SKIN]   = "00ff00",
     [CAP]    = "008000",
     [EMBLEM] = "00ff00",
+}
+local PALETTE_SMK_PROTO = {
+    [PANTS]  = "0048f8",
+    [SHIRT]  = "0048f8",
+    [GLOVES] = "ffffff",
+    [SHOES]  = "ffffff",
+    [HAIR]   = "500600",
+    [SKIN]   = "ffbe9b",
+    [CAP]    = "ffffff",
+    [EMBLEM] = "ff0000",
 }
 
 
@@ -590,6 +610,7 @@ local function on_character_select_load()
     _G.charSelect.character_add_palette_preset(E_MODEL_JER, PALETTE_JER, "Default")
     _G.charSelect.character_add_palette_preset(E_MODEL_JER, PALETTE_JER_LEGACY, "Legacy")
     _G.charSelect.character_add_palette_preset(E_MODEL_JER, PALETTE_JER_FIRE, "Fire")
+    _G.charSelect.character_add_palette_preset(E_MODEL_JER, PALETTE_JER_RETRO, "Retro") -- by: Kaktus64
     _G.charSelect.character_add_animations(E_MODEL_JER, ANIMTABLE_JER)
     _G.charSelect.character_add_caps(E_MODEL_JER, capJER)
     _G.charSelect.character_add_health_meter(CT_JER, HEALTH_METER_JER)
@@ -667,6 +688,7 @@ local function on_character_select_load()
     _G.charSelect.character_add_palette_preset(E_MODEL_JER_OG, PALETTE_JER_OG, "Default")
     _G.charSelect.character_add_palette_preset(E_MODEL_JER_OG, PALETTE_CARROT, "Carrot")
     _G.charSelect.character_add_palette_preset(E_MODEL_JER_OG, PALETTE_DELIRIOUS, "Delirious")
+    _G.charSelect.character_add_palette_preset(E_MODEL_JER_OG, PALETTE_SMK_PROTO, "1991")
     _G.charSelect.character_add_animations(E_MODEL_JER_OG, ANIMTABLE_JER)
     _G.charSelect.character_add_caps(E_MODEL_JER_OG, capJER_HELMET)
     _G.charSelect.character_add_voice(E_MODEL_JER_OG, VOICETABLE_JER)
