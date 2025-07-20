@@ -23,10 +23,12 @@ local E_MODEL_JESS_OG = smlua_model_util_get_id('jess_og_geo')
 
 local E_MODEL_DAVY = smlua_model_util_get_id('davy_geo')
 
+local E_MODEL_TROPHY = smlua_model_util_get_id('trophy_geo')
 -- Textures --
 local TEX_JER = get_texture_info('jer_icon')
 local TEX_JESS = get_texture_info('jess_icon')
 local TEX_DAVY = get_texture_info('davy_icon')
+local TEX_TROPHY = get_texture_info('trophy')
 
 VOICETABLE_JER = { -- Voices from Scooter and other male characters from Lego Racers (1999)
     [CHAR_SOUND_ATTACKED] = {'jer_no.ogg', 'jer_ouch.ogg'},
@@ -195,14 +197,14 @@ local PALETTE_JER_FIRE = {
     [EMBLEM] = "ff4000",
 }
 local PALETTE_JER_RETRO = {
-    [PANTS]  = "ffdba2",
-    [SHIRT]  = "386d00",
+    [PANTS]  = "F4A000",
+    [SHIRT]  = "3F6B00",
     [GLOVES] = "4c4c4c",
     [SHOES]  = "4c4c4c",
-    [HAIR]   = "386d00",
+    [HAIR]   = "3F6B00",
     [SKIN]   = "ffba90",
-    [CAP]    = "386d00",
-    [EMBLEM] = "386d00",
+    [CAP]    = "3F6B00",
+    [EMBLEM] = "3F6B00",
 }
 local PALETTE_JER_BEACH = {
     [PANTS]  = "FF8900",
@@ -615,6 +617,7 @@ local function on_character_select_load()
     _G.charSelect.character_add_caps(E_MODEL_JER, capJER)
     _G.charSelect.character_add_health_meter(CT_JER, HEALTH_METER_JER)
     _G.charSelect.character_add_voice(E_MODEL_JER, VOICETABLE_JER)
+    _G.charSelect.character_add_celebration_star(E_MODEL_JER, E_MODEL_TROPHY, TEX_TROPHY)
 
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS, PALETTE_JESS, "Default")
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS, PALETTE_JESS_FIRE, "Fire")
@@ -649,6 +652,7 @@ local function on_character_select_load()
     _G.charSelect.character_add_animations(E_MODEL_JER_BEACH, ANIMTABLE_JER)
     _G.charSelect.character_add_caps(E_MODEL_JER_BEACH, capJER_BEACH)
     _G.charSelect.character_add_voice(E_MODEL_JER_BEACH, VOICETABLE_JER)
+    _G.charSelect.character_add_celebration_star(E_MODEL_JER_BEACH, E_MODEL_TROPHY, TEX_TROPHY)
     -- LUCKY --
     _G.charSelect.character_add_costume(CT_JER, "Lucky", { '"Hello Peter, Welcome to Fortnite."',
                                                     "Jess' older brother.",
@@ -670,6 +674,7 @@ local function on_character_select_load()
     _G.charSelect.character_add_animations(E_MODEL_LUCKY, ANIMTABLE_JER)
     _G.charSelect.character_add_caps(E_MODEL_LUCKY, capJER)
     _G.charSelect.character_add_voice(E_MODEL_LUCKY, VOICETABLE_JER)
+    _G.charSelect.character_add_celebration_star(E_MODEL_LUCKY, E_MODEL_TROPHY, TEX_TROPHY)
     -- JERAD --
     _G.charSelect.character_add_costume(CT_JER, "Jerad", { "Jer wearing his usual clothes.",
                                                     "Jess' older brother.",
@@ -692,6 +697,7 @@ local function on_character_select_load()
     _G.charSelect.character_add_animations(E_MODEL_JER_OG, ANIMTABLE_JER)
     _G.charSelect.character_add_caps(E_MODEL_JER_OG, capJER_HELMET)
     _G.charSelect.character_add_voice(E_MODEL_JER_OG, VOICETABLE_JER)
+    _G.charSelect.character_add_celebration_star(E_MODEL_JER_OG, E_MODEL_TROPHY, TEX_TROPHY)
     -- BEACHY --
     _G.charSelect.character_add_costume(CT_JESS, "Beachy", { "Jess dressed for a sunny vacation.",
                                                     "Jer's younger sister.",

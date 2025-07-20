@@ -1,0 +1,11 @@
+extern const GeoLayout trophy_geo[];
+extern Lights1 trophy_Base_lights;
+extern u8 trophy_king_gold_rgba16[];
+extern Vtx trophy_Trophy_mesh_layer_1_vtx_0[106];
+extern Gfx trophy_Trophy_mesh_layer_1_tri_0[];
+extern Vtx trophy_Trophy_mesh_layer_1_vtx_1[170];
+extern Gfx trophy_Trophy_mesh_layer_1_tri_1[];
+extern Gfx mat_trophy_Base[];
+extern Gfx mat_trophy_Gold[];
+extern Gfx mat_revert_trophy_Gold[];
+extern Gfx trophy_Trophy_mesh_layer_1[];
