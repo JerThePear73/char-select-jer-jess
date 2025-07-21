@@ -103,4 +103,4 @@ some awesome slip 'n slide action!\
   end
 end
 
-hook_event(HOOK_MARIO_UPDATE, dialogs)
+_G.charSelect.hook_on_character_change(dialogs)
