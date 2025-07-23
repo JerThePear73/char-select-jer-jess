@@ -24,11 +24,15 @@ local E_MODEL_JESS_OG = smlua_model_util_get_id('jess_og_geo')
 local E_MODEL_DAVY = smlua_model_util_get_id('davy_geo')
 
 local E_MODEL_TROPHY = smlua_model_util_get_id('trophy_geo')
+
 -- Textures --
 local TEX_JER = get_texture_info('jer_icon')
 local TEX_JESS = get_texture_info('jess_icon')
 local TEX_DAVY = get_texture_info('davy_icon')
 local TEX_TROPHY = get_texture_info('trophy')
+
+-- Sound --
+local SOUND_MENU_THEME_JER = audio_stream_load('char-select-menu-theme-jer.mp3')
 
 VOICETABLE_JER = { -- Voices from Scooter and other male characters from Lego Racers (1999)
     [CHAR_SOUND_ATTACKED] = {'jer_no.ogg', 'jer_ouch.ogg'},
@@ -618,6 +622,7 @@ local function on_character_select_load()
     _G.charSelect.character_add_health_meter(CT_JER, HEALTH_METER_JER)
     _G.charSelect.character_add_voice(E_MODEL_JER, VOICETABLE_JER)
     _G.charSelect.character_add_celebration_star(E_MODEL_JER, E_MODEL_TROPHY, TEX_TROPHY)
+    _G.charSelect.character_add_menu_instrumental(CT_JER, SOUND_MENU_THEME_JER)
 
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS, PALETTE_JESS, "Default")
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS, PALETTE_JESS_FIRE, "Fire")
