@@ -23,6 +23,10 @@ local function get_cap_volume()
         return 0.2
     end
 
+    if _G.charSelect.is_menu_open() then
+        return 0
+    end
+
     return 1
 end   
 

@@ -439,7 +439,7 @@ local function act_cartwheel(m)
         set_mario_action(m, ACT_CARTWHEEL_JUMP, 0)
     end
 
-    if _G.charSelect.is_menu_open() == true then
+    if _G.charSelect.is_menu_open() == true then -- embarassing == true moment
         m.action = ACT_IDLE
     end
 
@@ -1004,6 +1004,10 @@ local function jer_set_action(m)
         m.vel.y = 0
         m.vel.z = 0
     end
+    -- fix repeated firsties
+    if m.action == ACT_WALL_KICK_AIR then
+        m.marioObj.header.gfx.animInfo.animFrame = 0
+    end
 end
 
 local function jer_before_set_action(m, act)
@@ -1240,7 +1244,7 @@ local function jer_update(m)
         end
     end
     -- firsties
-    if m.action == ACT_WALL_KICK_AIR and m.prevAction == ACT_AIR_HIT_WALL then
+    if m.action == ACT_WALL_KICK_AIR and (m.prevAction == ACT_AIR_HIT_WALL or m.prevAction == ACT_WALL_KICK_AIR) then
         smlua_anim_util_set_animation(m.marioObj, "jer_wallkick_alt")
         if m.marioObj.header.gfx.animInfo.animFrame < 10 then
             m.particleFlags = m.particleFlags | PARTICLE_SPARKLES
