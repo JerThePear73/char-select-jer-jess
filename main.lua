@@ -32,7 +32,7 @@ local TEX_DAVY = get_texture_info('davy_icon')
 local TEX_TROPHY = get_texture_info('trophy')
 
 -- Sound --
-local SOUND_MENU_THEME_JER = audio_stream_load('char-select-menu-theme-jer.mp3')
+local SOUND_MENU_THEME_JER = audio_stream_load('char-select-menu-theme-jer.ogg')
 
 VOICETABLE_JER = { -- Voices from Scooter and other male characters from Lego Racers (1999)
     [CHAR_SOUND_ATTACKED] = {'jer_no.ogg', 'jer_ouch.ogg'},
@@ -476,7 +476,7 @@ local capDAVY = {
 
 local ANIMTABLE_JER = {
     [_G.charSelect.CS_ANIM_MENU] = "jer_menu_anim",
-    [CHAR_ANIM_RUNNING] = "jer_run", -- Credit: Custom Run Animations Lua; By: STREAMING LION
+    [CHAR_ANIM_RUNNING] = "jer_run",
     [CHAR_ANIM_TWIRL] = "jer_twirl",
     [CHAR_ANIM_START_TWIRL] = "jer_twirl_start",
     [CHAR_ANIM_TWIRL_LAND] = "jer_twirl_end",
@@ -594,7 +594,7 @@ if _G.charSelectExists then
                                                     "",
                                                     "Type '/jj-moves' for help.",
                                                     "Ver "..VER_NUM
-                                                    }, "JerThePear", {r = 000, g = 255, b = 200}, E_MODEL_JESS, CT_MARIO, TEX_JESS)
+                                                    }, "JerThePear", {r = 000, g = 255, b = 125}, E_MODEL_JESS, CT_MARIO, TEX_JESS)
     CT_DAVY = _G.charSelect.character_add("Davy", { "A skeleton-cyborg mix bent on chaos.",
                                                     "A friend of Jer's.",
                                                     "Age:  ??,    Height:  6'9",
@@ -717,7 +717,7 @@ local function on_character_select_load()
                                                     "",
                                                     "Type '/jj-moves' for help.",
                                                     "Ver "..VER_NUM
-                                                    }, "JerThePear", {r = 000, g = 255, b = 200}, E_MODEL_JESS_BEACH, CT_MARIO, TEX_JESS)
+                                                    }, "JerThePear", {r = 000, g = 255, b = 125}, E_MODEL_JESS_BEACH, CT_MARIO, TEX_JESS)
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS_BEACH, PALETTE_JESS_BEACH, "Default")
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS_BEACH, PALETTE_POPULAR_GIRL, "Popular Girl")
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS_BEACH, PALETTE_SUNNY, "Sunny")
@@ -738,7 +738,7 @@ local function on_character_select_load()
                                                     "",
                                                     "Type '/jj-moves' for help.",
                                                     "Ver "..VER_NUM
-                                                    }, "JerThePear", {r = 000, g = 255, b = 200}, E_MODEL_JESSILYNN, CT_MARIO, TEX_JESS)
+                                                    }, "JerThePear", {r = 000, g = 255, b = 125}, E_MODEL_JESSILYNN, CT_MARIO, TEX_JESS)
     _G.charSelect.character_add_palette_preset(E_MODEL_JESSILYNN, PALETTE_JESSILYNN, "Default")
     _G.charSelect.character_add_palette_preset(E_MODEL_JESSILYNN, PALETTE_ANNA, "Annalynn")
     _G.charSelect.character_add_animations(E_MODEL_JESSILYNN, ANIMTABLE_JESS)
@@ -758,7 +758,7 @@ local function on_character_select_load()
                                                     "",
                                                     "Type '/jj-moves' for help.",
                                                     "Ver "..VER_NUM
-                                                    }, "JerThePear", {r = 000, g = 255, b = 200}, E_MODEL_JESS_OG, CT_MARIO, TEX_JESS)
+                                                    }, "JerThePear", {r = 000, g = 255, b = 125}, E_MODEL_JESS_OG, CT_MARIO, TEX_JESS)
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS_OG, PALETTE_JESS_OG, "Default")
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS_OG, PALETTE_DEMON, "Demon")
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS_OG, PALETTE_JERIA, "Jeria")
