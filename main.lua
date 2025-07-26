@@ -2,7 +2,6 @@
 -- description: Mod that adds My characters to SM64 along with their own custom movesets.\n\n\\#ff7777\\This Pack requires Character Select\nto use as a Library!
 
 local TEXT_MOD_NAME = "Jer + Jess"
-local VER_NUM = "0.19.0"
 
 -- Stops mod from loading if Character Select isn't on
 if not _G.charSelectExists then
@@ -25,6 +24,13 @@ local E_MODEL_DAVY = smlua_model_util_get_id('davy_geo')
 
 local E_MODEL_TROPHY = smlua_model_util_get_id('trophy_geo')
 
+-- Credits --
+local MOD_NAME = "Jer + Jess"
+_G.charSelect.credit_add(MOD_NAME, "Jer", "Creator")
+_G.charSelect.credit_add(MOD_NAME, "SaulTube", "Sprites, Coding")
+_G.charSelect.credit_add(MOD_NAME, "Kaktus64", "Coding")
+_G.charSelect.credit_add(MOD_NAME, "Squishy6094", "Character Select, Coding")
+
 -- Textures --
 local TEX_JER = get_texture_info('jer_icon')
 local TEX_JESS = get_texture_info('jess_icon')
@@ -33,6 +39,8 @@ local TEX_TROPHY = get_texture_info('trophy')
 
 -- Sound --
 local SOUND_MENU_THEME_JER = audio_stream_load('char-select-menu-theme-jer.ogg')
+local SOUND_MENU_THEME_JESS = audio_stream_load('char-select-menu-theme-jess.ogg')
+local SOUND_MENU_THEME_DAVY = audio_stream_load('char-select-menu-theme-davy.ogg')
 
 VOICETABLE_JER = { -- Voices from Scooter and other male characters from Lego Racers (1999)
     [CHAR_SOUND_ATTACKED] = {'jer_no.ogg', 'jer_ouch.ogg'},
@@ -114,7 +122,7 @@ VOICETABLE_JESS = { -- Voices from Veronica Voltage and other female characters 
     [CHAR_SOUND_UH] = 'jess_ow.ogg',
     [CHAR_SOUND_UH2] = 'jess_heh.ogg',
     [CHAR_SOUND_UH2_2] = nil,
-    [CHAR_SOUND_WAAAOOOW] = nil,
+    [CHAR_SOUND_WAAAOOOW] = 'jess_ohno.ogg',
     [CHAR_SOUND_WAH2] = 'jess_ya.ogg',
     [CHAR_SOUND_WHOA] = 'jess_uh_oh.ogg',
     [CHAR_SOUND_YAHOO] = { 'jess_yahoo.ogg', 'jess_woohoo.ogg' },
@@ -567,48 +575,12 @@ local HEALTH_METER_DAVY = {
 }
 
 if _G.charSelectExists then
-    CT_JER = _G.charSelect.character_add("Jer", { "A helmet man who loves cars and speed.",
-                                                    "Jess' older brother.",
-                                                    "Age:  21,    Height:  6'4",
-                                                    "",
-                                                    "Jer's moveset is based around",
-                                                    "maintaining speed but is designed for",
-                                                    "more experienced players.",
-                                                    "His powerups still serve their vanilla",
-                                                    "purpose but have slight adjustments.",
-                                                    "",
-                                                    "",
-                                                    "Type '/jj-moves' for help.",
-                                                    "Ver "..VER_NUM
-                                                    }, "JerThePear, SaulTube, Kaktus64", {r = 000, g = 255, b = 000}, E_MODEL_JER, CT_MARIO, TEX_JER)
-    CT_JESS = _G.charSelect.character_add("Jess", { "A clumsy gal that loves the winter.",
-                                                    "Jer's younger sister.",
-                                                    "Age:  19,    Height:  6'0", 
-                                                    "",
-                                                    "Jess' moveset is designed for less", 
-                                                    "experienced players, with",
-                                                    "easier, assisted platforming.",
-                                                    "Her powerups are different, and will",
-                                                    "make some stars easier to get but",
-                                                    "others impossible without help.",
-                                                    "",
-                                                    "Type '/jj-moves' for help.",
-                                                    "Ver "..VER_NUM
-                                                    }, "JerThePear", {r = 000, g = 255, b = 125}, E_MODEL_JESS, CT_MARIO, TEX_JESS)
-    CT_DAVY = _G.charSelect.character_add("Davy", { "A skeleton-cyborg mix bent on chaos.",
-                                                    "A friend of Jer's.",
-                                                    "Age:  ??,    Height:  6'9",
-                                                    "",
-                                                    "Davy's moveset is just meant to be",
-                                                    " silly, aside from his bomb throw",
-                                                    "ability.",
-                                                    "",
-                                                    "",
-                                                    "",
-                                                    "",
-                                                    "Type '/jj-moves' for help.",
-                                                    "Ver "..VER_NUM
-                                                    }, "JerThePear", {r = 255, g = 165, b = 000}, E_MODEL_DAVY, CT_MARIO, TEX_DAVY)
+    CT_JER = _G.charSelect.character_add("Jer", { "A helmet man with a love for speed. Age: 21, Height: 6'4, Jess' older brother. Jer's moveset is based around maintaining speed but is designed for more experienced players. His powerups still serve their vanilla purpose but have slight adjustments. Type '/jj-moves' for help."},
+        "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_JER, CT_MARIO, TEX_JER)
+    CT_JESS = _G.charSelect.character_add("Jess", { "A clumsy gal that loves the winter. Age: 19, Height: 6'0, Jer's younger sister. Jess' moveset is designed for less experienced players, with easier platforming. Her powerups are different and will make some stars easier but others impossible. Type '/jj-moves' for help."},
+        "JerThePear", {r = 000, g = 255, b = 125}, E_MODEL_JESS, CT_MARIO, TEX_JESS)
+    CT_DAVY = _G.charSelect.character_add("Davy", { "A skeleton-cyborg mix hellbent on chaos. Age: ??, Height: 6'9, A friend of Jer's. Davy's moveset is just meant to be silly, aside from his bomb throw ability. Type '/jj-moves' for help."},
+        "JerThePear", {r = 255, g = 165, b = 000}, E_MODEL_DAVY, CT_MARIO, TEX_DAVY)
 end
 
 local CSloaded = false
@@ -630,6 +602,7 @@ local function on_character_select_load()
     _G.charSelect.character_add_caps(E_MODEL_JESS, capJESS)
     _G.charSelect.character_add_health_meter(CT_JESS, HEALTH_METER_JESS)
     _G.charSelect.character_add_voice(E_MODEL_JESS, VOICETABLE_JESS)
+    _G.charSelect.character_add_menu_instrumental(CT_JESS, SOUND_MENU_THEME_JESS)
 
     _G.charSelect.character_add_palette_preset(E_MODEL_DAVY, PALETTE_DAVY, "Default")
     _G.charSelect.character_add_palette_preset(E_MODEL_DAVY, PALETTE_GREEDY, "Greedy")
@@ -637,21 +610,10 @@ local function on_character_select_load()
     _G.charSelect.character_add_caps(E_MODEL_DAVY, capDAVY)
     _G.charSelect.character_add_health_meter(CT_DAVY, HEALTH_METER_DAVY)
     _G.charSelect.character_add_animations(E_MODEL_DAVY, ANIMTABLE_DAVY)
+    _G.charSelect.character_add_menu_instrumental(CT_DAVY, SOUND_MENU_THEME_DAVY)
     -- SHADES --
-    _G.charSelect.character_add_costume(CT_JER, "Shades", { "Jer dressed for a sunny vacation.",
-                                                    "Jess' older brother.",
-                                                    "Age:  21,    Height:  6'4",
-                                                    "",
-                                                    "Jer's moveset is based around",
-                                                    "maintaining speed but is designed for",
-                                                    "more experienced players.",
-                                                    "His powerups still serve their vanilla",
-                                                    "purpose but have slight adjustments.",
-                                                    "",
-                                                    "",
-                                                    "Type '/jj-moves' for help.",
-                                                    "Ver "..VER_NUM
-                                                    }, "JerThePear, SaulTube, Kaktus64", {r = 000, g = 255, b = 000}, E_MODEL_JER_BEACH, CT_MARIO, TEX_JER)
+    _G.charSelect.character_add_costume(CT_JER, "Shades", { "Jer dressed for a sunny vacation. Age: 21, Height: 6'4, Jess' older brother. Jer's moveset is based around maintaining speed but is designed for more experienced players. His powerups still serve their vanilla purpose but have slight adjustments. Type '/jj-moves' for help."},
+        "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_JER_BEACH, CT_MARIO, TEX_JER)
     _G.charSelect.character_add_palette_preset(E_MODEL_JER_BEACH, PALETTE_JER_BEACH, "Default")
     _G.charSelect.character_add_palette_preset(E_MODEL_JER_BEACH, PALETTE_80_SUNSET, "80's Sunset")
     _G.charSelect.character_add_animations(E_MODEL_JER_BEACH, ANIMTABLE_JER)
@@ -659,20 +621,8 @@ local function on_character_select_load()
     _G.charSelect.character_add_voice(E_MODEL_JER_BEACH, VOICETABLE_JER)
     _G.charSelect.character_add_celebration_star(E_MODEL_JER_BEACH, E_MODEL_TROPHY, TEX_TROPHY)
     -- LUCKY --
-    _G.charSelect.character_add_costume(CT_JER, "Lucky", { '"Hello Peter, Welcome to Fortnite."',
-                                                    "Jess' older brother.",
-                                                    "Age:  21,    Height:  6'4",
-                                                    "",
-                                                    "Jer's moveset is based around",
-                                                    "maintaining speed but is designed for",
-                                                    "more experienced players.",
-                                                    "His powerups still serve their vanilla",
-                                                    "purpose but have slight adjustments.",
-                                                    "",
-                                                    "",
-                                                    "Type '/jj-moves' for help.",
-                                                    "Ver "..VER_NUM
-                                                    }, "JerThePear, SaulTube, Kaktus64", {r = 000, g = 255, b = 000}, E_MODEL_LUCKY, CT_MARIO, TEX_JER)
+    _G.charSelect.character_add_costume(CT_JER, "Lucky", { "Hello Peter, Welcome to Fortnite. Age: 21, Height: 6'4, Jess' older brother. Jer's moveset is based around maintaining speed but is designed for more experienced players. His powerups still serve their vanilla purpose but have slight adjustments. Type '/jj-moves' for help."},
+        "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_LUCKY, CT_MARIO, TEX_JER)
     _G.charSelect.character_add_palette_preset(E_MODEL_LUCKY, PALETTE_LUCKY, "Rider")
     _G.charSelect.character_add_palette_preset(E_MODEL_LUCKY, PALETTE_BURNOUT, "Burnout")
     _G.charSelect.character_add_palette_preset(E_MODEL_LUCKY, PALETTE_LENNY, "Lenny")
@@ -681,20 +631,8 @@ local function on_character_select_load()
     _G.charSelect.character_add_voice(E_MODEL_LUCKY, VOICETABLE_JER)
     _G.charSelect.character_add_celebration_star(E_MODEL_LUCKY, E_MODEL_TROPHY, TEX_TROPHY)
     -- JERAD --
-    _G.charSelect.character_add_costume(CT_JER, "Jerad", { "Jer wearing his usual clothes.",
-                                                    "Jess' older brother.",
-                                                    "Age:  21,    Height:  6'4",
-                                                    "",
-                                                    "Jer's moveset is based around",
-                                                    "maintaining speed but is designed for",
-                                                    "more experienced players.",
-                                                    "His powerups still serve their vanilla",
-                                                    "purpose but have slight adjustments.",
-                                                    "",
-                                                    "",
-                                                    "Type '/jj-moves' for help.",
-                                                    "Ver "..VER_NUM
-                                                    }, "JerThePear, SaulTube, Kaktus64", {r = 000, g = 255, b = 000}, E_MODEL_JER_OG, CT_MARIO, TEX_JER)
+    _G.charSelect.character_add_costume(CT_JER, "Jerad", { "Jer wearing his usual clothes. Age: 21, Height: 6'4, Jess' older brother. Jer's moveset is based around maintaining speed but is designed for more experienced players. His powerups still serve their vanilla purpose but have slight adjustments. Type '/jj-moves' for help."},
+        "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_JER_OG, CT_MARIO, TEX_JER)
     _G.charSelect.character_add_palette_preset(E_MODEL_JER_OG, PALETTE_JER_OG, "Default")
     _G.charSelect.character_add_palette_preset(E_MODEL_JER_OG, PALETTE_CARROT, "Carrot")
     _G.charSelect.character_add_palette_preset(E_MODEL_JER_OG, PALETTE_DELIRIOUS, "Delirious")
@@ -704,20 +642,8 @@ local function on_character_select_load()
     _G.charSelect.character_add_voice(E_MODEL_JER_OG, VOICETABLE_JER)
     _G.charSelect.character_add_celebration_star(E_MODEL_JER_OG, E_MODEL_TROPHY, TEX_TROPHY)
     -- BEACHY --
-    _G.charSelect.character_add_costume(CT_JESS, "Beachy", { "Jess dressed for a sunny vacation.",
-                                                    "Jer's younger sister.",
-                                                    "Age:  19,    Height:  6'0", 
-                                                    "",
-                                                    "Jess' moveset is designed for less", 
-                                                    "experienced players, with",
-                                                    "easier, assisted platforming.",
-                                                    "Her powerups are different, and will",
-                                                    "make some stars easier to get but",
-                                                    "others impossible without help.",
-                                                    "",
-                                                    "Type '/jj-moves' for help.",
-                                                    "Ver "..VER_NUM
-                                                    }, "JerThePear", {r = 000, g = 255, b = 125}, E_MODEL_JESS_BEACH, CT_MARIO, TEX_JESS)
+    _G.charSelect.character_add_costume(CT_JESS, "Beachy", { "Jess dressed for a sunny vacation. Age: 19, Height: 6'0, Jer's younger sister. Jess' moveset is designed for less experienced players, with easier platforming. Her powerups are different and will make some stars easier but others impossible. Type '/jj-moves' for help."},
+        "JerThePear", {r = 000, g = 255, b = 125}, E_MODEL_JESS_BEACH, CT_MARIO, TEX_JESS)
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS_BEACH, PALETTE_JESS_BEACH, "Default")
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS_BEACH, PALETTE_POPULAR_GIRL, "Popular Girl")
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS_BEACH, PALETTE_SUNNY, "Sunny")
@@ -725,40 +651,16 @@ local function on_character_select_load()
     _G.charSelect.character_add_caps(E_MODEL_JESS_BEACH, capJESS_BEACH)
     _G.charSelect.character_add_voice(E_MODEL_JESS_BEACH, VOICETABLE_JESS)
     -- JESSILYNN --
-    _G.charSelect.character_add_costume(CT_JESS, "Jessilynn", { "Jess dressed for the mines.",
-                                                    "Jer's younger sister.",
-                                                    "Age:  19,    Height:  6'0", 
-                                                    "",
-                                                    "Jess' moveset is designed for less", 
-                                                    "experienced players, with",
-                                                    "easier, assisted platforming.",
-                                                    "Her powerups are different, and will",
-                                                    "make some stars easier to get but",
-                                                    "others impossible without help.",
-                                                    "",
-                                                    "Type '/jj-moves' for help.",
-                                                    "Ver "..VER_NUM
-                                                    }, "JerThePear", {r = 000, g = 255, b = 125}, E_MODEL_JESSILYNN, CT_MARIO, TEX_JESS)
+    _G.charSelect.character_add_costume(CT_JESS, "Jessilynn", { "Jess dressed for the mines. Age: 19, Height: 6'0, Jer's younger sister. Jess' moveset is designed for less experienced players, with easier platforming. Her powerups are different and will make some stars easier but others impossible. Type '/jj-moves' for help."},
+        "JerThePear", {r = 000, g = 255, b = 125}, E_MODEL_JESSILYNN, CT_MARIO, TEX_JESS)
     _G.charSelect.character_add_palette_preset(E_MODEL_JESSILYNN, PALETTE_JESSILYNN, "Default")
     _G.charSelect.character_add_palette_preset(E_MODEL_JESSILYNN, PALETTE_ANNA, "Annalynn")
     _G.charSelect.character_add_animations(E_MODEL_JESSILYNN, ANIMTABLE_JESS)
     _G.charSelect.character_add_caps(E_MODEL_JESSILYNN, capJESSILYNN)
     _G.charSelect.character_add_voice(E_MODEL_JESSILYNN, VOICETABLE_JESS)
     -- JESSICA --
-    _G.charSelect.character_add_costume(CT_JESS, "Jessica", { "Jess wearing her usual clothes.",
-                                                    "Jer's younger sister.",
-                                                    "Age:  19,    Height:  6'0", 
-                                                    "",
-                                                    "Jess' moveset is designed for less", 
-                                                    "experienced players, with",
-                                                    "easier, assisted platforming.",
-                                                    "Her powerups are different, and will",
-                                                    "make some stars easier to get but",
-                                                    "others impossible without help.",
-                                                    "",
-                                                    "Type '/jj-moves' for help.",
-                                                    "Ver "..VER_NUM
-                                                    }, "JerThePear", {r = 000, g = 255, b = 125}, E_MODEL_JESS_OG, CT_MARIO, TEX_JESS)
+    _G.charSelect.character_add_costume(CT_JESS, "Jessica", { "Jess wearing her usual clothes. Age: 19, Height: 6'0, Jer's younger sister. Jess' moveset is designed for less experienced players, with easier platforming. Her powerups are different and will make some stars easier but others impossible. Type '/jj-moves' for help."},
+        "JerThePear", {r = 000, g = 255, b = 125}, E_MODEL_JESS_OG, CT_MARIO, TEX_JESS)
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS_OG, PALETTE_JESS_OG, "Default")
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS_OG, PALETTE_DEMON, "Demon")
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS_OG, PALETTE_JERIA, "Jeria")

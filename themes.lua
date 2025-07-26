@@ -6,8 +6,8 @@ for i = 0, (MAX_PLAYERS - 1) do
     VanishTimer = 0
 end
 
-ICE_CAP_MUSIC = audio_stream_load("ice_cap_theme.mp3")
-VANISH_CAP_MUSIC = audio_stream_load("vanish_cap_theme.mp3")
+ICE_CAP_MUSIC = audio_stream_load("ice_cap_theme.ogg")
+VANISH_CAP_MUSIC = audio_stream_load("vanish_cap_theme.ogg")
 
 local function get_cap_volume()
     local m = gMarioStates[0]

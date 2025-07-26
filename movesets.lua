@@ -48,17 +48,17 @@ for i = 0, MAX_PLAYERS - 1 do
     }
 end
 
-local SOUND_JER_BOOST_PULSE = audio_sample_load("jer_boost_pulse.mp3")
-local SOUND_JER_BOOST_HOLD = audio_sample_load("jer_boost_hold.mp3")
-local SOUND_FLUDD_PICKUP = audio_sample_load("fludd_pickup.mp3")
-local SOUND_FLUDD_HOVER = audio_sample_load("fludd_hover.mp3")
-local SOUND_FLUDD_HOVER_END = audio_sample_load("fludd_hover_end.mp3")
-local SOUND_FLUDD_LOOP = audio_stream_load("fludd_loop.mp3")
+local SOUND_JER_BOOST_PULSE = audio_sample_load("jer_boost_pulse.ogg")
+local SOUND_JER_BOOST_HOLD = audio_sample_load("jer_boost_hold.ogg")
+local SOUND_FLUDD_PICKUP = audio_sample_load("fludd_pickup.ogg")
+local SOUND_FLUDD_HOVER = audio_sample_load("fludd_hover.ogg")
+local SOUND_FLUDD_HOVER_END = audio_sample_load("fludd_hover_end.ogg")
+local SOUND_FLUDD_LOOP = audio_stream_load("fludd_loop.ogg")
 local SOUND_COMEDIC_METAL_PIPE = audio_sample_load("pipe.ogg")
-local SOUND_ZAP = audio_sample_load("zap.mp3")
+local SOUND_ZAP = audio_sample_load("zap.ogg")
 local SOUND_WHEEL_STEP = audio_sample_load("wheel_step.mp3")
-local SOUND_GALAXY_SPIN = audio_sample_load("smg_spin.mp3") -- this is an edited sound effect from extra characters
-local SOUND_JER_GP_JUMP = audio_sample_load("le_jump.mp3")
+local SOUND_GALAXY_SPIN = audio_sample_load("smg_spin.ogg") -- this is an edited sound effect from extra characters
+local SOUND_JER_GP_JUMP = audio_sample_load("le_jump.ogg")
 
 local E_MODEL_POCKET_EXPLOSIVE = smlua_model_util_get_id('pocket_explosive_geo')
 local E_MODEL_DYNAMITE = smlua_model_util_get_id('dynamite_geo')
@@ -478,7 +478,7 @@ local function act_galaxy_spin(m)
     smlua_anim_util_set_animation(m.marioObj, "jess_galaxy_spin")
 
     if m.actionTimer == 0 then
-        play_character_sound(m, CHAR_SOUND_PUNCH_HOO)
+        play_character_sound(m, CHAR_SOUND_HOOHOO)
         audio_sample_play(SOUND_GALAXY_SPIN, m.pos, 1)
         if m.forwardVel > 30 then
             m.forwardVel = 30
@@ -1081,8 +1081,8 @@ local function jer_update(m)
             m.faceAngle.y = m.intendedYaw
             set_mario_action(m, ACT_JUMP, 0)
             audio_sample_play(SOUND_JER_GP_JUMP, m.pos, 1)
+            m.vel.y = m.vel.y + 20
         end
-        m.vel.y = m.vel.y + 20
     end
     if m.action == ACT_JUMP and m.prevAction == ACT_GROUND_POUND_LAND and m.flags & MARIO_WING_CAP == 0 then
         if m.marioObj.header.gfx.animInfo.animFrame == -1 then
@@ -1489,12 +1489,12 @@ function jer_hud()
             djui_hud_set_resolution(RESOLUTION_N64)
 
             local widthCenter = djui_hud_get_screen_width()/2
-            local rotation = degrees_to_sm64(115 - (m.forwardVel*2.5))
+            local rotation = degrees_to_sm64(130 - (m.forwardVel*2.5))
             
 
             djui_hud_render_texture(speedometerBack, (widthCenter - 16), 60, 1, 1)
 
-            if m.flags & MARIO_METAL_CAP and m.forwardVel > 90 then
+            if m.forwardVel > 90 then
                 j.metalRotation = j.metalRotation - degrees_to_sm64(m.forwardVel/3)
                 djui_hud_set_rotation((rotation + j.metalRotation), 0.5, 0.9)
             else
