@@ -36,6 +36,8 @@ local TEX_JER = get_texture_info('jer_icon')
 local TEX_JESS = get_texture_info('jess_icon')
 local TEX_DAVY = get_texture_info('davy_icon')
 local TEX_TROPHY = get_texture_info('trophy')
+local TEX_ART_JER = get_texture_info('graffiti_jer')
+local TEX_ART_JESS = get_texture_info('graffiti_jess')
 
 -- Sound --
 local SOUND_MENU_THEME_JER = audio_stream_load('char-select-menu-theme-jer.ogg')
@@ -410,6 +412,16 @@ local PALETTE_JERIA = {
     [CAP]    = "462c1e",
     [EMBLEM] = "BCBCBC",
 }
+local PALETTE_JESS_RACER = {
+    [PANTS]  = "bbff4d",
+    [SHIRT]  = "ffffff",
+    [GLOVES] = "ffba90",
+    [SHOES]  = "922c4d",
+    [HAIR]   = "462c1e",
+    [SKIN]   = "ffba90",
+    [CAP]    = "404455",
+    [EMBLEM] = "8295af",
+}
 
 
 local PALETTE_DAVY =  {
@@ -595,6 +607,7 @@ local function on_character_select_load()
     _G.charSelect.character_add_voice(E_MODEL_JER, VOICETABLE_JER)
     _G.charSelect.character_add_celebration_star(E_MODEL_JER, E_MODEL_TROPHY, TEX_TROPHY)
     _G.charSelect.character_add_menu_instrumental(CT_JER, SOUND_MENU_THEME_JER)
+    _G.charSelect.character_add_grafitti(CT_JER, TEX_ART_JER)
 
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS, PALETTE_JESS, "Default")
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS, PALETTE_JESS_FIRE, "Fire")
@@ -603,6 +616,7 @@ local function on_character_select_load()
     _G.charSelect.character_add_health_meter(CT_JESS, HEALTH_METER_JESS)
     _G.charSelect.character_add_voice(E_MODEL_JESS, VOICETABLE_JESS)
     _G.charSelect.character_add_menu_instrumental(CT_JESS, SOUND_MENU_THEME_JESS)
+    _G.charSelect.character_add_grafitti(CT_JESS, TEX_ART_JESS)
 
     _G.charSelect.character_add_palette_preset(E_MODEL_DAVY, PALETTE_DAVY, "Default")
     _G.charSelect.character_add_palette_preset(E_MODEL_DAVY, PALETTE_GREEDY, "Greedy")
@@ -664,6 +678,7 @@ local function on_character_select_load()
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS_OG, PALETTE_JESS_OG, "Default")
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS_OG, PALETTE_DEMON, "Demon")
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS_OG, PALETTE_JERIA, "Jeria")
+    _G.charSelect.character_add_palette_preset(E_MODEL_JESS_OG, PALETTE_JESS_RACER, "Racer")
     _G.charSelect.character_add_animations(E_MODEL_JESS_OG, ANIMTABLE_JESS)
     _G.charSelect.character_add_caps(E_MODEL_JESS_OG, capJESS)
     _G.charSelect.character_add_voice(E_MODEL_JESS_OG, VOICETABLE_JESS)

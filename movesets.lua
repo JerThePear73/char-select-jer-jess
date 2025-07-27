@@ -8,7 +8,7 @@ local ACT_JERNADO = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR)
 local ACT_FLUDD_HOVER = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_CONTROL_JUMP_HEIGHT)
 local ACT_SPRINGFLIP = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION)
 local ACT_CARTWHEEL = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING | ACT_FLAG_ATTACKING)
-local ACT_CARTWHEEL_JUMP = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION)
+local ACT_CARTWHEEL_JUMP = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_CONTROL_JUMP_HEIGHT | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION)
 local ACT_GALAXY_SPIN = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING)
 local ACT_DAVY_MISSILE = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_MOVING | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION | ACT_FLAG_ATTACKING)
 local ACT_DAVY_DASH = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_MOVING | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION | ACT_FLAG_ATTACKING)
@@ -33,7 +33,6 @@ for i = 0, MAX_PLAYERS - 1 do
         fluddSoundLoop = false,
         stepTimer = 0,
         stepMax = 5,
-        twirlNerf = false,
         wheelAccel = 0,
         wheelSpeed = 0,
         animArg = 0,
@@ -306,11 +305,6 @@ local function act_fludd_hover(m)
     smlua_anim_util_set_animation(m.marioObj, "jess_fludd_hover")
     m.faceAngle.y = m.intendedYaw - approach_s32(limit_angle(m.intendedYaw - m.faceAngle.y), 0, 0x400, 0x400)
     m.particleFlags = m.particleFlags | PARTICLE_SNOW
-    --if j.jessHover > 45 then
-        --m.vel.y = (j.jessHover/2) - 20.5
-    --else
-        --m.vel.y = 2
-    --end
     m.vel.y = approach_f32(m.vel.y, target, 5, (-3.8))
 
     if m.forwardVel > 25 then
@@ -664,12 +658,8 @@ local function jess_set_action(m)
         m.vel.z = 0
     end
 
-
-    -- triple jump to twirl
-    if (m.action == ACT_TRIPLE_JUMP and m.forwardVel > 0) or m.action == ACT_FLYING_TRIPLE_JUMP then
-        j.twirlNerf = true
-        play_character_sound(m, CHAR_SOUND_YAHOO)
-		set_mario_action(m, ACT_TWIRLING, 0)
+    if m.action == ACT_FLYING_TRIPLE_JUMP then
+        m.action = ACT_TRIPLE_JUMP
     end
     -- pole jump twirl
     if m.action == ACT_TOP_OF_POLE_JUMP then
@@ -779,7 +769,7 @@ local function jess_update(m)
         set_mario_action(m, ACT_GROUND_POUND, 0)
     end
     -- ice cap
-    if m.flags & MARIO_METAL_CAP ~= 0 and (m.pos.y < (m.waterLevel + 1) or (m.floor.type == SURFACE_BURNING and m.pos.y < (m.floorHeight + 1))) and m.action ~= ACT_FALL_AFTER_STAR_GRAB and m.action ~= ACT_STAR_DANCE_EXIT and m.action ~= ACT_STAR_DANCE_NO_EXIT and m.action ~= ACT_ICE_SKATING then
+    if m.flags & MARIO_METAL_CAP ~= 0 and (m.pos.y < (m.waterLevel + 1) or (m.floor.type == SURFACE_BURNING and m.pos.y < (m.floorHeight + 1))) and m.action ~= ACT_FALL_AFTER_STAR_GRAB and m.action ~= ACT_STAR_DANCE_EXIT and m.action ~= ACT_STAR_DANCE_NO_EXIT and m.action ~= ACT_ICE_SKATING and m.action ~= ACT_PUTTING_ON_CAP then
         if m.action == ACT_DIVE or m.action == ACT_ICE_DIVE_SLIDE or m.action == ACT_DIVE_SLIDE then
             set_mario_action(m, ACT_ICE_DIVE_SLIDE, 0)
         else
@@ -795,8 +785,9 @@ local function jess_update(m)
             audio_sample_play(SOUND_FLUDD_HOVER_END, m.pos, 1)
             j.jessWater = j.jessWater - (jessMaxWater/10)
         else
-            set_mario_action(m, ACT_TRIPLE_JUMP, 0)
-            m.vel.y = m.vel.y - 4
+            m.faceAngle.y = m.intendedYaw
+            set_mario_action(m, ACT_JUMP, 0)
+            m.vel.y = m.vel.y + 20
         end
     end
     if (m.flags & MARIO_WING_CAP) ~= 0 and m.action == ACT_DOUBLE_JUMP and m.vel.y > 70 then
@@ -804,6 +795,15 @@ local function jess_update(m)
         m.vel.x = 0
         m.vel.z = 0
         m.forwardVel = 0
+    end
+    if m.action == ACT_JUMP and m.prevAction == ACT_GROUND_POUND_LAND and m.flags & MARIO_WING_CAP == 0 then
+        if m.marioObj.header.gfx.animInfo.animFrame == -1 then
+	        play_character_sound(m, CHAR_SOUND_YAHOO_WAHA_YIPPEE)
+        end
+        if m.vel.y > 20 then
+            m.particleFlags = m.particleFlags | PARTICLE_DUST
+        end
+        smlua_anim_util_set_animation(m.marioObj, "jess_gp_jump")
     end
     -- dont get stuck in water
     if (m.flags & MARIO_METAL_CAP) ~= 0 and (m.pos.y < (m.waterLevel + 1)) then
@@ -819,7 +819,7 @@ local function jess_update(m)
     end
 
     if (m.flags & MARIO_WING_CAP) ~= 0 then
-        local canFludd = (m.action == ACT_JUMP or m.action == ACT_DOUBLE_JUMP or m.action == ACT_TWIRLING or m.action == ACT_SIDE_FLIP or m.action == ACT_BACKFLIP or m.action == ACT_FREEFALL or m.action == ACT_WALL_KICK_AIR or m.action == ACT_FORWARD_ROLLOUT or m.action == ACT_STEEP_JUMP) and (m.vel.y < 10)
+        local canFludd = (m.action == ACT_JUMP or m.action == ACT_DOUBLE_JUMP or m.action == ACT_TWIRLING or m.action == ACT_SIDE_FLIP or m.action == ACT_BACKFLIP or m.action == ACT_FREEFALL or m.action == ACT_WALL_KICK_AIR or m.action == ACT_FORWARD_ROLLOUT or m.action == ACT_STEEP_JUMP or m.action == ACT_TRIPLE_JUMP) and (m.vel.y < 10)
 
         if m.pos.y == m.floorHeight and j.jessHover < jessMaxHover then
             j.jessHover = jessMaxHover
@@ -891,13 +891,10 @@ local function jess_update(m)
             audio_stream_stop(SOUND_FLUDD_LOOP)
         end
     end
-    -- nerf twirling
-    if m.action ~= ACT_TRIPLE_JUMP and m.action ~= ACT_TWIRLING and m.action ~= ACT_SPECIAL_TRIPLE_JUMP then
-        j.twirlNerf = false
+    if m.action == ACT_TRIPLE_JUMP and m.flags & MARIO_WING_CAP == 0 and m.vel.y < 0 then
+        m.vel.y = m.vel.y + 1
     end
-    if m.action == ACT_TWIRLING and m.vel.y < 0 and j.twirlNerf then
-        m.vel.y = m.vel.y - 3
-    end
+
     -- springflip
     if m.action == ACT_DIVE_SLIDE and (m.input & INPUT_Z_PRESSED) ~= 0 and (m.flags & MARIO_WING_CAP) == 0 and ((m.floor.normal.y > 0.94 and m.forwardVel > 20) or (m.forwardVel > 60)) then
         set_mario_action(m, ACT_SPRINGFLIP, 0)
