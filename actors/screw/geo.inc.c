@@ -7,20 +7,6 @@ const GeoLayout screw_Metal_Cap_State_Switch_opt1[] = {
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout screw_Metal_Cap_State_Switch_opt2[] = {
-	GEO_NODE_START(),
-	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, screw_Metal_Cap_DL_mesh_layer_1_mat_override_Jer_Metal_METAL_0),
-	GEO_CLOSE_NODE(),
-	GEO_RETURN(),
-};
-const GeoLayout screw_Metal_Cap_State_Switch_opt3[] = {
-	GEO_NODE_START(),
-	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, screw_Metal_Cap_DL_mesh_layer_1_mat_override_Jer_Metal_METAL_0),
-	GEO_CLOSE_NODE(),
-	GEO_RETURN(),
-};
 const GeoLayout screw_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
@@ -39,8 +25,6 @@ const GeoLayout screw_geo[] = {
 						GEO_DISPLAY_LIST(LAYER_OPAQUE, screw_Metal_Cap_DL_mesh_layer_1),
 					GEO_CLOSE_NODE(),
 					GEO_BRANCH(1, screw_Metal_Cap_State_Switch_opt1),
-					GEO_BRANCH(1, screw_Metal_Cap_State_Switch_opt2),
-					GEO_BRANCH(1, screw_Metal_Cap_State_Switch_opt3),
 				GEO_CLOSE_NODE(),
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),

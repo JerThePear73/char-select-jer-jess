@@ -5,7 +5,6 @@ extern Lights1 j_cap_Cap_Bottom__CAP__lights;
 extern Lights1 j_cap_Hat__CAP__lights;
 extern Lights1 j_cap_Logo__CAP__lights;
 extern u8 j_cap_j_emblem_ia8[];
-extern u8 j_cap_jer_shade_ia8[];
 extern u8 j_cap_emblem_fill_i8[];
 extern Vtx j_cap_Normal_Cap_DL_mesh_layer_1_vtx_0[6];
 extern Gfx j_cap_Normal_Cap_DL_mesh_layer_1_tri_0[];

@@ -69,7 +69,6 @@ extern Lights1 davy_Metal_Wing_Tip_lights;
 extern Lights1 davy_Metal_Wing_Base_lights;
 extern u8 davy_davy_metal_base_rgba16[];
 extern u8 davy_davy_metal_shine_rgba16[];
-extern u8 davy_quin_shade_ia8[];
 extern u8 davy_cap_logo_rgba16[];
 extern u8 davy_davy_letter_rgba16[];
 extern u8 davy_davy_eyes_center_rgba16_rgba16[];

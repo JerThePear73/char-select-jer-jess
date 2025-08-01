@@ -107,11 +107,6 @@ u8 jer_jer_eyes_center_rgba16_rgba16[] = {
 	#include "actors/jer/jer_eyes_center.rgba16.inc.c"
 };
 
-Gfx jer_jer_shade_alpha_ia8_aligner[] = {gsSPEndDisplayList()};
-u8 jer_jer_shade_alpha_ia8[] = {
-	#include "actors/jer/jer_shade_alpha.ia8.inc.c"
-};
-
 Gfx jer_emblem_fill_rgba16_aligner[] = {gsSPEndDisplayList()};
 u8 jer_emblem_fill_rgba16[] = {
 	#include "actors/jer/emblem_fill.rgba16.inc.c"
@@ -4858,13 +4853,9 @@ Gfx mat_jer_Hat__CAP_[] = {
 Gfx mat_jer_Cap_Bottom__CAP_[] = {
 	gsSPCopyLightsPlayerPart(CAP),
 	gsDPPipeSync(),
-	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
+	gsDPSetCombineLERP(SHADE, 0, PRIMITIVE, 0, 0, 0, 0, ENVIRONMENT, SHADE, 0, PRIMITIVE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, jer_jer_shade_alpha_ia8),
-	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 511, 512),
-	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
-	gsDPSetTileSize(0, 0, 0, 124, 124),
+	gsDPSetPrimColor(0, 0, 137, 137, 137, 255),
 	gsSPEndDisplayList(),
 };
 

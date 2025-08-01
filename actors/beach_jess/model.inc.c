@@ -103,11 +103,6 @@ u8 beach_jess_beach_jess_towel_ia8[] = {
 	#include "actors/beach_jess/beach_jess_towel.ia8.inc.c"
 };
 
-Gfx beach_jess_jess_shade_alpha_ia8_aligner[] = {gsSPEndDisplayList()};
-u8 beach_jess_jess_shade_alpha_ia8[] = {
-	#include "actors/beach_jess/jess_shade_alpha.ia8.inc.c"
-};
-
 Gfx beach_jess_jess_eyes_center_rgba16_aligner[] = {gsSPEndDisplayList()};
 u8 beach_jess_jess_eyes_center_rgba16[] = {
 	#include "actors/beach_jess/jess_eyes_center.rgba16.inc.c"
@@ -2309,13 +2304,13 @@ Vtx beach_jess_Fludd_DL_mesh_layer_1_vtx_1[45] = {
 	{{ {116, -168, 0}, 0, {496, -16}, {176, 158, 0, 255} }},
 	{{ {103, -156, 0}, 0, {496, -16}, {251, 129, 0, 255} }},
 	{{ {116, -143, -43}, 0, {325, -16}, {176, 207, 171, 255} }},
-	{{ {116, -135, -43}, 0, {268, -16}, {158, 234, 178, 255} }},
+	{{ {116, -102, -43}, 0, {212, -16}, {158, 22, 178, 255} }},
 	{{ {116, -94, -43}, 0, {155, -16}, {176, 49, 171, 255} }},
 	{{ {103, -99, -33}, 0, {155, -16}, {251, 63, 146, 255} }},
 	{{ {103, -81, 0}, 0, {-16, -16}, {251, 127, 0, 255} }},
 	{{ {116, -69, 0}, 0, {-16, -16}, {176, 98, 0, 255} }},
 	{{ {116, -94, 43}, 0, {155, -16}, {176, 49, 85, 255} }},
-	{{ {116, -102, -43}, 0, {212, -16}, {158, 22, 178, 255} }},
+	{{ {116, -135, -43}, 0, {268, -16}, {158, 234, 178, 255} }},
 	{{ {116, -135, 43}, 0, {268, -16}, {158, 234, 78, 255} }},
 	{{ {116, -102, 43}, 0, {212, -16}, {158, 22, 78, 255} }},
 };
@@ -2339,10 +2334,10 @@ Gfx beach_jess_Fludd_DL_mesh_layer_1_tri_1[] = {
 	gsSP2Triangles(27, 30, 29, 0, 27, 31, 30, 0),
 	gsSPVertex(beach_jess_Fludd_DL_mesh_layer_1_vtx_1 + 32, 13, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
-	gsSP2Triangles(4, 3, 0, 0, 5, 4, 0, 0),
+	gsSP2Triangles(4, 3, 0, 0, 0, 5, 4, 0),
 	gsSP2Triangles(0, 6, 5, 0, 7, 5, 6, 0),
 	gsSP2Triangles(7, 8, 5, 0, 7, 9, 8, 0),
-	gsSP2Triangles(5, 10, 4, 0, 11, 12, 9, 0),
+	gsSP2Triangles(4, 10, 3, 0, 11, 12, 9, 0),
 	gsSPEndDisplayList(),
 };
 
@@ -8351,13 +8346,9 @@ Gfx mat_beach_jess_Hair__HAIR_[] = {
 Gfx mat_beach_jess_Dark_Hair__HAIR_[] = {
 	gsSPCopyLightsPlayerPart(HAIR),
 	gsDPPipeSync(),
-	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
+	gsDPSetCombineLERP(SHADE, 0, PRIMITIVE, 0, 0, 0, 0, ENVIRONMENT, SHADE, 0, PRIMITIVE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, beach_jess_jess_shade_alpha_ia8),
-	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 511, 512),
-	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
-	gsDPSetTileSize(0, 0, 0, 124, 124),
+	gsDPSetPrimColor(0, 0, 137, 137, 137, 255),
 	gsSPEndDisplayList(),
 };
 
@@ -8995,13 +8986,6 @@ Gfx beach_jess_Right_Shoe_DL_mesh_layer_1[] = {
 	gsSPDisplayList(beach_jess_Right_Shoe_DL_mesh_layer_1_tri_0),
 	gsSPDisplayList(mat_beach_jess_Skin__SKIN_),
 	gsSPDisplayList(beach_jess_Right_Shoe_DL_mesh_layer_1_tri_1),
-	gsDPPipeSync(),
-	gsSPSetGeometryMode(G_LIGHTING),
-	gsSPClearGeometryMode(G_TEXTURE_GEN),
-	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
-	gsSPTexture(65535, 65535, 0, 0, 0),
-	gsDPSetEnvColor(255, 255, 255, 255),
-	gsDPSetAlphaCompare(G_AC_NONE),
 	gsSPEndDisplayList(),
 };
 
@@ -9155,6 +9139,10 @@ Gfx beach_jess_Metal_VL_Tone_Luigi_Switch_Option_Right_Shoe_DL_mesh_layer_1[] = 
 	gsSPDisplayList(mat_beach_jess_Metal__METAL_),
 	gsSPDisplayList(beach_jess_Metal_VL_Tone_Luigi_Switch_Option_Right_Shoe_DL_mesh_layer_1_tri_0),
 	gsSPDisplayList(mat_revert_beach_jess_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx beach_jess_material_revert_render_settings[] = {
 	gsDPPipeSync(),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPClearGeometryMode(G_TEXTURE_GEN),
@@ -9162,18 +9150,16 @@ Gfx beach_jess_Metal_VL_Tone_Luigi_Switch_Option_Right_Shoe_DL_mesh_layer_1[] = 
 	gsSPTexture(65535, 65535, 0, 0, 0),
 	gsDPSetEnvColor(255, 255, 255, 255),
 	gsDPSetAlphaCompare(G_AC_NONE),
-
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, 0),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
+	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP  | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(7, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(0, 0, 0, 124, 124),
-
 	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, 0),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 256, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
 	gsDPLoadBlock(6, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 256, 1, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(1, 0, 0, 124, 124),
-
 	gsSPEndDisplayList(),
 };
+

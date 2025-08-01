@@ -1125,7 +1125,7 @@ local function jer_update(m)
         end
     end
     -- jernado
-    if m.action == ACT_GROUND_POUND and (m.input & INPUT_A_PRESSED) ~= 0 and j.canJernado == true then
+    if m.action == ACT_GROUND_POUND and (m.input & INPUT_A_PRESSED) ~= 0 and j.canJernado == true and m.pos.y > (m.floorHeight + 100) then
         set_mario_action(m, ACT_JERNADO, 0)
         j.canJernado = false
     end

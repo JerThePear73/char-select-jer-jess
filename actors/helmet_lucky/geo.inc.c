@@ -1,13 +1,13 @@
 #include "src/game/envfx_snow.h"
 
-const GeoLayout davy_cap_Normal_Cap_State_Switch_opt1[] = {
+const GeoLayout helmet_lucky_Normal_Cap_State_Switch_opt1[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, davy_cap_Normal_Cap_DL_mesh_layer_1),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, helmet_lucky_Normal_Cap_DL_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
-const GeoLayout davy_cap_geo[] = {
+const GeoLayout helmet_lucky_geo[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
 		GEO_SHADOW(0, 180, 75),
@@ -22,14 +22,14 @@ const GeoLayout davy_cap_geo[] = {
 				GEO_OPEN_NODE(),
 					GEO_NODE_START(),
 					GEO_OPEN_NODE(),
-						GEO_DISPLAY_LIST(LAYER_OPAQUE, davy_cap_Normal_Cap_DL_mesh_layer_1),
+						GEO_DISPLAY_LIST(LAYER_OPAQUE, helmet_lucky_Normal_Cap_DL_mesh_layer_1),
 					GEO_CLOSE_NODE(),
-					GEO_BRANCH(1, davy_cap_Normal_Cap_State_Switch_opt1),
+					GEO_BRANCH(1, helmet_lucky_Normal_Cap_State_Switch_opt1),
 				GEO_CLOSE_NODE(),
 			GEO_CLOSE_NODE(),
 		GEO_CLOSE_NODE(),
-		GEO_DISPLAY_LIST(LAYER_OPAQUE, davy_cap_material_revert_render_settings),
-		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, davy_cap_material_revert_render_settings),
+		GEO_DISPLAY_LIST(LAYER_OPAQUE, helmet_lucky_material_revert_render_settings),
+		GEO_DISPLAY_LIST(LAYER_TRANSPARENT, helmet_lucky_material_revert_render_settings),
 	GEO_CLOSE_NODE(),
 	GEO_END(),
 };

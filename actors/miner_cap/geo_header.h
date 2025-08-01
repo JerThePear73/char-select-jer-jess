@@ -4,7 +4,6 @@ extern Lights1 miner_cap_Jessilynn_Cap_Bottom__CAP__lights;
 extern Lights1 miner_cap_Jessilynn_Cap__CAP__lights;
 extern Lights1 miner_cap_Jessilynn_Hair__HAIR__lights;
 extern Lights1 miner_cap_Jessilynn_Headlamp__HAIR__lights;
-extern u8 miner_cap_jess_shade_ia8[];
 extern u8 miner_cap_jess_headlamp_rgba16[];
 extern Vtx miner_cap_Normal_Cap_DL_mesh_layer_1_vtx_0[9];
 extern Gfx miner_cap_Normal_Cap_DL_mesh_layer_1_tri_0[];

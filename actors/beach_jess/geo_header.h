@@ -80,7 +80,6 @@ extern Lights1 beach_jess_Shoes__SHOES__lights;
 extern Lights1 beach_jess_Metal__METAL__lights;
 extern Lights1 beach_jess_Headband_Metal_lights;
 extern u8 beach_jess_beach_jess_towel_ia8[];
-extern u8 beach_jess_jess_shade_alpha_ia8[];
 extern u8 beach_jess_jess_eyes_center_rgba16[];
 extern u8 beach_jess_jess_eyes_half_rgba16[];
 extern u8 beach_jess_jess_eyes_closed_rgba16[];
@@ -333,3 +332,4 @@ extern Gfx beach_jess_Metal_VL_Tone_Luigi_Switch_Option_Left_Shoe_mesh_layer_1[]
 extern Gfx beach_jess_Metal_VL_Tone_Luigi_Switch_Option_Right_Thigh_Color_mesh_layer_1[];
 extern Gfx beach_jess_Metal_VL_Tone_Luigi_Switch_Option_Right_Leg_mesh_layer_1[];
 extern Gfx beach_jess_Metal_VL_Tone_Luigi_Switch_Option_Right_Shoe_DL_mesh_layer_1[];
+extern Gfx beach_jess_material_revert_render_settings[];

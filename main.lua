@@ -243,32 +243,42 @@ local PALETTE_80_SUNSET = {
 local PALETTE_LUCKY = {
     [PANTS]  = "333333",
     [SHIRT]  = "333333",
-    [GLOVES] = "222222",
+    [GLOVES] = "FFC900",
     [SHOES]  = "222222",
-    [HAIR]   = "008000",
-    [SKIN]   = "ffba90",
-    [CAP]    = "FFC900",
-    [EMBLEM] = "FFC900",
+    [HAIR]   = "462C1E",
+    [SKIN]   = "FFC2AB",
+    [CAP]    = "333333",
+    [EMBLEM] = "008000",
 }
 local PALETTE_BURNOUT = {
-    [PANTS]  = "777777",
-    [SHIRT]  = "4a3333",
-    [GLOVES] = "222222",
-    [SHOES]  = "222222",
-    [HAIR]   = "ff0000",
-    [SKIN]   = "ffba90",
-    [CAP]    = "222222",
-    [EMBLEM] = "ff0000",
+    [PANTS]  = "333333",
+    [SHIRT]  = "827654",
+    [GLOVES] = "542d00",
+    [SHOES]  = "544b3a",
+    [HAIR]   = "2e221e",
+    [SKIN]   = "FFC2AB",
+    [CAP]    = "aaaaaa",
+    [EMBLEM] = "4b7047",
 }
 local PALETTE_LENNY = {
-    [PANTS]  = "222222",
+    [PANTS]  = "444444",
     [SHIRT]  = "566b2e",
-    [GLOVES] = "222222",
-    [SHOES]  = "555555",
-    [HAIR]   = "d2002b",
-    [SKIN]   = "ffba90",
-    [CAP]    = "000000",
+    [GLOVES] = "000000",
+    [SHOES]  = "222222",
+    [HAIR]   = "322220",
+    [SKIN]   = "b77351",
+    [CAP]    = "b00c1f",
     [EMBLEM] = "ff6900",
+}
+local PALETTE_SAUL = {
+    [PANTS]  = "4b0079",
+    [SHIRT]  = "bbff4d",
+    [GLOVES] = "bbff4d",
+    [SHOES]  = "462c1e",
+    [HAIR]   = "462c1e",
+    [SKIN]   = "ffba90",
+    [CAP]    = "666666",
+    [EMBLEM] = "462c1e",
 }
 local PALETTE_JER_OG = {
     [PANTS]  = "303030",
@@ -429,7 +439,7 @@ local PALETTE_DAVY =  {
     [SHIRT]  = "222222",
     [GLOVES] = "ff8000",
     [SHOES]  = "552945",
-    [HAIR]   = "ffffff",
+    [HAIR]   = "888888",
     [SKIN]   = "ffffff",
     [CAP]    = "ff8000",
     [EMBLEM] = "ff8000",
@@ -439,7 +449,7 @@ local PALETTE_GREEDY =  {
     [SHIRT]  = "ff8000",
     [GLOVES] = "ffffb2",
     [SHOES]  = "bc0000",
-    [HAIR]   = "ffa200",
+    [HAIR]   = "ffa300",
     [SKIN]   = "ffffb2",
     [CAP]    = "5724aa",
     [EMBLEM] = "5724aa",
@@ -454,6 +464,13 @@ local capJER = {
 
 local capJER_BEACH = {
     normal = smlua_model_util_get_id("shades_geo"),
+    wing = smlua_model_util_get_id("nos_tank_geo"),
+    metal = smlua_model_util_get_id("metal_flower_geo"),
+    metalWing = nil
+}
+
+local capJER_LUCKY = {
+    normal = smlua_model_util_get_id("helmet_lucky_geo"),
     wing = smlua_model_util_get_id("nos_tank_geo"),
     metal = smlua_model_util_get_id("metal_flower_geo"),
     metalWing = nil
@@ -491,7 +508,7 @@ local capDAVY = {
     normal = smlua_model_util_get_id("davy_cap_geo"),
     wing = smlua_model_util_get_id("davy_wing_cap_geo"),
     metal = smlua_model_util_get_id("screw_geo"),
-    metalWing = smlua_model_util_get_id("davy_metal_wing_cap_geo")
+    metalWing = nil
 }
 
 local ANIMTABLE_JER = {
@@ -640,8 +657,9 @@ local function on_character_select_load()
     _G.charSelect.character_add_palette_preset(E_MODEL_LUCKY, PALETTE_LUCKY, "Rider")
     _G.charSelect.character_add_palette_preset(E_MODEL_LUCKY, PALETTE_BURNOUT, "Burnout")
     _G.charSelect.character_add_palette_preset(E_MODEL_LUCKY, PALETTE_LENNY, "Lenny")
+    _G.charSelect.character_add_palette_preset(E_MODEL_LUCKY, PALETTE_SAUL, "Fungus")
     _G.charSelect.character_add_animations(E_MODEL_LUCKY, ANIMTABLE_JER)
-    _G.charSelect.character_add_caps(E_MODEL_LUCKY, capJER)
+    _G.charSelect.character_add_caps(E_MODEL_LUCKY, capJER_LUCKY)
     _G.charSelect.character_add_voice(E_MODEL_LUCKY, VOICETABLE_JER)
     _G.charSelect.character_add_celebration_star(E_MODEL_LUCKY, E_MODEL_TROPHY, TEX_TROPHY)
     -- JERAD --

@@ -81,7 +81,6 @@ extern Lights1 jer_Shoes__SHOES__lights;
 extern Lights1 jer_Metal__METAL__lights;
 extern Lights1 jer_Metal_Unculled__METAL__lights;
 extern u8 jer_jer_eyes_center_rgba16_rgba16[];
-extern u8 jer_jer_shade_alpha_ia8[];
 extern u8 jer_emblem_fill_rgba16[];
 extern u8 jer_j_emblem_rgba16[];
 extern u8 jer_jer_eyes_half_rgba16_rgba16[];

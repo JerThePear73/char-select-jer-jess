@@ -19,11 +19,6 @@ u8 j_cap_j_emblem_ia8[] = {
 	#include "actors/j_cap/j_emblem.ia8.inc.c"
 };
 
-Gfx j_cap_jer_shade_ia8_aligner[] = {gsSPEndDisplayList()};
-u8 j_cap_jer_shade_ia8[] = {
-	#include "actors/j_cap/jer_shade.ia8.inc.c"
-};
-
 Gfx j_cap_emblem_fill_i8_aligner[] = {gsSPEndDisplayList()};
 u8 j_cap_emblem_fill_i8[] = {
 	#include "actors/j_cap/emblem_fill.i8.inc.c"
@@ -162,13 +157,9 @@ Gfx mat_j_cap_J__EMBLEM_[] = {
 Gfx mat_j_cap_Cap_Bottom__CAP_[] = {
 	gsSPCopyLightsPlayerPart(CAP),
 	gsDPPipeSync(),
-	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
+	gsDPSetCombineLERP(SHADE, 0, PRIMITIVE, 0, 0, 0, 0, ENVIRONMENT, SHADE, 0, PRIMITIVE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, j_cap_jer_shade_ia8),
-	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 511, 512),
-	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
-	gsDPSetTileSize(0, 0, 0, 124, 124),
+	gsDPSetPrimColor(0, 0, 137, 137, 137, 255),
 	gsSPEndDisplayList(),
 };
 

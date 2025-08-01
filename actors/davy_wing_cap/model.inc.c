@@ -14,15 +14,6 @@ Lights1 davy_wing_cap_Davy_Emblem__EMBLEM__lights = gdSPDefLights1(
 	0x7F, 0x45, 0x0,
 	0xFF, 0x90, 0x0, 0x28, 0x28, 0x28);
 
-Lights1 davy_wing_cap_Metal__METAL__lights = gdSPDefLights1(
-	0xFF, 0xFF, 0xFF,
-	0x0, 0x0, 0x0, 0x28, 0x28, 0x28);
-
-Gfx davy_wing_cap_quin_shade_ia8_aligner[] = {gsSPEndDisplayList()};
-u8 davy_wing_cap_quin_shade_ia8[] = {
-	#include "actors/davy_wing_cap/quin_shade.ia8.inc.c"
-};
-
 Gfx davy_wing_cap_cap_logo_rgba16_aligner[] = {gsSPEndDisplayList()};
 u8 davy_wing_cap_cap_logo_rgba16[] = {
 	#include "actors/davy_wing_cap/cap_logo.rgba16.inc.c"
@@ -31,16 +22,6 @@ u8 davy_wing_cap_cap_logo_rgba16[] = {
 Gfx davy_wing_cap_davy_letter_rgba16_aligner[] = {gsSPEndDisplayList()};
 u8 davy_wing_cap_davy_letter_rgba16[] = {
 	#include "actors/davy_wing_cap/davy_letter.rgba16.inc.c"
-};
-
-Gfx davy_wing_cap_Metal_Shade_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 davy_wing_cap_Metal_Shade_rgba16_rgba16[] = {
-	#include "actors/davy_wing_cap/Metal_Shade.rgba16.inc.c"
-};
-
-Gfx davy_wing_cap_Metal_Light_rgba16_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 davy_wing_cap_Metal_Light_rgba16_rgba16[] = {
-	#include "actors/davy_wing_cap/Metal_Light.rgba16.inc.c"
 };
 
 Gfx davy_wing_cap_wing_2_ia8_aligner[] = {gsSPEndDisplayList()};
@@ -231,13 +212,9 @@ Gfx mat_davy_wing_cap_Davy_Cap__CAP_[] = {
 Gfx mat_davy_wing_cap_Davy_Cap_Bottom__CAP_[] = {
 	gsSPCopyLightsPlayerPart(CAP),
 	gsDPPipeSync(),
-	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
+	gsDPSetCombineLERP(SHADE, 0, PRIMITIVE, 0, 0, 0, 0, ENVIRONMENT, SHADE, 0, PRIMITIVE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, davy_wing_cap_quin_shade_ia8),
-	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 511, 512),
-	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
-	gsDPSetTileSize(0, 0, 0, 124, 124),
+	gsDPSetPrimColor(0, 0, 137, 137, 137, 255),
 	gsSPEndDisplayList(),
 };
 
@@ -264,33 +241,6 @@ Gfx mat_davy_wing_cap_Davy_Emblem__EMBLEM_[] = {
 	gsDPLoadBlock(7, 0, 0, 1023, 256),
 	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(0, 0, 0, 124, 124),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_davy_wing_cap_Metal__METAL_[] = {
-	gsSPGeometryMode(G_CULL_BACK, G_TEXTURE_GEN),
-	gsSPLight(&davy_wing_cap_Metal__METAL__lights.l, 1),
-    gsSPLight(&davy_wing_cap_Metal__METAL__lights.a, 2),
-    gsSPCopyLightEXT(2, 15),
-	gsDPPipeSync(),
-	gsDPSetCombineLERP(TEXEL0, 0, SHADE, TEXEL1, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, TEXEL1, 0, 0, 0, ENVIRONMENT),
-	gsSPTexture(4032, 1984, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, davy_wing_cap_Metal_Shade_rgba16_rgba16),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 2047, 128),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0),
-	gsDPSetTileSize(0, 0, 0, 252, 124),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, davy_wing_cap_Metal_Light_rgba16_rgba16),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 512, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(6, 0, 0, 2047, 128),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 512, 1, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0),
-	gsDPSetTileSize(1, 0, 0, 252, 124),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_revert_davy_wing_cap_Metal__METAL_[] = {
-	gsSPGeometryMode(G_TEXTURE_GEN, G_CULL_BACK),
-	gsDPPipeSync(),
 	gsSPEndDisplayList(),
 };
 
@@ -344,27 +294,7 @@ Gfx davy_wing_cap_Wing_Cap_mesh_layer_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx davy_wing_cap_Wing_Cap_mesh_layer_1_mat_override_Metal__METAL__0[] = {
-	gsSPDisplayList(mat_davy_wing_cap_Metal__METAL_),
-	gsSPDisplayList(davy_wing_cap_Wing_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(davy_wing_cap_Wing_Cap_mesh_layer_1_tri_1),
-	gsSPDisplayList(davy_wing_cap_Wing_Cap_mesh_layer_1_tri_2),
-	gsSPDisplayList(davy_wing_cap_Wing_Cap_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_davy_wing_cap_Metal__METAL_),
-	gsSPEndDisplayList(),
-};
-
 Gfx davy_wing_cap_Wings_mesh_layer_4[] = {
-	gsSPDisplayList(mat_davy_wing_cap_Wing_Tip),
-	gsSPDisplayList(davy_wing_cap_Wings_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_davy_wing_cap_Wing_Tip),
-	gsSPDisplayList(mat_davy_wing_cap_Wing_Base),
-	gsSPDisplayList(davy_wing_cap_Wings_mesh_layer_4_tri_1),
-	gsSPDisplayList(mat_revert_davy_wing_cap_Wing_Base),
-	gsSPEndDisplayList(),
-};
-
-Gfx davy_wing_cap_Wings_mesh_layer_4_mat_override_Metal__METAL__0[] = {
 	gsSPDisplayList(mat_davy_wing_cap_Wing_Tip),
 	gsSPDisplayList(davy_wing_cap_Wings_mesh_layer_4_tri_0),
 	gsSPDisplayList(mat_revert_davy_wing_cap_Wing_Tip),

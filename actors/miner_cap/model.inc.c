@@ -14,11 +14,6 @@ Lights1 miner_cap_Jessilynn_Headlamp__HAIR__lights = gdSPDefLights1(
 	0x27, 0x15, 0xB,
 	0x56, 0x34, 0x21, 0x28, 0x28, 0x28);
 
-Gfx miner_cap_jess_shade_ia8_aligner[] = {gsSPEndDisplayList()};
-u8 miner_cap_jess_shade_ia8[] = {
-	#include "actors/miner_cap/jess_shade.ia8.inc.c"
-};
-
 Gfx miner_cap_jess_headlamp_rgba16_aligner[] = {gsSPEndDisplayList()};
 u8 miner_cap_jess_headlamp_rgba16[] = {
 	#include "actors/miner_cap/jess_headlamp.rgba16.inc.c"
@@ -189,13 +184,9 @@ Gfx miner_cap_Normal_Cap_DL_mesh_layer_1_tri_3[] = {
 Gfx mat_miner_cap_Jessilynn_Cap_Bottom__CAP_[] = {
 	gsSPCopyLightsPlayerPart(CAP),
 	gsDPPipeSync(),
-	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
+	gsDPSetCombineLERP(SHADE, 0, PRIMITIVE, 0, 0, 0, 0, ENVIRONMENT, SHADE, 0, PRIMITIVE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, miner_cap_jess_shade_ia8),
-	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 511, 512),
-	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
-	gsDPSetTileSize(0, 0, 0, 124, 124),
+	gsDPSetPrimColor(0, 0, 137, 137, 137, 255),
 	gsSPEndDisplayList(),
 };
 
