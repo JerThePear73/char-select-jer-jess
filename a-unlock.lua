@@ -31,22 +31,20 @@ local function unlock_progress()
 		elseif LEVEL ~= 9 then
 			davyProgress = 0
 		end
-	elseif davyProgress == 2 then -- king bobomb death check
-		
-		davyProgress = 3 -- remove this if i figure out how to check for king bobomb death
+	elseif davyProgress == 2 then
 
 		if m.dialogId == DIALOG_116 then
 			davyProgress = davyProgress + 1
 		elseif m.numCoins > 69 or LEVEL ~= 9 then
 			davyProgress = 0
 		end
-	elseif davyProgress == 3 then
+	elseif davyProgress == 2 then
 		if (LEVEL ~= 9 and LEVEL ~= 6 and LEVEL ~= 26 and LEVEL ~= 16) or m.action == ACT_FALL_AFTER_STAR_GRAB or m.action == ACT_EXIT_AIRBORNE then
 			davyProgress = 0
 		end
 		if LEVEL == 26 and (m.action == ACT_DROWNING or m.action == ACT_WATER_DEATH) then
 			audio_sample_play(davy_laugh, m.pos, 0.5)
-			davyProgress = davyProgress + 1
+			davyProgress = 4
 		end
 	elseif davyProgress == 4 then
 		if m.playerIndex == 0 then
