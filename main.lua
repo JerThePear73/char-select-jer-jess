@@ -212,13 +212,13 @@ local PALETTE_JER_FIRE = {
 }
 local PALETTE_JER_RETRO = {
     [PANTS]  = "F4A000",
-    [SHIRT]  = "3F6B00",
+    [SHIRT]  = "257641",
     [GLOVES] = "4c4c4c",
-    [SHOES]  = "4c4c4c",
-    [HAIR]   = "3F6B00",
+    [SHOES]  = "257641",
+    [HAIR]   = "257641",
     [SKIN]   = "ffba90",
-    [CAP]    = "3F6B00",
-    [EMBLEM] = "3F6B00",
+    [CAP]    = "257641",
+    [EMBLEM] = "257641",
 }
 local PALETTE_JER_BEACH = {
     [PANTS]  = "FF8900",
