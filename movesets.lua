@@ -657,10 +657,6 @@ local function jess_set_action(m)
         m.vel.y = 0
         m.vel.z = 0
     end
-
-    if m.action == ACT_FLYING_TRIPLE_JUMP then
-        m.action = ACT_TRIPLE_JUMP
-    end
     -- pole jump twirl
     if m.action == ACT_TOP_OF_POLE_JUMP then
         m.vel.y = 70
@@ -672,7 +668,7 @@ local function jess_set_action(m)
         m.vel.y = m.vel.y + 7
     end
     -- extra height on triple jump
-    if m.action == ACT_TRIPLE_JUMP then
+    if m.action == ACT_TRIPLE_JUMP and m.flags & MARIO_WING_CAP == 0 then
         m.vel.y = m.vel.y + 5
     end
     -- sunshine dive
@@ -683,6 +679,10 @@ local function jess_set_action(m)
     -- dont allow flying
     if m.action == ACT_FLYING then
         set_mario_action(m, ACT_FREEFALL, 0)
+    end
+    if m.action == ACT_FLYING_TRIPLE_JUMP then
+        m.action = ACT_TRIPLE_JUMP
+        m.vel.y = m.vel.y - 7
     end
     -- galaxy spin
     if (m.action == ACT_JUMP_KICK or (m.action == ACT_DIVE and ((m.input & INPUT_NONZERO_ANALOG == 0 or m.forwardVel < 15) and m.vel.y < 15 and (m.prevAction ~= ACT_GROUND_POUND and m.prevAction ~= ACT_WALKING and m.prevAction ~= ACT_ICE_SKATING and m.prevAction ~= ACT_FORWARD_ROLLOUT)))) then
@@ -891,6 +891,8 @@ local function jess_update(m)
             audio_stream_stop(SOUND_FLUDD_LOOP)
         end
     end
+
+    -- floaty triple jump
     if m.action == ACT_TRIPLE_JUMP and m.flags & MARIO_WING_CAP == 0 and m.vel.y < 0 then
         m.vel.y = m.vel.y + 1
     end
