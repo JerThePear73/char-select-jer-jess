@@ -26,7 +26,7 @@ local E_MODEL_TROPHY = smlua_model_util_get_id('trophy_geo')
 
 -- Credits --
 local MOD_NAME = "Jer + Jess"
-_G.charSelect.credit_add(MOD_NAME, "Jer", "Creator")
+_G.charSelect.credit_add(MOD_NAME, "JerThePear", "Creator")
 _G.charSelect.credit_add(MOD_NAME, "SaulTube", "Sprites, Coding")
 _G.charSelect.credit_add(MOD_NAME, "Kaktus64", "Coding")
 _G.charSelect.credit_add(MOD_NAME, "Squishy6094", "Character Select, Coding")
