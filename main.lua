@@ -1,5 +1,5 @@
 -- name: [CS] \\#00aa00\\Jer \\#ffffff\\+ \\#22ccff\\Jess
--- description: Mod that adds My characters to SM64 along with their own custom movesets.\n\n\\#ff7777\\This Pack requires Character Select\nto use as a Library!
+-- description: [CS] \\#00aa00\\Jer \\#ffffff\\+ \\#22ccff\\Jess\n\\#ffffff\\By \\#008800\\JerThePear\n\n\\#ffffff\\Jer and Jess find an old decrepit N64 in their attic and after turning it on, the two siblings get sucked into their TV and now must run around collecting Power Stars.\n\n\\#ff8000\\NEW Davy Mode!\n\n\\#ff7777\\This Pack requires Character Select\nto use as a Library!
 
 local TEXT_MOD_NAME = "Jer + Jess"
 

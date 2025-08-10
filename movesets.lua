@@ -207,7 +207,7 @@ hook_mario_action(ACT_ICE_DIVE_SLIDE, act_ice_dive_slide)
 local function act_elegant_jump(m)
     local j = gJerJessExtraStates[m.playerIndex]
 
-    if m.actionTimer <= 1 then
+    if m.actionTimer == 1 then
         m.particleFlags = m.particleFlags | PARTICLE_MIST_CIRCLE
         play_character_sound(m, CHAR_SOUND_HAHA)
         j.animArg = math.floor(math.random(1,3))
