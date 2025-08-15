@@ -129,14 +129,14 @@ const GeoLayout davy_Metal_VL_Tone_Luigi_Switch_Option_Metal_Capless_Head[] = {
 const GeoLayout davy_Metal_VL_Tone_Luigi_Switch_Option_Metal_Left_Hand_Open[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_ANIMATED_PART(LAYER_OPAQUE, 106, 0, 0, davy_Metal_VL_Tone_Luigi_Switch_Option_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1),
+		GEO_ANIMATED_PART(LAYER_OPAQUE, 79, 0, 0, davy_Metal_VL_Tone_Luigi_Switch_Option_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
 const GeoLayout davy_Metal_VL_Tone_Luigi_Switch_Option_Metal_Right_Hand_Open[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_ANIMATED_PART(LAYER_OPAQUE, 106, 0, 0, davy_Metal_VL_Tone_Luigi_Switch_Option_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1),
+		GEO_ANIMATED_PART(LAYER_OPAQUE, 79, 0, 0, davy_Metal_VL_Tone_Luigi_Switch_Option_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1),
 		GEO_OPEN_NODE(),
 			GEO_HELD_OBJECT(0, 0, 0, 0, geo_switch_mario_hand_grab_pos),
 		GEO_CLOSE_NODE(),
@@ -146,21 +146,21 @@ const GeoLayout davy_Metal_VL_Tone_Luigi_Switch_Option_Metal_Right_Hand_Open[] =
 const GeoLayout davy_Metal_VL_Tone_Luigi_Switch_Option_Metal_Right_Hand_Peace[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_ANIMATED_PART(LAYER_OPAQUE, 106, 0, 0, davy_Metal_VL_Tone_Luigi_Switch_Option_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1),
+		GEO_ANIMATED_PART(LAYER_OPAQUE, 79, 0, 0, davy_Metal_VL_Tone_Luigi_Switch_Option_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
 const GeoLayout davy_Metal_VL_Tone_Luigi_Switch_Option_Metal_Right_Hand_Cap[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_ANIMATED_PART(LAYER_OPAQUE, 106, 0, 0, davy_Metal_VL_Tone_Luigi_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1),
+		GEO_ANIMATED_PART(LAYER_OPAQUE, 79, 0, 0, davy_Metal_VL_Tone_Luigi_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
 const GeoLayout davy_Metal_VL_Tone_Luigi_Switch_Option_Metal_Right_Hand_Wing_Cap[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_ANIMATED_PART(LAYER_OPAQUE, 106, 0, 0, davy_Metal_VL_Tone_Luigi_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1),
+		GEO_ANIMATED_PART(LAYER_OPAQUE, 79, 0, 0, davy_Metal_VL_Tone_Luigi_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1),
 		GEO_OPEN_NODE(),
 			GEO_DISPLAY_LIST(LAYER_ALPHA, davy_Metal_VL_Tone_Luigi_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_4),
 			GEO_DISPLAY_LIST(LAYER_ALPHA, davy_Metal_VL_Tone_Luigi_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_Wings_mesh_layer_4),
@@ -178,14 +178,14 @@ const GeoLayout davy_7_LoD_Switch_opt0_Cap_State_Switch_opt2_Cap_State_Switch_op
 const GeoLayout davy_7_LoD_Switch_opt0_Cap_State_Switch_opt2_Cap_State_Switch_opt1_jump_davy_Metal_VL_Tone_Luigi_Switch_Option_Metal_Left_Hand_Open[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_ANIMATED_PART(LAYER_TRANSPARENT, 106, 0, 0, davy_Metal_VL_Tone_Luigi_Switch_Option_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1),
+		GEO_ANIMATED_PART(LAYER_TRANSPARENT, 79, 0, 0, davy_Metal_VL_Tone_Luigi_Switch_Option_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
 const GeoLayout davy_7_LoD_Switch_opt0_Cap_State_Switch_opt2_Cap_State_Switch_opt1_jump_davy_Metal_VL_Tone_Luigi_Switch_Option_Metal_Right_Hand_Open[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_ANIMATED_PART(LAYER_TRANSPARENT, 106, 0, 0, davy_Metal_VL_Tone_Luigi_Switch_Option_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1),
+		GEO_ANIMATED_PART(LAYER_TRANSPARENT, 79, 0, 0, davy_Metal_VL_Tone_Luigi_Switch_Option_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1),
 		GEO_OPEN_NODE(),
 			GEO_HELD_OBJECT(0, 0, 0, 0, geo_switch_mario_hand_grab_pos),
 		GEO_CLOSE_NODE(),
@@ -195,21 +195,21 @@ const GeoLayout davy_7_LoD_Switch_opt0_Cap_State_Switch_opt2_Cap_State_Switch_op
 const GeoLayout davy_7_LoD_Switch_opt0_Cap_State_Switch_opt2_Cap_State_Switch_opt1_jump_davy_Metal_VL_Tone_Luigi_Switch_Option_Metal_Right_Hand_Peace[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_ANIMATED_PART(LAYER_TRANSPARENT, 106, 0, 0, davy_Metal_VL_Tone_Luigi_Switch_Option_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1),
+		GEO_ANIMATED_PART(LAYER_TRANSPARENT, 79, 0, 0, davy_Metal_VL_Tone_Luigi_Switch_Option_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
 const GeoLayout davy_7_LoD_Switch_opt0_Cap_State_Switch_opt2_Cap_State_Switch_opt1_jump_davy_Metal_VL_Tone_Luigi_Switch_Option_Metal_Right_Hand_Cap[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_ANIMATED_PART(LAYER_TRANSPARENT, 106, 0, 0, davy_Metal_VL_Tone_Luigi_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1),
+		GEO_ANIMATED_PART(LAYER_TRANSPARENT, 79, 0, 0, davy_Metal_VL_Tone_Luigi_Switch_Option_Right_Hand_Switch_Option_Right_Hand_Cap_mesh_layer_1),
 	GEO_CLOSE_NODE(),
 	GEO_RETURN(),
 };
 const GeoLayout davy_7_LoD_Switch_opt0_Cap_State_Switch_opt2_Cap_State_Switch_opt1_jump_davy_Metal_VL_Tone_Luigi_Switch_Option_Metal_Right_Hand_Wing_Cap[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_ANIMATED_PART(LAYER_TRANSPARENT, 106, 0, 0, davy_Metal_VL_Tone_Luigi_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1),
+		GEO_ANIMATED_PART(LAYER_TRANSPARENT, 79, 0, 0, davy_Metal_VL_Tone_Luigi_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_1),
 		GEO_OPEN_NODE(),
 			GEO_DISPLAY_LIST(LAYER_TRANSPARENT, davy_Metal_VL_Tone_Luigi_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_mesh_layer_4),
 			GEO_DISPLAY_LIST(LAYER_TRANSPARENT, davy_Metal_VL_Tone_Luigi_Switch_Option_Right_Hand_Wing_Cap_Switch_Option_Right_Hand_Wing_Cap_Wings_mesh_layer_4),

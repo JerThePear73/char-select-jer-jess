@@ -444,15 +444,35 @@ local PALETTE_DAVY =  {
     [CAP]    = "ff8000",
     [EMBLEM] = "ff8000",
 }
-local PALETTE_GREEDY =  {
-    [PANTS]  = "5724aa",
-    [SHIRT]  = "ff8000",
-    [GLOVES] = "ffffb2",
-    [SHOES]  = "bc0000",
-    [HAIR]   = "ffa300",
+local PALETTE_PISSBOY =  {
+    [PANTS]  = "ffff00",
+    [SHIRT]  = "006080",
+    [GLOVES] = "ffff00",
+    [SHOES]  = "006080",
+    [HAIR]   = "ffb000",
+    [SKIN]   = "ffffff",
+    [CAP]    = "ffff00",
+    [EMBLEM] = "ffff00",
+}
+local PALETTE_MANHATTAN =  {
+    [PANTS]  = "008eff",
+    [SHIRT]  = "df1a10",
+    [GLOVES] = "008eff",
+    [SHOES]  = "df1a10",
+    [HAIR]   = "00d99c",
     [SKIN]   = "ffffb2",
-    [CAP]    = "5724aa",
-    [EMBLEM] = "5724aa",
+    [CAP]    = "008eff",
+    [EMBLEM] = "df1a10",
+}
+local PALETTE_CANTALOUPE =  {
+    [PANTS]  = "a00030",
+    [SHIRT]  = "00b277",
+    [GLOVES] = "a00030",
+    [SHOES]  = "00b277",
+    [HAIR]   = "9b3d00",
+    [SKIN]   = "ffffff",
+    [CAP]    = "a00030",
+    [EMBLEM] = "a00030",
 }
 
 local capJER = {
@@ -636,7 +656,9 @@ local function on_character_select_load()
     _G.charSelect.character_add_graffiti(CT_JESS, TEX_ART_JESS)
 
     _G.charSelect.character_add_palette_preset(E_MODEL_DAVY, PALETTE_DAVY, "Default")
-    _G.charSelect.character_add_palette_preset(E_MODEL_DAVY, PALETTE_GREEDY, "Greedy")
+    _G.charSelect.character_add_palette_preset(E_MODEL_DAVY, PALETTE_PISSBOY, "Pissboy")
+    _G.charSelect.character_add_palette_preset(E_MODEL_DAVY, PALETTE_MANHATTAN, "Manhattan")
+    _G.charSelect.character_add_palette_preset(E_MODEL_DAVY, PALETTE_CANTALOUPE, "Cantaloupe")
     _G.charSelect.character_add_voice(E_MODEL_DAVY, VOICETABLE_DAVY)
     _G.charSelect.character_add_caps(E_MODEL_DAVY, capDAVY)
     _G.charSelect.character_add_health_meter(CT_DAVY, HEALTH_METER_DAVY)

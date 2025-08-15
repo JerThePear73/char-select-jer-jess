@@ -63,16 +63,17 @@ local function unlock_progress()
 			davyProgress = davyProgress + 1
 			darkTimer = 0
 			djui_chat_message_create("You can now play as \\#ff8000\\Davy")
-			_G.charSelect.character_set_current_number(CT_DAVY)
+			--_G.charSelect.character_set_current_number(CT_DAVY)
 		end
 	elseif davyProgress == 6 then
+		_G.charSelect.character_set_current_number(CT_DAVY)
 		m.pos.x = 0
 		m.pos.y = 0
 		m.pos.z = -1500
 		m.faceAngle.y = -32768
-		set_mario_action(m, ACT_SPECIAL_EXIT_AIRBORNE, 0)
 		play_sound_with_freq_scale(SOUND_MENU_COLLECT_SECRET, m.pos, 0.9)
-		davyProgress = davyProgress + 1
+		set_mario_action(m, ACT_SPECIAL_EXIT_AIRBORNE, 0)
+		davyProgress = 7
 	end
   end
 	return davyProgress == 7
