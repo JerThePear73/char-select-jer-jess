@@ -32,13 +32,6 @@ local function unlock_progress()
 			davyProgress = 0
 		end
 	elseif davyProgress == 2 then
-
-		if m.dialogId == DIALOG_116 then
-			davyProgress = davyProgress + 1
-		elseif m.numCoins > 69 or LEVEL ~= 9 then
-			davyProgress = 0
-		end
-	elseif davyProgress == 2 then
 		if (LEVEL ~= 9 and LEVEL ~= 6 and LEVEL ~= 26 and LEVEL ~= 16) or m.action == ACT_FALL_AFTER_STAR_GRAB or m.action == ACT_EXIT_AIRBORNE then
 			davyProgress = 0
 		end

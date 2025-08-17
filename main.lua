@@ -19,6 +19,7 @@ local E_MODEL_JESS = smlua_model_util_get_id('jess_geo')
 local E_MODEL_JESS_BEACH = smlua_model_util_get_id('beach_jess_geo')
 local E_MODEL_JESSILYNN = smlua_model_util_get_id('jessilynn_geo')
 local E_MODEL_JESS_OG = smlua_model_util_get_id('jess_og_geo')
+local E_MODEL_ROBO_JESS = smlua_model_util_get_id('robo_jess_geo')
 
 local E_MODEL_DAVY = smlua_model_util_get_id('davy_geo')
 
@@ -35,6 +36,7 @@ _G.charSelect.credit_add(MOD_NAME, "Squishy6094", "Character Select, Coding")
 local TEX_JER = get_texture_info('jer_icon')
 local TEX_JESS = get_texture_info('jess_icon')
 local TEX_DAVY = get_texture_info('davy_icon')
+local TEX_ROBO_JESS = get_texture_info('robo_jess_icon')
 local TEX_TROPHY = get_texture_info('trophy')
 local TEX_ART_JER = get_texture_info('graffiti_jer')
 local TEX_ART_JESS = get_texture_info('graffiti_jess')
@@ -178,6 +180,50 @@ VOICETABLE_DAVY = { -- Voices from Skeleton character from Lego Racers (1999)
     [CHAR_SOUND_HELLO] = nil,
     [CHAR_SOUND_PRESS_START_TO_PLAY] = nil,
     [CHAR_SOUND_OKEY_DOKEY] = 'davy_hohoyeahah.ogg'
+}
+
+VOICETABLE_ROBO_JESS = { -- Voices from Veronica Voltage and other female characters from Lego Racers (1999)
+    [CHAR_SOUND_ATTACKED] = 'robo_jess_ow.ogg',
+    [CHAR_SOUND_COUGHING1] = nil,
+    [CHAR_SOUND_COUGHING2] = nil,
+    [CHAR_SOUND_COUGHING3] = nil,
+    [CHAR_SOUND_DOH] = 'robo_jess_ow.ogg',
+    [CHAR_SOUND_DROWNING] = nil,
+    [CHAR_SOUND_DYING] = 'robo_jess_ohno.ogg',
+    [CHAR_SOUND_EEUH] = 'robo_jess_heh.ogg',
+    [CHAR_SOUND_GROUND_POUND_WAH] = 'robo_jess_hiya.ogg',
+    [CHAR_SOUND_HAHA] = 'robo_jess_yeah_jazzy.ogg',
+    [CHAR_SOUND_HAHA_2] = 'robo_jess_oh_yeah.ogg',
+    [CHAR_SOUND_HERE_WE_GO] = 'robo_jess_yeah_jazzy.ogg',
+    [CHAR_SOUND_HOOHOO] = 'robo_jess_woo.ogg',
+    [CHAR_SOUND_HRMM] = 'robo_jess_heh.ogg',
+    [CHAR_SOUND_IMA_TIRED] = nil,
+    [CHAR_SOUND_MAMA_MIA] = 'robo_jess_ohno.ogg',
+    [CHAR_SOUND_LETS_A_GO] = 'robo_jess_oh_yeah.ogg',
+    [CHAR_SOUND_ON_FIRE] = 'robo_jess_ohno.ogg',
+    [CHAR_SOUND_OOOF] = 'robo_jess_ouch.ogg',
+    [CHAR_SOUND_OOOF2] = 'robo_jess_ouch.ogg',
+    [CHAR_SOUND_PANTING] = nil,
+    [CHAR_SOUND_PANTING_COLD] = nil,
+    [CHAR_SOUND_PUNCH_HOO] = 'robo_jess_yeah.ogg',
+    [CHAR_SOUND_PUNCH_WAH] = 'robo_jess_ya.ogg',
+    [CHAR_SOUND_PUNCH_YAH] = 'robo_jess_ha.ogg',
+    [CHAR_SOUND_SO_LONGA_BOWSER] = 'robo_jess_hiya.ogg',
+    [CHAR_SOUND_SNORING1] = nil,
+    [CHAR_SOUND_SNORING2] = nil,
+    [CHAR_SOUND_SNORING3] = nil,
+    [CHAR_SOUND_TWIRL_BOUNCE] = 'robo_jess_yahoo.ogg',
+    [CHAR_SOUND_UH] = 'robo_jess_ow.ogg',
+    [CHAR_SOUND_UH2] = 'robo_jess_heh.ogg',
+    [CHAR_SOUND_UH2_2] = nil,
+    [CHAR_SOUND_WAAAOOOW] = 'robo_jess_ohno.ogg',
+    [CHAR_SOUND_WAH2] = 'robo_jess_ya.ogg',
+    [CHAR_SOUND_WHOA] = 'robo_jess_uh_oh.ogg',
+    [CHAR_SOUND_YAHOO] = { 'robo_jess_yahoo.ogg', 'robo_jess_woohoo.ogg' },
+    [CHAR_SOUND_YAWNING] = 'robo_jess_shutdown.ogg',
+    [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = {'robo_jess_yahoo.ogg', 'robo_jess_woohoo.ogg' },
+    [CHAR_SOUND_YAH_WAH_HOO] = {'robo_jess_ha.ogg', 'robo_jess_ya.ogg', 'robo_jess_yeah.ogg' },
+    [CHAR_SOUND_OKEY_DOKEY] = 'robo_jess_oh_yeah.ogg'
 }
 
 local PALETTE_JER = {
@@ -342,6 +388,16 @@ local PALETTE_JESS_FIRE = {
     [CAP]    = "ffffff",
     [EMBLEM] = "bbff4d",
 }
+local PALETTE_ZOE = {
+    [PANTS]  = "84007b",
+    [SHIRT]  = "ff5b00",
+    [GLOVES] = "84007b",
+    [SHOES]  = "295539",
+    [HAIR]   = "9c2c1e",
+    [SKIN]   = "9eff93",
+    [CAP]    = "84007b",
+    [EMBLEM] = "84007b",
+}
 local PALETTE_JESS_BEACH = {
     [PANTS]  = "c64f42",
     [SHIRT]  = "336677",
@@ -432,7 +488,36 @@ local PALETTE_JESS_RACER = {
     [CAP]    = "404455",
     [EMBLEM] = "8295af",
 }
-
+local PALETTE_ROBO_JESS = {
+    [PANTS]  = "333333",
+    [SHIRT]  = "ffc000",
+    [GLOVES] = "ffffff",
+    [SHOES]  = "333333",
+    [HAIR]   = "a3b3bf",
+    [SKIN]   = "dddddd",
+    [CAP]    = "333333",
+    [EMBLEM] = "0000ff",
+}
+local PALETTE_ROBO_JESS_SILVER = {
+    [PANTS]  = "999999",
+    [SHIRT]  = "ffc000",
+    [GLOVES] = "ffffff",
+    [SHOES]  = "999999",
+    [HAIR]   = "a3b3bf",
+    [SKIN]   = "dddddd",
+    [CAP]    = "999999",
+    [EMBLEM] = "ff0000",
+}
+local PALETTE_DAVID =  {
+    [PANTS]  = "ff8000",
+    [SHIRT]  = "222222",
+    [GLOVES] = "ff8000",
+    [SHOES]  = "552945",
+    [HAIR]   = "888888",
+    [SKIN]   = "dddddd",
+    [CAP]    = "ff8000",
+    [EMBLEM] = "552945",
+}
 
 local PALETTE_DAVY =  {
     [PANTS]  = "ff8000",
@@ -623,6 +708,23 @@ local HEALTH_METER_DAVY = {
     }
 }
 
+local HEALTH_METER_ROBO_JESS = {
+    label = {
+        left = get_texture_info("robo-jess-hp-left"),
+        right = get_texture_info("robo-jess-hp-right"),
+    },
+    pie = {
+        [1] = get_texture_info("hp-1"),
+        [2] = get_texture_info("hp-2"),
+        [3] = get_texture_info("hp-3"),
+        [4] = get_texture_info("hp-4"),
+        [5] = get_texture_info("hp-5"),
+        [6] = get_texture_info("hp-6"),
+        [7] = get_texture_info("hp-7"),
+        [8] = get_texture_info("hp-8"),
+    }
+}
+
 if _G.charSelectExists then
     CT_JER = _G.charSelect.character_add("Jer", { "A helmet man with a love for speed. Age: 21, Height: 6'4, Jess' older brother. Jer's moveset is based around maintaining speed but is designed for more experienced players. His powerups still serve their vanilla purpose but have slight adjustments. Type '/jj-moves' for help."},
         "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_JER, CT_MARIO, TEX_JER)
@@ -648,6 +750,7 @@ local function on_character_select_load()
 
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS, PALETTE_JESS, "Default")
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS, PALETTE_JESS_FIRE, "Fire")
+    _G.charSelect.character_add_palette_preset(E_MODEL_JESS, PALETTE_ZOE, "Zoe")
     _G.charSelect.character_add_animations(E_MODEL_JESS, ANIMTABLE_JESS)
     _G.charSelect.character_add_caps(E_MODEL_JESS, capJESS)
     _G.charSelect.character_add_health_meter(CT_JESS, HEALTH_METER_JESS)
@@ -722,6 +825,16 @@ local function on_character_select_load()
     _G.charSelect.character_add_animations(E_MODEL_JESS_OG, ANIMTABLE_JESS)
     _G.charSelect.character_add_caps(E_MODEL_JESS_OG, capJESS)
     _G.charSelect.character_add_voice(E_MODEL_JESS_OG, VOICETABLE_JESS)
+    -- ROBO JESS 
+    CT_ROBO_JESS = _G.charSelect.character_add_costume(CT_JESS, "J-355", { "A strangely familiar robotic clone. Age: ??, Height: 6'0, Allegedly created by Evil Jer."},
+        "JerThePear", {r = 200, g = 200, b = 200}, E_MODEL_ROBO_JESS, CT_MARIO, TEX_ROBO_JESS)
+    _G.charSelect.character_add_palette_preset(E_MODEL_ROBO_JESS, PALETTE_ROBO_JESS, "Default")
+    _G.charSelect.character_add_palette_preset(E_MODEL_ROBO_JESS, PALETTE_ROBO_JESS_SILVER, "Silver")
+    _G.charSelect.character_add_palette_preset(E_MODEL_ROBO_JESS, PALETTE_DAVID, "Skeleton")
+    _G.charSelect.character_add_animations(E_MODEL_ROBO_JESS, ANIMTABLE_JESS)
+    _G.charSelect.character_add_caps(E_MODEL_ROBO_JESS, capJESS)
+    _G.charSelect.character_add_voice(E_MODEL_ROBO_JESS, VOICETABLE_ROBO_JESS)
+    _G.charSelect.character_add_costume_health_meter(CT_JESS, CT_ROBO_JESS, HEALTH_METER_ROBO_JESS)
 
     -- Categories
     _G.charSelect.character_set_category(CT_JER, "Jer + Jess")
@@ -751,6 +864,7 @@ local function on_character_sound(m, sound)
     if _G.charSelect.character_get_voice(m) == VOICETABLE_JER then return _G.charSelect.voice.sound(m, sound) end
     if _G.charSelect.character_get_voice(m) == VOICETABLE_JESS then return _G.charSelect.voice.sound(m, sound) end
     if _G.charSelect.character_get_voice(m) == VOICETABLE_DAVY then return _G.charSelect.voice.sound(m, sound) end
+    if _G.charSelect.character_get_voice(m) == VOICETABLE_ROBO_JESS then return _G.charSelect.voice.sound(m, sound) end
 end
 
 local function on_character_snore(m)
@@ -758,6 +872,7 @@ local function on_character_snore(m)
     if _G.charSelect.character_get_voice(m) == VOICETABLE_JER then return _G.charSelect.voice.snore(m) end
     if _G.charSelect.character_get_voice(m) == VOICETABLE_JESS then return _G.charSelect.voice.snore(m) end
     if _G.charSelect.character_get_voice(m) == VOICETABLE_DAVY then return _G.charSelect.voice.snore(m) end
+    if _G.charSelect.character_get_voice(m) == VOICETABLE_ROBO_JESS then return _G.charSelect.voice.snore(m) end
 end
 
 local function menu_pose(m)
