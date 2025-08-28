@@ -41,6 +41,16 @@ local TEX_TROPHY = get_texture_info('trophy')
 local TEX_ART_JER = get_texture_info('graffiti_jer')
 local TEX_ART_JESS = get_texture_info('graffiti_jess')
 
+local beytah = false
+for _,mods in pairs(gActiveMods) do
+    if mods.name == "[v0.7] \\#F78AF5\\B\\#F94A36\\3\\#4C5BFF\\3\\#EDD83D\\1\\#16C31C\\3" then
+        TEX_JER = get_texture_info('beta_jer_icon')
+        TEX_JESS = get_texture_info('beta_jess_icon')
+        --E_MODEL_JER = smlua_model_util_get_id('jer_beta_geo')
+        beytah = true
+    end
+end
+
 -- Sound --
 local SOUND_MENU_THEME_JER = audio_stream_load('char-select-menu-theme-jer.ogg')
 local SOUND_MENU_THEME_JESS = audio_stream_load('char-select-menu-theme-jess.ogg')
@@ -647,6 +657,9 @@ local ANIMTABLE_JESS = {
     [CHAR_ANIM_LAND_FROM_DOUBLE_JUMP] = "jess_land_double",
     [CHAR_ANIM_STOP_SLIDE] = "jess_getup_slide",
 }
+local EYETABLE_JESS = {
+    [_G.charSelect.CS_ANIM_MENU] = MARIO_EYES_LOOK_RIGHT,
+}
 
 local ANIMTABLE_DAVY = {
     [_G.charSelect.CS_ANIM_MENU] = "davy_menu_anim",
@@ -655,6 +668,9 @@ local ANIMTABLE_DAVY = {
     [CHAR_ANIM_IDLE_HEAD_RIGHT] = "davy_idle",
     [CHAR_ANIM_IDLE_HEAD_CENTER] = "davy_idle",
     [CHAR_ANIM_FIRST_PERSON] = "davy_idle"
+}
+local EYETABLE_DAVY = {
+    [_G.charSelect.CS_ANIM_MENU] = MARIO_EYES_LOOK_RIGHT,
 }
 
 local HEALTH_METER_JER = {
@@ -751,7 +767,7 @@ local function on_character_select_load()
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS, PALETTE_JESS, "Default")
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS, PALETTE_JESS_FIRE, "Fire")
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS, PALETTE_ZOE, "Zoe")
-    _G.charSelect.character_add_animations(E_MODEL_JESS, ANIMTABLE_JESS)
+    _G.charSelect.character_add_animations(E_MODEL_JESS, ANIMTABLE_JESS, EYETABLE_JESS)
     _G.charSelect.character_add_caps(E_MODEL_JESS, capJESS)
     _G.charSelect.character_add_health_meter(CT_JESS, HEALTH_METER_JESS)
     _G.charSelect.character_add_voice(E_MODEL_JESS, VOICETABLE_JESS)
@@ -765,7 +781,7 @@ local function on_character_select_load()
     _G.charSelect.character_add_voice(E_MODEL_DAVY, VOICETABLE_DAVY)
     _G.charSelect.character_add_caps(E_MODEL_DAVY, capDAVY)
     _G.charSelect.character_add_health_meter(CT_DAVY, HEALTH_METER_DAVY)
-    _G.charSelect.character_add_animations(E_MODEL_DAVY, ANIMTABLE_DAVY)
+    _G.charSelect.character_add_animations(E_MODEL_DAVY, ANIMTABLE_DAVY, EYETABLE_DAVY)
     _G.charSelect.character_add_menu_instrumental(CT_DAVY, SOUND_MENU_THEME_DAVY)
     -- SHADES --
     _G.charSelect.character_add_costume(CT_JER, "Shades", { "Jer dressed for a sunny vacation. Age: 21, Height: 6'4, Jess' older brother. Jer's moveset is based around maintaining speed but is designed for more experienced players. His powerups still serve their vanilla purpose but have slight adjustments. Type '/jj-moves' for help."},
@@ -804,7 +820,7 @@ local function on_character_select_load()
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS_BEACH, PALETTE_JESS_BEACH, "Default")
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS_BEACH, PALETTE_POPULAR_GIRL, "Popular Girl")
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS_BEACH, PALETTE_SUNNY, "Sunny")
-    _G.charSelect.character_add_animations(E_MODEL_JESS_BEACH, ANIMTABLE_JESS)
+    _G.charSelect.character_add_animations(E_MODEL_JESS_BEACH, ANIMTABLE_JESS, EYETABLE_JESS)
     _G.charSelect.character_add_caps(E_MODEL_JESS_BEACH, capJESS_BEACH)
     _G.charSelect.character_add_voice(E_MODEL_JESS_BEACH, VOICETABLE_JESS)
     -- JESSILYNN --
@@ -812,7 +828,7 @@ local function on_character_select_load()
         "JerThePear", {r = 000, g = 255, b = 125}, E_MODEL_JESSILYNN, CT_MARIO, TEX_JESS)
     _G.charSelect.character_add_palette_preset(E_MODEL_JESSILYNN, PALETTE_JESSILYNN, "Default")
     _G.charSelect.character_add_palette_preset(E_MODEL_JESSILYNN, PALETTE_ANNA, "Annalynn")
-    _G.charSelect.character_add_animations(E_MODEL_JESSILYNN, ANIMTABLE_JESS)
+    _G.charSelect.character_add_animations(E_MODEL_JESSILYNN, ANIMTABLE_JESS, EYETABLE_JESS)
     _G.charSelect.character_add_caps(E_MODEL_JESSILYNN, capJESSILYNN)
     _G.charSelect.character_add_voice(E_MODEL_JESSILYNN, VOICETABLE_JESS)
     -- JESSICA --
@@ -822,7 +838,7 @@ local function on_character_select_load()
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS_OG, PALETTE_DEMON, "Demon")
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS_OG, PALETTE_JERIA, "Jeria")
     _G.charSelect.character_add_palette_preset(E_MODEL_JESS_OG, PALETTE_JESS_RACER, "Racer")
-    _G.charSelect.character_add_animations(E_MODEL_JESS_OG, ANIMTABLE_JESS)
+    _G.charSelect.character_add_animations(E_MODEL_JESS_OG, ANIMTABLE_JESS, EYETABLE_JESS)
     _G.charSelect.character_add_caps(E_MODEL_JESS_OG, capJESS)
     _G.charSelect.character_add_voice(E_MODEL_JESS_OG, VOICETABLE_JESS)
     -- ROBO JESS 
@@ -865,6 +881,10 @@ local function on_character_sound(m, sound)
     if _G.charSelect.character_get_voice(m) == VOICETABLE_JESS then return _G.charSelect.voice.sound(m, sound) end
     if _G.charSelect.character_get_voice(m) == VOICETABLE_DAVY then return _G.charSelect.voice.sound(m, sound) end
     if _G.charSelect.character_get_voice(m) == VOICETABLE_ROBO_JESS then return _G.charSelect.voice.sound(m, sound) end
+
+    if beytah then
+        _G.charSelect.character_add_voice(E_MODEL_JER, nil)
+    end
 end
 
 local function on_character_snore(m)
@@ -883,12 +903,6 @@ local function menu_pose(m)
         else
             m.marioBodyState.eyeState = MARIO_EYES_LOOK_LEFT
         end
-    end
-    if m.marioObj.header.gfx.animInfo.animID == charSelect.CS_ANIM_MENU and is_jess() and m.playerIndex == 0 then
-        m.marioBodyState.eyeState = MARIO_EYES_LOOK_RIGHT
-    end
-    if m.marioObj.header.gfx.animInfo.animID == charSelect.CS_ANIM_MENU and is_davy() and m.playerIndex == 0 then
-        m.marioBodyState.eyeState = MARIO_EYES_LOOK_RIGHT
     end
 end
 
