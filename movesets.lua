@@ -1294,7 +1294,7 @@ function davy_set_action(m)
     local bombRand = math.floor(math.random(1,4))
 
 
-    if (m.action == ACT_PUNCHING or m.action == ACT_MOVE_PUNCHING) and j.davyBomb > 500 and m.input & INPUT_Z_DOWN == 0 and m.input & INPUT_A_DOWN == 0 then -- make action condition kick when bomb spawning fixed
+    if (gNetworkPlayers[0].currLevelNum ~= 30 and gNetworkPlayers[0].currLevelNum ~= 33 and gNetworkPlayers[0].currLevelNum ~= 34) and (m.action == ACT_PUNCHING or m.action == ACT_MOVE_PUNCHING) and j.davyBomb > 500 and m.input & INPUT_Z_DOWN == 0 and m.input & INPUT_A_DOWN == 0 then -- make action condition kick when bomb spawning fixed
         j.davyBomb = j.davyBomb - 500
         set_mario_action(m, ACT_AIR_THROW, 0)
         m.forwardVel = m.forwardVel + 10
