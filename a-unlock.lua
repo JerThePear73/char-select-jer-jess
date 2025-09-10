@@ -15,7 +15,6 @@ local function unlock_progress()
 	else
 		local m = gMarioStates[0]
 		local LEVEL = gNetworkPlayers[0].currLevelNum
-		djui_chat_message_create(tostring(davyProgress))
 		if davyProgress == 0 then
 			if LEVEL == 9 and m.numCoins == 0 then
 				davyProgress = davyProgress + 1
@@ -48,7 +47,7 @@ local function unlock_progress()
 			if darkTimer > 150 then
 				davyProgress = davyProgress + 1
 				darkTimer = 0
-				djui_chat_message_create("You can now play as \\#ff8000\\Davy")
+				--djui_chat_message_create("You can now play as \\#ff8000\\Davy")
 				return true
 			end
 		end
@@ -81,7 +80,7 @@ local function davy_unlock_cutscene(m)
 end
 hook_event(HOOK_MARIO_UPDATE, davy_unlock_cutscene)
 hook_event(HOOK_ON_MODS_LOADED, function()
-	_G.charSelect.character_set_locked(CT_DAVY, unlock_progress, false)
+	_G.charSelect.character_set_locked(CT_DAVY, unlock_progress, true)
 end)
 
 function davy_relock_fuck_you()
