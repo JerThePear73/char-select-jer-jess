@@ -212,9 +212,10 @@ local function act_elegant_jump(m)
         play_character_sound(m, CHAR_SOUND_HAHA)
         j.animArg = math.floor(math.random(1,3))
     end
-    local stepResult = common_air_action_step(m, ACT_DOUBLE_JUMP_LAND, MARIO_ANIM_GROUND_POUND, 
-                                                                AIR_STEP_NONE)
-    smlua_anim_util_set_animation(m.marioObj, "jess_ice_jump_" .. tostring(j.animArg))
+    local stepResult = common_air_action_step(m, ACT_DOUBLE_JUMP_LAND, MARIO_ANIM_GROUND_POUND, AIR_STEP_NONE)
+    if j.animArg ~= 0 then
+        smlua_anim_util_set_animation(m.marioObj, "jess_ice_jump_" .. tostring(j.animArg))
+    end
     m.particleFlags = m.particleFlags | PARTICLE_SPARKLES
     m.marioBodyState.handState = MARIO_HAND_OPEN
 
