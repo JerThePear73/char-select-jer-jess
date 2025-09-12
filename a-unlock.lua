@@ -89,7 +89,7 @@ hook_event(HOOK_ON_MODS_LOADED, function()
 end)
 
 function davy_relock()
-	davyProgress = 0
+	davyProgress = -1
 	djui_chat_message_create("[Davy save reset]")
 	return true
 end
