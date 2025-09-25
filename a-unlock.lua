@@ -3,17 +3,26 @@
 -- Spoilerss!!!! --
 -------------------
 
-local STORAGE_DAVY_UNLOCK = "davyUnlockProgress"
-local davyProgress = mod_storage_load_number(STORAGE_DAVY_UNLOCK)
+local STORAGE_DAVY_UNLOCK = "davyUnlockProgress" -- bitches HATE strings
+davyProgress = mod_storage_load_number(STORAGE_DAVY_UNLOCK)
 local darkTimer = 0
 
 local davy_laugh = audio_sample_load("davy_laugh.ogg")
 
 local function unlock_progress()
+	local m = gMarioStates[0]
 	if davyProgress == 7 then
+		set_volume_level(100)
+		return true
+	elseif davyProgress == 6 then
+		m.pos.x = 0
+		m.pos.y = 0
+		m.pos.z = -1500
+		m.faceAngle.y = -32768
+		play_sound_with_freq_scale(SOUND_MENU_COLLECT_SECRET, m.pos, 0.9)
+		set_mario_action(m, ACT_SPECIAL_EXIT_AIRBORNE, 0)
 		return true
 	else
-		local m = gMarioStates[0]
 		local LEVEL = gNetworkPlayers[0].currLevelNum
 		if davyProgress == 0 then
 			if LEVEL == 9 and m.numCoins == 0 then
@@ -26,7 +35,7 @@ local function unlock_progress()
 				davyProgress = 0
 			end
 		elseif davyProgress == 2 then
-			if (LEVEL ~= 9 and LEVEL ~= 6 and LEVEL ~= 26 and LEVEL ~= 16) or m.action == ACT_FALL_AFTER_STAR_GRAB or m.action == ACT_EXIT_AIRBORNE then
+			if (LEVEL ~= 9 and LEVEL ~= 6 and LEVEL ~= 26 and LEVEL ~= 16) or m.action == ACT_FALL_AFTER_STAR_GRAB or m.action == ACT_EXIT_AIRBORNE or m.numCoins > 69 then
 				davyProgress = 0
 			end
 			if LEVEL == 26 and (m.action == ACT_DROWNING or m.action == ACT_WATER_DEATH) then
@@ -51,8 +60,8 @@ local function unlock_progress()
 				return true
 			end
 		end
+		return false
 	end
-	return false
 end
 
 local function davy_unlock_cutscene(m)
@@ -65,27 +74,23 @@ local function davy_unlock_cutscene(m)
 	if davyProgress == 6 then
 		-- Unlock Cutscene
 		_G.charSelect.character_set_current_number(CT_DAVY)
-		m.pos.x = 0
-		m.pos.y = 0
-		m.pos.z = -1500
-		m.faceAngle.y = -32768
-		play_sound_with_freq_scale(SOUND_MENU_COLLECT_SECRET, m.pos, 0.9)
-		set_mario_action(m, ACT_SPECIAL_EXIT_AIRBORNE, 0)
-		set_volume_level(1)
 
 		-- Save Progress, Don't repeat
+		if is_davy() and m.action == ACT_SPECIAL_EXIT_AIRBORNE then
 		mod_storage_save_number(STORAGE_DAVY_UNLOCK, 7)
 		davyProgress = 7
+		end
 	end
 end
 hook_event(HOOK_MARIO_UPDATE, davy_unlock_cutscene)
+
 hook_event(HOOK_ON_MODS_LOADED, function()
 	_G.charSelect.character_set_locked(CT_DAVY, unlock_progress, true)
 end)
 
-function davy_relock_fuck_you()
+function davy_relock()
 	davyProgress = -1
 	djui_chat_message_create("[Davy save reset]")
 	return true
 end
-_G.charSelect.hook_on_save_data_reset(davy_relock_fuck_you)
+_G.charSelect.hook_on_save_data_reset(davy_relock)
