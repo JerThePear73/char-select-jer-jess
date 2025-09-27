@@ -70,10 +70,6 @@ Lights1 jess_og_Water_lights = gdSPDefLights1(
 	0x40, 0x45, 0xBF,
 	0x3F, 0x98, 0xFF, 0x28, 0x28, 0x28);
 
-Lights1 jess_og_Glass_lights = gdSPDefLights1(
-	0x55, 0x68, 0x7F,
-	0xAE, 0xD1, 0xFF, 0x28, 0x28, 0x28);
-
 Lights1 jess_og_Yellow_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
@@ -86,11 +82,15 @@ Lights1 jess_og_Handle_lights = gdSPDefLights1(
 	0x2E, 0xF, 0x0,
 	0x64, 0x28, 0x0, 0x28, 0x28, 0x28);
 
+Lights1 jess_og_Glass_lights = gdSPDefLights1(
+	0x55, 0x67, 0x7F,
+	0xAE, 0xD1, 0xFF, 0x28, 0x28, 0x28);
+
 Lights1 jess_og_Gloves__GLOVES__lights = gdSPDefLights1(
 	0x7F, 0x5B, 0x45,
 	0xFF, 0xBA, 0x90, 0x28, 0x28, 0x28);
 
-Lights1 jess_og_Fast3D_Material_lights = gdSPDefLights1(
+Lights1 jess_og_Tears__SKIN__lights = gdSPDefLights1(
 	0x7F, 0x5B, 0x45,
 	0xFF, 0xBA, 0x90, 0x28, 0x28, 0x28);
 
@@ -106,14 +106,14 @@ Lights1 jess_og_Shoes__SHIRT__lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
 
-Gfx jess_og_pants_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 jess_og_pants_rgba16[] = {
-	#include "actors/jess_og/pants.rgba16.inc.c"
+Gfx jess_og_pants_i8_aligner[] = {gsSPEndDisplayList()};
+u8 jess_og_pants_i8[] = {
+	#include "actors/jess_og/pants.i8.inc.c"
 };
 
-Gfx jess_og_sweater_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 jess_og_sweater_rgba16[] = {
-	#include "actors/jess_og/sweater.rgba16.inc.c"
+Gfx jess_og_sweater_i8_aligner[] = {gsSPEndDisplayList()};
+u8 jess_og_sweater_i8[] = {
+	#include "actors/jess_og/sweater.i8.inc.c"
 };
 
 Gfx jess_og_jess_ice_shine_rgba16_aligner[] = {gsSPEndDisplayList()};
@@ -176,14 +176,14 @@ u8 jess_og_steel_rgba16[] = {
 	#include "actors/jess_og/steel.rgba16.inc.c"
 };
 
-Gfx jess_og_tears_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 jess_og_tears_rgba16[] = {
-	#include "actors/jess_og/tears.rgba16.inc.c"
+Gfx jess_og_tears_ia8_aligner[] = {gsSPEndDisplayList()};
+u8 jess_og_tears_ia8[] = {
+	#include "actors/jess_og/tears.ia8.inc.c"
 };
 
-Gfx jess_og_shoe_detail_rgba16_aligner[] = {gsSPEndDisplayList()};
-u8 jess_og_shoe_detail_rgba16[] = {
-	#include "actors/jess_og/shoe_detail.rgba16.inc.c"
+Gfx jess_og_shoe_detail_i8_aligner[] = {gsSPEndDisplayList()};
+u8 jess_og_shoe_detail_i8[] = {
+	#include "actors/jess_og/shoe_detail.i8.inc.c"
 };
 
 Vtx jess_og_Torso_mesh_layer_1_vtx_0[8] = {
@@ -2026,81 +2026,7 @@ Gfx jess_og_Fludd_DL_mesh_layer_1_tri_0[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx jess_og_Fludd_DL_mesh_layer_1_vtx_1[45] = {
-	{{ {72, -55, 0}, 0, {1008, -16}, {38, 121, 0, 255} }},
-	{{ {72, -87, 55}, 0, {666, -16}, {38, 61, 105, 255} }},
-	{{ {103, -99, 33}, 0, {666, 486}, {251, 63, 110, 255} }},
-	{{ {103, -137, 33}, 0, {325, 486}, {251, 193, 110, 255} }},
-	{{ {72, -150, 55}, 0, {325, -16}, {38, 195, 105, 255} }},
-	{{ {103, -156, 0}, 0, {-16, 486}, {251, 129, 0, 255} }},
-	{{ {72, -182, 0}, 0, {-16, -16}, {38, 135, 0, 255} }},
-	{{ {72, -150, -55}, 0, {325, -16}, {38, 195, 151, 255} }},
-	{{ {103, -137, -33}, 0, {325, 486}, {251, 193, 146, 255} }},
-	{{ {72, -87, -55}, 0, {666, -16}, {38, 61, 151, 255} }},
-	{{ {103, -99, -33}, 0, {666, 486}, {251, 63, 146, 255} }},
-	{{ {103, -81, 0}, 0, {1008, 486}, {251, 127, 0, 255} }},
-	{{ {55, -87, 55}, 0, {155, 368}, {46, 59, 103, 255} }},
-	{{ {72, -87, 55}, 0, {155, 240}, {38, 61, 105, 255} }},
-	{{ {72, -55, 0}, 0, {-16, 240}, {38, 121, 0, 255} }},
-	{{ {55, -150, 55}, 0, {325, 368}, {46, 197, 103, 255} }},
-	{{ {72, -150, 55}, 0, {325, 240}, {38, 195, 105, 255} }},
-	{{ {55, -182, 0}, 0, {496, 368}, {46, 137, 0, 255} }},
-	{{ {72, -182, 0}, 0, {496, 240}, {38, 135, 0, 255} }},
-	{{ {72, -150, -55}, 0, {325, 240}, {38, 195, 151, 255} }},
-	{{ {55, -150, -55}, 0, {325, 368}, {46, 197, 153, 255} }},
-	{{ {72, -87, -55}, 0, {155, 240}, {38, 61, 151, 255} }},
-	{{ {55, -87, -55}, 0, {155, 368}, {46, 59, 153, 255} }},
-	{{ {55, -55, 0}, 0, {-16, 368}, {46, 119, 0, 255} }},
-	{{ {103, -81, 0}, 0, {-16, -16}, {251, 127, 0, 255} }},
-	{{ {103, -99, 33}, 0, {155, -16}, {251, 63, 110, 255} }},
-	{{ {116, -94, 43}, 0, {155, -16}, {176, 49, 85, 255} }},
-	{{ {103, -137, 33}, 0, {325, -16}, {251, 193, 110, 255} }},
-	{{ {116, -135, 43}, 0, {268, -16}, {158, 234, 78, 255} }},
-	{{ {116, -143, 43}, 0, {325, -16}, {176, 207, 85, 255} }},
-	{{ {116, -168, 0}, 0, {496, -16}, {176, 158, 0, 255} }},
-	{{ {103, -156, 0}, 0, {496, -16}, {251, 129, 0, 255} }},
-	{{ {103, -137, -33}, 0, {325, -16}, {251, 193, 146, 255} }},
-	{{ {116, -168, 0}, 0, {496, -16}, {176, 158, 0, 255} }},
-	{{ {103, -156, 0}, 0, {496, -16}, {251, 129, 0, 255} }},
-	{{ {116, -143, -43}, 0, {325, -16}, {176, 207, 171, 255} }},
-	{{ {116, -102, -43}, 0, {212, -16}, {158, 22, 178, 255} }},
-	{{ {116, -94, -43}, 0, {155, -16}, {176, 49, 171, 255} }},
-	{{ {103, -99, -33}, 0, {155, -16}, {251, 63, 146, 255} }},
-	{{ {103, -81, 0}, 0, {-16, -16}, {251, 127, 0, 255} }},
-	{{ {116, -69, 0}, 0, {-16, -16}, {176, 98, 0, 255} }},
-	{{ {116, -94, 43}, 0, {155, -16}, {176, 49, 85, 255} }},
-	{{ {116, -135, -43}, 0, {268, -16}, {158, 234, 178, 255} }},
-	{{ {116, -135, 43}, 0, {268, -16}, {158, 234, 78, 255} }},
-	{{ {116, -102, 43}, 0, {212, -16}, {158, 22, 78, 255} }},
-};
-
-Gfx jess_og_Fludd_DL_mesh_layer_1_tri_1[] = {
-	gsSPVertex(jess_og_Fludd_DL_mesh_layer_1_vtx_1 + 0, 32, 0),
-	gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
-	gsSP2Triangles(1, 4, 3, 0, 4, 5, 3, 0),
-	gsSP2Triangles(4, 6, 5, 0, 7, 5, 6, 0),
-	gsSP2Triangles(7, 8, 5, 0, 9, 8, 7, 0),
-	gsSP2Triangles(9, 10, 8, 0, 0, 10, 9, 0),
-	gsSP2Triangles(0, 11, 10, 0, 0, 2, 11, 0),
-	gsSP2Triangles(12, 13, 14, 0, 15, 13, 12, 0),
-	gsSP2Triangles(15, 16, 13, 0, 17, 16, 15, 0),
-	gsSP2Triangles(17, 18, 16, 0, 17, 19, 18, 0),
-	gsSP2Triangles(17, 20, 19, 0, 20, 21, 19, 0),
-	gsSP2Triangles(20, 22, 21, 0, 22, 14, 21, 0),
-	gsSP2Triangles(22, 23, 14, 0, 12, 14, 23, 0),
-	gsSP2Triangles(24, 25, 26, 0, 26, 25, 27, 0),
-	gsSP2Triangles(27, 28, 26, 0, 27, 29, 28, 0),
-	gsSP2Triangles(27, 30, 29, 0, 27, 31, 30, 0),
-	gsSPVertex(jess_og_Fludd_DL_mesh_layer_1_vtx_1 + 32, 13, 0),
-	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
-	gsSP2Triangles(4, 3, 0, 0, 0, 5, 4, 0),
-	gsSP2Triangles(0, 6, 5, 0, 7, 5, 6, 0),
-	gsSP2Triangles(7, 8, 5, 0, 7, 9, 8, 0),
-	gsSP2Triangles(4, 10, 3, 0, 11, 12, 9, 0),
-	gsSPEndDisplayList(),
-};
-
-Vtx jess_og_Fludd_DL_mesh_layer_1_vtx_2[155] = {
+Vtx jess_og_Fludd_DL_mesh_layer_1_vtx_1[155] = {
 	{{ {275, -121, 156}, 0, {-16, 496}, {10, 240, 126, 255} }},
 	{{ {275, -135, 137}, 0, {-16, 496}, {231, 131, 0, 255} }},
 	{{ {275, -135, 156}, 0, {-16, 496}, {169, 206, 77, 255} }},
@@ -2258,8 +2184,8 @@ Vtx jess_og_Fludd_DL_mesh_layer_1_vtx_2[155] = {
 	{{ {106, -118, -110}, 0, {-16, 496}, {166, 0, 166, 255} }},
 };
 
-Gfx jess_og_Fludd_DL_mesh_layer_1_tri_2[] = {
-	gsSPVertex(jess_og_Fludd_DL_mesh_layer_1_vtx_2 + 0, 32, 0),
+Gfx jess_og_Fludd_DL_mesh_layer_1_tri_1[] = {
+	gsSPVertex(jess_og_Fludd_DL_mesh_layer_1_vtx_1 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 2, 1, 0),
 	gsSP2Triangles(4, 3, 1, 0, 1, 5, 4, 0),
 	gsSP2Triangles(1, 6, 5, 0, 7, 5, 6, 0),
@@ -2278,7 +2204,7 @@ Gfx jess_og_Fludd_DL_mesh_layer_1_tri_2[] = {
 	gsSP2Triangles(24, 25, 20, 0, 25, 26, 20, 0),
 	gsSP2Triangles(27, 28, 29, 0, 29, 30, 27, 0),
 	gsSP1Triangle(29, 31, 30, 0),
-	gsSPVertex(jess_og_Fludd_DL_mesh_layer_1_vtx_2 + 32, 32, 0),
+	gsSPVertex(jess_og_Fludd_DL_mesh_layer_1_vtx_1 + 32, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(3, 4, 0, 0, 5, 6, 7, 0),
 	gsSP2Triangles(7, 6, 8, 0, 7, 8, 9, 0),
@@ -2297,7 +2223,7 @@ Gfx jess_og_Fludd_DL_mesh_layer_1_tri_2[] = {
 	gsSP2Triangles(25, 26, 27, 0, 26, 25, 28, 0),
 	gsSP2Triangles(28, 25, 29, 0, 29, 25, 30, 0),
 	gsSP1Triangle(30, 25, 31, 0),
-	gsSPVertex(jess_og_Fludd_DL_mesh_layer_1_vtx_2 + 64, 32, 0),
+	gsSPVertex(jess_og_Fludd_DL_mesh_layer_1_vtx_1 + 64, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 2, 3, 0, 0),
 	gsSP2Triangles(2, 4, 3, 0, 5, 6, 7, 0),
 	gsSP2Triangles(5, 7, 8, 0, 8, 9, 5, 0),
@@ -2318,7 +2244,7 @@ Gfx jess_og_Fludd_DL_mesh_layer_1_tri_2[] = {
 	gsSP2Triangles(18, 21, 30, 0, 18, 19, 21, 0),
 	gsSP2Triangles(22, 30, 21, 0, 22, 31, 30, 0),
 	gsSP2Triangles(27, 30, 31, 0, 27, 28, 30, 0),
-	gsSPVertex(jess_og_Fludd_DL_mesh_layer_1_vtx_2 + 96, 32, 0),
+	gsSPVertex(jess_og_Fludd_DL_mesh_layer_1_vtx_1 + 96, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 2, 1, 3, 0),
 	gsSP2Triangles(0, 4, 5, 0, 6, 5, 4, 0),
 	gsSP2Triangles(7, 8, 9, 0, 8, 10, 9, 0),
@@ -2337,7 +2263,7 @@ Gfx jess_og_Fludd_DL_mesh_layer_1_tri_2[] = {
 	gsSP2Triangles(28, 26, 29, 0, 26, 30, 29, 0),
 	gsSP2Triangles(30, 31, 29, 0, 30, 25, 31, 0),
 	gsSP1Triangle(31, 25, 27, 0),
-	gsSPVertex(jess_og_Fludd_DL_mesh_layer_1_vtx_2 + 128, 27, 0),
+	gsSPVertex(jess_og_Fludd_DL_mesh_layer_1_vtx_1 + 128, 27, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 0, 5, 0),
 	gsSP2Triangles(6, 4, 5, 0, 7, 6, 5, 0),
@@ -2359,7 +2285,7 @@ Gfx jess_og_Fludd_DL_mesh_layer_1_tri_2[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx jess_og_Fludd_DL_mesh_layer_1_vtx_3[30] = {
+Vtx jess_og_Fludd_DL_mesh_layer_1_vtx_2[30] = {
 	{{ {141, -94, 0}, 0, {240, 615}, {82, 97, 0, 255} }},
 	{{ {141, -106, 21}, 0, {122, 684}, {82, 48, 84, 255} }},
 	{{ {167, -98, 36}, 0, {122, 684}, {0, 63, 110, 255} }},
@@ -2392,8 +2318,8 @@ Vtx jess_og_Fludd_DL_mesh_layer_1_vtx_3[30] = {
 	{{ {242, -94, 0}, 0, {240, 615}, {174, 97, 0, 255} }},
 };
 
-Gfx jess_og_Fludd_DL_mesh_layer_1_tri_3[] = {
-	gsSPVertex(jess_og_Fludd_DL_mesh_layer_1_vtx_3 + 0, 30, 0),
+Gfx jess_og_Fludd_DL_mesh_layer_1_tri_2[] = {
+	gsSPVertex(jess_og_Fludd_DL_mesh_layer_1_vtx_2 + 0, 30, 0),
 	gsSP2Triangles(0, 1, 2, 0, 1, 3, 2, 0),
 	gsSP2Triangles(1, 4, 3, 0, 4, 5, 3, 0),
 	gsSP2Triangles(4, 6, 5, 0, 7, 5, 6, 0),
@@ -2421,7 +2347,7 @@ Gfx jess_og_Fludd_DL_mesh_layer_1_tri_3[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx jess_og_Fludd_DL_mesh_layer_1_vtx_4[80] = {
+Vtx jess_og_Fludd_DL_mesh_layer_1_vtx_3[80] = {
 	{{ {312, -106, 22}, 0, {-1023, -742}, {51, 58, 101, 255} }},
 	{{ {312, -131, 22}, 0, {-1023, -674}, {51, 198, 101, 255} }},
 	{{ {331, -118, 0}, 0, {-1023, -742}, {127, 0, 0, 255} }},
@@ -2504,8 +2430,8 @@ Vtx jess_og_Fludd_DL_mesh_layer_1_vtx_4[80] = {
 	{{ {116, -102, -69}, 0, {-978, -1092}, {239, 30, 122, 255} }},
 };
 
-Gfx jess_og_Fludd_DL_mesh_layer_1_tri_4[] = {
-	gsSPVertex(jess_og_Fludd_DL_mesh_layer_1_vtx_4 + 0, 32, 0),
+Gfx jess_og_Fludd_DL_mesh_layer_1_tri_3[] = {
+	gsSPVertex(jess_og_Fludd_DL_mesh_layer_1_vtx_3 + 0, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 0, 5, 0),
 	gsSP2Triangles(5, 0, 6, 0, 5, 6, 7, 0),
@@ -2528,7 +2454,7 @@ Gfx jess_og_Fludd_DL_mesh_layer_1_tri_4[] = {
 	gsSP2Triangles(15, 26, 14, 0, 19, 26, 15, 0),
 	gsSP2Triangles(27, 28, 29, 0, 27, 29, 30, 0),
 	gsSP1Triangle(31, 27, 30, 0),
-	gsSPVertex(jess_og_Fludd_DL_mesh_layer_1_vtx_4 + 32, 32, 0),
+	gsSPVertex(jess_og_Fludd_DL_mesh_layer_1_vtx_3 + 32, 32, 0),
 	gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
 	gsSP2Triangles(3, 2, 4, 0, 5, 6, 7, 0),
 	gsSP2Triangles(5, 8, 6, 0, 9, 8, 5, 0),
@@ -2542,7 +2468,7 @@ Gfx jess_og_Fludd_DL_mesh_layer_1_tri_4[] = {
 	gsSP2Triangles(24, 26, 25, 0, 24, 27, 26, 0),
 	gsSP2Triangles(27, 28, 26, 0, 27, 23, 28, 0),
 	gsSP2Triangles(23, 25, 28, 0, 29, 30, 31, 0),
-	gsSPVertex(jess_og_Fludd_DL_mesh_layer_1_vtx_4 + 64, 16, 0),
+	gsSPVertex(jess_og_Fludd_DL_mesh_layer_1_vtx_3 + 64, 16, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 3, 1, 0),
 	gsSP2Triangles(4, 3, 0, 0, 4, 5, 3, 0),
 	gsSP2Triangles(6, 5, 4, 0, 6, 7, 5, 0),
@@ -2554,7 +2480,7 @@ Gfx jess_og_Fludd_DL_mesh_layer_1_tri_4[] = {
 	gsSPEndDisplayList(),
 };
 
-Vtx jess_og_Fludd_DL_mesh_layer_1_vtx_5[24] = {
+Vtx jess_og_Fludd_DL_mesh_layer_1_vtx_4[24] = {
 	{{ {14, -56, 116}, 0, {306, 301}, {183, 164, 208, 255} }},
 	{{ {21, -52, 135}, 0, {174, 301}, {1, 178, 100, 255} }},
 	{{ {19, -42, 141}, 0, {174, 301}, {254, 217, 121, 255} }},
@@ -2581,8 +2507,8 @@ Vtx jess_og_Fludd_DL_mesh_layer_1_vtx_5[24] = {
 	{{ {19, 59, -141}, 0, {174, 301}, {0, 72, 151, 255} }},
 };
 
-Gfx jess_og_Fludd_DL_mesh_layer_1_tri_5[] = {
-	gsSPVertex(jess_og_Fludd_DL_mesh_layer_1_vtx_5 + 0, 24, 0),
+Gfx jess_og_Fludd_DL_mesh_layer_1_tri_4[] = {
+	gsSPVertex(jess_og_Fludd_DL_mesh_layer_1_vtx_4 + 0, 24, 0),
 	gsSP2Triangles(0, 1, 2, 0, 0, 2, 3, 0),
 	gsSP2Triangles(3, 2, 4, 0, 3, 4, 5, 0),
 	gsSP2Triangles(6, 3, 5, 0, 6, 5, 7, 0),
@@ -2596,6 +2522,79 @@ Gfx jess_og_Fludd_DL_mesh_layer_1_tri_5[] = {
 	gsSP2Triangles(19, 21, 20, 0, 21, 22, 20, 0),
 	gsSP2Triangles(17, 20, 22, 0, 17, 22, 15, 0),
 	gsSP2Triangles(15, 22, 23, 0, 15, 23, 13, 0),
+	gsSPEndDisplayList(),
+};
+
+Vtx jess_og_Fludd_DL_mesh_layer_5_vtx_0[44] = {
+	{{ {116, -135, 43}, 0, {268, -16}, {158, 234, 78, 255} }},
+	{{ {116, -102, 43}, 0, {212, -16}, {158, 22, 78, 255} }},
+	{{ {116, -94, 43}, 0, {155, -16}, {176, 49, 85, 255} }},
+	{{ {103, -137, 33}, 0, {325, -16}, {251, 193, 110, 255} }},
+	{{ {103, -99, 33}, 0, {155, -16}, {251, 63, 110, 255} }},
+	{{ {103, -81, 0}, 0, {-16, -16}, {251, 127, 0, 255} }},
+	{{ {116, -69, 0}, 0, {-16, -16}, {176, 98, 0, 255} }},
+	{{ {116, -94, -43}, 0, {155, -16}, {176, 49, 171, 255} }},
+	{{ {103, -99, -33}, 0, {155, -16}, {251, 63, 146, 255} }},
+	{{ {103, -137, -33}, 0, {325, -16}, {251, 193, 146, 255} }},
+	{{ {116, -102, -43}, 0, {212, -16}, {158, 22, 178, 255} }},
+	{{ {116, -143, -43}, 0, {325, -16}, {176, 207, 171, 255} }},
+	{{ {116, -135, -43}, 0, {268, -16}, {158, 234, 178, 255} }},
+	{{ {116, -168, 0}, 0, {496, -16}, {176, 158, 0, 255} }},
+	{{ {103, -156, 0}, 0, {496, -16}, {251, 129, 0, 255} }},
+	{{ {116, -143, 43}, 0, {325, -16}, {176, 207, 85, 255} }},
+	{{ {72, -55, 0}, 0, {1008, -16}, {38, 121, 0, 255} }},
+	{{ {72, -87, 55}, 0, {666, -16}, {38, 61, 105, 255} }},
+	{{ {103, -99, 33}, 0, {666, 486}, {251, 63, 110, 255} }},
+	{{ {103, -137, 33}, 0, {325, 486}, {251, 193, 110, 255} }},
+	{{ {72, -150, 55}, 0, {325, -16}, {38, 195, 105, 255} }},
+	{{ {103, -156, 0}, 0, {-16, 486}, {251, 129, 0, 255} }},
+	{{ {72, -182, 0}, 0, {-16, -16}, {38, 135, 0, 255} }},
+	{{ {72, -150, -55}, 0, {325, -16}, {38, 195, 151, 255} }},
+	{{ {103, -137, -33}, 0, {325, 486}, {251, 193, 146, 255} }},
+	{{ {72, -87, -55}, 0, {666, -16}, {38, 61, 151, 255} }},
+	{{ {103, -99, -33}, 0, {666, 486}, {251, 63, 146, 255} }},
+	{{ {103, -81, 0}, 0, {1008, 486}, {251, 127, 0, 255} }},
+	{{ {55, -87, 55}, 0, {155, 368}, {46, 59, 103, 255} }},
+	{{ {72, -87, 55}, 0, {155, 240}, {38, 61, 105, 255} }},
+	{{ {72, -55, 0}, 0, {-16, 240}, {38, 121, 0, 255} }},
+	{{ {55, -150, 55}, 0, {325, 368}, {46, 197, 103, 255} }},
+	{{ {55, -150, 55}, 0, {325, 368}, {46, 197, 103, 255} }},
+	{{ {72, -150, 55}, 0, {325, 240}, {38, 195, 105, 255} }},
+	{{ {72, -87, 55}, 0, {155, 240}, {38, 61, 105, 255} }},
+	{{ {55, -182, 0}, 0, {496, 368}, {46, 137, 0, 255} }},
+	{{ {72, -182, 0}, 0, {496, 240}, {38, 135, 0, 255} }},
+	{{ {72, -150, -55}, 0, {325, 240}, {38, 195, 151, 255} }},
+	{{ {55, -150, -55}, 0, {325, 368}, {46, 197, 153, 255} }},
+	{{ {72, -87, -55}, 0, {155, 240}, {38, 61, 151, 255} }},
+	{{ {55, -87, -55}, 0, {155, 368}, {46, 59, 153, 255} }},
+	{{ {72, -55, 0}, 0, {-16, 240}, {38, 121, 0, 255} }},
+	{{ {55, -55, 0}, 0, {-16, 368}, {46, 119, 0, 255} }},
+	{{ {55, -87, 55}, 0, {155, 368}, {46, 59, 103, 255} }},
+};
+
+Gfx jess_og_Fludd_DL_mesh_layer_5_tri_0[] = {
+	gsSPVertex(jess_og_Fludd_DL_mesh_layer_5_vtx_0 + 0, 32, 0),
+	gsSP2Triangles(0, 1, 2, 0, 3, 0, 2, 0),
+	gsSP2Triangles(2, 4, 3, 0, 5, 4, 2, 0),
+	gsSP2Triangles(5, 2, 6, 0, 5, 6, 7, 0),
+	gsSP2Triangles(5, 7, 8, 0, 9, 8, 7, 0),
+	gsSP2Triangles(9, 7, 10, 0, 10, 11, 9, 0),
+	gsSP2Triangles(10, 12, 11, 0, 9, 11, 13, 0),
+	gsSP2Triangles(9, 13, 14, 0, 3, 14, 13, 0),
+	gsSP2Triangles(3, 13, 15, 0, 3, 15, 0, 0),
+	gsSP2Triangles(16, 17, 18, 0, 17, 19, 18, 0),
+	gsSP2Triangles(17, 20, 19, 0, 20, 21, 19, 0),
+	gsSP2Triangles(20, 22, 21, 0, 23, 21, 22, 0),
+	gsSP2Triangles(23, 24, 21, 0, 25, 24, 23, 0),
+	gsSP2Triangles(25, 26, 24, 0, 16, 26, 25, 0),
+	gsSP2Triangles(16, 27, 26, 0, 16, 18, 27, 0),
+	gsSP2Triangles(28, 29, 30, 0, 31, 29, 28, 0),
+	gsSPVertex(jess_og_Fludd_DL_mesh_layer_5_vtx_0 + 32, 12, 0),
+	gsSP2Triangles(0, 1, 2, 0, 3, 1, 0, 0),
+	gsSP2Triangles(3, 4, 1, 0, 3, 5, 4, 0),
+	gsSP2Triangles(3, 6, 5, 0, 6, 7, 5, 0),
+	gsSP2Triangles(6, 8, 7, 0, 8, 9, 7, 0),
+	gsSP2Triangles(8, 10, 9, 0, 11, 9, 10, 0),
 	gsSPEndDisplayList(),
 };
 
@@ -3609,10 +3608,10 @@ Gfx mat_jess_og_Pants_Button__PANTS_[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, jess_og_pants_rgba16),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 127, 1024),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 2, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 4, 0, G_TX_CLAMP | G_TX_NOMIRROR, 3, 0),
+	gsDPSetTextureImage(G_IM_FMT_I, G_IM_SIZ_8b_LOAD_BLOCK, 1, jess_og_pants_i8),
+	gsDPSetTile(G_IM_FMT_I, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
+	gsDPLoadBlock(7, 0, 0, 63, 2048),
+	gsDPSetTile(G_IM_FMT_I, G_IM_SIZ_8b, 1, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 4, 0, G_TX_CLAMP | G_TX_NOMIRROR, 3, 0),
 	gsDPSetTileSize(0, 0, 0, 28, 60),
 	gsSPEndDisplayList(),
 };
@@ -3630,10 +3629,10 @@ Gfx mat_jess_og_Shirt__SHIRT_[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, jess_og_sweater_rgba16),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 63, 1024),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 2, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 3, 0, G_TX_WRAP | G_TX_NOMIRROR, 3, 0),
+	gsDPSetTextureImage(G_IM_FMT_I, G_IM_SIZ_8b_LOAD_BLOCK, 1, jess_og_sweater_i8),
+	gsDPSetTile(G_IM_FMT_I, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
+	gsDPLoadBlock(7, 0, 0, 31, 2048),
+	gsDPSetTile(G_IM_FMT_I, G_IM_SIZ_8b, 1, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 3, 0, G_TX_WRAP | G_TX_NOMIRROR, 3, 0),
 	gsDPSetTileSize(0, 0, 0, 28, 28),
 	gsSPEndDisplayList(),
 };
@@ -3816,21 +3815,6 @@ Gfx mat_jess_og_Water[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_jess_og_Glass[] = {
-	gsSPGeometryMode(G_CULL_BACK, G_CULL_FRONT),
-	gsSPSetLights1(jess_og_Glass_lights),
-	gsDPPipeSync(),
-	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
-	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_revert_jess_og_Glass[] = {
-	gsSPGeometryMode(G_CULL_FRONT, G_CULL_BACK),
-	gsDPPipeSync(),
-	gsSPEndDisplayList(),
-};
-
 Gfx mat_jess_og_Yellow[] = {
 	gsSPSetLights1(jess_og_Yellow_lights),
 	gsDPPipeSync(),
@@ -3879,6 +3863,22 @@ Gfx mat_jess_og_Handle[] = {
 	gsSPEndDisplayList(),
 };
 
+Gfx mat_jess_og_Glass[] = {
+	gsSPGeometryMode(G_CULL_BACK, 0),
+	gsSPSetLights1(jess_og_Glass_lights),
+	gsDPPipeSync(),
+	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, PRIMITIVE, 0, 0, 0, SHADE, 0, 0, 0, PRIMITIVE),
+	gsSPTexture(65535, 65535, 0, 0, 1),
+	gsDPSetPrimColor(0, 0, 255, 255, 255, 128),
+	gsSPEndDisplayList(),
+};
+
+Gfx mat_revert_jess_og_Glass[] = {
+	gsSPGeometryMode(0, G_CULL_BACK),
+	gsDPPipeSync(),
+	gsSPEndDisplayList(),
+};
+
 Gfx mat_jess_og_Gloves__GLOVES_[] = {
 	gsSPCopyLightsPlayerPart(GLOVES),
 	gsDPPipeSync(),
@@ -3887,21 +3887,21 @@ Gfx mat_jess_og_Gloves__GLOVES_[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_jess_og_Fast3D_Material[] = {
+Gfx mat_jess_og_Tears__SKIN_[] = {
 	gsSPGeometryMode(G_CULL_BACK, 0),
 	gsSPCopyLightsPlayerPart(SKIN),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, TEXEL0, 0, ENVIRONMENT, 0, TEXEL0, 0, SHADE, 0, TEXEL0, 0, ENVIRONMENT, 0),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, jess_og_tears_rgba16),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 2047, 256),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
+	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, jess_og_tears_ia8),
+	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
+	gsDPLoadBlock(7, 0, 0, 1023, 512),
+	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 6, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
 	gsDPSetTileSize(0, 0, 0, 124, 252),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_jess_og_Fast3D_Material[] = {
+Gfx mat_revert_jess_og_Tears__SKIN_[] = {
 	gsSPGeometryMode(0, G_CULL_BACK),
 	gsDPPipeSync(),
 	gsSPEndDisplayList(),
@@ -3912,10 +3912,10 @@ Gfx mat_jess_og_Laces__SHIRT_[] = {
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
 	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, jess_og_shoe_detail_rgba16),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 63, 1024),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 2, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 3, 0, G_TX_WRAP | G_TX_NOMIRROR, 3, 0),
+	gsDPSetTextureImage(G_IM_FMT_I, G_IM_SIZ_8b_LOAD_BLOCK, 1, jess_og_shoe_detail_i8),
+	gsDPSetTile(G_IM_FMT_I, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
+	gsDPLoadBlock(7, 0, 0, 31, 2048),
+	gsDPSetTile(G_IM_FMT_I, G_IM_SIZ_8b, 1, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 3, 0, G_TX_WRAP | G_TX_NOMIRROR, 3, 0),
 	gsDPSetTileSize(0, 0, 0, 28, 28),
 	gsSPEndDisplayList(),
 };
@@ -4176,18 +4176,15 @@ Gfx jess_og_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Ey
 Gfx jess_og_Fludd_DL_mesh_layer_1[] = {
 	gsSPDisplayList(mat_jess_og_Water),
 	gsSPDisplayList(jess_og_Fludd_DL_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_jess_og_Glass),
-	gsSPDisplayList(jess_og_Fludd_DL_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_jess_og_Glass),
 	gsSPDisplayList(mat_jess_og_Yellow),
-	gsSPDisplayList(jess_og_Fludd_DL_mesh_layer_1_tri_2),
+	gsSPDisplayList(jess_og_Fludd_DL_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_jess_og_Blue),
-	gsSPDisplayList(jess_og_Fludd_DL_mesh_layer_1_tri_3),
+	gsSPDisplayList(jess_og_Fludd_DL_mesh_layer_1_tri_2),
 	gsSPDisplayList(mat_jess_og_Steel),
-	gsSPDisplayList(jess_og_Fludd_DL_mesh_layer_1_tri_4),
+	gsSPDisplayList(jess_og_Fludd_DL_mesh_layer_1_tri_3),
 	gsSPDisplayList(mat_revert_jess_og_Steel),
 	gsSPDisplayList(mat_jess_og_Handle),
-	gsSPDisplayList(jess_og_Fludd_DL_mesh_layer_1_tri_5),
+	gsSPDisplayList(jess_og_Fludd_DL_mesh_layer_1_tri_4),
 	gsSPEndDisplayList(),
 };
 
@@ -4198,7 +4195,20 @@ Gfx jess_og_Fludd_DL_mesh_layer_1_mat_override_Metal__METAL__0[] = {
 	gsSPDisplayList(jess_og_Fludd_DL_mesh_layer_1_tri_2),
 	gsSPDisplayList(jess_og_Fludd_DL_mesh_layer_1_tri_3),
 	gsSPDisplayList(jess_og_Fludd_DL_mesh_layer_1_tri_4),
-	gsSPDisplayList(jess_og_Fludd_DL_mesh_layer_1_tri_5),
+	gsSPDisplayList(mat_revert_jess_og_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx jess_og_Fludd_DL_mesh_layer_5[] = {
+	gsSPDisplayList(mat_jess_og_Glass),
+	gsSPDisplayList(jess_og_Fludd_DL_mesh_layer_5_tri_0),
+	gsSPDisplayList(mat_revert_jess_og_Glass),
+	gsSPEndDisplayList(),
+};
+
+Gfx jess_og_Fludd_DL_mesh_layer_5_mat_override_Metal__METAL__0[] = {
+	gsSPDisplayList(mat_jess_og_Metal__METAL_),
+	gsSPDisplayList(jess_og_Fludd_DL_mesh_layer_5_tri_0),
 	gsSPDisplayList(mat_revert_jess_og_Metal__METAL_),
 	gsSPEndDisplayList(),
 };
@@ -4360,9 +4370,9 @@ Gfx jess_og_Left_Thigh_Color_mesh_layer_1_mat_override_Metal__METAL__0[] = {
 };
 
 Gfx jess_og_Left_Thigh_Color_mesh_layer_4[] = {
-	gsSPDisplayList(mat_jess_og_Fast3D_Material),
+	gsSPDisplayList(mat_jess_og_Tears__SKIN_),
 	gsSPDisplayList(jess_og_Left_Thigh_Color_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_jess_og_Fast3D_Material),
+	gsSPDisplayList(mat_revert_jess_og_Tears__SKIN_),
 	gsSPEndDisplayList(),
 };
 
@@ -4419,16 +4429,9 @@ Gfx jess_og_Right_Thigh_Color_mesh_layer_1_mat_override_Metal__METAL__0[] = {
 };
 
 Gfx jess_og_Right_Thigh_Color_mesh_layer_4[] = {
-	gsSPDisplayList(mat_jess_og_Fast3D_Material),
+	gsSPDisplayList(mat_jess_og_Tears__SKIN_),
 	gsSPDisplayList(jess_og_Right_Thigh_Color_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_jess_og_Fast3D_Material),
-	gsDPPipeSync(),
-	gsSPSetGeometryMode(G_LIGHTING),
-	gsSPClearGeometryMode(G_TEXTURE_GEN),
-	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
-	gsSPTexture(65535, 65535, 0, 0, 0),
-	gsDPSetEnvColor(255, 255, 255, 255),
-	gsDPSetAlphaCompare(G_AC_NONE),
+	gsSPDisplayList(mat_revert_jess_og_Tears__SKIN_),
 	gsSPEndDisplayList(),
 };
 
@@ -4436,13 +4439,6 @@ Gfx jess_og_Right_Thigh_Color_mesh_layer_4_mat_override_Metal__METAL__0[] = {
 	gsSPDisplayList(mat_jess_og_Metal__METAL_),
 	gsSPDisplayList(jess_og_Right_Thigh_Color_mesh_layer_4_tri_0),
 	gsSPDisplayList(mat_revert_jess_og_Metal__METAL_),
-	gsDPPipeSync(),
-	gsSPSetGeometryMode(G_LIGHTING),
-	gsSPClearGeometryMode(G_TEXTURE_GEN),
-	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
-	gsSPTexture(65535, 65535, 0, 0, 0),
-	gsDPSetEnvColor(255, 255, 255, 255),
-	gsDPSetAlphaCompare(G_AC_NONE),
 	gsSPEndDisplayList(),
 };
 
@@ -4466,13 +4462,6 @@ Gfx jess_og_Right_Shoe_DL_mesh_layer_1[] = {
 	gsSPDisplayList(jess_og_Right_Shoe_DL_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_jess_og_Shoes__SHOES_),
 	gsSPDisplayList(jess_og_Right_Shoe_DL_mesh_layer_1_tri_2),
-	gsDPPipeSync(),
-	gsSPSetGeometryMode(G_LIGHTING),
-	gsSPClearGeometryMode(G_TEXTURE_GEN),
-	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
-	gsSPTexture(65535, 65535, 0, 0, 0),
-	gsDPSetEnvColor(255, 255, 255, 255),
-	gsDPSetAlphaCompare(G_AC_NONE),
 	gsSPEndDisplayList(),
 };
 
@@ -4482,6 +4471,10 @@ Gfx jess_og_Right_Shoe_DL_mesh_layer_1_mat_override_Metal__METAL__0[] = {
 	gsSPDisplayList(jess_og_Right_Shoe_DL_mesh_layer_1_tri_1),
 	gsSPDisplayList(jess_og_Right_Shoe_DL_mesh_layer_1_tri_2),
 	gsSPDisplayList(mat_revert_jess_og_Metal__METAL_),
+	gsSPEndDisplayList(),
+};
+
+Gfx jess_og_material_revert_render_settings[] = {
 	gsDPPipeSync(),
 	gsSPSetGeometryMode(G_LIGHTING),
 	gsSPClearGeometryMode(G_TEXTURE_GEN),
@@ -4489,6 +4482,16 @@ Gfx jess_og_Right_Shoe_DL_mesh_layer_1_mat_override_Metal__METAL__0[] = {
 	gsSPTexture(65535, 65535, 0, 0, 0),
 	gsDPSetEnvColor(255, 255, 255, 255),
 	gsDPSetAlphaCompare(G_AC_NONE),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, 0),
+	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP  | G_TX_NOMIRROR, 0, 0),
+	gsDPLoadBlock(7, 0, 0, 1023, 256),
+	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
+	gsDPSetTileSize(0, 0, 0, 124, 124),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, 0),
+	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 256, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
+	gsDPLoadBlock(6, 0, 0, 1023, 256),
+	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 256, 1, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
+	gsDPSetTileSize(1, 0, 0, 124, 124),
 	gsSPEndDisplayList(),
 };
 
