@@ -906,6 +906,9 @@ end
 function _G.is_davy()
     return CT_DAVY == _G.charSelect.character_get_current_number()
 end
+function _G.is_robojess()
+    return CT_ROBO_JESS == _G.charSelect.character_get_current_costume()
+end
 
 local function on_character_sound(m, sound)
     if not CSloaded then return end
