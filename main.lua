@@ -14,6 +14,7 @@ local E_MODEL_JER = smlua_model_util_get_id('jer_geo')
 local E_MODEL_JER_BEACH = smlua_model_util_get_id('beach_jer_geo')
 local E_MODEL_LUCKY = smlua_model_util_get_id('lucky_geo')
 local E_MODEL_JER_OG = smlua_model_util_get_id('jer_og_geo')
+local E_MODEL_SUPER_UNCLE = smlua_model_util_get_id('super_uncle_geo')
 
 local E_MODEL_JESS = smlua_model_util_get_id('jess_geo')
 local E_MODEL_JESS_BEACH = smlua_model_util_get_id('beach_jess_geo')
@@ -42,12 +43,17 @@ local TEX_ART_JER = get_texture_info('graffiti_jer')
 local TEX_ART_JESS = get_texture_info('graffiti_jess')
 
 local beytah = false
+local saul = false
 for _,mods in pairs(gActiveMods) do
     if mods.name == "[v0.7] \\#F78AF5\\B\\#F94A36\\3\\#4C5BFF\\3\\#EDD83D\\1\\#16C31C\\3" then
         TEX_JER = get_texture_info('beta_jer_icon')
         TEX_JESS = get_texture_info('beta_jess_icon')
         --E_MODEL_JER = smlua_model_util_get_id('jer_beta_geo')
         beytah = true
+    end
+
+    if mods.name == "[CS] \\#882A40\\Beef \\#88D549\\Saul" then
+        saul = true
     end
 end
 
@@ -376,6 +382,16 @@ local PALETTE_SMK_PROTO = {
     [CAP]    = "ffffff",
     [EMBLEM] = "ff0000",
 }
+local PALETTE_UNCLE =  {
+    [PANTS]  = "5B4129",
+    [SHIRT]  = "FF6C6C",
+    [GLOVES] = "ffbe9b",
+    [SHOES]  = "93704D",
+    [HAIR]   = "6D2D2A",
+    [SKIN]   = "ffbe9b",
+    [CAP]    = "6E4D46",
+    [EMBLEM] = "FFAF00",
+}
 
 
 local PALETTE_JESS = {
@@ -569,6 +585,7 @@ local PALETTE_CANTALOUPE =  {
     [CAP]    = "a00030",
     [EMBLEM] = "a00030",
 }
+
 
 local capJER = {
     normal = smlua_model_util_get_id("j_cap_geo"),
@@ -852,10 +869,25 @@ local function on_character_select_load()
     _G.charSelect.character_add_voice(E_MODEL_ROBO_JESS, VOICETABLE_ROBO_JESS)
     _G.charSelect.character_add_costume_health_meter(CT_JESS, CT_ROBO_JESS, HEALTH_METER_ROBO_JESS)
 
+    -- Super Uncle
+    if saul then
+    _G.charSelect.character_add_costume(CT_JER, "Super Uncle", { "Super Uncle is real!!"},
+        "JerThePear", {r = 255, g = 108, b = 108}, E_MODEL_SUPER_UNCLE, CT_MARIO, TEX_JER)
+    _G.charSelect.character_add_palette_preset(E_MODEL_SUPER_UNCLE, PALETTE_UNCLE, "Default")
+    _G.charSelect.character_add_animations(E_MODEL_SUPER_UNCLE, ANIMTABLE_JER)
+    _G.charSelect.character_add_caps(E_MODEL_SUPER_UNCLE, capJER)
+    _G.charSelect.character_add_voice(E_MODEL_SUPER_UNCLE, VOICETABLE_JER)
+    --_G.charSelect.character_add_celebration_star(E_MODEL_SUPER_UNCLE, E_MODEL_TROPHY, TEX_TROPHY)
+    end
+
     -- Categories
     _G.charSelect.character_set_category(CT_JER, "Jer + Jess")
     _G.charSelect.character_set_category(CT_JESS, "Jer + Jess")
     _G.charSelect.character_set_category(CT_DAVY, "Jer + Jess")
+
+    _G.charSelect.character_set_category(CT_JER, "DXA")
+    _G.charSelect.character_set_category(CT_JESS, "DXA")
+    _G.charSelect.character_set_category(CT_DAVY, "DXA")
 
     _G.charSelect.character_set_category(CT_JER, "Squishy Workshop")
     _G.charSelect.character_set_category(CT_JESS, "Squishy Workshop")
@@ -873,6 +905,9 @@ function _G.is_jer()
 end
 function _G.is_davy()
     return CT_DAVY == _G.charSelect.character_get_current_number()
+end
+function _G.is_robojess()
+    return CT_ROBO_JESS == _G.charSelect.character_get_current_costume()
 end
 
 local function on_character_sound(m, sound)

@@ -88,9 +88,9 @@ hook_event(HOOK_ON_MODS_LOADED, function()
 	_G.charSelect.character_set_locked(CT_DAVY, unlock_progress, true)
 end)
 
-function davy_relock()
-	davyProgress = -1
-	djui_chat_message_create("[Davy save reset]")
-	return true
-end
-_G.charSelect.hook_on_save_data_reset(davy_relock)
+--function davy_relock()
+--	davyProgress = -1
+--	djui_chat_message_create("[Davy save reset]")
+--	return true
+--end
+--_G.charSelect.hook_on_save_data_reset(davy_relock)

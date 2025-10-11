@@ -473,13 +473,14 @@ local function act_galaxy_spin(m)
     if m.actionTimer == 0 then
         play_character_sound(m, CHAR_SOUND_HOOHOO)
         audio_sample_play(SOUND_GALAXY_SPIN, m.pos, 1)
-        if m.forwardVel > 30 then
-            m.forwardVel = 30
-        end
         m.vel.y = 30
     end
     local stepResult = common_air_action_step(m, ACT_FREEFALL_LAND, MARIO_ANIM_RUNNING_UNUSED, AIR_STEP_CHECK_LEDGE_GRAB)
     m.vel.y = m.vel.y + 1
+
+    if m.forwardVel > 25 then
+        m.forwardVel = 25
+    end
 
     if m.actionTimer > 0 and m.actionTimer < 10 then
         m.particleFlags = m.particleFlags | PARTICLE_SPARKLES
@@ -754,7 +755,7 @@ local function jess_update(m)
             set_mario_action(m, ACT_DIVE, 0)
             m.particleFlags = m.particleFlags | PARTICLE_MIST_CIRCLE
             m.vel.y = 30
-            m.forwardVel = 20
+            m.forwardVel = m.forwardVel + 25
         else
             set_mario_action(m, ACT_DIVE, 0)
             m.vel.y = 0
@@ -897,7 +898,7 @@ local function jess_update(m)
     end
 
     -- springflip
-    if m.action == ACT_DIVE_SLIDE and (m.input & INPUT_Z_PRESSED) ~= 0 and (m.flags & MARIO_WING_CAP) == 0 and ((m.floor.normal.y > 0.94 and m.forwardVel > 20) or (m.forwardVel > 60)) then
+    if m.action == ACT_DIVE_SLIDE and (m.input & INPUT_Z_PRESSED) ~= 0 and (m.flags & MARIO_WING_CAP) == 0 and m.forwardVel > 30 then --((m.floor.normal.y > 0.94 and m.forwardVel > 20) or (m.forwardVel > 60))
         set_mario_action(m, ACT_SPRINGFLIP, 0)
     end
     -- twirl cancel
