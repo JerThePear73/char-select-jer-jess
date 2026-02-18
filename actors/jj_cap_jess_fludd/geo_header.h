@@ -1,0 +1,14 @@
+extern const GeoLayout jj_cap_jess_fludd_6_Cap_Anim_State_Switch_opt1[];
+extern const GeoLayout jj_cap_jess_fludd_geo[];
+extern Lights1 jj_cap_jess_fludd_Yellow_lights;
+extern u8 jj_cap_jess_fludd_FluddScrew_rgba16[];
+extern u8 jj_cap_jess_fludd_BuckleEnvMap_i8[];
+extern Vtx jj_cap_jess_fludd_Wing_Cap_DL_mesh_layer_1_vtx_0[72];
+extern Gfx jj_cap_jess_fludd_Wing_Cap_DL_mesh_layer_1_tri_0[];
+extern Vtx jj_cap_jess_fludd_Wing_Cap_DL_mesh_layer_1_vtx_1[57];
+extern Gfx jj_cap_jess_fludd_Wing_Cap_DL_mesh_layer_1_tri_1[];
+extern Gfx mat_jj_cap_jess_fludd_Yellow[];
+extern Gfx mat_jj_cap_jess_fludd_Steel[];
+extern Gfx mat_revert_jj_cap_jess_fludd_Steel[];
+extern Gfx jj_cap_jess_fludd_Wing_Cap_DL_mesh_layer_1[];
+extern Gfx jj_cap_jess_fludd_material_revert_render_settings[];

@@ -1,0 +1,9 @@
+extern const GeoLayout jj_cap_davy_magmastar_6_Cap_Anim_State_Switch_opt1[];
+extern const GeoLayout jj_cap_davy_magmastar_geo[];
+extern u8 jj_cap_davy_magmastar_DavyMagma_rgba16[];
+extern Vtx jj_cap_davy_magmastar_Winged_Metal_Cap_DL_mesh_layer_1_vtx_0[117];
+extern Gfx jj_cap_davy_magmastar_Winged_Metal_Cap_DL_mesh_layer_1_tri_0[];
+extern Gfx mat_jj_cap_davy_magmastar_Magma[];
+extern Gfx mat_revert_jj_cap_davy_magmastar_Magma[];
+extern Gfx jj_cap_davy_magmastar_Winged_Metal_Cap_DL_mesh_layer_1[];
+extern Gfx jj_cap_davy_magmastar_material_revert_render_settings[];

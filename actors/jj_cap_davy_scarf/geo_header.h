@@ -1,0 +1,15 @@
+extern const GeoLayout jj_cap_davy_scarf_6_Cap_Anim_State_Switch_opt1[];
+extern const GeoLayout jj_cap_davy_scarf_geo[];
+extern Lights1 jj_cap_davy_scarf_Scarf__CAP__lights;
+extern Lights1 jj_cap_davy_scarf_Scarf_End__CAP__lights;
+extern u8 jj_cap_davy_scarf_DavyScarf_ia8[];
+extern Vtx jj_cap_davy_scarf_Cap_DL_mesh_layer_1_vtx_0[70];
+extern Gfx jj_cap_davy_scarf_Cap_DL_mesh_layer_1_tri_0[];
+extern Vtx jj_cap_davy_scarf_Cap_DL_mesh_layer_4_vtx_0[13];
+extern Gfx jj_cap_davy_scarf_Cap_DL_mesh_layer_4_tri_0[];
+extern Gfx mat_jj_cap_davy_scarf_Scarf__CAP_[];
+extern Gfx mat_jj_cap_davy_scarf_Scarf_End__CAP_[];
+extern Gfx mat_revert_jj_cap_davy_scarf_Scarf_End__CAP_[];
+extern Gfx jj_cap_davy_scarf_Cap_DL_mesh_layer_1[];
+extern Gfx jj_cap_davy_scarf_Cap_DL_mesh_layer_4[];
+extern Gfx jj_cap_davy_scarf_material_revert_render_settings[];

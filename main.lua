@@ -1,4 +1,4 @@
--- name: [CS] \\#00aa00\\Jer \\#ffffff\\+ \\#22ccff\\Jess
+-- name: [CS] \\#00aa00\\Jer \\#ffffff\\& \\#22ccff\\Jess
 -- description: [CS] \\#00aa00\\Jer \\#ffffff\\+ \\#22ccff\\Jess\n\\#ffffff\\By \\#008800\\JerThePear\n\n\\#ffffff\\Jer and Jess find an old decrepit N64 in their attic and after turning it on, the two siblings get sucked into their TV and now must run around collecting Power Stars.\n\n\\#ff8000\\NEW Davy Mode!\n\n\\#ff7777\\This Pack requires Character Select\nto use as a Library!
 
 local TEXT_MOD_NAME = "Jer + Jess"
@@ -11,56 +11,38 @@ end
 
 -- Models --
 local E_MODEL_JER = smlua_model_util_get_id('jer_geo')
-local E_MODEL_JER_BEACH = smlua_model_util_get_id('beach_jer_geo')
-local E_MODEL_LUCKY = smlua_model_util_get_id('lucky_geo')
-local E_MODEL_JER_OG = smlua_model_util_get_id('jer_og_geo')
-local E_MODEL_SUPER_UNCLE = smlua_model_util_get_id('super_uncle_geo')
-
 local E_MODEL_JESS = smlua_model_util_get_id('jess_geo')
-local E_MODEL_JESS_BEACH = smlua_model_util_get_id('beach_jess_geo')
-local E_MODEL_JESSILYNN = smlua_model_util_get_id('jessilynn_geo')
-local E_MODEL_JESS_OG = smlua_model_util_get_id('jess_og_geo')
-local E_MODEL_ROBO_JESS = smlua_model_util_get_id('robo_jess_geo')
-
 local E_MODEL_DAVY = smlua_model_util_get_id('davy_geo')
-
-local E_MODEL_TROPHY = smlua_model_util_get_id('trophy_geo')
+--local E_MODEL_ROBO = smlua_model_util_get_id('robo_jess_geo')
 
 -- Credits --
-local MOD_NAME = "Jer + Jess"
-_G.charSelect.credit_add(MOD_NAME, "JerThePear", "Creator")
-_G.charSelect.credit_add(MOD_NAME, "SaulTube", "Sprites, Coding")
-_G.charSelect.credit_add(MOD_NAME, "Kaktus64", "Coding")
-_G.charSelect.credit_add(MOD_NAME, "Squishy6094", "Character Select, Coding")
+_G.charSelect.credit_add(TEXT_MOD_NAME, "JerThePear", "Creator")
+_G.charSelect.credit_add(TEXT_MOD_NAME, "SaulTube", "Sprites, Coding, Combiners")
+_G.charSelect.credit_add(TEXT_MOD_NAME, "Kaktus64", "Coding")
+_G.charSelect.credit_add(TEXT_MOD_NAME, "Squishy6094", "Character Select, Coding")
+_G.charSelect.credit_add(TEXT_MOD_NAME, "Xeebleton", "Being cool")
+_G.charSelect.credit_add(TEXT_MOD_NAME, "Isikle", "Being very cool")
 
 -- Textures --
-local TEX_JER = get_texture_info('jer_icon')
-local TEX_JESS = get_texture_info('jess_icon')
-local TEX_DAVY = get_texture_info('davy_icon')
-local TEX_ROBO_JESS = get_texture_info('robo_jess_icon')
-local TEX_TROPHY = get_texture_info('trophy')
-local TEX_ART_JER = get_texture_info('graffiti_jer')
-local TEX_ART_JESS = get_texture_info('graffiti_jess')
+local TEX_JER = get_texture_info('jj-icon-jer')
+local TEX_JESS = get_texture_info('jj-icon-jess')
+local TEX_DAVY = get_texture_info('jj-icon-davy')
+--local TEX_ROBO = get_texture_info('jj-icon-robo')
 
-local beytah = false
-local saul = false
-for _,mods in pairs(gActiveMods) do
-    if mods.name == "[v0.7] \\#F78AF5\\B\\#F94A36\\3\\#4C5BFF\\3\\#EDD83D\\1\\#16C31C\\3" then
-        TEX_JER = get_texture_info('beta_jer_icon')
-        TEX_JESS = get_texture_info('beta_jess_icon')
-        --E_MODEL_JER = smlua_model_util_get_id('jer_beta_geo')
-        beytah = true
-    end
-
-    if mods.name == "[CS] \\#882A40\\Beef \\#88D549\\Saul" then
-        saul = true
-    end
-end
+local TEX_ART_JER = get_texture_info('jj-graffiti-jer')
+local TEX_ART_JESS = get_texture_info('jj-graffiti-jess')
+local TEX_ART_DAVY = get_texture_info('jj-graffiti-davy')
+--local ART_ROBO = get_texture_info('jj-graffiti-robo')
 
 -- Sound --
 local SOUND_MENU_THEME_JER = audio_stream_load('char-select-menu-theme-jer.ogg')
 local SOUND_MENU_THEME_JESS = audio_stream_load('char-select-menu-theme-jess.ogg')
 local SOUND_MENU_THEME_DAVY = audio_stream_load('char-select-menu-theme-davy.ogg')
+
+CHAR_SOUND_EXTRA_1 = CHAR_SOUND_MAX + 1
+CHAR_SOUND_YEEHAW = CHAR_SOUND_MAX  + 2
+CHAR_SOUND_PIPE = CHAR_SOUND_MAX    + 3
+CHAR_SOUND_ZAP = CHAR_SOUND_MAX     + 4
 
 VOICETABLE_JER = { -- Voices from Scooter and other male characters from Lego Racers (1999)
     [CHAR_SOUND_ATTACKED] = {'jer_no.ogg', 'jer_ouch.ogg'},
@@ -103,9 +85,12 @@ VOICETABLE_JER = { -- Voices from Scooter and other male characters from Lego Ra
     [CHAR_SOUND_YAWNING] = nil,
     [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = {'jer_woohoo.ogg', 'jer_yippee.ogg'},
     [CHAR_SOUND_YAH_WAH_HOO] = {'jer_ha.ogg', 'jer_hoh.ogg'},
-    [CHAR_SOUND_HELLO] = 'rev.ogg',
-    [CHAR_SOUND_PRESS_START_TO_PLAY] = {'jer_heeyaw.ogg', 'jer_yeehaw.ogg'},
-    [CHAR_SOUND_OKEY_DOKEY] = 'jer_yeah_jazzy.ogg'
+    [CHAR_SOUND_OKEY_DOKEY] = 'jer_yeah_jazzy.ogg',
+    --CHAR_SOUND_MAX
+    [CHAR_SOUND_EXTRA_1] = 'jj_sound_rev.ogg',
+    [CHAR_SOUND_YEEHAW] = {'jer_heeyaw.ogg', 'jer_yeehaw.ogg'},
+    [CHAR_SOUND_PIPE] = 'jj_sound_pipe.ogg',
+    [CHAR_SOUND_ZAP] = 'jj_sound_zap.ogg',
 }
 
 VOICETABLE_JESS = { -- Voices from Veronica Voltage and other female characters from Lego Racers (1999)
@@ -149,7 +134,9 @@ VOICETABLE_JESS = { -- Voices from Veronica Voltage and other female characters 
     [CHAR_SOUND_YAWNING] = nil,
     [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = {'jess_yahoo.ogg', 'jess_woohoo.ogg' },
     [CHAR_SOUND_YAH_WAH_HOO] = {'jess_ha.ogg', 'jess_ya.ogg', 'jess_yeah.ogg' },
-    [CHAR_SOUND_OKEY_DOKEY] = 'jess_oh_yeah.ogg'
+    [CHAR_SOUND_OKEY_DOKEY] = 'jess_oh_yeah.ogg',
+    --CHAR_SOUND_MAX
+    [CHAR_SOUND_EXTRA_1] = 'jess_galaxy_spin.ogg',
 }
 
 VOICETABLE_DAVY = { -- Voices from Skeleton character from Lego Racers (1999)
@@ -195,452 +182,287 @@ VOICETABLE_DAVY = { -- Voices from Skeleton character from Lego Racers (1999)
     [CHAR_SOUND_YAH_WAH_HOO] = {'davy_haha.ogg', 'davy_ya.ogg'},
     [CHAR_SOUND_HELLO] = nil,
     [CHAR_SOUND_PRESS_START_TO_PLAY] = nil,
-    [CHAR_SOUND_OKEY_DOKEY] = 'davy_hohoyeahah.ogg'
+    [CHAR_SOUND_OKEY_DOKEY] = 'davy_hohoyeahah.ogg',
 }
 
-VOICETABLE_ROBO_JESS = { -- Voices from Veronica Voltage and other female characters from Lego Racers (1999)
-    [CHAR_SOUND_ATTACKED] = 'robo_jess_ow.ogg',
-    [CHAR_SOUND_COUGHING1] = nil,
-    [CHAR_SOUND_COUGHING2] = nil,
-    [CHAR_SOUND_COUGHING3] = nil,
-    [CHAR_SOUND_DOH] = 'robo_jess_ow.ogg',
-    [CHAR_SOUND_DROWNING] = nil,
-    [CHAR_SOUND_DYING] = 'robo_jess_ohno.ogg',
-    [CHAR_SOUND_EEUH] = 'robo_jess_heh.ogg',
-    [CHAR_SOUND_GROUND_POUND_WAH] = 'robo_jess_hiya.ogg',
-    [CHAR_SOUND_HAHA] = 'robo_jess_yeah_jazzy.ogg',
-    [CHAR_SOUND_HAHA_2] = 'robo_jess_oh_yeah.ogg',
-    [CHAR_SOUND_HERE_WE_GO] = 'robo_jess_yeah_jazzy.ogg',
-    [CHAR_SOUND_HOOHOO] = 'robo_jess_woo.ogg',
-    [CHAR_SOUND_HRMM] = 'robo_jess_heh.ogg',
-    [CHAR_SOUND_IMA_TIRED] = nil,
-    [CHAR_SOUND_MAMA_MIA] = 'robo_jess_ohno.ogg',
-    [CHAR_SOUND_LETS_A_GO] = 'robo_jess_oh_yeah.ogg',
-    [CHAR_SOUND_ON_FIRE] = 'robo_jess_ohno.ogg',
-    [CHAR_SOUND_OOOF] = 'robo_jess_ouch.ogg',
-    [CHAR_SOUND_OOOF2] = 'robo_jess_ouch.ogg',
-    [CHAR_SOUND_PANTING] = nil,
-    [CHAR_SOUND_PANTING_COLD] = nil,
-    [CHAR_SOUND_PUNCH_HOO] = 'robo_jess_yeah.ogg',
-    [CHAR_SOUND_PUNCH_WAH] = 'robo_jess_ya.ogg',
-    [CHAR_SOUND_PUNCH_YAH] = 'robo_jess_ha.ogg',
-    [CHAR_SOUND_SO_LONGA_BOWSER] = 'robo_jess_hiya.ogg',
-    [CHAR_SOUND_SNORING1] = nil,
-    [CHAR_SOUND_SNORING2] = nil,
-    [CHAR_SOUND_SNORING3] = nil,
-    [CHAR_SOUND_TWIRL_BOUNCE] = 'robo_jess_yahoo.ogg',
-    [CHAR_SOUND_UH] = 'robo_jess_ow.ogg',
-    [CHAR_SOUND_UH2] = 'robo_jess_heh.ogg',
-    [CHAR_SOUND_UH2_2] = nil,
-    [CHAR_SOUND_WAAAOOOW] = 'robo_jess_ohno.ogg',
-    [CHAR_SOUND_WAH2] = 'robo_jess_ya.ogg',
-    [CHAR_SOUND_WHOA] = 'robo_jess_uh_oh.ogg',
-    [CHAR_SOUND_YAHOO] = { 'robo_jess_yahoo.ogg', 'robo_jess_woohoo.ogg' },
-    [CHAR_SOUND_YAWNING] = 'robo_jess_shutdown.ogg',
-    [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = {'robo_jess_yahoo.ogg', 'robo_jess_woohoo.ogg' },
-    [CHAR_SOUND_YAH_WAH_HOO] = {'robo_jess_ha.ogg', 'robo_jess_ya.ogg', 'robo_jess_yeah.ogg' },
-    [CHAR_SOUND_OKEY_DOKEY] = 'robo_jess_oh_yeah.ogg'
+local PALETTES_JER = {
+    {
+        name = "Default",
+        [PANTS]  = "303030",
+        [SHIRT]  = "305e3d",
+        [GLOVES] = "303030",
+        [SHOES]  = "85642c",
+        [HAIR]   = "462c1e",
+        [SKIN]   = "ffc2ab",
+        [CAP]    = "4c4c4c",
+        [EMBLEM] = "00ff00",
+    },
+    {
+        name = "Legacy",
+        [PANTS]  = "008000",
+        [SHIRT]  = "ffff6c",
+        [GLOVES] = "008000",
+        [SHOES]  = "462c1e",
+        [HAIR]   = "462c1e",
+        [SKIN]   = "ffba90",
+        [CAP]    = "4c4c4c",
+        [EMBLEM] = "00ff00",
+    },
+    {
+        name = "GameGuy",
+        [PANTS]  = "0d350d",
+        [SHIRT]  = "0d350d",
+        [GLOVES] = "0d350d",
+        [SHOES]  = "346734",
+        [HAIR]   = "346734",
+        [SKIN]   = "a3c113",
+        [CAP]    = "346734",
+        [EMBLEM] = "a3c113",
+    },
+    {
+        name = "Dreamwalker",
+        [PANTS]  = "003300",
+        [SHIRT]  = "ff0080",
+        [GLOVES] = "00ff00",
+        [SHOES]  = "ff0080",
+        [HAIR]   = "005f00",
+        [SKIN]   = "00ff00",
+        [CAP]    = "008000",
+        [EMBLEM] = "66be00",
+    },
+    {
+        name = "Dead Meat",
+        [PANTS]  = "00413c",
+        [SHIRT]  = "ffffff",
+        [GLOVES] = "009378",
+        [SHOES]  = "b92c50",
+        [HAIR]   = "00704d",
+        [SKIN]   = "ffcd90",
+        [CAP]    = "009378",
+        [EMBLEM] = "009378",
+    },
+    {
+        name = "Carrot",
+        [PANTS]  = "625900",
+        [SHIRT]  = "c36400",
+        [GLOVES] = "ffba90",
+        [SHOES]  = "c36400",
+        [HAIR]   = "ffffff",
+        [SKIN]   = "ffba90",
+        [CAP]    = "ffffff",
+        [EMBLEM] = "c36400",
+    },
+    {
+        name = "Bad at The Game",
+        [PANTS]  = "ffffff",
+        [SHIRT]  = "ff0000",
+        [GLOVES] = "fec179",
+        [SHOES]  = "333333",
+        [HAIR]   = "730600",
+        [SKIN]   = "fec179",
+        [CAP]    = "ffffff",
+        [EMBLEM] = "ff0000",
+    },
 }
-
-local PALETTE_JER = {
-    [PANTS]  = "008040",
-    [SHIRT]  = "ffaa00",
-    [GLOVES] = "008040",
-    [SHOES]  = "462c1e",
-    [HAIR]   = "00ff00",
-    [SKIN]   = "ffba90",
-    [CAP]    = "008040",
-    [EMBLEM] = "008040",
+local PALETTES_JESS = {
+    {
+        name = "Default",
+        [PANTS]  = "7195ac",
+        [SHIRT]  = "ffffff",
+        [GLOVES] = "ffba90",
+        [SHOES]  = "3f3f3f",
+        [HAIR]   = "462c1e",
+        [SKIN]   = "ffba90",
+        [CAP]    = "ae0000",
+        [EMBLEM] = "ffc200",
+    },
+    {
+        name = "Legacy",
+        [PANTS]  = "8cc6ff",
+        [SHIRT]  = "bbff4d",
+        [GLOVES] = "ffba90",
+        [SHOES]  = "462c1e",
+        [HAIR]   = "462c1e",
+        [SKIN]   = "ffba90",
+        [CAP]    = "8cc6ff",
+        [EMBLEM] = "bbff4d",
+    },
+    {
+        name = "GameGal",
+        [PANTS]  = "4f4f4f",
+        [SHIRT]  = "ffffff",
+        [GLOVES] = "a6a6a6",
+        [SHOES]  = "4f4f4f",
+        [HAIR]   = "8c8c8c",
+        [SKIN]   = "a6a6a6",
+        [CAP]    = "4f4f4f",
+        [EMBLEM] = "ffffff",
+    },
+    {
+        name = "Boy Hungry",
+        [PANTS]  = "65869d",
+        [SHIRT]  = "cdbd8f",
+        [GLOVES] = "9eff93",
+        [SHOES]  = "3a4a65",
+        [HAIR]   = "9c2c37",
+        [SKIN]   = "9eff93",
+        [CAP]    = "40354e",
+        [EMBLEM] = "9099ae",
+    },
+    {
+        name = "Autumn Breeze",
+        [PANTS]  = "333333",
+        [SHIRT]  = "6b5033",
+        [GLOVES] = "ffba90",
+        [SHOES]  = "dddddd",
+        [HAIR]   = "462c1e",
+        [SKIN]   = "ffba90",
+        [CAP]    = "b13a32",
+        [EMBLEM] = "dddddd",
+    },
+    {
+        name = "Demon",
+        [PANTS]  = "333333",
+        [SHIRT]  = "8b2121",
+        [GLOVES] = "e9b1aa",
+        [SHOES]  = "222222",
+        [HAIR]   = "ffffff",
+        [SKIN]   = "e9b1aa",
+        [CAP]    = "222222",
+        [EMBLEM] = "666666",
+    },
+    {
+        name = "Cave Dweller",
+        [PANTS]  = "33394d",
+        [SHIRT]  = "9975d4",
+        [GLOVES] = "ffdca8",
+        [SHOES]  = "271c45",
+        [HAIR]   = "090c09",
+        [SKIN]   = "ffdca8",
+        [CAP]    = "390e52",
+        [EMBLEM] = "ecd1ff",
+    },
 }
-local PALETTE_JER_LEGACY = {
-    [PANTS]  = "008000",
-    [SHIRT]  = "ffff66",
-    [GLOVES] = "008000",
-    [SHOES]  = "462c1e",
-    [HAIR]   = "00ff00",
-    [SKIN]   = "ffba90",
-    [CAP]    = "008000",
-    [EMBLEM] = "008000",
-}
-local PALETTE_JER_FIRE = {
-    [PANTS]  = "ff4000",
-    [SHIRT]  = "222222",
-    [GLOVES] = "ff4000",
-    [SHOES]  = "462c1e",
-    [HAIR]   = "ff7700",
-    [SKIN]   = "ffba90",
-    [CAP]    = "ff4000",
-    [EMBLEM] = "ff4000",
-}
-local PALETTE_JER_RETRO = {
-    [PANTS]  = "F4A000",
-    [SHIRT]  = "257641",
-    [GLOVES] = "4c4c4c",
-    [SHOES]  = "257641",
-    [HAIR]   = "257641",
-    [SKIN]   = "ffba90",
-    [CAP]    = "257641",
-    [EMBLEM] = "257641",
-}
-local PALETTE_JER_BEACH = {
-    [PANTS]  = "FF8900",
-    [SHIRT]  = "98FF2E",
-    [GLOVES] = "FF8900",
-    [SHOES]  = "BC00BC",
-    [HAIR]   = "00ff00",
-    [SKIN]   = "ffba90",
-    [CAP]    = "BC00BC",
-    [EMBLEM] = "BC00BC",
-}
-local PALETTE_80_SUNSET = {
-    [PANTS]  = "8000ff",
-    [SHIRT]  = "ff0080",
-    [GLOVES] = "00ff80",
-    [SHOES]  = "ff0080",
-    [HAIR]   = "00ff80",
-    [SKIN]   = "ffba90",
-    [CAP]    = "8000ff",
-    [EMBLEM] = "8000ff",
-}
-local PALETTE_LUCKY = {
-    [PANTS]  = "333333",
-    [SHIRT]  = "333333",
-    [GLOVES] = "FFC900",
-    [SHOES]  = "222222",
-    [HAIR]   = "462C1E",
-    [SKIN]   = "FFC2AB",
-    [CAP]    = "333333",
-    [EMBLEM] = "008000",
-}
-local PALETTE_BURNOUT = {
-    [PANTS]  = "333333",
-    [SHIRT]  = "827654",
-    [GLOVES] = "542d00",
-    [SHOES]  = "544b3a",
-    [HAIR]   = "2e221e",
-    [SKIN]   = "FFC2AB",
-    [CAP]    = "aaaaaa",
-    [EMBLEM] = "4b7047",
-}
-local PALETTE_LENNY = {
-    [PANTS]  = "444444",
-    [SHIRT]  = "566b2e",
-    [GLOVES] = "000000",
-    [SHOES]  = "222222",
-    [HAIR]   = "322220",
-    [SKIN]   = "b77351",
-    [CAP]    = "b00c1f",
-    [EMBLEM] = "ff6900",
-}
-local PALETTE_SAUL = {
-    [PANTS]  = "4b0079",
-    [SHIRT]  = "bbff4d",
-    [GLOVES] = "bbff4d",
-    [SHOES]  = "462c1e",
-    [HAIR]   = "462c1e",
-    [SKIN]   = "ffba90",
-    [CAP]    = "666666",
-    [EMBLEM] = "462c1e",
-}
-local PALETTE_JER_OG = {
-    [PANTS]  = "303030",
-    [SHIRT]  = "BCBCBC",
-    [GLOVES] = "303030",
-    [SHOES]  = "3F3F3F",
-    [HAIR]   = "462C1E",
-    [SKIN]   = "FFC2AB",
-    [CAP]    = "4C4C4C",
-    [EMBLEM] = "00FF00",
-}
-local PALETTE_CARROT = {
-    [PANTS]  = "472900",
-    [SHIRT]  = "ff6700",
-    [GLOVES] = "FFC2AB",
-    [SHOES]  = "ffffff",
-    [HAIR]   = "ffffff",
-    [SKIN]   = "FFC2AB",
-    [CAP]    = "4C4C4C",
-    [EMBLEM] = "ff6700",
-}
-local PALETTE_DELIRIOUS = {
-    [PANTS]  = "000000",
-    [SHIRT]  = "ff0080",
-    [GLOVES] = "00ff00",
-    [SHOES]  = "00ff00",
-    [HAIR]   = "008000",
-    [SKIN]   = "00ff00",
-    [CAP]    = "008000",
-    [EMBLEM] = "00ff00",
-}
-local PALETTE_SMK_PROTO = {
-    [PANTS]  = "0048f8",
-    [SHIRT]  = "0048f8",
-    [GLOVES] = "ffffff",
-    [SHOES]  = "ffffff",
-    [HAIR]   = "500600",
-    [SKIN]   = "ffbe9b",
-    [CAP]    = "ffffff",
-    [EMBLEM] = "ff0000",
-}
-local PALETTE_UNCLE =  {
-    [PANTS]  = "5B4129",
-    [SHIRT]  = "FF6C6C",
-    [GLOVES] = "ffbe9b",
-    [SHOES]  = "93704D",
-    [HAIR]   = "6D2D2A",
-    [SKIN]   = "ffbe9b",
-    [CAP]    = "6E4D46",
-    [EMBLEM] = "FFAF00",
-}
-
-
-local PALETTE_JESS = {
-    [PANTS]  = "8cc6ff",
-    [SHIRT]  = "bbff4d",
-    [GLOVES] = "8cc6ff",
-    [SHOES]  = "462c1e",
-    [HAIR]   = "462c1e",
-    [SKIN]   = "ffba90",
-    [CAP]    = "8cc6ff",
-    [EMBLEM] = "8cc6ff",
-}
-local PALETTE_JESS_FIRE = {
-    [PANTS]  = "bbff4d",
-    [SHIRT]  = "ffffff",
-    [GLOVES] = "ffffff",
-    [SHOES]  = "462c1e",
-    [HAIR]   = "ff4a00",
-    [SKIN]   = "e5935f",
-    [CAP]    = "ffffff",
-    [EMBLEM] = "bbff4d",
-}
-local PALETTE_ZOE = {
-    [PANTS]  = "84007b",
-    [SHIRT]  = "ff5b00",
-    [GLOVES] = "84007b",
-    [SHOES]  = "295539",
-    [HAIR]   = "9c2c1e",
-    [SKIN]   = "9eff93",
-    [CAP]    = "84007b",
-    [EMBLEM] = "84007b",
-}
-local PALETTE_JESS_BEACH = {
-    [PANTS]  = "c64f42",
-    [SHIRT]  = "336677",
-    [GLOVES] = "c64f42",
-    [SHOES]  = "c64f42",
-    [HAIR]   = "462c1e",
-    [SKIN]   = "ffba90",
-    [CAP]    = "c64f42",
-    [EMBLEM] = "ffd532",
-}
-local PALETTE_POPULAR_GIRL = {
-    [PANTS]  = "276dff",
-    [SHIRT]  = "ff4100",
-    [GLOVES] = "ce6cff",
-    [SHOES]  = "ff4100",
-    [HAIR]   = "ff9b00",
-    [SKIN]   = "ffba90",
-    [CAP]    = "ce6cff",
-    [EMBLEM] = "ffffff",
-}
-local PALETTE_SUNNY = {
-    [PANTS]  = "ffd979",
-    [SHIRT]  = "ff4a55",
-    [GLOVES] = "ffffff",
-    [SHOES]  = "ffffff",
-    [HAIR]   = "ffd979",
-    [SKIN]   = "ff8e55",
-    [CAP]    = "ffffff",
-    [EMBLEM] = "ff4a00",
-}
-local PALETTE_JESSILYNN = {
-    [PANTS]  = "2b8859",
-    [SHIRT]  = "99d149",
-    [GLOVES] = "ffffff",
-    [SHOES]  = "462c1e",
-    [HAIR]   = "462c1e",
-    [SKIN]   = "ffba90",
-    [CAP]    = "99d149",
-    [EMBLEM] = "ffc300",
-}
-local PALETTE_ANNA = {
-    [PANTS]  = "3c2fff",
-    [SHIRT]  = "5aa6ff",
-    [GLOVES] = "c64f42",
-    [SHOES]  = "5aa6ff",
-    [HAIR]   = "462c1e",
-    [SKIN]   = "ffba90",
-    [CAP]    = "5aa6ff",
-    [EMBLEM] = "ffc300",
-}
-local PALETTE_JESS_OG = {
-    [PANTS]  = "77bdff",
-    [SHIRT]  = "ffffff",
-    [GLOVES] = "ffba90",
-    [SHOES]  = "333333",
-    [HAIR]   = "462c1e",
-    [SKIN]   = "ffba90",
-    [CAP]    = "771E16",
-    [EMBLEM] = "FFCC00",
-}
-local PALETTE_DEMON = {
-    [PANTS]  = "333340",
-    [SHIRT]  = "bb0000",
-    [GLOVES] = "ffba90",
-    [SHOES]  = "111111",
-    [HAIR]   = "d0ddff",
-    [SKIN]   = "ffba90",
-    [CAP]    = "111111",
-    [EMBLEM] = "879cb4",
-}
-local PALETTE_JERIA = {
-    [PANTS]  = "2c4654",
-    [SHIRT]  = "333333",
-    [GLOVES] = "FFC2AB",
-    [SHOES]  = "BCBCBC",
-    [HAIR]   = "462c1e",
-    [SKIN]   = "FFC2AB",
-    [CAP]    = "462c1e",
-    [EMBLEM] = "BCBCBC",
-}
-local PALETTE_JESS_RACER = {
-    [PANTS]  = "bbff4d",
-    [SHIRT]  = "ffffff",
-    [GLOVES] = "ffba90",
-    [SHOES]  = "922c4d",
-    [HAIR]   = "462c1e",
-    [SKIN]   = "ffba90",
-    [CAP]    = "404455",
-    [EMBLEM] = "8295af",
-}
-local PALETTE_ROBO_JESS = {
-    [PANTS]  = "333333",
-    [SHIRT]  = "ffc000",
-    [GLOVES] = "ffffff",
-    [SHOES]  = "333333",
-    [HAIR]   = "a3b3bf",
-    [SKIN]   = "dddddd",
-    [CAP]    = "333333",
-    [EMBLEM] = "0000ff",
-}
-local PALETTE_ROBO_JESS_SILVER = {
-    [PANTS]  = "999999",
-    [SHIRT]  = "ffc000",
-    [GLOVES] = "ffffff",
-    [SHOES]  = "999999",
-    [HAIR]   = "a3b3bf",
-    [SKIN]   = "dddddd",
-    [CAP]    = "999999",
-    [EMBLEM] = "ff0000",
-}
-local PALETTE_DAVID =  {
-    [PANTS]  = "ff8000",
-    [SHIRT]  = "222222",
-    [GLOVES] = "ff8000",
-    [SHOES]  = "552945",
-    [HAIR]   = "888888",
-    [SKIN]   = "dddddd",
-    [CAP]    = "ff8000",
-    [EMBLEM] = "552945",
-}
-
-local PALETTE_DAVY =  {
-    [PANTS]  = "ff8000",
-    [SHIRT]  = "222222",
-    [GLOVES] = "ff8000",
-    [SHOES]  = "552945",
-    [HAIR]   = "888888",
-    [SKIN]   = "ffffff",
-    [CAP]    = "ff8000",
-    [EMBLEM] = "ff8000",
-}
-local PALETTE_PISSBOY =  {
-    [PANTS]  = "ffff00",
-    [SHIRT]  = "006080",
-    [GLOVES] = "ffff00",
-    [SHOES]  = "006080",
-    [HAIR]   = "ffb000",
-    [SKIN]   = "ffffff",
-    [CAP]    = "ffff00",
-    [EMBLEM] = "ffff00",
-}
-local PALETTE_MANHATTAN =  {
-    [PANTS]  = "008eff",
-    [SHIRT]  = "df1a10",
-    [GLOVES] = "008eff",
-    [SHOES]  = "df1a10",
-    [HAIR]   = "00d99c",
-    [SKIN]   = "ffffb2",
-    [CAP]    = "008eff",
-    [EMBLEM] = "df1a10",
-}
-local PALETTE_CANTALOUPE =  {
-    [PANTS]  = "a00030",
-    [SHIRT]  = "00b277",
-    [GLOVES] = "a00030",
-    [SHOES]  = "00b277",
-    [HAIR]   = "9b3d00",
-    [SKIN]   = "ffffff",
-    [CAP]    = "a00030",
-    [EMBLEM] = "a00030",
+local PALETTES_DAVY = {
+    {
+        name = "Default",
+        [PANTS]  = "303030",
+        [SHIRT]  = "bbbbbb",
+        [GLOVES] = "888888",
+        [SHOES]  = "303030",
+        [HAIR]   = "bbbbbb",
+        [SKIN]   = "ffffff",
+        [CAP]    = "ff8200",
+        [EMBLEM] = "ffffff",
+    },
+    {
+        name = "Legacy",
+        [PANTS]  = "ff8000",
+        [SHIRT]  = "222222",
+        [GLOVES] = "552945",
+        [SHOES]  = "552945",
+        [HAIR]   = "bbbbbb",
+        [SKIN]   = "ffffff",
+        [CAP]    = "ff8000",
+        [EMBLEM] = "222222",
+    },
+    {
+        name = "VirtualGuy",
+        [PANTS]  = "300000",
+        [SHIRT]  = "bb0000",
+        [GLOVES] = "880000",
+        [SHOES]  = "300000",
+        [HAIR]   = "bb0000",
+        [SKIN]   = "ff0000",
+        [CAP]    = "ff0000",
+        [EMBLEM] = "ff0000",
+    },
+    {
+        name = "Cotton Candy",
+        [PANTS]  = "5bcefa",
+        [SHIRT]  = "f5a9b8",
+        [GLOVES] = "5bcefa",
+        [SHOES]  = "5bcefa",
+        [HAIR]   = "f5a9b8",
+        [SKIN]   = "ffffff",
+        [CAP]    = "ffffff",
+        [EMBLEM] = "f5a9b8",
+    },
+    {
+        name = "Pissboy",
+        [PANTS]  = "1f2f34",
+        [SHIRT]  = "006080",
+        [GLOVES] = "ffff00",
+        [SHOES]  = "1f2f34",
+        [HAIR]   = "ffab00",
+        [SKIN]   = "ffffff",
+        [CAP]    = "ffff00",
+        [EMBLEM] = "006080",
+    },
+    {
+        name = "Manhattan",
+        [PANTS]  = "301a22",
+        [SHIRT]  = "008eff",
+        [GLOVES] = "59ffb2",
+        [SHOES]  = "301a22",
+        [HAIR]   = "99ffff",
+        [SKIN]   = "ffffff",
+        [CAP]    = "df1a10",
+        [EMBLEM] = "008eff",
+    },
+    {
+        name = "Cantaloupe",
+        [PANTS]  = "30251b",
+        [SHIRT]  = "009d4d",
+        [GLOVES] = "9b623c",
+        [SHOES]  = "30251b",
+        [HAIR]   = "85502c",
+        [SKIN]   = "ffffff",
+        [CAP]    = "a00040",
+        [EMBLEM] = "009d4d",
+    },
+    {
+        name = "Parchment",
+        [PANTS]  = "4782c9",
+        [SHIRT]  = "ffffff",
+        [GLOVES] = "ffe467",
+        [SHOES]  = "ff4711",
+        [HAIR]   = "bbbbbb",
+        [SKIN]   = "ffffff",
+        [CAP]    = "ff4711",
+        [EMBLEM] = "ffe467",
+    },
+    {
+        name = "Decayed",
+        [PANTS]  = "101010",
+        [SHIRT]  = "a6a6a6",
+        [GLOVES] = "595959",
+        [SHOES]  = "101010",
+        [HAIR]   = "d9d79e",
+        [SKIN]   = "8c8b62",
+        [CAP]    = "5c3b1b",
+        [EMBLEM] = "a6a6a6",
+    },
 }
 
 
-local capJER = {
-    normal = smlua_model_util_get_id("j_cap_geo"),
-    wing = smlua_model_util_get_id("nos_tank_geo"),
-    metal = smlua_model_util_get_id("metal_flower_geo"),
-    metalWing = nil
+local CAP_JER = {
+    normal = smlua_model_util_get_id("jj_cap_jer_helmet_geo"),
+    wing = smlua_model_util_get_id("jj_cap_jer_nos_geo"),
+    metal = smlua_model_util_get_id("jj_cap_jer_metal_geo"),
+    metalWing = smlua_model_util_get_id("jj_cap_jer_metalnos_geo"),
 }
-
-local capJER_BEACH = {
-    normal = smlua_model_util_get_id("shades_geo"),
-    wing = smlua_model_util_get_id("nos_tank_geo"),
-    metal = smlua_model_util_get_id("metal_flower_geo"),
-    metalWing = nil
+local CAP_JESS = {
+    normal = smlua_model_util_get_id("jj_cap_jess_hat_geo"),
+    wing = smlua_model_util_get_id("jj_cap_jess_fludd_geo"),
+    metal = smlua_model_util_get_id("jj_cap_jess_ice_geo"),
+    metalWing = smlua_model_util_get_id("jj_cap_jess_icefludd_geo"),
 }
-
-local capJER_LUCKY = {
-    normal = smlua_model_util_get_id("helmet_lucky_geo"),
-    wing = smlua_model_util_get_id("nos_tank_geo"),
-    metal = smlua_model_util_get_id("metal_flower_geo"),
-    metalWing = nil
-}
-
-local capJER_HELMET = {
-    normal = smlua_model_util_get_id("helmet_geo"),
-    wing = smlua_model_util_get_id("nos_tank_geo"),
-    metal = smlua_model_util_get_id("metal_flower_geo"),
-    metalWing = nil
-}
-
-local capJESS = {
-    normal = smlua_model_util_get_id("j_cap_geo"),
-    wing = smlua_model_util_get_id("fludd_nozzle_geo"),
-    metal = smlua_model_util_get_id("ice_flower_geo"),
-    metalWing = nil
-}
-
-local capJESS_BEACH = {
-    normal = smlua_model_util_get_id("beach_flower_geo"),
-    wing = smlua_model_util_get_id("fludd_nozzle_geo"),
-    metal = smlua_model_util_get_id("ice_flower_geo"),
-    metalWing = nil
-}
-
-local capJESSILYNN = {
-    normal = smlua_model_util_get_id("miner_cap_geo"),
-    wing = smlua_model_util_get_id("fludd_nozzle_geo"),
-    metal = smlua_model_util_get_id("ice_flower_geo"),
-    metalWing = nil
-}
-
-local capDAVY = {
-    normal = smlua_model_util_get_id("davy_cap_geo"),
-    wing = smlua_model_util_get_id("davy_wing_cap_geo"),
-    metal = smlua_model_util_get_id("screw_geo"),
-    metalWing = nil
+local CAP_DAVY = {
+    normal = smlua_model_util_get_id("jj_cap_davy_scarf_geo"),
+    wing = smlua_model_util_get_id("jj_cap_davy_star_geo"),
+    metal = smlua_model_util_get_id("jj_cap_davy_magma_geo"),
+    metalWing = smlua_model_util_get_id("jj_cap_davy_magmastar_geo"),
 }
 
 local ANIMTABLE_JER = {
@@ -656,10 +478,10 @@ local ANIMTABLE_JER = {
     [CHAR_ANIM_SLIDEFLIP] = "beytah_slideflip",
     [CHAR_ANIM_SLIDEJUMP] = "jer_wallkick",
 }
-
 local ANIMTABLE_JESS = {
     [_G.charSelect.CS_ANIM_MENU] = "jess_menu_anim",
     [CHAR_ANIM_RUNNING] = "jess_run",
+    [CHAR_ANIM_WALKING] = "jess_walking",
     [CHAR_ANIM_IDLE_HEAD_LEFT] = "jess_idle",
     [CHAR_ANIM_IDLE_HEAD_RIGHT] = "jess_idle",
     [CHAR_ANIM_IDLE_HEAD_CENTER] = "jess_idle",
@@ -677,7 +499,6 @@ local ANIMTABLE_JESS = {
 local EYETABLE_JESS = {
     [_G.charSelect.CS_ANIM_MENU] = MARIO_EYES_LOOK_RIGHT,
 }
-
 local ANIMTABLE_DAVY = {
     [_G.charSelect.CS_ANIM_MENU] = "davy_menu_anim",
     [CHAR_ANIM_SINGLE_JUMP] = "davy_single_jump",
@@ -692,193 +513,133 @@ local EYETABLE_DAVY = {
 
 local HEALTH_METER_JER = {
     label = {
-        left = get_texture_info("jer-hp-left"),
-        right = get_texture_info("jer-hp-right"),
+        left = get_texture_info("jj-pie-jer-left"),
+        right = get_texture_info("jj-pie-jer-right"),
     },
     pie = {
-        [1] = get_texture_info("hp-1"),
-        [2] = get_texture_info("hp-2"),
-        [3] = get_texture_info("hp-3"),
-        [4] = get_texture_info("hp-4"),
-        [5] = get_texture_info("hp-5"),
-        [6] = get_texture_info("hp-6"),
-        [7] = get_texture_info("hp-7"),
-        [8] = get_texture_info("hp-8"),
+        [1] = get_texture_info("jj-pie-1"),
+        [2] = get_texture_info("jj-pie-2"),
+        [3] = get_texture_info("jj-pie-3"),
+        [4] = get_texture_info("jj-pie-4"),
+        [5] = get_texture_info("jj-pie-5"),
+        [6] = get_texture_info("jj-pie-6"),
+        [7] = get_texture_info("jj-pie-7"),
+        [8] = get_texture_info("jj-pie-8"),
     }
 }
-
 local HEALTH_METER_JESS = {
     label = {
-        left = get_texture_info("jess-hp-left"),
-        right = get_texture_info("jess-hp-right"),
+        left = get_texture_info("jj-pie-jess-left"),
+        right = get_texture_info("jj-pie-jess-right"),
     },
     pie = {
-        [1] = get_texture_info("hp-1"),
-        [2] = get_texture_info("hp-2"),
-        [3] = get_texture_info("hp-3"),
-        [4] = get_texture_info("hp-4"),
-        [5] = get_texture_info("hp-5"),
-        [6] = get_texture_info("hp-6"),
-        [7] = get_texture_info("hp-7"),
-        [8] = get_texture_info("hp-8"),
+        [1] = get_texture_info("jj-pie-1"),
+        [2] = get_texture_info("jj-pie-2"),
+        [3] = get_texture_info("jj-pie-3"),
+        [4] = get_texture_info("jj-pie-4"),
+        [5] = get_texture_info("jj-pie-5"),
+        [6] = get_texture_info("jj-pie-6"),
+        [7] = get_texture_info("jj-pie-7"),
+        [8] = get_texture_info("jj-pie-8"),
     }
 }
-
 local HEALTH_METER_DAVY = {
     label = {
-        left = get_texture_info("davy-hp-left"),
-        right = get_texture_info("davy-hp-right"),
+        left = get_texture_info("jj-pie-davy-left"),
+        right = get_texture_info("jj-pie-davy-right"),
     },
     pie = {
-        [1] = get_texture_info("hp-1"),
-        [2] = get_texture_info("hp-2"),
-        [3] = get_texture_info("hp-3"),
-        [4] = get_texture_info("hp-4"),
-        [5] = get_texture_info("hp-5"),
-        [6] = get_texture_info("hp-6"),
-        [7] = get_texture_info("hp-7"),
-        [8] = get_texture_info("hp-8"),
+        [1] = get_texture_info("jj-pie-1"),
+        [2] = get_texture_info("jj-pie-2"),
+        [3] = get_texture_info("jj-pie-3"),
+        [4] = get_texture_info("jj-pie-4"),
+        [5] = get_texture_info("jj-pie-5"),
+        [6] = get_texture_info("jj-pie-6"),
+        [7] = get_texture_info("jj-pie-7"),
+        [8] = get_texture_info("jj-pie-8"),
     }
 }
-
 local HEALTH_METER_ROBO_JESS = {
     label = {
-        left = get_texture_info("robo-jess-hp-left"),
-        right = get_texture_info("robo-jess-hp-right"),
+        left = get_texture_info("jj-pie-robo-left"),
+        right = get_texture_info("jj-pie-robo-right"),
     },
     pie = {
-        [1] = get_texture_info("hp-1"),
-        [2] = get_texture_info("hp-2"),
-        [3] = get_texture_info("hp-3"),
-        [4] = get_texture_info("hp-4"),
-        [5] = get_texture_info("hp-5"),
-        [6] = get_texture_info("hp-6"),
-        [7] = get_texture_info("hp-7"),
-        [8] = get_texture_info("hp-8"),
+        [1] = get_texture_info("jj-pie-1"),
+        [2] = get_texture_info("jj-pie-2"),
+        [3] = get_texture_info("jj-pie-3"),
+        [4] = get_texture_info("jj-pie-4"),
+        [5] = get_texture_info("jj-pie-5"),
+        [6] = get_texture_info("jj-pie-6"),
+        [7] = get_texture_info("jj-pie-7"),
+        [8] = get_texture_info("jj-pie-8"),
     }
 }
 
 if _G.charSelectExists then
     CT_JER = _G.charSelect.character_add("Jer", { "A helmet man with a love for speed. Age: 21, Height: 6'4, Jess' older brother. Jer's moveset is based around maintaining speed but is designed for more experienced players. His powerups still serve their vanilla purpose but have slight adjustments. Type '/jj-moves' for help."},
-        "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_JER, CT_MARIO, TEX_JER)
+        "JerThePear",
+        {r = 000, g = 255, b = 000},
+        E_MODEL_JER,
+        CT_MARIO,
+        TEX_JER,
+        1.25
+    )
     CT_JESS = _G.charSelect.character_add("Jess", { "A clumsy gal that loves the winter. Age: 19, Height: 6'0, Jer's younger sister. Jess' moveset is designed for less experienced players, with easier platforming. Her powerups are different and will make some stars easier but others impossible. Type '/jj-moves' for help."},
-        "JerThePear", {r = 000, g = 255, b = 125}, E_MODEL_JESS, CT_MARIO, TEX_JESS)
+        "JerThePear",
+        {r = 000, g = 255, b = 125},
+        E_MODEL_JESS,
+        CT_MARIO,
+        TEX_JESS,
+        1.25
+    )
     CT_DAVY = _G.charSelect.character_add("Davy", { "A skeleton-cyborg mix hellbent on chaos. Age: ??, Height: 6'9, A friend of Jer's. Davy's moveset is just meant to be silly, aside from his bomb throw ability. Type '/jj-moves' for help."},
-        "JerThePear", {r = 255, g = 165, b = 000}, E_MODEL_DAVY, CT_MARIO, TEX_DAVY)
+        "JerThePear",
+        {r = 255, g = 165, b = 000},
+        E_MODEL_DAVY,
+        CT_MARIO,
+        TEX_DAVY,
+        1.25
+    )
 end
 
 local CSloaded = false
 local function on_character_select_load()
-    _G.charSelect.character_add_palette_preset(E_MODEL_JER, PALETTE_JER, "Default")
-    _G.charSelect.character_add_palette_preset(E_MODEL_JER, PALETTE_JER_LEGACY, "Legacy")
-    _G.charSelect.character_add_palette_preset(E_MODEL_JER, PALETTE_JER_FIRE, "Fire")
-    _G.charSelect.character_add_palette_preset(E_MODEL_JER, PALETTE_JER_RETRO, "Retro") -- by: Kaktus64
-    _G.charSelect.character_add_animations(E_MODEL_JER, ANIMTABLE_JER)
-    _G.charSelect.character_add_caps(E_MODEL_JER, capJER)
-    _G.charSelect.character_add_health_meter(CT_JER, HEALTH_METER_JER)
-    _G.charSelect.character_add_voice(E_MODEL_JER, VOICETABLE_JER)
-    _G.charSelect.character_add_celebration_star(E_MODEL_JER, E_MODEL_TROPHY, TEX_TROPHY)
-    _G.charSelect.character_add_menu_instrumental(CT_JER, SOUND_MENU_THEME_JER)
-    _G.charSelect.character_add_graffiti(CT_JER, TEX_ART_JER)
-
-    _G.charSelect.character_add_palette_preset(E_MODEL_JESS, PALETTE_JESS, "Default")
-    _G.charSelect.character_add_palette_preset(E_MODEL_JESS, PALETTE_JESS_FIRE, "Fire")
-    _G.charSelect.character_add_palette_preset(E_MODEL_JESS, PALETTE_ZOE, "Zoe")
-    _G.charSelect.character_add_animations(E_MODEL_JESS, ANIMTABLE_JESS, EYETABLE_JESS)
-    _G.charSelect.character_add_caps(E_MODEL_JESS, capJESS)
-    _G.charSelect.character_add_health_meter(CT_JESS, HEALTH_METER_JESS)
-    _G.charSelect.character_add_voice(E_MODEL_JESS, VOICETABLE_JESS)
-    _G.charSelect.character_add_menu_instrumental(CT_JESS, SOUND_MENU_THEME_JESS)
-    _G.charSelect.character_add_graffiti(CT_JESS, TEX_ART_JESS)
-
-    _G.charSelect.character_add_palette_preset(E_MODEL_DAVY, PALETTE_DAVY, "Default")
-    _G.charSelect.character_add_palette_preset(E_MODEL_DAVY, PALETTE_PISSBOY, "Pissboy")
-    _G.charSelect.character_add_palette_preset(E_MODEL_DAVY, PALETTE_MANHATTAN, "Manhattan")
-    _G.charSelect.character_add_palette_preset(E_MODEL_DAVY, PALETTE_CANTALOUPE, "Cantaloupe")
-    _G.charSelect.character_add_voice(E_MODEL_DAVY, VOICETABLE_DAVY)
-    _G.charSelect.character_add_caps(E_MODEL_DAVY, capDAVY)
-    _G.charSelect.character_add_health_meter(CT_DAVY, HEALTH_METER_DAVY)
-    _G.charSelect.character_add_animations(E_MODEL_DAVY, ANIMTABLE_DAVY, EYETABLE_DAVY)
-    _G.charSelect.character_add_menu_instrumental(CT_DAVY, SOUND_MENU_THEME_DAVY)
-    -- SHADES --
-    _G.charSelect.character_add_costume(CT_JER, "Shades", { "Jer dressed for a sunny vacation. Age: 21, Height: 6'4, Jess' older brother. Jer's moveset is based around maintaining speed but is designed for more experienced players. His powerups still serve their vanilla purpose but have slight adjustments. Type '/jj-moves' for help."},
-        "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_JER_BEACH, CT_MARIO, TEX_JER)
-    _G.charSelect.character_add_palette_preset(E_MODEL_JER_BEACH, PALETTE_JER_BEACH, "Default")
-    _G.charSelect.character_add_palette_preset(E_MODEL_JER_BEACH, PALETTE_80_SUNSET, "80's Sunset")
-    _G.charSelect.character_add_animations(E_MODEL_JER_BEACH, ANIMTABLE_JER)
-    _G.charSelect.character_add_caps(E_MODEL_JER_BEACH, capJER_BEACH)
-    _G.charSelect.character_add_voice(E_MODEL_JER_BEACH, VOICETABLE_JER)
-    _G.charSelect.character_add_celebration_star(E_MODEL_JER_BEACH, E_MODEL_TROPHY, TEX_TROPHY)
-    -- LUCKY --
-    _G.charSelect.character_add_costume(CT_JER, "Lucky", { "Hello Peter, Welcome to Fortnite. Age: 21, Height: 6'4, Jess' older brother. Jer's moveset is based around maintaining speed but is designed for more experienced players. His powerups still serve their vanilla purpose but have slight adjustments. Type '/jj-moves' for help."},
-        "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_LUCKY, CT_MARIO, TEX_JER)
-    _G.charSelect.character_add_palette_preset(E_MODEL_LUCKY, PALETTE_LUCKY, "Rider")
-    _G.charSelect.character_add_palette_preset(E_MODEL_LUCKY, PALETTE_BURNOUT, "Burnout")
-    _G.charSelect.character_add_palette_preset(E_MODEL_LUCKY, PALETTE_LENNY, "Lenny")
-    _G.charSelect.character_add_palette_preset(E_MODEL_LUCKY, PALETTE_SAUL, "Fungus")
-    _G.charSelect.character_add_animations(E_MODEL_LUCKY, ANIMTABLE_JER)
-    _G.charSelect.character_add_caps(E_MODEL_LUCKY, capJER_LUCKY)
-    _G.charSelect.character_add_voice(E_MODEL_LUCKY, VOICETABLE_JER)
-    _G.charSelect.character_add_celebration_star(E_MODEL_LUCKY, E_MODEL_TROPHY, TEX_TROPHY)
-    -- JERAD --
-    _G.charSelect.character_add_costume(CT_JER, "Jerad", { "Jer wearing his usual clothes. Age: 21, Height: 6'4, Jess' older brother. Jer's moveset is based around maintaining speed but is designed for more experienced players. His powerups still serve their vanilla purpose but have slight adjustments. Type '/jj-moves' for help."},
-        "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_JER_OG, CT_MARIO, TEX_JER)
-    _G.charSelect.character_add_palette_preset(E_MODEL_JER_OG, PALETTE_JER_OG, "Default")
-    _G.charSelect.character_add_palette_preset(E_MODEL_JER_OG, PALETTE_CARROT, "Carrot")
-    _G.charSelect.character_add_palette_preset(E_MODEL_JER_OG, PALETTE_DELIRIOUS, "Delirious")
-    _G.charSelect.character_add_palette_preset(E_MODEL_JER_OG, PALETTE_SMK_PROTO, "1991")
-    _G.charSelect.character_add_animations(E_MODEL_JER_OG, ANIMTABLE_JER)
-    _G.charSelect.character_add_caps(E_MODEL_JER_OG, capJER_HELMET)
-    _G.charSelect.character_add_voice(E_MODEL_JER_OG, VOICETABLE_JER)
-    _G.charSelect.character_add_celebration_star(E_MODEL_JER_OG, E_MODEL_TROPHY, TEX_TROPHY)
-    -- BEACHY --
-    _G.charSelect.character_add_costume(CT_JESS, "Beachy", { "Jess dressed for a sunny vacation. Age: 19, Height: 6'0, Jer's younger sister. Jess' moveset is designed for less experienced players, with easier platforming. Her powerups are different and will make some stars easier but others impossible. Type '/jj-moves' for help."},
-        "JerThePear", {r = 000, g = 255, b = 125}, E_MODEL_JESS_BEACH, CT_MARIO, TEX_JESS)
-    _G.charSelect.character_add_palette_preset(E_MODEL_JESS_BEACH, PALETTE_JESS_BEACH, "Default")
-    _G.charSelect.character_add_palette_preset(E_MODEL_JESS_BEACH, PALETTE_POPULAR_GIRL, "Popular Girl")
-    _G.charSelect.character_add_palette_preset(E_MODEL_JESS_BEACH, PALETTE_SUNNY, "Sunny")
-    _G.charSelect.character_add_animations(E_MODEL_JESS_BEACH, ANIMTABLE_JESS, EYETABLE_JESS)
-    _G.charSelect.character_add_caps(E_MODEL_JESS_BEACH, capJESS_BEACH)
-    _G.charSelect.character_add_voice(E_MODEL_JESS_BEACH, VOICETABLE_JESS)
-    -- JESSILYNN --
-    _G.charSelect.character_add_costume(CT_JESS, "Jessilynn", { "Jess dressed for the mines. Age: 19, Height: 6'0, Jer's younger sister. Jess' moveset is designed for less experienced players, with easier platforming. Her powerups are different and will make some stars easier but others impossible. Type '/jj-moves' for help."},
-        "JerThePear", {r = 000, g = 255, b = 125}, E_MODEL_JESSILYNN, CT_MARIO, TEX_JESS)
-    _G.charSelect.character_add_palette_preset(E_MODEL_JESSILYNN, PALETTE_JESSILYNN, "Default")
-    _G.charSelect.character_add_palette_preset(E_MODEL_JESSILYNN, PALETTE_ANNA, "Annalynn")
-    _G.charSelect.character_add_animations(E_MODEL_JESSILYNN, ANIMTABLE_JESS, EYETABLE_JESS)
-    _G.charSelect.character_add_caps(E_MODEL_JESSILYNN, capJESSILYNN)
-    _G.charSelect.character_add_voice(E_MODEL_JESSILYNN, VOICETABLE_JESS)
-    -- JESSICA --
-    _G.charSelect.character_add_costume(CT_JESS, "Jessica", { "Jess wearing her usual clothes. Age: 19, Height: 6'0, Jer's younger sister. Jess' moveset is designed for less experienced players, with easier platforming. Her powerups are different and will make some stars easier but others impossible. Type '/jj-moves' for help."},
-        "JerThePear", {r = 000, g = 255, b = 125}, E_MODEL_JESS_OG, CT_MARIO, TEX_JESS)
-    _G.charSelect.character_add_palette_preset(E_MODEL_JESS_OG, PALETTE_JESS_OG, "Default")
-    _G.charSelect.character_add_palette_preset(E_MODEL_JESS_OG, PALETTE_DEMON, "Demon")
-    _G.charSelect.character_add_palette_preset(E_MODEL_JESS_OG, PALETTE_JERIA, "Jeria")
-    _G.charSelect.character_add_palette_preset(E_MODEL_JESS_OG, PALETTE_JESS_RACER, "Racer")
-    _G.charSelect.character_add_animations(E_MODEL_JESS_OG, ANIMTABLE_JESS, EYETABLE_JESS)
-    _G.charSelect.character_add_caps(E_MODEL_JESS_OG, capJESS)
-    _G.charSelect.character_add_voice(E_MODEL_JESS_OG, VOICETABLE_JESS)
-    -- ROBO JESS 
-    CT_ROBO_JESS = _G.charSelect.character_add_costume(CT_JESS, "J-355", { "A strangely familiar robotic clone. Age: ??, Height: 6'0, Allegedly created by Evil Jer."},
-        "JerThePear", {r = 200, g = 200, b = 200}, E_MODEL_ROBO_JESS, CT_MARIO, TEX_ROBO_JESS)
-    _G.charSelect.character_add_palette_preset(E_MODEL_ROBO_JESS, PALETTE_ROBO_JESS, "Default")
-    _G.charSelect.character_add_palette_preset(E_MODEL_ROBO_JESS, PALETTE_ROBO_JESS_SILVER, "Silver")
-    _G.charSelect.character_add_palette_preset(E_MODEL_ROBO_JESS, PALETTE_DAVID, "Skeleton")
-    _G.charSelect.character_add_animations(E_MODEL_ROBO_JESS, ANIMTABLE_JESS)
-    _G.charSelect.character_add_caps(E_MODEL_ROBO_JESS, capJESS)
-    _G.charSelect.character_add_voice(E_MODEL_ROBO_JESS, VOICETABLE_ROBO_JESS)
-    _G.charSelect.character_add_costume_health_meter(CT_JESS, CT_ROBO_JESS, HEALTH_METER_ROBO_JESS)
-
-    -- Super Uncle
-    if saul then
-    _G.charSelect.character_add_costume(CT_JER, "Super Uncle", { "Super Uncle is real!!"},
-        "JerThePear", {r = 255, g = 108, b = 108}, E_MODEL_SUPER_UNCLE, CT_MARIO, TEX_JER)
-    _G.charSelect.character_add_palette_preset(E_MODEL_SUPER_UNCLE, PALETTE_UNCLE, "Default")
-    _G.charSelect.character_add_animations(E_MODEL_SUPER_UNCLE, ANIMTABLE_JER)
-    _G.charSelect.character_add_caps(E_MODEL_SUPER_UNCLE, capJER)
-    _G.charSelect.character_add_voice(E_MODEL_SUPER_UNCLE, VOICETABLE_JER)
-    --_G.charSelect.character_add_celebration_star(E_MODEL_SUPER_UNCLE, E_MODEL_TROPHY, TEX_TROPHY)
+    for i = 1, #PALETTES_JER do
+        _G.charSelect.character_add_palette_preset(E_MODEL_JER, PALETTES_JER[i], PALETTES_JER[i].name)
     end
+    for i = 1, #PALETTES_JESS do
+        _G.charSelect.character_add_palette_preset(E_MODEL_JESS, PALETTES_JESS[i], PALETTES_JESS[i].name)
+    end
+    for i = 1, #PALETTES_DAVY do
+        _G.charSelect.character_add_palette_preset(E_MODEL_DAVY, PALETTES_DAVY[i], PALETTES_DAVY[i].name)
+    end
+
+    -- Model dependant
+    _G.charSelect.character_add_animations(E_MODEL_JER, ANIMTABLE_JER)
+    _G.charSelect.character_add_animations(E_MODEL_JESS, ANIMTABLE_JESS, EYETABLE_JESS)
+    _G.charSelect.character_add_animations(E_MODEL_DAVY, ANIMTABLE_DAVY, EYETABLE_DAVY)
+    
+    _G.charSelect.character_add_caps(E_MODEL_JER, CAP_JER)
+    _G.charSelect.character_add_caps(E_MODEL_JESS, CAP_JESS)
+    _G.charSelect.character_add_caps(E_MODEL_DAVY, CAP_DAVY)
+
+    _G.charSelect.character_add_voice(E_MODEL_JER, VOICETABLE_JER)
+    _G.charSelect.character_add_voice(E_MODEL_JESS, VOICETABLE_JESS)
+    _G.charSelect.character_add_voice(E_MODEL_DAVY, VOICETABLE_DAVY)
+
+    -- Char dependant
+    _G.charSelect.character_add_health_meter(CT_JER, HEALTH_METER_JER)
+    _G.charSelect.character_add_health_meter(CT_JESS, HEALTH_METER_JESS)
+    _G.charSelect.character_add_health_meter(CT_DAVY, HEALTH_METER_DAVY)
+
+    _G.charSelect.character_add_graffiti(CT_JER, TEX_ART_JER)
+    _G.charSelect.character_add_graffiti(CT_JESS, TEX_ART_JESS)
+    _G.charSelect.character_add_graffiti(CT_DAVY, TEX_ART_DAVY)
+    
+    _G.charSelect.character_add_menu_instrumental(CT_JER, SOUND_MENU_THEME_JER)
+    _G.charSelect.character_add_menu_instrumental(CT_JESS, SOUND_MENU_THEME_JESS)
+    _G.charSelect.character_add_menu_instrumental(CT_DAVY, SOUND_MENU_THEME_DAVY)
 
     -- Categories
     _G.charSelect.character_set_category(CT_JER, "Jer + Jess")
@@ -897,29 +658,25 @@ local function on_character_select_load()
 end
 
 -- Compare table positions
-function _G.is_jess()
-    return CT_JESS == _G.charSelect.character_get_current_number()
-end
 function _G.is_jer()
     return CT_JER == _G.charSelect.character_get_current_number()
+end
+function _G.is_jess()
+    return CT_JESS == _G.charSelect.character_get_current_number()
 end
 function _G.is_davy()
     return CT_DAVY == _G.charSelect.character_get_current_number()
 end
-function _G.is_robojess()
-    return CT_ROBO_JESS == _G.charSelect.character_get_current_costume()
-end
+--function _G.is_robojess()
+--    return CT_ROBO == _G.charSelect.character_get_current_number()
+--end
 
 local function on_character_sound(m, sound)
     if not CSloaded then return end
     if _G.charSelect.character_get_voice(m) == VOICETABLE_JER then return _G.charSelect.voice.sound(m, sound) end
     if _G.charSelect.character_get_voice(m) == VOICETABLE_JESS then return _G.charSelect.voice.sound(m, sound) end
     if _G.charSelect.character_get_voice(m) == VOICETABLE_DAVY then return _G.charSelect.voice.sound(m, sound) end
-    if _G.charSelect.character_get_voice(m) == VOICETABLE_ROBO_JESS then return _G.charSelect.voice.sound(m, sound) end
-
-    if beytah then
-        _G.charSelect.character_add_voice(E_MODEL_JER, nil)
-    end
+    --if _G.charSelect.character_get_voice(m) == VOICETABLE_ROBO_JESS then return _G.charSelect.voice.sound(m, sound) end
 end
 
 local function on_character_snore(m)
@@ -927,21 +684,39 @@ local function on_character_snore(m)
     if _G.charSelect.character_get_voice(m) == VOICETABLE_JER then return _G.charSelect.voice.snore(m) end
     if _G.charSelect.character_get_voice(m) == VOICETABLE_JESS then return _G.charSelect.voice.snore(m) end
     if _G.charSelect.character_get_voice(m) == VOICETABLE_DAVY then return _G.charSelect.voice.snore(m) end
-    if _G.charSelect.character_get_voice(m) == VOICETABLE_ROBO_JESS then return _G.charSelect.voice.snore(m) end
-end
-
-local function menu_pose(m)
-    -- menu pose (Concept by Wall_E20)
-    if m.marioObj.header.gfx.animInfo.animID == charSelect.CS_ANIM_MENU and is_jer() and m.playerIndex == 0 then
-        if m.marioObj.header.gfx.animInfo.animFrame > 45 and m.marioObj.header.gfx.animInfo.animFrame < 95 then
-            m.marioBodyState.eyeState = MARIO_EYES_LOOK_RIGHT
-        else
-            m.marioBodyState.eyeState = MARIO_EYES_LOOK_LEFT
-        end
-    end
+    --if _G.charSelect.character_get_voice(m) == VOICETABLE_ROBO_JESS then return _G.charSelect.voice.snore(m) end
 end
 
 hook_event(HOOK_ON_MODS_LOADED, on_character_select_load)
 hook_event(HOOK_CHARACTER_SOUND, on_character_sound)
 hook_event(HOOK_MARIO_UPDATE, on_character_snore)
-hook_event(HOOK_MARIO_UPDATE, menu_pose)
+
+local gExtraStates = {}
+for i = 0, MAX_PLAYERS - 1 do
+    gExtraStates[i] = {}
+    local e = gExtraStates[i]
+    e.davyHasWing = 0
+end
+
+local function davy_flying_star(m)
+    local np = gNetworkPlayers[m.playerIndex]
+    local e = gExtraStates[m.playerIndex]
+
+    if CT_DAVY == _G.charSelect.character_get_current_number(m.playerIndex) then
+        if m.flags & MARIO_WING_CAP ~= 0 then
+            network_player_set_override_palette_color(np, EMBLEM,   {r = 192, g = 0, b = 0})
+            network_player_set_override_palette_color(np, CAP,      {r = 192, g = 0, b = 0})
+            network_player_set_override_palette_color(np, GLOVES,   {r = 192, g = 0, b = 0})
+            network_player_set_override_palette_color(np, SHIRT,    {r = 34, g = 34, b = 34})
+            network_player_set_override_palette_color(np, PANTS,    {r = 34, g = 34, b = 34})
+            network_player_set_override_palette_color(np, SHOES,    {r = 48, g = 48, b = 48})
+
+            e.davyHasWing = true
+        elseif m.flags & MARIO_WING_CAP == 0 and e.davyHasWing then
+            network_player_reset_override_palette(np)
+            e.davyHasWing = false
+        end
+    end
+end
+
+hook_event(HOOK_MARIO_UPDATE, davy_flying_star)

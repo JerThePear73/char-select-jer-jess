@@ -1,8 +1,9 @@
+if not _G.charSelectExists then return end
+
 local ACT_ELEGANT_JUMP = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION | ACT_FLAG_CONTROL_JUMP_HEIGHT) -- Credit: Character Movesets; By: steven3004
-local ACT_WALL_SLIDE = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_MOVING | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION) -- Credit: Character Movesets; By: steven3004
 local ACT_FLUTTER = allocate_mario_action(ACT_FLAG_AIR | ACT_FLAG_ALLOW_VERTICAL_WIND_ACTION | ACT_GROUP_AIRBORNE) -- this is just taken from extra chars cuz i dont feel like coding this from scratch rn
 
-local ACT_ICE_SKATING = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING | ACT_FLAG_ATTACKING | ACT_FLAG_RIDING_SHELL)
+local ACT_ICE_SKATING = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING | ACT_FLAG_RIDING_SHELL)
 local ACT_ICE_DIVE_SLIDE = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_MOVING | ACT_FLAG_ATTACKING | ACT_FLAG_RIDING_SHELL)
 local ACT_JERNADO = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR)
 local ACT_FLUDD_HOVER = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_CONTROL_JUMP_HEIGHT)
@@ -44,124 +45,156 @@ for i = 0, MAX_PLAYERS - 1 do
         canFlutter = false,
         canDash = true,
         prevPosY = 0,
+        davyHasWing = false,
+        flyingSpeed = 0,
+        cooldown = 0,
     }
 end
 
-local SOUND_JER_BOOST_PULSE = audio_sample_load("jer_boost_pulse.ogg")
-local SOUND_JER_BOOST_HOLD = audio_sample_load("jer_boost_hold.ogg")
+local SOUND_JER_BOOST = audio_sample_load("jj_sound_boost.ogg")
+local SOUND_CARTWHEEL = audio_sample_load("jj_sound_cartwheel.mp3")
 local SOUND_FLUDD_PICKUP = audio_sample_load("fludd_pickup.ogg")
 local SOUND_FLUDD_HOVER = audio_sample_load("fludd_hover.ogg")
 local SOUND_FLUDD_HOVER_END = audio_sample_load("fludd_hover_end.ogg")
 local SOUND_FLUDD_LOOP = audio_stream_load("fludd_loop.ogg")
-local SOUND_COMEDIC_METAL_PIPE = audio_sample_load("pipe.ogg")
-local SOUND_ZAP = audio_sample_load("zap.ogg")
-local SOUND_WHEEL_STEP = audio_sample_load("wheel_step.mp3")
-local SOUND_GALAXY_SPIN = audio_sample_load("smg_spin.ogg") -- this is an edited sound effect from extra characters
-local SOUND_JER_GP_JUMP = audio_sample_load("le_jump.ogg")
 
-local E_MODEL_POCKET_EXPLOSIVE = smlua_model_util_get_id('pocket_explosive_geo')
-local E_MODEL_DYNAMITE = smlua_model_util_get_id('dynamite_geo')
+--local E_MODEL_POCKET_EXPLOSIVE = smlua_model_util_get_id('davy_bomb_1_geo')
+--local E_MODEL_DYNAMITE = smlua_model_util_get_id('davy_bomb_2_geo')
 
+local E_MODEL_JER_AFTERIMAGE = smlua_model_util_get_id("jer_afterimage_geo")
+local AfterImageDuration = 15
 
+function afterimage_init(o)
+  local index = network_local_index_from_global(o.globalPlayerIndex) or 255
+  if index == 255 then
+    obj_mark_for_deletion(o)
+    return
+  end
+  local m = gMarioStates[index]
+  o.oFlags = OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE
+  o.oOpacity = 0
+
+  o.oPosX = m.marioObj.header.gfx.pos.x
+  o.oPosY = m.marioObj.header.gfx.pos.y
+  o.oPosZ = m.marioObj.header.gfx.pos.z
+  o.oFaceAnglePitch = m.marioObj.header.gfx.angle.x
+  o.oFaceAngleYaw = m.marioObj.header.gfx.angle.y
+  o.oFaceAngleRoll = m.marioObj.header.gfx.angle.z
+  o.header.gfx.animInfo.animID = m.marioObj.header.gfx.animInfo.animID
+  o.header.gfx.animInfo.curAnim = m.marioObj.header.gfx.animInfo.curAnim
+  o.header.gfx.animInfo.animYTrans = m.unkB0
+  o.header.gfx.animInfo.animAccel = 0            --m.marioObj.header.gfx.animInfo.animAccel
+  o.header.gfx.animInfo.animFrame = m.marioObj.header.gfx.animInfo.animFrame
+  o.header.gfx.animInfo.animTimer = m.marioObj.header.gfx.animInfo.animTimer
+  o.header.gfx.animInfo.animFrameAccelAssist = 0 --m.marioObj.header.gfx.animInfo.animFrameAccelAssist
+  o.header.gfx.scale.x = m.marioObj.header.gfx.scale.x
+  o.header.gfx.scale.y = m.marioObj.header.gfx.scale.y
+  o.header.gfx.scale.z = m.marioObj.header.gfx.scale.z
+end
+
+local opacityMax = 200
+function afterimage_loop(o)
+  o.oOpacity = opacityMax - (o.oTimer * (opacityMax/AfterImageDuration))
+  o.header.gfx.animInfo.animAccel = -1
+  o.header.gfx.scale.x = o.header.gfx.scale.x * 1.02
+  o.header.gfx.scale.y = o.header.gfx.scale.y * 1.02
+  o.header.gfx.scale.z = o.header.gfx.scale.z * 1.02
+  if o.oTimer >= AfterImageDuration then
+    obj_mark_for_deletion(o)
+  end
+end
+
+id_bhvAfterImage = hook_behavior(nil, OBJ_LIST_UNIMPORTANT, true, afterimage_init, afterimage_loop, "bhvAfterImage")
 
 ------------------
 -- CUSTOM MOVES --
 ------------------
 
-local function act_wall_slide(m)
-        if (m.input & INPUT_A_PRESSED) ~= 0 then
-            local rc = set_mario_action(m, ACT_WALL_KICK_AIR, 0)
-            m.vel.y = 72.0
-
-            if m.forwardVel < 20.0 then
-                m.forwardVel = 20.0
-            end
-            m.wallKickTimer = 0
-            return rc
-        end
-
-        -- attempt to stick to the wall a bit. if it's 0, sometimes you'll get kicked off of slightly sloped walls
-        mario_set_forward_vel(m, -1.0)
-
-        m.particleFlags = m.particleFlags | PARTICLE_DUST
-
-        play_sound(SOUND_MOVING_TERRAIN_SLIDE + m.terrainSoundAddend, m.marioObj.header.gfx.cameraToObject)
-        set_mario_animation(m, MARIO_ANIM_START_WALLKICK)
-
-        if perform_air_step(m, 0) == AIR_STEP_LANDED then
-            mario_set_forward_vel(m, 0.0)
-            if check_fall_damage_or_get_stuck(m, ACT_HARD_BACKWARD_GROUND_KB) == 0 then
-                return set_mario_action(m, ACT_FREEFALL_LAND, 0)
-            end
-        end
-
-        m.actionTimer = m.actionTimer + 1
-        if m.wall == nil and m.actionTimer > 2 then
-            mario_set_forward_vel(m, 0.0)
-            return set_mario_action(m, ACT_FREEFALL, 0)
-        end
-    
-        -- gravity
-        m.vel.y = m.vel.y + 2
-    
-        return 0
-end
-hook_mario_action(ACT_WALL_SLIDE, act_wall_slide)
-
 local function act_ice_skating(m)
     local j = gJerJessExtraStates[m.playerIndex]
 
-    m.faceAngle.y = m.intendedYaw - approach_s32(limit_angle(m.intendedYaw - m.faceAngle.y), 0, 10, 10)
-    m.faceAngle.x = 0
-    update_walking_speed(m)
-    set_mario_anim_with_accel(m, MARIO_ANIM_RUNNING_UNUSED, m.forwardVel / 5 * 11000)
+    local targetSpeed = 30
+    local speed = m.forwardVel
+    local accel = 0
+
+    m.particleFlags = m.particleFlags | PARTICLE_DUST
     smlua_anim_util_set_animation(m.marioObj, "jess_skating")
-    play_sound(SOUND_MOVING_SLIDE_DOWN_POLE, m.marioObj.header.gfx.cameraToObject)
+
+    if m.actionTimer == 0 and m.forwardVel > 0 then
+        j.rotAngle = -0x10000
+        m.actionState = 1
+    elseif j.rotAngle < 0 then
+        j.rotAngle = (j.rotAngle + 1500) * 0.9
+        m.marioObj.header.gfx.animInfo.animFrame = 15
+        accel = 0
+        if j.rotAngle < -0x10000 then
+            m.particleFlags = m.particleFlags | PARTICLE_SPARKLES
+        end
+    else
+        if m.input & INPUT_Z_DOWN == 0 then
+            j.rotAngle = math.lerp(j.rotAngle, 0, 0.2)
+            if math.abs(j.rotAngle) < 15 then
+                j.rotAngle = 0
+            end
+            accel = m.forwardVel / 5 * 11000
+        else
+            accel = m.forwardVel / 5 * 8000
+        end
+    end
+
+    if m.input & INPUT_Z_DOWN ~= 0 and j.rotAngle >= 0 and j.rotAngle < 0x7950 and m.forwardVel >= 50 then
+        j.rotAngle = j.rotAngle + 0x700
+    end
+
+    set_mario_anim_with_accel(m, MARIO_ANIM_RUNNING_UNUSED, accel)
 
     local stepResult = perform_ground_step(m)
-    if stepResult == GROUND_STEP_HIT_WALL then
-        m.pos.y = m.pos.y + 1
-        m.vel.y = 30
-        m.particleFlags = m.particleFlags | PARTICLE_VERTICAL_STAR
-        set_mario_action(m, ACT_BACKWARD_AIR_KB, 0)
-    elseif stepResult == GROUND_STEP_LEFT_GROUND then
+    if stepResult == GROUND_STEP_LEFT_GROUND then
         m.action = ACT_FREEFALL
         m.vel.y = 5
     end
 
     if m.input & INPUT_NONZERO_ANALOG ~= 0 then
-        if m.forwardVel < 55 then
-            m.forwardVel = m.forwardVel + 2
-        end
-    elseif m.forwardVel < 30 then
-        m.forwardVel = 30
+        targetSpeed = 55
+    else
+        targetSpeed = 30
     end
-    if m.forwardVel > 5 then
-        m.particleFlags = m.particleFlags | PARTICLE_DUST
+    speed = math.lerp(speed, targetSpeed, 0.05)
+    if m.forwardVel > 0 then
+        update_walking_speed(m)
     end
+    mario_set_forward_vel(m, speed)
+    play_sound(SOUND_MOVING_SLIDE_DOWN_POLE, m.marioObj.header.gfx.cameraToObject)
+
     if m.pos.y > (m.waterLevel + 1) then
         set_mario_action(m, ACT_WALKING, 0)
     end
     -- skating jump
     if (m.input & INPUT_A_PRESSED) ~= 0 then
-        m.forwardVel = m.forwardVel - 15
+        m.forwardVel = m.forwardVel - 4
         m.vel.y = 55
         m.pos.y = m.pos.y + 1
-        set_mario_action(m, ACT_ELEGANT_JUMP, 0)
+        set_mario_action(m, ACT_ELEGANT_JUMP, math.random(0,2))
+        return 0
     end
-    if m.input & INPUT_B_PRESSED ~= 0 and m.forwardVel > 30 then
-        m.pos.y = m.pos.y + 1
-        m.vel.y = 20
-        set_mario_action(m, ACT_DIVE, 0)
+    if m.input & INPUT_B_PRESSED ~= 0 and j.rotAngle == 0 then --m.forwardVel > 30 then
+        --m.pos.y = m.pos.y + 1
+        --m.vel.y = 20
+        --set_mario_action(m, ACT_DIVE, 0)
+        play_character_sound(m, CHAR_SOUND_EXTRA_1)
+        m.forwardVel = m.forwardVel + 5
+        j.rotAngle = -0x20000
     end
     -- fall when ice cap ends
     if (m.flags & MARIO_METAL_CAP) == 0 or not is_jess() then
         set_mario_action(m, ACT_FREEFALL, 0)
     end
 
-    if m.actionTimer < 5 then
-        m.actionTimer = m.actionTimer + 1
-    end
+    m.marioObj.header.gfx.angle.y = m.faceAngle.y + j.rotAngle
+    m.marioObj.header.gfx.angle.x = 0
+    m.marioObj.header.gfx.angle.z = 0
+
+    m.actionTimer = m.actionTimer + 1
     return 0
 end
 hook_mario_action(ACT_ICE_SKATING, act_ice_skating)
@@ -169,7 +202,6 @@ hook_mario_action(ACT_ICE_SKATING, act_ice_skating)
 local function act_ice_dive_slide(m)
     
     m.faceAngle.x = 0
-    m.forwardVel = 55
     m.vel.y = 0
     m.particleFlags = m.particleFlags | PARTICLE_DUST
     set_mario_animation(m, CHAR_ANIM_DIVE)
@@ -189,7 +221,11 @@ local function act_ice_dive_slide(m)
 
     if m.input & INPUT_A_PRESSED ~= 0 or m.input & INPUT_B_PRESSED ~= 0 then
         m.pos.y = m.pos.y + 1
-        set_mario_action(m, ACT_FORWARD_ROLLOUT, 0)
+        if m.forwardVel < 0 then
+            set_mario_action(m, ACT_BACKWARD_ROLLOUT, 0)
+        else
+            set_mario_action(m, ACT_FORWARD_ROLLOUT, 0)
+        end
     elseif m.input & INPUT_Z_PRESSED ~= 0 then
         m.pos.y = m.pos.y + 1
         set_mario_action(m, ACT_SPRINGFLIP, 0)
@@ -207,19 +243,14 @@ hook_mario_action(ACT_ICE_DIVE_SLIDE, act_ice_dive_slide)
 local function act_elegant_jump(m)
     local j = gJerJessExtraStates[m.playerIndex]
 
+    smlua_anim_util_set_animation(m.marioObj, "jess_ice_jump_" .. tostring(m.actionArg))
+
     if m.actionTimer == 1 then
-        m.particleFlags = m.particleFlags | PARTICLE_MIST_CIRCLE
         play_character_sound(m, CHAR_SOUND_HAHA)
-        j.animArg = math.floor(math.random(0,2))
     end
     local stepResult = common_air_action_step(m, ACT_DOUBLE_JUMP_LAND, MARIO_ANIM_GROUND_POUND, AIR_STEP_NONE)
-    smlua_anim_util_set_animation(m.marioObj, "jess_ice_jump_" .. tostring(j.animArg))
     m.particleFlags = m.particleFlags | PARTICLE_SPARKLES
     m.marioBodyState.handState = MARIO_HAND_OPEN
-
-    if (m.input & INPUT_NONZERO_ANALOG) ~= 0 then
-        mario_set_forward_vel(m, math.abs(m.forwardVel))
-    end
     
     if stepResult == AIR_STEP_LANDED then
         play_sound(SOUND_ACTION_TERRAIN_LANDING, m.marioObj.header.gfx.cameraToObject)
@@ -236,20 +267,17 @@ hook_mario_action(ACT_ELEGANT_JUMP, act_elegant_jump)
 
 local function act_jernado(m)
 
-    if (m.flags & MARIO_VANISH_CAP) ~= 0 then
-        smlua_anim_util_set_animation(m.marioObj, "jernado_alt")
-        m.marioBodyState.eyeState = MARIO_EYES_CLOSED
-    else
-        smlua_anim_util_set_animation(m.marioObj, "jernado")
-    end
+    smlua_anim_util_set_animation(m.marioObj, "jernado_alt")
+    m.marioBodyState.eyeState = MARIO_EYES_CLOSED
+
     if m.actionTimer == 0 then
         m.faceAngle.y = m.intendedYaw
-        play_character_sound(m, CHAR_SOUND_PRESS_START_TO_PLAY)
+        play_character_sound(m, CHAR_SOUND_YEEHAW)
         if m.input & INPUT_NONZERO_ANALOG ~= 0 then
             m.forwardVel = 5
         end
     elseif m.actionTimer < 35 then
-        local stepResult = common_air_action_step(m, ACT_FREEFALL, MARIO_ANIM_RUNNING_UNUSED, AIR_STEP_NONE)
+        local stepResult = common_air_action_step(m, ACT_FREEFALL, CHAR_ANIM_GENERAL_FALL, AIR_STEP_NONE)
 
         m.faceAngle.y = m.intendedYaw - approach_s32(limit_angle(m.intendedYaw - m.faceAngle.y), 0, 0x200, 0x200)
 
@@ -373,10 +401,8 @@ local function act_cartwheel(m)
     set_mario_anim_with_accel(m, MARIO_ANIM_RUNNING_UNUSED, m.forwardVel / 5 * 11000)
     smlua_anim_util_set_animation(m.marioObj, "jer_wheel")
     if (m.marioObj.header.gfx.animInfo.animFrame > 8 and m.marioObj.header.gfx.animInfo.animFrame < 12) or m.marioObj.header.gfx.animInfo.animFrame == 0 then
-        if not is_game_paused() then
-            audio_sample_stop(SOUND_WHEEL_STEP)
-            audio_sample_play(SOUND_WHEEL_STEP, m.pos, 1)
-        end
+        audio_sample_stop(SOUND_CARTWHEEL)
+        audio_sample_play(SOUND_CARTWHEEL, m.pos, 1)
     end
 
     if m.actionTimer == 0 then
@@ -471,8 +497,7 @@ local function act_galaxy_spin(m)
     smlua_anim_util_set_animation(m.marioObj, "jess_galaxy_spin")
 
     if m.actionTimer == 0 then
-        play_character_sound(m, CHAR_SOUND_HOOHOO)
-        audio_sample_play(SOUND_GALAXY_SPIN, m.pos, 1)
+        play_character_sound(m, CHAR_SOUND_EXTRA_1)
         m.vel.y = 30
     end
     local stepResult = common_air_action_step(m, ACT_FREEFALL_LAND, MARIO_ANIM_RUNNING_UNUSED, AIR_STEP_CHECK_LEDGE_GRAB)
@@ -501,8 +526,13 @@ local function act_davy_missile(m)
     -- shake screen somehow here
         play_sound(SOUND_GENERAL_BOWSER_BOMB_EXPLOSION, m.marioObj.header.gfx.cameraToObject)
         m.faceAngle.y = m.intendedYaw
-        m.forwardVel = 85
-        m.vel.y = 50
+        if m.flags & MARIO_METAL_CAP ~= 0 then
+            m.forwardVel = 15
+            m.vel.y = 90
+        else
+            m.forwardVel = 85
+            m.vel.y = 50
+        end
     end
     local stepResult = common_air_action_step(m, ACT_DIVE, MARIO_ANIM_GROUND_POUND, AIR_STEP_NONE)
     smlua_anim_util_set_animation(m.marioObj, "davy_missile")
@@ -535,14 +565,27 @@ local function act_davy_missile(m)
                 obj_scale(o, 2)
             end)
         m.particleFlags = m.particleFlags | PARTICLE_VERTICAL_STAR
-        set_mario_action(m, ACT_BACKWARD_AIR_KB, 0)
+        if m.flags & MARIO_METAL_CAP ~= 0 then
+            set_mario_action(m, ACT_JUMP, 0)
+            m.faceAngle.y = m.faceAngle.y - 0x8000
+            m.pos.y = m.pos.y + 50
+        else
+            set_mario_action(m, ACT_BACKWARD_AIR_KB, 0)
+        end
+    end
+
+    if m.flags & MARIO_METAL_CAP ~= 0 then
+        m.peakHeight = m.pos.y
+        if m.input & INPUT_B_PRESSED ~= 0 then
+            set_mario_action(m, ACT_DAVY_DASH, 0)
+        end
     end
 
     m.vel.y = m.vel.y + 1
 
     j.rotAngle = j.rotAngle + 0x3000
     m.marioObj.header.gfx.angle.z = j.rotAngle
-    m.marioObj.header.gfx.angle.x = (m.vel.y * -120)
+    m.marioObj.header.gfx.angle.x = degrees_to_sm64(m.vel.y * -1)
     
     m.actionTimer = m.actionTimer + 1
     return 0
@@ -552,13 +595,16 @@ hook_mario_action(ACT_DAVY_MISSILE, act_davy_missile)
 local function act_davy_dash(m)
     local j = gJerJessExtraStates[m.playerIndex]
 
+    j.flyingSpeed = m.forwardVel
+
     if m.actionTimer == 0 then
         m.particleFlags = m.particleFlags | PARTICLE_VERTICAL_STAR
     end
-    if m.actionTimer > 20 then
+    if m.actionTimer > 20 and m.flags & MARIO_METAL_CAP == 0 or m.actionTimer > 30 then
         if m.flags & MARIO_WING_CAP ~= 0 then
             m.faceAngle.z = m.marioObj.header.gfx.angle.z
             m.faceAngle.x = 0
+            j.rotAngle = j.rotAngle * -1
             set_mario_action(m, ACT_FLYING, 0)
         else
             set_mario_action(m, ACT_FREEFALL, 0)
@@ -583,7 +629,13 @@ local function act_davy_dash(m)
                 obj_scale(o, 2)
             end)
         m.particleFlags = m.particleFlags | PARTICLE_VERTICAL_STAR
-        set_mario_action(m, ACT_BACKWARD_AIR_KB, 0)
+        if m.flags & MARIO_METAL_CAP ~= 0 then
+            set_mario_action(m, ACT_JUMP, 0)
+            m.faceAngle.y = m.faceAngle.y - 0x8000
+            m.pos.y = m.pos.y + 50
+        else
+            set_mario_action(m, ACT_BACKWARD_AIR_KB, 0)
+        end
     end
 
     if m.input & INPUT_Z_PRESSED ~= 0 then
@@ -649,14 +701,6 @@ hook_mario_action(ACT_FLUTTER, act_flutter)
 local function jess_set_action(m)
     local j = gJerJessExtraStates[m.playerIndex]
 
-    -- wall slide
-    if m.action == ACT_SOFT_BONK then
-        m.faceAngle.y = m.faceAngle.y + 0x8000
-        set_mario_action(m, ACT_WALL_SLIDE, 0)
-        m.vel.x = 0
-        m.vel.y = 0
-        m.vel.z = 0
-    end
     -- pole jump twirl
     if m.action == ACT_TOP_OF_POLE_JUMP then
         m.vel.y = 70
@@ -671,11 +715,6 @@ local function jess_set_action(m)
     if m.action == ACT_TRIPLE_JUMP and m.flags & MARIO_WING_CAP == 0 then
         m.vel.y = m.vel.y + 5
     end
-    -- sunshine dive
-    if m.action == ACT_FORWARD_ROLLOUT and (m.input & INPUT_B_PRESSED) ~= 0 and (m.input & INPUT_Z_DOWN) == 0 then
-        set_mario_action(m, ACT_DIVE, 0)
-        m.vel.y = 25
-    end
     -- dont allow flying
     if m.action == ACT_FLYING then
         set_mario_action(m, ACT_FREEFALL, 0)
@@ -685,7 +724,7 @@ local function jess_set_action(m)
         m.vel.y = m.vel.y - 7
     end
     -- galaxy spin
-    if (m.action == ACT_JUMP_KICK or (m.action == ACT_DIVE and ((m.input & INPUT_NONZERO_ANALOG == 0 or m.forwardVel < 15) and m.vel.y < 15 and (m.prevAction ~= ACT_GROUND_POUND and m.prevAction ~= ACT_WALKING and m.prevAction ~= ACT_ICE_SKATING and m.prevAction ~= ACT_FORWARD_ROLLOUT)))) then
+    if ((m.action == ACT_JUMP_KICK and (m.pos.y - m.floorHeight) > 45) or (m.action == ACT_DIVE and ((m.input & INPUT_NONZERO_ANALOG == 0 or m.forwardVel < 15) and m.vel.y < 15 and (m.prevAction ~= ACT_GROUND_POUND and m.prevAction ~= ACT_WALKING and m.prevAction ~= ACT_ICE_SKATING and m.prevAction ~= ACT_FORWARD_ROLLOUT)))) then
         if m.action == ACT_DIVE then
             m.forwardVel = m.forwardVel - 15
         end
@@ -711,7 +750,20 @@ local function jess_before_set_action(m, act)
 
     if act == ACT_LAVA_BOOST and m.flags & MARIO_METAL_CAP ~= 0 then
         play_character_sound(m, CHAR_SOUND_COUGHING1)
-        return ACT_WALL_SLIDE
+        if m.pos.y > m.floorHeight + 1 then
+            return ACT_AIR_HIT_WALL
+        elseif m.prevAction == ACT_DIVE then
+            return ACT_ICE_DIVE_SLIDE
+        else
+            return ACT_ICE_SKATING
+        end
+    end
+    if act == ACT_WALKING and m.floor.type == SURFACE_BURNING then
+        if m.prevAction ~= ACT_DIVE then
+            return ACT_ICE_SKATING
+        else
+            return ACT_ICE_DIVE_SLIDE
+        end
     end
 end
 
@@ -752,10 +804,14 @@ local function jess_update(m)
     if m.action == ACT_GROUND_POUND and (m.input & INPUT_B_PRESSED) ~= 0 then
         m.faceAngle.y = m.intendedYaw
         if m.prevAction ~= ACT_GALAXY_SPIN then
-            set_mario_action(m, ACT_DIVE, 0)
-            m.particleFlags = m.particleFlags | PARTICLE_MIST_CIRCLE
-            m.vel.y = 30
-            m.forwardVel = m.forwardVel + 25
+            if m.input & INPUT_NONZERO_ANALOG == 0 then
+                set_mario_action(m, ACT_GALAXY_SPIN, 0)
+            else
+                set_mario_action(m, ACT_DIVE, 0)
+                m.particleFlags = m.particleFlags | PARTICLE_MIST_CIRCLE
+                m.vel.y = 30
+                m.forwardVel = m.forwardVel + 25
+            end
         else
             set_mario_action(m, ACT_DIVE, 0)
             m.vel.y = 0
@@ -772,7 +828,7 @@ local function jess_update(m)
     if m.flags & MARIO_METAL_CAP ~= 0 and (m.pos.y < (m.waterLevel + 1) or (m.floor.type == SURFACE_BURNING and m.pos.y < (m.floorHeight + 1))) and m.action ~= ACT_FALL_AFTER_STAR_GRAB and m.action ~= ACT_STAR_DANCE_EXIT and m.action ~= ACT_STAR_DANCE_NO_EXIT and m.action ~= ACT_ICE_SKATING and m.action ~= ACT_PUTTING_ON_CAP then
         if m.action == ACT_DIVE or m.action == ACT_ICE_DIVE_SLIDE or m.action == ACT_DIVE_SLIDE then
             set_mario_action(m, ACT_ICE_DIVE_SLIDE, 0)
-        else
+        elseif m.floor.type ~= SURFACE_BURNING then
             set_mario_action(m, ACT_ICE_SKATING, 0)
         end
     end
@@ -974,13 +1030,7 @@ local function jer_set_action(m)
     if m.action == ACT_SLIDE_KICK then
         m.forwardVel = m.forwardVel + 18
     end
-    -- burst slide kick
-    --if (m.action == ACT_PUNCHING or m.action == ACT_MOVE_PUNCHING) and m.input & INPUT_Z_DOWN ~= 0 and m.forwardVel < 10 then
 
-    -- pipe sound
-    if (m.flags & MARIO_METAL_CAP) ~= 0 and m.action == ACT_HARD_BACKWARD_GROUND_KB then
-        audio_sample_play(SOUND_COMEDIC_METAL_PIPE, m.pos, 1)
-    end 
     -- metal shock boost
     if (m.flags & MARIO_METAL_CAP) ~= 0 and m.action == ACT_SHOCKED then
         set_mario_action(m, ACT_WALKING, 0)
@@ -988,24 +1038,16 @@ local function jer_set_action(m)
         m.forwardVel = 73
         m.particleFlags = m.particleFlags | PARTICLE_VERTICAL_STAR
         spawn_mist_particles_variable(10, 0, 10)
-        audio_sample_play(SOUND_ZAP, m.pos, 1)
+        play_character_sound(m, CHAR_SOUND_ZAP)
     end
     -- slide kick persists if holding Z
     if m.prevAction == ACT_SLIDE_KICK and m.action == ACT_FREEFALL and (m.input & INPUT_Z_DOWN) ~= 0 and (m.flags & MARIO_VANISH_CAP) == 0 then
         m.actionTimer = 2
         m.action = ACT_SLIDE_KICK
     end
-    -- wall kick from ledge grab
-    if m.action == ACT_SOFT_BONK and m.prevAction == ACT_LEDGE_GRAB and m.input & INPUT_Z_DOWN ~= 0 then
-        m.faceAngle.y = m.faceAngle.y + 0x8000
-        set_mario_action(m, ACT_WALL_SLIDE, 0)
-        m.vel.x = 0
-        m.vel.y = 0
-        m.vel.z = 0
-    end
     -- fix repeated firsties
     if m.action == ACT_WALL_KICK_AIR then
-        m.marioObj.header.gfx.animInfo.animFrame = 0
+        m.marioObj.header.gfx.animInfo.animID = -1
     end
 end
 
@@ -1073,16 +1115,16 @@ local function jer_update(m)
         m.particleFlags = m.particleFlags | PARTICLE_FIRE 
     end
     -- GP jump
-    if m.action == ACT_GROUND_POUND_LAND and (m.input & INPUT_A_PRESSED) ~= 0 then
-        if (m.flags & MARIO_WING_CAP) ~= 0 then
-            set_mario_action(m, ACT_FLYING_TRIPLE_JUMP, 0)
-        else
-            m.faceAngle.y = m.intendedYaw
-            set_mario_action(m, ACT_JUMP, 0)
-            audio_sample_play(SOUND_JER_GP_JUMP, m.pos, 1)
-            m.vel.y = m.vel.y + 20
-        end
-    end
+    --if m.action == ACT_GROUND_POUND_LAND and (m.input & INPUT_A_PRESSED) ~= 0 then
+    --    if (m.flags & MARIO_WING_CAP) ~= 0 then
+    --        set_mario_action(m, ACT_FLYING_TRIPLE_JUMP, 0)
+    --    else
+    --        m.faceAngle.y = m.intendedYaw
+    --        set_mario_action(m, ACT_JUMP, 0)
+    --        audio_sample_play(SOUND_JER_GP_JUMP, m.pos, 1)
+    --        m.vel.y = m.vel.y + 20
+    --    end
+    --end
     if m.action == ACT_JUMP and m.prevAction == ACT_GROUND_POUND_LAND and m.flags & MARIO_WING_CAP == 0 then
         if m.marioObj.header.gfx.animInfo.animFrame == -1 then
 	        play_character_sound(m, CHAR_SOUND_YAWNING)
@@ -1105,11 +1147,14 @@ local function jer_update(m)
         set_mario_action(m, ACT_CARTWHEEL, 0)
     end
     -- rev sound
-    if m.action == ACT_SLIDE_KICK then
-		if m.marioObj.header.gfx.animInfo.animFrame == -1 then
-	        play_character_sound(m, CHAR_SOUND_HELLO)
+    if m.marioObj.header.gfx.animInfo.animFrame == -1 then
+        if m.action == ACT_SLIDE_KICK then
+	        play_character_sound(m, CHAR_SOUND_EXTRA_1)
+        elseif (m.flags & MARIO_METAL_CAP) ~= 0 and m.action == ACT_HARD_BACKWARD_GROUND_KB then
+            play_character_sound(m, CHAR_SOUND_PIPE)
         end
-	end
+    end
+
     -- metal speed
     if (m.flags & MARIO_METAL_CAP) ~= 0 then
         if m.action == ACT_WALKING and m.input & INPUT_NONZERO_ANALOG ~= 0 then
@@ -1179,18 +1224,18 @@ local function jer_update(m)
                 m.forwardVel = 70
                 m.particleFlags = m.particleFlags | PARTICLE_VERTICAL_STAR
                 play_character_sound(m, CHAR_SOUND_YAHOO)
-                audio_sample_play(SOUND_JER_BOOST_PULSE, m.pos, 1)
+                audio_sample_play(SOUND_JER_BOOST, m.pos, 1)
                 spawn_mist_particles_variable(20, 0, 50)
                 j.jerBoost = -50
             end
             m.forwardVel = m.forwardVel + 1
             spawn_mist_particles_variable(1, 0, 10)
-            if (m.input & INPUT_A_PRESSED) ~= 0 then
-                audio_sample_play(SOUND_JER_BOOST_HOLD, m.pos, 1)
-            end
+            --if (m.input & INPUT_A_PRESSED) ~= 0 then
+            --    audio_sample_play(SOUND_JER_BOOST_HOLD, m.pos, 1)
+            --end
             j.jerBoost = j.jerBoost - 2
-        else
-            audio_sample_stop(SOUND_JER_BOOST_HOLD)
+        --else
+        --    audio_sample_stop(SOUND_JER_BOOST_HOLD)
         end
         if m.action == ACT_FLYING and (m.input & INPUT_B_PRESSED) ~= 0 and m.forwardVel > 20 then
             m.forwardVel = m.forwardVel - 10
@@ -1200,21 +1245,21 @@ local function jer_update(m)
             m.vel.y = 40
             m.particleFlags = m.particleFlags | PARTICLE_MIST_CIRCLE | PARTICLE_HORIZONTAL_STAR
             play_character_sound(m, CHAR_SOUND_PUNCH_HOO)
-            audio_sample_play(SOUND_JER_BOOST_PULSE, m.pos, 1)
+            audio_sample_play(SOUND_JER_BOOST, m.pos, 1)
             j.jerBoost = 0
         end
         if j.jerBoost == 50 and m.action == ACT_SLIDE_KICK then
             m.forwardVel = m.forwardVel + 20
             spawn_mist_particles_variable(20, 0, 50)
-            audio_sample_play(SOUND_JER_BOOST_PULSE, m.pos, 1)
+            audio_sample_play(SOUND_JER_BOOST, m.pos, 1)
             j.jerBoost = 0
         end
     else
         j.jerBoost = 0
     end
     -- metal cap can move underwater airborne
-    if (m.input & INPUT_NONZERO_ANALOG ~= 0) and m.action == ACT_METAL_WATER_FALLING then
-        m.forwardVel = 20
+    if m.intendedMag > 0 and m.action == ACT_METAL_WATER_FALLING then
+        m.forwardVel = m.intendedMag * 0.75
     end
     -- forgiving soft bonk
     if m.action == ACT_SOFT_BONK then
@@ -1249,6 +1294,15 @@ local function jer_update(m)
             m.particleFlags = m.particleFlags | PARTICLE_SPARKLES
         end
     end
+    -- after images
+    if (m.playerIndex == 0 or is_player_active(m) ~= 0) and m.marioObj.header.gfx.node.flags & GRAPH_RENDER_ACTIVE ~= 0 then
+        if (m.flags & MARIO_VANISH_CAP ~= 0) or (m.flags & MARIO_METAL_CAP ~= 0 and m.forwardVel > 45) then
+            if (get_global_timer()) % 3 == 0 then
+                spawn_non_sync_object(id_bhvAfterImage, E_MODEL_JER_AFTERIMAGE, m.pos.x, m.pos.y, m.pos.z,
+                function(o) o.globalPlayerIndex = network_global_index_from_local(m.playerIndex) end)
+            end
+        end
+    end
 
     -- kirby crouch
     local actCrouchSquish = {
@@ -1256,7 +1310,7 @@ local function jer_update(m)
         [ACT_CROUCH_SLIDE] = true,
     }
     local jerSquishGeneral = { --just squishes the char, no anim changes
-        [ACT_LONG_JUMP_LAND_STOP] = true,
+        --[ACT_LONG_JUMP_LAND_STOP] = true,
         [ACT_LONG_JUMP_LAND] = true,
         [ACT_CRAWLING] = true,
         [ACT_GROUND_POUND_LAND] = true,
@@ -1288,10 +1342,8 @@ function davy_set_action(m)
     local bombTable = {
                     E_MODEL_BLACK_BOBOMB,
                     E_MODEL_BOBOMB_BUDDY,
-                    E_MODEL_POCKET_EXPLOSIVE, 
-                    E_MODEL_DYNAMITE
                     }
-    local bombRand = math.floor(math.random(1,4))
+    local bombRand = math.floor(math.random(1 , #bombTable))
 
 
     if (gNetworkPlayers[0].currLevelNum ~= 30 and gNetworkPlayers[0].currLevelNum ~= 33 and gNetworkPlayers[0].currLevelNum ~= 34) and (m.action == ACT_PUNCHING or m.action == ACT_MOVE_PUNCHING) and j.davyBomb > 500 and m.input & INPUT_Z_DOWN == 0 and m.input & INPUT_A_DOWN == 0 then -- make action condition kick when bomb spawning fixed
@@ -1316,14 +1368,6 @@ function davy_set_action(m)
         m.vel.y = m.vel.y + 10
     end
 
-    -- wall slide
-    if m.action == ACT_SOFT_BONK then
-        m.faceAngle.y = m.faceAngle.y + 0x8000
-        set_mario_action(m, ACT_WALL_SLIDE, 0)
-        m.vel.x = 0
-        m.vel.y = 0
-        m.vel.z = 0
-    end
     -- twirl landing momentum
     if m.action == ACT_TWIRL_LAND and m.input & INPUT_NONZERO_ANALOG ~= 0 then
         set_mario_action(m, ACT_WALKING, 0)
@@ -1336,6 +1380,7 @@ function davy_set_action(m)
 end
 
 function davy_before_set_action(m, act)
+    local j = gJerJessExtraStates[m.playerIndex]
     -- derpy crouch
     if act == ACT_START_CROUCHING then
         return ACT_CROUCHING
@@ -1351,26 +1396,6 @@ function davy_before_step(m)
     -- faster holding item
     if m.action == ACT_HOLD_WALKING and m.forwardVel < 30 then
         hScale = hScale * 2.5
-    end
-    -- slippery
-    if (m.action == ACT_WALKING) then
-        if (floorClass == 19 or floorClass == 20) then
-            hScale = -(m.forwardVel / 64) + 1.5
-        else
-            hScale = (m.forwardVel / 64) + 0.5
-        end
-    end
-    if (m.action == ACT_BRAKING or m.action == ACT_TURNING_AROUND) then
-        if floorClass == 20 then
-            hScale = hScale * 0.8
-            m.forwardVel = m.forwardVel + hScale
-        elseif floorClass ~= 19 then
-            hScale = hScale * 1.6
-            m.forwardVel = m.forwardVel + hScale
-        end
-        if (m.forwardVel < 0) then
-            m.forwardVel = 0
-        end
     end
 
     m.vel.x = m.vel.x * hScale
@@ -1424,6 +1449,71 @@ function davy_update(m)
         j.canDash = true
         j.canFlutter = true
     end
+
+    -- flying
+    if m.action == ACT_FLYING then
+        local x0 = get_hand_foot_pos_x(m, 0)
+        local y0 = get_hand_foot_pos_y(m, 0) - 25
+        local z0 = get_hand_foot_pos_z(m, 0)
+        local x1 = get_hand_foot_pos_x(m, 1)
+        local y1 = get_hand_foot_pos_y(m, 1) - 25
+        local z1 = get_hand_foot_pos_z(m, 1)
+
+        spawn_non_sync_object(
+            id_bhvCoinSparkles,
+            E_MODEL_RED_FLAME,
+            x0,
+            y0,
+            z0,
+            nil
+        )
+        spawn_non_sync_object(
+            id_bhvCoinSparkles,
+            E_MODEL_RED_FLAME,
+            x1,
+            y1,
+            z1,
+            nil
+        )
+        local maxSpeed = 30
+        if m.flags & MARIO_METAL_CAP ~= 0 then
+            maxSpeed = 45
+        end
+        if j.flyingSpeed < maxSpeed then
+            j.flyingSpeed = maxSpeed
+        else
+            j.flyingSpeed = math.lerp(j.flyingSpeed, maxSpeed, 0.05)
+        end
+
+        if m.input & INPUT_B_PRESSED ~= 0 and j.cooldown == 0 then
+            play_character_sound(m, CHAR_SOUND_YAHOO_WAHA_YIPPEE)
+            j.rotAngle = -0x10000
+            j.flyingSpeed = maxSpeed + 25
+            j.cooldown = 45
+        end
+
+        if j.cooldown > 0 then
+            j.cooldown = j.cooldown - 1
+        end
+        j.rotAngle = math.lerp(j.rotAngle, 0, 0.1)
+        m.marioObj.header.gfx.angle.z = m.marioObj.header.gfx.angle.z + j.rotAngle
+        m.forwardVel = j.flyingSpeed
+    end
+
+    if m.flags & MARIO_METAL_CAP ~= 0 and m.pos.y > m.waterLevel then
+        local range = 80
+        local rangex = m.pos.x + math.random(0 - range, range)
+        local rangey = m.pos.y + 25
+        local rangez = m.pos.z + math.random(0 - range, range)
+        spawn_non_sync_object(
+            id_bhvKoopaShellFlame,
+            E_MODEL_RED_FLAME,
+            rangex,
+            rangey,
+            rangez,
+            nil
+        )
+    end
 end
 
 function davy_interact(m, o, intee)
@@ -1437,21 +1527,36 @@ end
 -- HUD --
 ---------
 
-local jerMeterEmpty = get_texture_info("jer-boost-meter0")
-local jerMeterFull = get_texture_info("jer-boost-meter1")
-local jerBarEmpty = get_texture_info("jer-boost-bar0")
-local jerBarFull = get_texture_info("jer-boost-bar1")
+local jerMeterEmpty = get_texture_info("jj-hud-nos-empty")
+local jerMeterFull = get_texture_info("jj-hud-nos-full")
+local jerBarEmpty = get_texture_info("jj-hud-bar-red")
+local jerBarFull = get_texture_info("jj-hud-bar-green")
 
-local jessWaterMeter = get_texture_info("water_meter")
-local jessWaterTop = get_texture_info("water_top")
-local jessWaterMid = get_texture_info("water_bar")
-local jessWaterBot = get_texture_info("water_bottom")
-local jessHoverBar = get_texture_info("water_hover_bar")
+local jessWaterMeter = get_texture_info("jj-hud-water-meter")
+local jessWaterTop = get_texture_info("jj-hud-water-top")
+local jessWaterMid = get_texture_info("jj-hud-water-mid")
+local jessWaterBot = get_texture_info("jj-hud-water-bot")
+local jessHoverBar = get_texture_info("jj-hud-water-red")
 
-local speedometerBack = get_texture_info("speedometer")
-local speedometerFront = get_texture_info("needle")
+local speedometerBack = get_texture_info("jj-hud-speedometer")
+local speedometerFront = get_texture_info("jj-hud-needle")
+
+local bombMeterTable = {
+                    get_texture_info("jj-hud-bomb0"),
+                    get_texture_info("jj-hud-bomb1"),
+                    get_texture_info("jj-hud-bomb2"),
+                    get_texture_info("jj-hud-bomb3")
+                    }
+local bombBarTable = {
+                    get_texture_info("jj-hud-bar-red"),
+                    get_texture_info("jj-hud-bar-orange"),
+                    get_texture_info("jj-hud-bar-white"),
+                    get_texture_info("jj-hud-bar-white")
+                    }
 
 function jer_hud()
+    if gNetworkPlayers[0].currActNum == 99 or gMarioStates[0].action == ACT_INTRO_CUTSCENE or hud_is_hidden() or obj_get_first_with_behavior_id(id_bhvActSelector) then return end
+    
   for i = 0, MAX_PLAYERS - 1 do
     local m = gMarioStates[i]
     local j = gJerJessExtraStates[i]
@@ -1506,6 +1611,8 @@ function jer_hud()
 end
 
 local function jess_hud()
+    if gNetworkPlayers[0].currActNum == 99 or gMarioStates[0].action == ACT_INTRO_CUTSCENE or hud_is_hidden() or obj_get_first_with_behavior_id(id_bhvActSelector) then return end
+
   for i = 0, MAX_PLAYERS - 1 do
     local m = gMarioStates[i]
     local j = gJerJessExtraStates[i]
@@ -1538,20 +1645,9 @@ local function jess_hud()
   end
 end
 
-local bombMeterTable = {
-                    get_texture_info("bomb-meter0"),
-                    get_texture_info("bomb-meter1"),
-                    get_texture_info("bomb-meter2"),
-                    get_texture_info("bomb-meter3")
-                    }
-local bombBarTable = {
-                    get_texture_info("bomb-bar1"),
-                    get_texture_info("bomb-bar2"),
-                    get_texture_info("bomb-bar3"),
-                    get_texture_info("bomb-bar3")
-                    }
-
 function davy_hud()
+    if gNetworkPlayers[0].currActNum == 99 or gMarioStates[0].action == ACT_INTRO_CUTSCENE or hud_is_hidden() or obj_get_first_with_behavior_id(id_bhvActSelector) then return end
+
     for i = 0, MAX_PLAYERS - 1 do
         local m = gMarioStates[i]
         local j = gJerJessExtraStates[0]

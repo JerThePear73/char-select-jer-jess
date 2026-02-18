@@ -1,0 +1,16 @@
+extern const GeoLayout jj_cap_jer_metalnos_6_Cap_Anim_State_Switch_opt1[];
+extern const GeoLayout jj_cap_jer_metalnos_geo[];
+extern Lights1 jj_cap_jer_metalnos_Nos_Label_lights;
+extern u8 jj_cap_jer_metalnos_JerMetal_rgba16[];
+extern u8 jj_cap_jer_metalnos_JerNos_rgba16[];
+extern Vtx jj_cap_jer_metalnos_Winged_Metal_Cap_DL_mesh_layer_1_vtx_0[108];
+extern Gfx jj_cap_jer_metalnos_Winged_Metal_Cap_DL_mesh_layer_1_tri_0[];
+extern Vtx jj_cap_jer_metalnos_Winged_Metal_Cap_DL_mesh_layer_4_vtx_0[8];
+extern Gfx jj_cap_jer_metalnos_Winged_Metal_Cap_DL_mesh_layer_4_tri_0[];
+extern Gfx mat_jj_cap_jer_metalnos_Metal[];
+extern Gfx mat_revert_jj_cap_jer_metalnos_Metal[];
+extern Gfx mat_jj_cap_jer_metalnos_Nos_Label[];
+extern Gfx mat_revert_jj_cap_jer_metalnos_Nos_Label[];
+extern Gfx jj_cap_jer_metalnos_Winged_Metal_Cap_DL_mesh_layer_1[];
+extern Gfx jj_cap_jer_metalnos_Winged_Metal_Cap_DL_mesh_layer_4[];
+extern Gfx jj_cap_jer_metalnos_material_revert_render_settings[];

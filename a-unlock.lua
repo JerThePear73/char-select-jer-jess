@@ -3,6 +3,8 @@
 -- Spoilerss!!!! --
 -------------------
 
+if not _G.charSelectExists then return end
+
 local STORAGE_DAVY_UNLOCK = "davyUnlockProgress" -- bitches HATE strings
 davyProgress = mod_storage_load_number(STORAGE_DAVY_UNLOCK)
 local darkTimer = 0

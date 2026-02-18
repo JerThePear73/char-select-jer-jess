@@ -1,0 +1,12 @@
+extern const GeoLayout jj_pet_gregg_Anim_State_Switch_opt1[];
+extern const GeoLayout jj_pet_gregg_geo[];
+extern Lights1 jj_pet_gregg_Egg_lights;
+extern Lights1 jj_pet_gregg_pet_basic_lights;
+extern u8 jj_pet_gregg_face_rgba16[];
+extern u8 jj_pet_gregg_pet_basic_ia8[];
+extern Vtx jj_pet_gregg_Body_mesh_layer_1_vtx_0[110];
+extern Gfx jj_pet_gregg_Body_mesh_layer_1_tri_0[];
+extern Gfx mat_jj_pet_gregg_Egg[];
+extern Gfx mat_jj_pet_gregg_pet_basic[];
+extern Gfx jj_pet_gregg_Body_mesh_layer_1[];
+extern Gfx jj_pet_gregg_Body_mesh_layer_1_mat_override_pet_basic_0[];

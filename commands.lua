@@ -1,3 +1,5 @@
+if not _G.charSelectExists then return end
+
 FluddCoins = mod_storage_load_bool("fludd_coins")
 
 local function command_moveset_guide(msg)

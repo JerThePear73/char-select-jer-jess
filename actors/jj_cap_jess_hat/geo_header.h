@@ -1,0 +1,16 @@
+extern const GeoLayout jj_cap_jess_hat_6_Cap_Anim_State_Switch_opt1[];
+extern const GeoLayout jj_cap_jess_hat_geo[];
+extern Lights1 jj_cap_jess_hat_Belt__CAP__lights;
+extern Lights1 jj_cap_jess_hat_Dark_Cap__CAP__lights;
+extern Lights1 jj_cap_jess_hat_Brim__EMBLEM__lights;
+extern Vtx jj_cap_jess_hat_Cap_DL_mesh_layer_1_vtx_0[74];
+extern Gfx jj_cap_jess_hat_Cap_DL_mesh_layer_1_tri_0[];
+extern Vtx jj_cap_jess_hat_Cap_DL_mesh_layer_1_vtx_1[10];
+extern Gfx jj_cap_jess_hat_Cap_DL_mesh_layer_1_tri_1[];
+extern Vtx jj_cap_jess_hat_Cap_DL_mesh_layer_1_vtx_2[17];
+extern Gfx jj_cap_jess_hat_Cap_DL_mesh_layer_1_tri_2[];
+extern Gfx mat_jj_cap_jess_hat_Belt__CAP_[];
+extern Gfx mat_jj_cap_jess_hat_Dark_Cap__CAP_[];
+extern Gfx mat_jj_cap_jess_hat_Brim__EMBLEM_[];
+extern Gfx jj_cap_jess_hat_Cap_DL_mesh_layer_1[];
+extern Gfx jj_cap_jess_hat_material_revert_render_settings[];
