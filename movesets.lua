@@ -1680,7 +1680,7 @@ function davy_hud()
 end
 
 local function jer_vanish_surface(m)
-    if is_jer() and (m.flags & MARIO_VANISH_CAP) ~= 0 and m.floor.type ~= SURFACE_BURNING then -- a little glitchy, will do some weird spam dying thing on other peoples screen
+    if (m.flags & MARIO_VANISH_CAP) ~= 0 and m.floor.type ~= SURFACE_BURNING then -- a little glitchy, will do some weird spam dying thing on other peoples screen
         return false
     else
         return true
@@ -1688,14 +1688,13 @@ local function jer_vanish_surface(m)
 end
 
 local function jess_fludd_init()
-    if gNetworkPlayers[0].currLevelNum == 29 then 
+    if gNetworkPlayers[0].currLevelNum == 29 then
         gJerJessExtraStates[0].jessWater = jessMaxWater
-        gJerJessExtraStates[0].jessHover = jessMaxHover  
+        gJerJessExtraStates[0].jessHover = jessMaxHover
     end
 end
 
 hook_event(HOOK_ON_LEVEL_INIT, jess_fludd_init)
-hook_event(HOOK_ALLOW_HAZARD_SURFACE, jer_vanish_surface)
 
 _G.charSelect.character_hook_moveset(CT_JESS, HOOK_MARIO_UPDATE, jess_update)
 _G.charSelect.character_hook_moveset(CT_JESS, HOOK_ON_SET_MARIO_ACTION, jess_set_action)
@@ -1709,6 +1708,7 @@ _G.charSelect.character_hook_moveset(CT_JER, HOOK_ON_SET_MARIO_ACTION, jer_set_a
 _G.charSelect.character_hook_moveset(CT_JER, HOOK_BEFORE_PHYS_STEP, jer_before_phys_step)
 _G.charSelect.character_hook_moveset(CT_JER, HOOK_BEFORE_SET_MARIO_ACTION, jer_before_set_action)
 _G.charSelect.character_hook_moveset(CT_JER, HOOK_ON_HUD_RENDER_BEHIND, jer_hud)
+_G.charSelect.character_hook_moveset(CT_JER, HOOK_ALLOW_HAZARD_SURFACE, jer_vanish_surface)
 
 _G.charSelect.character_hook_moveset(CT_DAVY, HOOK_MARIO_UPDATE, davy_update)
 _G.charSelect.character_hook_moveset(CT_DAVY, HOOK_ON_SET_MARIO_ACTION, davy_set_action)
