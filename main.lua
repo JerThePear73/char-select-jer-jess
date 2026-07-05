@@ -1,4 +1,4 @@
--- name: [CS] \\#00aa00\\Jer \\#ffffff\\& \\#22ccff\\Jess
+-- name: [CS] Legacy \\#00aa00\\Jer \\#ffffff\\+ \\#22ccff\\Jess
 -- description: [CS] \\#00aa00\\Jer \\#ffffff\\+ \\#22ccff\\Jess\n\\#ffffff\\By \\#008800\\JerThePear\n\n\\#ffffff\\Jer and Jess find an old decrepit N64 in their attic and after turning it on, the two siblings get sucked into their TV and now must run around collecting Power Stars.\n\n\\#ff8000\\NEW Davy Mode!\n\n\\#ff7777\\This Pack requires Character Select\nto use as a Library!
 
 local TEXT_MOD_NAME = "Jer + Jess"
@@ -13,7 +13,18 @@ end
 local E_MODEL_JER = smlua_model_util_get_id('jer_geo')
 local E_MODEL_JESS = smlua_model_util_get_id('jess_geo')
 local E_MODEL_DAVY = smlua_model_util_get_id('davy_geo')
---local E_MODEL_ROBO = smlua_model_util_get_id('robo_jess_geo')
+    --legacy
+local E_MODEL_JER_0 = smlua_model_util_get_id('jj_legacy_jer_geo')
+local E_MODEL_JER_1 = smlua_model_util_get_id('jj_legacy_jer_beach_geo')
+local E_MODEL_JER_2 = smlua_model_util_get_id('jj_legacy_jer_casual_geo')
+local E_MODEL_JER_3 = smlua_model_util_get_id('jj_legacy_jer_lucky_geo')
+local E_MODEL_JER_4 = smlua_model_util_get_id('jj_legacy_jer_uncle_geo')
+local E_MODEL_JESS_0 = smlua_model_util_get_id('jj_legacy_jess_geo')
+local E_MODEL_JESS_1 = smlua_model_util_get_id('jj_legacy_jess_beach_geo')
+local E_MODEL_JESS_2 = smlua_model_util_get_id('jj_legacy_jess_casual_geo')
+local E_MODEL_JESS_3 = smlua_model_util_get_id('jj_legacy_jess_miner_geo')
+local E_MODEL_JESS_4 = smlua_model_util_get_id('jj_legacy_jess_robo_geo')
+local E_MODEL_DAVY_0 = smlua_model_util_get_id('jj_legacy_davy_geo')
 
 -- Credits --
 _G.charSelect.credit_add(TEXT_MOD_NAME, "JerThePear", "Creator")
@@ -27,7 +38,7 @@ _G.charSelect.credit_add(TEXT_MOD_NAME, "Isikle", "Being very cool")
 local TEX_JER = get_texture_info('jj-icon-jer')
 local TEX_JESS = get_texture_info('jj-icon-jess')
 local TEX_DAVY = get_texture_info('jj-icon-davy')
---local TEX_ROBO = get_texture_info('jj-icon-robo')
+local TEX_ROBO = get_texture_info('jj-icon-robo')
 
 local TEX_ART_JER = get_texture_info('jj-graffiti-jer')
 local TEX_ART_JESS = get_texture_info('jj-graffiti-jess')
@@ -137,6 +148,52 @@ VOICETABLE_JESS = { -- Voices from Veronica Voltage and other female characters 
     [CHAR_SOUND_OKEY_DOKEY] = 'jess_oh_yeah.ogg',
     --CHAR_SOUND_MAX
     [CHAR_SOUND_EXTRA_1] = 'jess_galaxy_spin.ogg',
+}
+
+VOICETABLE_ROBO_JESS = { -- Voices from Veronica Voltage and other female characters from Lego Racers (1999)
+    [CHAR_SOUND_ATTACKED] = 'robo_jess_ow.ogg',
+    [CHAR_SOUND_COUGHING1] = nil,
+    [CHAR_SOUND_COUGHING2] = nil,
+    [CHAR_SOUND_COUGHING3] = nil,
+    [CHAR_SOUND_DOH] = 'robo_jess_ow.ogg',
+    [CHAR_SOUND_DROWNING] = nil,
+    [CHAR_SOUND_DYING] = 'robo_jess_ohno.ogg',
+    [CHAR_SOUND_EEUH] = 'robo_jess_heh.ogg',
+    [CHAR_SOUND_GROUND_POUND_WAH] = 'robo_jess_hiya.ogg',
+    [CHAR_SOUND_HAHA] = 'robo_jess_yeah_jazzy.ogg',
+    [CHAR_SOUND_HAHA_2] = 'robo_jess_oh_yeah.ogg',
+    [CHAR_SOUND_HERE_WE_GO] = 'robo_jess_yeah_jazzy.ogg',
+    [CHAR_SOUND_HOOHOO] = 'robo_jess_woo.ogg',
+    [CHAR_SOUND_HRMM] = 'robo_jess_heh.ogg',
+    [CHAR_SOUND_IMA_TIRED] = nil,
+    [CHAR_SOUND_MAMA_MIA] = 'robo_jess_ohno.ogg',
+    [CHAR_SOUND_LETS_A_GO] = 'robo_jess_oh_yeah.ogg',
+    [CHAR_SOUND_ON_FIRE] = 'robo_jess_ohno.ogg',
+    [CHAR_SOUND_OOOF] = 'robo_jess_ouch.ogg',
+    [CHAR_SOUND_OOOF2] = 'robo_jess_ouch.ogg',
+    [CHAR_SOUND_PANTING] = nil,
+    [CHAR_SOUND_PANTING_COLD] = nil,
+    [CHAR_SOUND_PUNCH_HOO] = 'robo_jess_yeah.ogg',
+    [CHAR_SOUND_PUNCH_WAH] = 'robo_jess_ya.ogg',
+    [CHAR_SOUND_PUNCH_YAH] = 'robo_jess_ha.ogg',
+    [CHAR_SOUND_SO_LONGA_BOWSER] = 'robo_jess_hiya.ogg',
+    [CHAR_SOUND_SNORING1] = nil,
+    [CHAR_SOUND_SNORING2] = nil,
+    [CHAR_SOUND_SNORING3] = nil,
+    [CHAR_SOUND_TWIRL_BOUNCE] = 'robo_jess_yahoo.ogg',
+    [CHAR_SOUND_UH] = 'robo_jess_ow.ogg',
+    [CHAR_SOUND_UH2] = 'robo_jess_heh.ogg',
+    [CHAR_SOUND_UH2_2] = nil,
+    [CHAR_SOUND_WAAAOOOW] = 'robo_jess_ohno.ogg',
+    [CHAR_SOUND_WAH2] = 'robo_jess_ya.ogg',
+    [CHAR_SOUND_WHOA] = 'robo_jess_uh_oh.ogg',
+    [CHAR_SOUND_YAHOO] = { 'robo_jess_yahoo.ogg', 'robo_jess_woohoo.ogg' },
+    [CHAR_SOUND_YAWNING] = nil,
+    [CHAR_SOUND_YAHOO_WAHA_YIPPEE] = {'robo_jess_yahoo.ogg', 'robo_jess_woohoo.ogg' },
+    [CHAR_SOUND_YAH_WAH_HOO] = {'robo_jess_ha.ogg', 'robo_jess_ya.ogg', 'robo_jess_yeah.ogg' },
+    [CHAR_SOUND_OKEY_DOKEY] = 'robo_jess_oh_yeah.ogg',
+    --CHAR_SOUND_MAX
+    [CHAR_SOUND_EXTRA_1] = 'robo_jess_woo.ogg',
 }
 
 VOICETABLE_DAVY = { -- Voices from Skeleton character from Lego Racers (1999)
@@ -615,11 +672,62 @@ local function on_character_select_load()
         _G.charSelect.character_add_palette_preset(E_MODEL_DAVY, PALETTES_DAVY[i], PALETTES_DAVY[i].name)
     end
 
+    -- Legacy costumes
+    _G.charSelect.character_add_costume(CT_JER, "Jer", { "Legacy outfit: MARIO |", ""}, "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_JER_0, CT_MARIO, TEX_JER)
+    _G.charSelect.character_add_costume(CT_JER, "Jer", { "Legacy outfit: BEACH |", ""}, "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_JER_1, CT_MARIO, TEX_JER)
+    _G.charSelect.character_add_costume(CT_JER, "Jer", { "Legacy outfit: CASUAL |", ""}, "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_JER_2, CT_MARIO, TEX_JER)
+    _G.charSelect.character_add_costume(CT_JER, "Jer", { "Legacy outfit: LUCKY |", ""}, "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_JER_3, CT_MARIO, TEX_JER)
+    _G.charSelect.character_add_costume(CT_JER, "Jer", { "Legacy outfit: UNCLE |", ""}, "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_JER_4, CT_MARIO, TEX_JER)
+    _G.charSelect.character_add_costume(CT_JESS, "Jess", { "Legacy outfit: MARIO |", ""}, "JerThePear", {r = 000, g = 255, b = 125}, E_MODEL_JESS_0, CT_MARIO, TEX_JESS)
+    _G.charSelect.character_add_costume(CT_JESS, "Jess", { "Legacy outfit: BEACH |", ""}, "JerThePear", {r = 000, g = 255, b = 125}, E_MODEL_JESS_1, CT_MARIO, TEX_JESS)
+    _G.charSelect.character_add_costume(CT_JESS, "Jess", { "Legacy outfit: CASUAL |", ""}, "JerThePear", {r = 000, g = 255, b = 125}, E_MODEL_JESS_2, CT_MARIO, TEX_JESS)
+    _G.charSelect.character_add_costume(CT_JESS, "Jess", { "Legacy outfit: MINER |", ""}, "JerThePear", {r = 000, g = 255, b = 125}, E_MODEL_JESS_3, CT_MARIO, TEX_JESS)
+    _G.charSelect.character_add_costume(CT_JESS, "Jess", { "Legacy outfit: ROBO |", ""}, "JerThePear", {r = 000, g = 255, b = 125}, E_MODEL_JESS_4, CT_MARIO, TEX_ROBO)
+    _G.charSelect.character_add_costume(CT_DAVY, "Davy", { "Legacy outfit: MARIO |", ""}, "JerThePear", {r = 225, g = 165, b = 000}, E_MODEL_DAVY_0, CT_MARIO, TEX_DAVY)
+
+    _G.charSelect.character_add_palette_preset(E_MODEL_JER_0, {[PANTS] = "008000", [SHIRT] = "FFFF66", [GLOVES] = "008000", [SHOES] = "462C1E", [HAIR] = "00FF00", [SKIN] = "FFC2AB", [CAP] = "008000", [EMBLEM] = "008000",}, "Default")
+    _G.charSelect.character_add_palette_preset(E_MODEL_JER_1, {[PANTS] = "FF8900", [SHIRT] = "98FF2E", [GLOVES] = "FF8900", [SHOES] = "BC00BC", [HAIR] = "00FF00", [SKIN] = "FFC2AB", [CAP] = "BC00BC", [EMBLEM] = "BC00BC",}, "Default")
+    _G.charSelect.character_add_palette_preset(E_MODEL_JER_2, {[PANTS] = "303030", [SHIRT] = "BCBCBC", [GLOVES] = "303030", [SHOES] = "3F3F3F", [HAIR] = "462C1E", [SKIN] = "FFC2AB", [CAP] = "4C4C4C", [EMBLEM] = "00FF00",}, "Default")
+    _G.charSelect.character_add_palette_preset(E_MODEL_JER_3, {[PANTS] = "333333", [SHIRT] = "333333", [GLOVES] = "FFC900", [SHOES] = "222222", [HAIR] = "462C1E", [SKIN] = "FFC2AB", [CAP] = "333333", [EMBLEM] = "008900",}, "Default")
+    _G.charSelect.character_add_palette_preset(E_MODEL_JER_4, {[PANTS] = "5B4129", [SHIRT] = "FF6C6C", [GLOVES] = "FFC2AB", [SHOES] = "93704D", [HAIR] = "6D2D2A", [SKIN] = "FFC2AB", [CAP] = "6E4D46", [EMBLEM] = "FFAF00",}, "Default")
+    _G.charSelect.character_add_palette_preset(E_MODEL_JESS_0, {[PANTS] = "8CC6FF", [SHIRT] = "99D149", [GLOVES] = "8CC6FF", [SHOES] = "563421", [HAIR] = "462C1E", [SKIN] = "FFBA90", [CAP] = "8CC6FF", [EMBLEM] = "8CC6FF",}, "Default")
+    _G.charSelect.character_add_palette_preset(E_MODEL_JESS_1, {[PANTS] = "C64F42", [SHIRT] = "336677", [GLOVES] = "C64F42", [SHOES] = "C64F42", [HAIR] = "462C1E", [SKIN] = "FFBA90", [CAP] = "C64F42", [EMBLEM] = "FFD532",}, "Default")
+    _G.charSelect.character_add_palette_preset(E_MODEL_JESS_2, {[PANTS] = "7195AC", [SHIRT] = "FFFFFF", [GLOVES] = "FFBA90", [SHOES] = "333333", [HAIR] = "462C1E", [SKIN] = "FFBA90", [CAP] = "771E16", [EMBLEM] = "FFCC00",}, "Default")
+    _G.charSelect.character_add_palette_preset(E_MODEL_JESS_3, {[PANTS] = "2B8859", [SHIRT] = "99D149", [GLOVES] = "FFBA90", [SHOES] = "99D149", [HAIR] = "462C1E", [SKIN] = "FFBA90", [CAP] = "99D149", [EMBLEM] = "FFC300",}, "Default")
+    _G.charSelect.character_add_palette_preset(E_MODEL_JESS_4, {[PANTS] = "333333", [SHIRT] = "FFC000", [GLOVES] = "FFFFFF", [SHOES] = "333333", [HAIR] = "A3B3BF", [SKIN] = "C1C1C1", [CAP] = "333333", [EMBLEM] = "0000FF",}, "Default")
+    _G.charSelect.character_add_palette_preset(E_MODEL_DAVY_0, {[PANTS] = "FF9000", [SHIRT] = "222222", [GLOVES] = "FF9000", [SHOES] = "552945", [HAIR] = "FFFFFF", [SKIN] = "FFFFFF", [CAP] = "FF9000", [EMBLEM] = "FF9000",}, "Default")
+
+    _G.charSelect.character_add_animations(E_MODEL_JER_0, ANIMTABLE_JER)
+    _G.charSelect.character_add_animations(E_MODEL_JER_1, ANIMTABLE_JER)
+    _G.charSelect.character_add_animations(E_MODEL_JER_2, ANIMTABLE_JER)
+    _G.charSelect.character_add_animations(E_MODEL_JER_3, ANIMTABLE_JER)
+    _G.charSelect.character_add_animations(E_MODEL_JER_4, ANIMTABLE_JER)
+    _G.charSelect.character_add_animations(E_MODEL_JESS_0, ANIMTABLE_JESS, EYETABLE_JESS)
+    _G.charSelect.character_add_animations(E_MODEL_JESS_1, ANIMTABLE_JESS, EYETABLE_JESS)
+    _G.charSelect.character_add_animations(E_MODEL_JESS_2, ANIMTABLE_JESS, EYETABLE_JESS)
+    _G.charSelect.character_add_animations(E_MODEL_JESS_3, ANIMTABLE_JESS, EYETABLE_JESS)
+    _G.charSelect.character_add_animations(E_MODEL_JESS_4, ANIMTABLE_JESS, EYETABLE_JESS)
+    _G.charSelect.character_add_animations(E_MODEL_DAVY_0, ANIMTABLE_DAVY, EYETABLE_DAVY)
+
+    _G.charSelect.character_add_voice(E_MODEL_JER_0, VOICETABLE_JER)
+    _G.charSelect.character_add_voice(E_MODEL_JER_1, VOICETABLE_JER)
+    _G.charSelect.character_add_voice(E_MODEL_JER_2, VOICETABLE_JER)
+    _G.charSelect.character_add_voice(E_MODEL_JER_3, VOICETABLE_JER)
+    _G.charSelect.character_add_voice(E_MODEL_JER_4, VOICETABLE_JER)
+    _G.charSelect.character_add_voice(E_MODEL_JESS_0, VOICETABLE_JESS)
+    _G.charSelect.character_add_voice(E_MODEL_JESS_1, VOICETABLE_JESS)
+    _G.charSelect.character_add_voice(E_MODEL_JESS_2, VOICETABLE_JESS)
+    _G.charSelect.character_add_voice(E_MODEL_JESS_3, VOICETABLE_JESS)
+    _G.charSelect.character_add_voice(E_MODEL_JESS_4, VOICETABLE_ROBO_JESS)
+    _G.charSelect.character_add_voice(E_MODEL_DAVY_0, VOICETABLE_DAVY)
+
+    _G.charSelect.character_add_costume_health_meter(CT_JESS, 6, HEALTH_METER_ROBO_JESS)
+
     -- Model dependant
     _G.charSelect.character_add_animations(E_MODEL_JER, ANIMTABLE_JER)
     _G.charSelect.character_add_animations(E_MODEL_JESS, ANIMTABLE_JESS, EYETABLE_JESS)
     _G.charSelect.character_add_animations(E_MODEL_DAVY, ANIMTABLE_DAVY, EYETABLE_DAVY)
-    
+
     _G.charSelect.character_add_caps(E_MODEL_JER, CAP_JER)
     _G.charSelect.character_add_caps(E_MODEL_JESS, CAP_JESS)
     _G.charSelect.character_add_caps(E_MODEL_DAVY, CAP_DAVY)
@@ -636,7 +744,7 @@ local function on_character_select_load()
     _G.charSelect.character_add_graffiti(CT_JER, TEX_ART_JER)
     _G.charSelect.character_add_graffiti(CT_JESS, TEX_ART_JESS)
     _G.charSelect.character_add_graffiti(CT_DAVY, TEX_ART_DAVY)
-    
+
     _G.charSelect.character_add_menu_instrumental(CT_JER, SOUND_MENU_THEME_JER)
     _G.charSelect.character_add_menu_instrumental(CT_JESS, SOUND_MENU_THEME_JESS)
     _G.charSelect.character_add_menu_instrumental(CT_DAVY, SOUND_MENU_THEME_DAVY)
@@ -646,9 +754,9 @@ local function on_character_select_load()
     _G.charSelect.character_set_category(CT_JESS, "Jer + Jess")
     _G.charSelect.character_set_category(CT_DAVY, "Jer + Jess")
 
-    _G.charSelect.character_set_category(CT_JER, "DXA")
-    _G.charSelect.character_set_category(CT_JESS, "DXA")
-    _G.charSelect.character_set_category(CT_DAVY, "DXA")
+    --_G.charSelect.character_set_category(CT_JER, "DXA")
+    --_G.charSelect.character_set_category(CT_JESS, "DXA")
+    --_G.charSelect.character_set_category(CT_DAVY, "DXA")
 
     _G.charSelect.character_set_category(CT_JER, "Squishy Workshop")
     _G.charSelect.character_set_category(CT_JESS, "Squishy Workshop")
@@ -675,6 +783,7 @@ local function on_character_sound(m, sound)
     if not CSloaded then return end
     if _G.charSelect.character_get_voice(m) == VOICETABLE_JER then return _G.charSelect.voice.sound(m, sound) end
     if _G.charSelect.character_get_voice(m) == VOICETABLE_JESS then return _G.charSelect.voice.sound(m, sound) end
+    if _G.charSelect.character_get_voice(m) == VOICETABLE_ROBO_JESS then return _G.charSelect.voice.sound(m, sound) end
     if _G.charSelect.character_get_voice(m) == VOICETABLE_DAVY then return _G.charSelect.voice.sound(m, sound) end
     --if _G.charSelect.character_get_voice(m) == VOICETABLE_ROBO_JESS then return _G.charSelect.voice.sound(m, sound) end
 end
@@ -683,6 +792,7 @@ local function on_character_snore(m)
     if not CSloaded then return end
     if _G.charSelect.character_get_voice(m) == VOICETABLE_JER then return _G.charSelect.voice.snore(m) end
     if _G.charSelect.character_get_voice(m) == VOICETABLE_JESS then return _G.charSelect.voice.snore(m) end
+    if _G.charSelect.character_get_voice(m) == VOICETABLE_ROBO_JESS then return _G.charSelect.voice.sound(m, sound) end
     if _G.charSelect.character_get_voice(m) == VOICETABLE_DAVY then return _G.charSelect.voice.snore(m) end
     --if _G.charSelect.character_get_voice(m) == VOICETABLE_ROBO_JESS then return _G.charSelect.voice.snore(m) end
 end
