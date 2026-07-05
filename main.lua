@@ -783,18 +783,16 @@ local function on_character_sound(m, sound)
     if not CSloaded then return end
     if _G.charSelect.character_get_voice(m) == VOICETABLE_JER then return _G.charSelect.voice.sound(m, sound) end
     if _G.charSelect.character_get_voice(m) == VOICETABLE_JESS then return _G.charSelect.voice.sound(m, sound) end
-    if _G.charSelect.character_get_voice(m) == VOICETABLE_ROBO_JESS then return _G.charSelect.voice.sound(m, sound) end
     if _G.charSelect.character_get_voice(m) == VOICETABLE_DAVY then return _G.charSelect.voice.sound(m, sound) end
-    --if _G.charSelect.character_get_voice(m) == VOICETABLE_ROBO_JESS then return _G.charSelect.voice.sound(m, sound) end
+    if _G.charSelect.character_get_voice(m) == VOICETABLE_ROBO_JESS then return _G.charSelect.voice.sound(m, sound) end
 end
 
 local function on_character_snore(m)
     if not CSloaded then return end
     if _G.charSelect.character_get_voice(m) == VOICETABLE_JER then return _G.charSelect.voice.snore(m) end
     if _G.charSelect.character_get_voice(m) == VOICETABLE_JESS then return _G.charSelect.voice.snore(m) end
-    if _G.charSelect.character_get_voice(m) == VOICETABLE_ROBO_JESS then return _G.charSelect.voice.sound(m, sound) end
     if _G.charSelect.character_get_voice(m) == VOICETABLE_DAVY then return _G.charSelect.voice.snore(m) end
-    --if _G.charSelect.character_get_voice(m) == VOICETABLE_ROBO_JESS then return _G.charSelect.voice.snore(m) end
+    if _G.charSelect.character_get_voice(m) == VOICETABLE_ROBO_JESS then return _G.charSelect.voice.snore(m) end
 end
 
 hook_event(HOOK_ON_MODS_LOADED, on_character_select_load)
