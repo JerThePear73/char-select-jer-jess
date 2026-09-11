@@ -634,7 +634,7 @@ local HEALTH_METER_ROBO_JESS = {
 }
 
 if _G.charSelectExists then
-    CT_JER = _G.charSelect.character_add("Jer", { "A helmet man with a love for speed. Age: 21, Height: 6'4, Jess' older brother. Jer's moveset is based around maintaining speed but is designed for more experienced players. His powerups still serve their vanilla purpose but have slight adjustments. Type '/jj-moves' for help."},
+    CT_JER = _G.charSelect.character_add("Legacy Jer", { "A helmet man with a love for speed. Age: 21, Height: 6'4, Jess' older brother. Jer's moveset is based around maintaining speed but is designed for more experienced players. His powerups still serve their vanilla purpose but have slight adjustments. Type '/jj-moves' for help."},
         "JerThePear",
         {r = 000, g = 255, b = 000},
         E_MODEL_JER,
@@ -673,11 +673,11 @@ local function on_character_select_load()
     end
 
     -- Legacy costumes
-    _G.charSelect.character_add_costume(CT_JER, "Jer", { "Legacy outfit: MARIO |", ""}, "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_JER_0, CT_MARIO, TEX_JER)
-    _G.charSelect.character_add_costume(CT_JER, "Jer", { "Legacy outfit: BEACH |", ""}, "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_JER_1, CT_MARIO, TEX_JER)
-    _G.charSelect.character_add_costume(CT_JER, "Jer", { "Legacy outfit: CASUAL |", ""}, "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_JER_2, CT_MARIO, TEX_JER)
-    _G.charSelect.character_add_costume(CT_JER, "Jer", { "Legacy outfit: LUCKY |", ""}, "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_JER_3, CT_MARIO, TEX_JER)
-    _G.charSelect.character_add_costume(CT_JER, "Jer", { "Legacy outfit: UNCLE |", ""}, "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_JER_4, CT_MARIO, TEX_JER)
+    _G.charSelect.character_add_costume(CT_JER, "Legacy Jer", { "Legacy outfit: MARIO |", ""}, "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_JER_0, CT_MARIO, TEX_JER)
+    _G.charSelect.character_add_costume(CT_JER, "Legacy Jer", { "Legacy outfit: BEACH |", ""}, "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_JER_1, CT_MARIO, TEX_JER)
+    _G.charSelect.character_add_costume(CT_JER, "Legacy Jer", { "Legacy outfit: CASUAL |", ""}, "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_JER_2, CT_MARIO, TEX_JER)
+    _G.charSelect.character_add_costume(CT_JER, "Legacy Jer", { "Legacy outfit: LUCKY |", ""}, "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_JER_3, CT_MARIO, TEX_JER)
+    _G.charSelect.character_add_costume(CT_JER, "Legacy Jer", { "Legacy outfit: UNCLE |", ""}, "JerThePear", {r = 000, g = 255, b = 000}, E_MODEL_JER_4, CT_MARIO, TEX_JER)
     _G.charSelect.character_add_costume(CT_JESS, "Jess", { "Legacy outfit: MARIO |", ""}, "JerThePear", {r = 000, g = 255, b = 125}, E_MODEL_JESS_0, CT_MARIO, TEX_JESS)
     _G.charSelect.character_add_costume(CT_JESS, "Jess", { "Legacy outfit: BEACH |", ""}, "JerThePear", {r = 000, g = 255, b = 125}, E_MODEL_JESS_1, CT_MARIO, TEX_JESS)
     _G.charSelect.character_add_costume(CT_JESS, "Jess", { "Legacy outfit: CASUAL |", ""}, "JerThePear", {r = 000, g = 255, b = 125}, E_MODEL_JESS_2, CT_MARIO, TEX_JESS)
