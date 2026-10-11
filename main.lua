@@ -642,7 +642,7 @@ if _G.charSelectExists then
         TEX_JER,
         1.25
     )
-    CT_JESS = _G.charSelect.character_add("Jess", { "A clumsy gal that loves the winter. Age: 19, Height: 6'0, Jer's younger sister. Jess' moveset is designed for less experienced players, with easier platforming. Her powerups are different and will make some stars easier but others impossible. Type '/jj-moves' for help."},
+    CT_JESS = _G.charSelect.character_add("Legacy Jess", { "A clumsy gal that loves the winter. Age: 19, Height: 6'0, Jer's younger sister. Jess' moveset is designed for less experienced players, with easier platforming. Her powerups are different and will make some stars easier but others impossible. Type '/jj-moves' for help."},
         "JerThePear",
         {r = 000, g = 255, b = 125},
         E_MODEL_JESS,
@@ -650,7 +650,7 @@ if _G.charSelectExists then
         TEX_JESS,
         1.25
     )
-    CT_DAVY = _G.charSelect.character_add("Davy", { "A skeleton-cyborg mix hellbent on chaos. Age: ??, Height: 6'9, A friend of Jer's. Davy's moveset is just meant to be silly, aside from his bomb throw ability. Type '/jj-moves' for help."},
+    CT_DAVY = _G.charSelect.character_add("Legacy Davy", { "A skeleton-cyborg mix hellbent on chaos. Age: ??, Height: 6'9, A friend of Jer's. Davy's moveset is just meant to be silly, aside from his bomb throw ability. Type '/jj-moves' for help."},
         "JerThePear",
         {r = 255, g = 165, b = 000},
         E_MODEL_DAVY,
